@@ -22,6 +22,26 @@
       "C[C@@H](Cl)CC"
     ],
     [
+      "(S)-2-pentanol",
+      "CCC[C@H](C)O"
+    ],
+    [
+      "(R)-2-pentanol",
+      "CCC[C@@H](C)O"
+    ],
+    [
+      "(S)-2-cloropentano",
+      "CCC[C@H](C)Cl"
+    ],
+    [
+      "(R)-2-cloropentano",
+      "CCC[C@@H](C)Cl"
+    ],
+    [
+      "(S)-2-bromopentano",
+      "CCC[C@H](C)Br"
+    ],
+    [
       "(S)-2-clorobutano",
       "C[C@H](Cl)CC"
     ],
@@ -488,56 +508,6 @@
     {
       "id": "estereo_e_rs_04",
       "familia": "estereo_rs",
-      "smiles": "C[C@H:1](Br)CC",
-      "respuesta": "S",
-      "comprobaciones": [
-        {
-          "nombre": "svg_molblock_roundtrip",
-          "ok": true,
-          "detalle": "molblock→CC[C@H](C)Br vs CC[C@H](C)Br"
-        },
-        {
-          "nombre": "etiqueta_rdkit",
-          "ok": true,
-          "detalle": "S"
-        },
-        {
-          "nombre": "sustituyentes_nombrables",
-          "ok": true,
-          "detalle": "['Br', 'C₂H₅', 'CH₃', 'H']"
-        },
-        {
-          "nombre": "prioridades_distintas",
-          "ok": true,
-          "detalle": "[4, 2, 1]"
-        },
-        {
-          "nombre": "rs_volumen_quiral_3d",
-          "ok": true,
-          "detalle": "3d=S"
-        },
-        {
-          "nombre": "rs_cunas_2d",
-          "ok": true,
-          "detalle": "('S', 'adelante', 'horario')"
-        },
-        {
-          "nombre": "cunas_del_dibujo_coinciden",
-          "ok": true,
-          "detalle": "{0: ('BEGINDASH', 1)}"
-        },
-        {
-          "nombre": "distractor_incorrecto",
-          "ok": true,
-          "detalle": "R"
-        }
-      ],
-      "descartado": false,
-      "motivo": null
-    },
-    {
-      "id": "estereo_e_rs_05",
-      "familia": "estereo_rs",
       "smiles": "C[C@H:1](O)C(=O)O",
       "respuesta": "S",
       "comprobaciones": [
@@ -586,107 +556,7 @@
       "motivo": null
     },
     {
-      "id": "estereo_e_rs_06",
-      "familia": "estereo_rs",
-      "smiles": "C[C@@H:1](O)C(=O)O",
-      "respuesta": "R",
-      "comprobaciones": [
-        {
-          "nombre": "svg_molblock_roundtrip",
-          "ok": true,
-          "detalle": "molblock→C[C@@H](O)C(=O)O vs C[C@@H](O)C(=O)O"
-        },
-        {
-          "nombre": "etiqueta_rdkit",
-          "ok": true,
-          "detalle": "R"
-        },
-        {
-          "nombre": "sustituyentes_nombrables",
-          "ok": true,
-          "detalle": "['OH', 'COOH', 'CH₃', 'H']"
-        },
-        {
-          "nombre": "prioridades_distintas",
-          "ok": true,
-          "detalle": "[3, 2, 0]"
-        },
-        {
-          "nombre": "rs_volumen_quiral_3d",
-          "ok": true,
-          "detalle": "3d=R"
-        },
-        {
-          "nombre": "rs_cunas_2d",
-          "ok": true,
-          "detalle": "('R', 'atrás', 'horario')"
-        },
-        {
-          "nombre": "cunas_del_dibujo_coinciden",
-          "ok": true,
-          "detalle": "{0: ('BEGINWEDGE', 1)}"
-        },
-        {
-          "nombre": "distractor_incorrecto",
-          "ok": true,
-          "detalle": "S"
-        }
-      ],
-      "descartado": false,
-      "motivo": null
-    },
-    {
-      "id": "estereo_e_rs_07",
-      "familia": "estereo_rs",
-      "smiles": "C[C@H:1](N)C(=O)O",
-      "respuesta": "S",
-      "comprobaciones": [
-        {
-          "nombre": "svg_molblock_roundtrip",
-          "ok": true,
-          "detalle": "molblock→C[C@H](N)C(=O)O vs C[C@H](N)C(=O)O"
-        },
-        {
-          "nombre": "etiqueta_rdkit",
-          "ok": true,
-          "detalle": "S"
-        },
-        {
-          "nombre": "sustituyentes_nombrables",
-          "ok": true,
-          "detalle": "['NH₂', 'COOH', 'CH₃', 'H']"
-        },
-        {
-          "nombre": "prioridades_distintas",
-          "ok": true,
-          "detalle": "[3, 2, 0]"
-        },
-        {
-          "nombre": "rs_volumen_quiral_3d",
-          "ok": true,
-          "detalle": "3d=S"
-        },
-        {
-          "nombre": "rs_cunas_2d",
-          "ok": true,
-          "detalle": "('S', 'adelante', 'horario')"
-        },
-        {
-          "nombre": "cunas_del_dibujo_coinciden",
-          "ok": true,
-          "detalle": "{0: ('BEGINDASH', 1)}"
-        },
-        {
-          "nombre": "distractor_incorrecto",
-          "ok": true,
-          "detalle": "R"
-        }
-      ],
-      "descartado": false,
-      "motivo": null
-    },
-    {
-      "id": "estereo_e_rs_08",
+      "id": "estereo_e_rs_05",
       "familia": "estereo_rs",
       "smiles": "C[C@@H:1](N)C(=O)O",
       "respuesta": "R",
@@ -736,15 +606,15 @@
       "motivo": null
     },
     {
-      "id": "estereo_e_rs_09",
+      "id": "estereo_e_rs_06",
       "familia": "estereo_rs",
-      "smiles": "C[C@H:1](N)CC",
+      "smiles": "CCC[C@H:1](C)O",
       "respuesta": "S",
       "comprobaciones": [
         {
           "nombre": "svg_molblock_roundtrip",
           "ok": true,
-          "detalle": "molblock→CC[C@H](C)N vs CC[C@H](C)N"
+          "detalle": "molblock→CCC[C@H](C)O vs CCC[C@H](C)O"
         },
         {
           "nombre": "etiqueta_rdkit",
@@ -754,12 +624,12 @@
         {
           "nombre": "sustituyentes_nombrables",
           "ok": true,
-          "detalle": "['NH₂', 'C₂H₅', 'CH₃', 'H']"
+          "detalle": "['OH', 'C₃H₇', 'CH₃', 'H']"
         },
         {
           "nombre": "prioridades_distintas",
           "ok": true,
-          "detalle": "[4, 2, 1]"
+          "detalle": "[5, 3, 1]"
         },
         {
           "nombre": "rs_volumen_quiral_3d",
@@ -769,12 +639,12 @@
         {
           "nombre": "rs_cunas_2d",
           "ok": true,
-          "detalle": "('S', 'adelante', 'horario')"
+          "detalle": "('S', 'atrás', 'antihorario')"
         },
         {
           "nombre": "cunas_del_dibujo_coinciden",
           "ok": true,
-          "detalle": "{0: ('BEGINDASH', 1)}"
+          "detalle": "{3: ('BEGINWEDGE', 3)}"
         },
         {
           "nombre": "distractor_incorrecto",
@@ -786,15 +656,15 @@
       "motivo": null
     },
     {
-      "id": "estereo_e_rs_10",
+      "id": "estereo_e_rs_07",
       "familia": "estereo_rs",
-      "smiles": "C[C@@H:1](Cl)CC",
+      "smiles": "CCC[C@@H:1](C)O",
       "respuesta": "R",
       "comprobaciones": [
         {
           "nombre": "svg_molblock_roundtrip",
           "ok": true,
-          "detalle": "molblock→CC[C@@H](C)Cl vs CC[C@@H](C)Cl"
+          "detalle": "molblock→CCC[C@@H](C)O vs CCC[C@@H](C)O"
         },
         {
           "nombre": "etiqueta_rdkit",
@@ -804,12 +674,12 @@
         {
           "nombre": "sustituyentes_nombrables",
           "ok": true,
-          "detalle": "['Cl', 'C₂H₅', 'CH₃', 'H']"
+          "detalle": "['OH', 'C₃H₇', 'CH₃', 'H']"
         },
         {
           "nombre": "prioridades_distintas",
           "ok": true,
-          "detalle": "[4, 2, 1]"
+          "detalle": "[5, 3, 1]"
         },
         {
           "nombre": "rs_volumen_quiral_3d",
@@ -819,17 +689,167 @@
         {
           "nombre": "rs_cunas_2d",
           "ok": true,
-          "detalle": "('R', 'atrás', 'horario')"
+          "detalle": "('R', 'adelante', 'antihorario')"
         },
         {
           "nombre": "cunas_del_dibujo_coinciden",
           "ok": true,
-          "detalle": "{0: ('BEGINWEDGE', 1)}"
+          "detalle": "{3: ('BEGINDASH', 3)}"
         },
         {
           "nombre": "distractor_incorrecto",
           "ok": true,
           "detalle": "S"
+        }
+      ],
+      "descartado": false,
+      "motivo": null
+    },
+    {
+      "id": "estereo_e_rs_08",
+      "familia": "estereo_rs",
+      "smiles": "CCC[C@H:1](C)Cl",
+      "respuesta": "S",
+      "comprobaciones": [
+        {
+          "nombre": "svg_molblock_roundtrip",
+          "ok": true,
+          "detalle": "molblock→CCC[C@H](C)Cl vs CCC[C@H](C)Cl"
+        },
+        {
+          "nombre": "etiqueta_rdkit",
+          "ok": true,
+          "detalle": "S"
+        },
+        {
+          "nombre": "sustituyentes_nombrables",
+          "ok": true,
+          "detalle": "['Cl', 'C₃H₇', 'CH₃', 'H']"
+        },
+        {
+          "nombre": "prioridades_distintas",
+          "ok": true,
+          "detalle": "[5, 3, 1]"
+        },
+        {
+          "nombre": "rs_volumen_quiral_3d",
+          "ok": true,
+          "detalle": "3d=S"
+        },
+        {
+          "nombre": "rs_cunas_2d",
+          "ok": true,
+          "detalle": "('S', 'atrás', 'antihorario')"
+        },
+        {
+          "nombre": "cunas_del_dibujo_coinciden",
+          "ok": true,
+          "detalle": "{3: ('BEGINWEDGE', 3)}"
+        },
+        {
+          "nombre": "distractor_incorrecto",
+          "ok": true,
+          "detalle": "R"
+        }
+      ],
+      "descartado": false,
+      "motivo": null
+    },
+    {
+      "id": "estereo_e_rs_09",
+      "familia": "estereo_rs",
+      "smiles": "CCC[C@@H:1](C)Cl",
+      "respuesta": "R",
+      "comprobaciones": [
+        {
+          "nombre": "svg_molblock_roundtrip",
+          "ok": true,
+          "detalle": "molblock→CCC[C@@H](C)Cl vs CCC[C@@H](C)Cl"
+        },
+        {
+          "nombre": "etiqueta_rdkit",
+          "ok": true,
+          "detalle": "R"
+        },
+        {
+          "nombre": "sustituyentes_nombrables",
+          "ok": true,
+          "detalle": "['Cl', 'C₃H₇', 'CH₃', 'H']"
+        },
+        {
+          "nombre": "prioridades_distintas",
+          "ok": true,
+          "detalle": "[5, 3, 1]"
+        },
+        {
+          "nombre": "rs_volumen_quiral_3d",
+          "ok": true,
+          "detalle": "3d=R"
+        },
+        {
+          "nombre": "rs_cunas_2d",
+          "ok": true,
+          "detalle": "('R', 'adelante', 'antihorario')"
+        },
+        {
+          "nombre": "cunas_del_dibujo_coinciden",
+          "ok": true,
+          "detalle": "{3: ('BEGINDASH', 3)}"
+        },
+        {
+          "nombre": "distractor_incorrecto",
+          "ok": true,
+          "detalle": "S"
+        }
+      ],
+      "descartado": false,
+      "motivo": null
+    },
+    {
+      "id": "estereo_e_rs_10",
+      "familia": "estereo_rs",
+      "smiles": "CCC[C@H:1](C)Br",
+      "respuesta": "S",
+      "comprobaciones": [
+        {
+          "nombre": "svg_molblock_roundtrip",
+          "ok": true,
+          "detalle": "molblock→CCC[C@H](C)Br vs CCC[C@H](C)Br"
+        },
+        {
+          "nombre": "etiqueta_rdkit",
+          "ok": true,
+          "detalle": "S"
+        },
+        {
+          "nombre": "sustituyentes_nombrables",
+          "ok": true,
+          "detalle": "['Br', 'C₃H₇', 'CH₃', 'H']"
+        },
+        {
+          "nombre": "prioridades_distintas",
+          "ok": true,
+          "detalle": "[5, 3, 1]"
+        },
+        {
+          "nombre": "rs_volumen_quiral_3d",
+          "ok": true,
+          "detalle": "3d=S"
+        },
+        {
+          "nombre": "rs_cunas_2d",
+          "ok": true,
+          "detalle": "('S', 'atrás', 'antihorario')"
+        },
+        {
+          "nombre": "cunas_del_dibujo_coinciden",
+          "ok": true,
+          "detalle": "{3: ('BEGINWEDGE', 3)}"
+        },
+        {
+          "nombre": "distractor_incorrecto",
+          "ok": true,
+          "detalle": "R"
         }
       ],
       "descartado": false,
@@ -1165,6 +1185,11 @@
           "nombre": "distractores_incorrectos",
           "ok": true,
           "detalle": "{'identicas': False, 'enantiomeros': True, 'diastereomeros': False, 'constitucionales': False}"
+        },
+        {
+          "nombre": "explicacion_sin_smiles",
+          "ok": true,
+          "detalle": "A es R y B es S: misma conectividad y todos los estereocentros invertidos, por eso son enantiómeros (imágenes especulares no superponibles)."
         }
       ],
       "descartado": false,
@@ -1201,6 +1226,11 @@
           "nombre": "distractores_incorrectos",
           "ok": true,
           "detalle": "{'identicas': True, 'enantiomeros': False, 'diastereomeros': False, 'constitucionales': False}"
+        },
+        {
+          "nombre": "explicacion_sin_smiles",
+          "ok": true,
+          "detalle": "A es R y B es R: misma conectividad y los mismos descriptores, por eso son la misma molécula."
         }
       ],
       "descartado": false,
@@ -1237,6 +1267,11 @@
           "nombre": "distractores_incorrectos",
           "ok": true,
           "detalle": "{'identicas': False, 'enantiomeros': False, 'diastereomeros': True, 'constitucionales': False}"
+        },
+        {
+          "nombre": "explicacion_sin_smiles",
+          "ok": true,
+          "detalle": "A es (R,R) y B es (R,S): misma conectividad y solo 1 de 2 estereocentros invertido, por eso son diastereómeros (no son imágenes especulares)."
         }
       ],
       "descartado": false,
@@ -1273,6 +1308,11 @@
           "nombre": "distractores_incorrectos",
           "ok": true,
           "detalle": "{'identicas': False, 'enantiomeros': False, 'diastereomeros': True, 'constitucionales': False}"
+        },
+        {
+          "nombre": "explicacion_sin_smiles",
+          "ok": true,
+          "detalle": "A es (S,S) y B es (S,R): misma conectividad y solo 1 de 2 estereocentros invertido, por eso son diastereómeros (no son imágenes especulares)."
         }
       ],
       "descartado": false,
@@ -1309,6 +1349,11 @@
           "nombre": "distractores_incorrectos",
           "ok": true,
           "detalle": "{'identicas': False, 'enantiomeros': False, 'diastereomeros': False, 'constitucionales': True}"
+        },
+        {
+          "nombre": "explicacion_sin_smiles",
+          "ok": true,
+          "detalle": "A y B tienen la misma fórmula molecular, C₄H₁₀O, pero distinta conectividad entre sus átomos, por eso son isómeros constitucionales."
         }
       ],
       "descartado": false,
@@ -1345,6 +1390,11 @@
           "nombre": "distractores_incorrectos",
           "ok": true,
           "detalle": "{'identicas': False, 'enantiomeros': False, 'diastereomeros': True, 'constitucionales': False}"
+        },
+        {
+          "nombre": "explicacion_sin_smiles",
+          "ok": true,
+          "detalle": "A es E y B es Z: misma conectividad y distinta disposición de los sustituyentes en el doble enlace, por eso son diastereómeros."
         }
       ],
       "descartado": false,
@@ -1381,6 +1431,11 @@
           "nombre": "distractores_incorrectos",
           "ok": true,
           "detalle": "{'identicas': False, 'enantiomeros': True, 'diastereomeros': False, 'constitucionales': False}"
+        },
+        {
+          "nombre": "explicacion_sin_smiles",
+          "ok": true,
+          "detalle": "A es S y B es R: misma conectividad y todos los estereocentros invertidos, por eso son enantiómeros (imágenes especulares no superponibles)."
         }
       ],
       "descartado": false,
@@ -1417,6 +1472,11 @@
           "nombre": "distractores_incorrectos",
           "ok": true,
           "detalle": "{'identicas': False, 'enantiomeros': False, 'diastereomeros': True, 'constitucionales': False}"
+        },
+        {
+          "nombre": "explicacion_sin_smiles",
+          "ok": true,
+          "detalle": "A es (S,S) y B es (R,S): misma conectividad y solo 1 de 2 estereocentros invertido, por eso son diastereómeros (no son imágenes especulares)."
         }
       ],
       "descartado": false,
@@ -1453,6 +1513,11 @@
           "nombre": "distractores_incorrectos",
           "ok": true,
           "detalle": "{'identicas': False, 'enantiomeros': False, 'diastereomeros': False, 'constitucionales': True}"
+        },
+        {
+          "nombre": "explicacion_sin_smiles",
+          "ok": true,
+          "detalle": "A y B tienen la misma fórmula molecular, C₄H₈, pero distinta conectividad entre sus átomos, por eso son isómeros constitucionales."
         }
       ],
       "descartado": false,

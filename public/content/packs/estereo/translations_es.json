@@ -14,7 +14,7 @@
   {
     "key": "lesson.estereo_l_ez.intro",
     "locale": "es",
-    "value": "El doble enlace C=C no permite la rotación libre, así que los sustituyentes quedan fijos a uno u otro lado del plano del enlace. En cada carbono del doble enlace se elige el sustituyente de mayor prioridad según las reglas CIP. Si los dos grupos de mayor prioridad están del mismo lado, el isómero es Z; si están en lados opuestos, es E.",
+    "value": "El doble enlace C=C no permite la rotación libre, así que los sustituyentes quedan fijos a uno u otro lado del eje del doble enlace. En cada carbono del doble enlace se elige el sustituyente de mayor prioridad según las reglas CIP. Si los dos grupos de mayor prioridad están del mismo lado, el isómero es Z; si están en lados opuestos, es E.",
     "content_version": 1
   },
   {
@@ -372,294 +372,6 @@
     "content_version": 1
   },
   {
-    "key": "ex.estereo_e_rs_01.explain",
-    "locale": "es",
-    "value": "Prioridades CIP en el carbono resaltado: 1 = OH, 2 = C₂H₅, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia atrás; recorriendo 1→2→3 el giro es horario, por tanto la configuración es R.",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_01.opt.R",
-    "locale": "es",
-    "value": "R",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_01.opt.S",
-    "locale": "es",
-    "value": "S",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_01.prompt",
-    "locale": "es",
-    "value": "¿Qué configuración tiene el carbono resaltado?",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_02.explain",
-    "locale": "es",
-    "value": "Prioridades CIP en el carbono resaltado: 1 = OH, 2 = C₂H₅, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia adelante; recorriendo 1→2→3 el giro es horario, por tanto la configuración es S (como el de menor prioridad apunta hacia adelante, se invierte el giro observado).",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_02.opt.R",
-    "locale": "es",
-    "value": "R",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_02.opt.S",
-    "locale": "es",
-    "value": "S",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_02.prompt",
-    "locale": "es",
-    "value": "¿Qué configuración tiene el carbono resaltado?",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_03.explain",
-    "locale": "es",
-    "value": "Prioridades CIP en el carbono resaltado: 1 = Br, 2 = C₂H₅, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia atrás; recorriendo 1→2→3 el giro es horario, por tanto la configuración es R.",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_03.opt.R",
-    "locale": "es",
-    "value": "R",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_03.opt.S",
-    "locale": "es",
-    "value": "S",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_03.prompt",
-    "locale": "es",
-    "value": "¿Qué configuración tiene el carbono resaltado?",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_04.explain",
-    "locale": "es",
-    "value": "Prioridades CIP en el carbono resaltado: 1 = Br, 2 = C₂H₅, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia adelante; recorriendo 1→2→3 el giro es horario, por tanto la configuración es S (como el de menor prioridad apunta hacia adelante, se invierte el giro observado).",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_04.opt.R",
-    "locale": "es",
-    "value": "R",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_04.opt.S",
-    "locale": "es",
-    "value": "S",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_04.prompt",
-    "locale": "es",
-    "value": "¿Qué configuración tiene el carbono resaltado?",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_05.explain",
-    "locale": "es",
-    "value": "Prioridades CIP en el carbono resaltado: 1 = OH, 2 = COOH, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia adelante; recorriendo 1→2→3 el giro es horario, por tanto la configuración es S (como el de menor prioridad apunta hacia adelante, se invierte el giro observado).",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_05.opt.R",
-    "locale": "es",
-    "value": "R",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_05.opt.S",
-    "locale": "es",
-    "value": "S",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_05.prompt",
-    "locale": "es",
-    "value": "¿Qué configuración tiene el carbono resaltado?",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_06.explain",
-    "locale": "es",
-    "value": "Prioridades CIP en el carbono resaltado: 1 = OH, 2 = COOH, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia atrás; recorriendo 1→2→3 el giro es horario, por tanto la configuración es R.",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_06.opt.R",
-    "locale": "es",
-    "value": "R",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_06.opt.S",
-    "locale": "es",
-    "value": "S",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_06.prompt",
-    "locale": "es",
-    "value": "¿Qué configuración tiene el carbono resaltado?",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_07.explain",
-    "locale": "es",
-    "value": "Prioridades CIP en el carbono resaltado: 1 = NH₂, 2 = COOH, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia adelante; recorriendo 1→2→3 el giro es horario, por tanto la configuración es S (como el de menor prioridad apunta hacia adelante, se invierte el giro observado).",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_07.opt.R",
-    "locale": "es",
-    "value": "R",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_07.opt.S",
-    "locale": "es",
-    "value": "S",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_07.prompt",
-    "locale": "es",
-    "value": "¿Qué configuración tiene el carbono resaltado?",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_08.explain",
-    "locale": "es",
-    "value": "Prioridades CIP en el carbono resaltado: 1 = NH₂, 2 = COOH, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia atrás; recorriendo 1→2→3 el giro es horario, por tanto la configuración es R.",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_08.opt.R",
-    "locale": "es",
-    "value": "R",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_08.opt.S",
-    "locale": "es",
-    "value": "S",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_08.prompt",
-    "locale": "es",
-    "value": "¿Qué configuración tiene el carbono resaltado?",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_09.explain",
-    "locale": "es",
-    "value": "Prioridades CIP en el carbono resaltado: 1 = NH₂, 2 = C₂H₅, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia adelante; recorriendo 1→2→3 el giro es horario, por tanto la configuración es S (como el de menor prioridad apunta hacia adelante, se invierte el giro observado).",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_09.opt.R",
-    "locale": "es",
-    "value": "R",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_09.opt.S",
-    "locale": "es",
-    "value": "S",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_09.prompt",
-    "locale": "es",
-    "value": "¿Qué configuración tiene el carbono resaltado?",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_10.explain",
-    "locale": "es",
-    "value": "Prioridades CIP en el carbono resaltado: 1 = Cl, 2 = C₂H₅, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia atrás; recorriendo 1→2→3 el giro es horario, por tanto la configuración es R.",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_10.opt.R",
-    "locale": "es",
-    "value": "R",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_10.opt.S",
-    "locale": "es",
-    "value": "S",
-    "content_version": 1
-  },
-  {
-    "key": "ex.estereo_e_rs_10.prompt",
-    "locale": "es",
-    "value": "¿Qué configuración tiene el carbono resaltado?",
-    "content_version": 1
-  },
-  {
-    "key": "feedback.estereo_ft_centros.hint",
-    "locale": "es",
-    "value": "Revisa cada carbono sp³ y compara sus cuatro sustituyentes: basta que dos sean iguales para descartarlo.",
-    "content_version": 1
-  },
-  {
-    "key": "feedback.estereo_ft_centros.message",
-    "locale": "es",
-    "value": "Un carbono es estereocentro solo si sus cuatro sustituyentes son distintos entre sí (contando el H). Si dos coinciden, no lo es.",
-    "content_version": 1
-  },
-  {
-    "key": "feedback.estereo_ft_ez.hint",
-    "locale": "es",
-    "value": "Comprueba primero si algún carbono del doble enlace repite sustituyente; si no, compara los de mayor prioridad de cada lado.",
-    "content_version": 1
-  },
-  {
-    "key": "feedback.estereo_ft_ez.message",
-    "locale": "es",
-    "value": "Asigna la prioridad CIP a los dos sustituyentes de cada carbono del doble enlace. Si los de mayor prioridad están del mismo lado es Z; en lados opuestos, E. Si un carbono tiene dos sustituyentes idénticos, no hay isomería geométrica.",
-    "content_version": 1
-  },
-  {
-    "key": "feedback.estereo_ft_relaciones.hint",
-    "locale": "es",
-    "value": "Pregúntate en orden: ¿misma conectividad? ¿mismos centros? ¿están todos invertidos o solo algunos?",
-    "content_version": 1
-  },
-  {
-    "key": "feedback.estereo_ft_relaciones.message",
-    "locale": "es",
-    "value": "Compara el esqueleto: si difiere con la misma fórmula son isómeros constitucionales. Con el mismo esqueleto: iguales en todo, idénticas; todos los centros invertidos, enantiómeros; solo algunos, diastereómeros.",
-    "content_version": 1
-  },
-  {
-    "key": "feedback.estereo_ft_rs.hint",
-    "locale": "es",
-    "value": "Primero asigna las prioridades 1-4; después fíjate hacia dónde apunta el sustituyente 4 antes de leer el giro.",
-    "content_version": 1
-  },
-  {
-    "key": "feedback.estereo_ft_rs.message",
-    "locale": "es",
-    "value": "Ordena los sustituyentes por prioridad CIP (mayor número atómico primero), coloca el de menor prioridad hacia atrás y recorre 1→2→3: horario = R, antihorario = S. Si el de menor prioridad apunta hacia adelante, invierte el resultado.",
-    "content_version": 1
-  },
-  {
     "key": "ex.estereo_e_ez_01.explain",
     "locale": "es",
     "value": "Prioridades CIP en cada carbono del doble enlace: C2: 1 = CH₃, 2 = H; C3: 1 = CH₃, 2 = H. Los sustituyentes de mayor prioridad (CH₃ y CH₃) quedan en lados opuestos del doble enlace, por tanto la isomería es E.",
@@ -962,7 +674,7 @@
   {
     "key": "ex.estereo_e_relacion_01.explain",
     "locale": "es",
-    "value": "Comparación que decidió: mismo esqueleto (CCC(C)O) y B (CC[C@H](C)O) es la imagen especular de A (todos los centros invertidos: CC[C@H](C)O). Relación: enantiómeros.",
+    "value": "A es R y B es S: misma conectividad y todos los estereocentros invertidos, por eso son enantiómeros (imágenes especulares no superponibles).",
     "content_version": 1
   },
   {
@@ -998,7 +710,7 @@
   {
     "key": "ex.estereo_e_relacion_02.explain",
     "locale": "es",
-    "value": "Comparación que decidió: el SMILES canónico isomérico coincide (CC[C@@H](C)Br). Relación: idénticas.",
+    "value": "A es R y B es R: misma conectividad y los mismos descriptores, por eso son la misma molécula.",
     "content_version": 1
   },
   {
@@ -1034,7 +746,7 @@
   {
     "key": "ex.estereo_e_relacion_03.explain",
     "locale": "es",
-    "value": "Comparación que decidió: mismo esqueleto (CC(Br)C(C)Br), distinta estereoquímica (C[C@@H](Br)[C@@H](C)Br vs C[C@H](Br)[C@@H](C)Br) y B no es el espejo de A (C[C@H](Br)[C@H](C)Br). Relación: diastereómeros.",
+    "value": "A es (R,R) y B es (R,S): misma conectividad y solo 1 de 2 estereocentros invertido, por eso son diastereómeros (no son imágenes especulares).",
     "content_version": 1
   },
   {
@@ -1070,7 +782,7 @@
   {
     "key": "ex.estereo_e_relacion_04.explain",
     "locale": "es",
-    "value": "Comparación que decidió: mismo esqueleto (CC1CCCCC1C), distinta estereoquímica (C[C@H]1CCCC[C@@H]1C vs C[C@@H]1CCCC[C@@H]1C) y B no es el espejo de A (C[C@@H]1CCCC[C@H]1C). Relación: diastereómeros.",
+    "value": "A es (S,S) y B es (S,R): misma conectividad y solo 1 de 2 estereocentros invertido, por eso son diastereómeros (no son imágenes especulares).",
     "content_version": 1
   },
   {
@@ -1106,7 +818,7 @@
   {
     "key": "ex.estereo_e_relacion_05.explain",
     "locale": "es",
-    "value": "Comparación que decidió: misma fórmula (C4H10O) pero distinto esqueleto (CCC(C)O vs CCCCO). Relación: isómeros constitucionales.",
+    "value": "A y B tienen la misma fórmula molecular, C₄H₁₀O, pero distinta conectividad entre sus átomos, por eso son isómeros constitucionales.",
     "content_version": 1
   },
   {
@@ -1142,7 +854,7 @@
   {
     "key": "ex.estereo_e_relacion_06.explain",
     "locale": "es",
-    "value": "Comparación que decidió: mismo esqueleto (CC=CC), distinta estereoquímica (C/C=C/C vs C/C=C\\C) y B no es el espejo de A (C/C=C/C). Relación: diastereómeros.",
+    "value": "A es E y B es Z: misma conectividad y distinta disposición de los sustituyentes en el doble enlace, por eso son diastereómeros.",
     "content_version": 1
   },
   {
@@ -1178,7 +890,7 @@
   {
     "key": "ex.estereo_e_relacion_07.explain",
     "locale": "es",
-    "value": "Comparación que decidió: mismo esqueleto (CC(N)C(=O)O) y B (C[C@@H](N)C(=O)O) es la imagen especular de A (todos los centros invertidos: C[C@@H](N)C(=O)O). Relación: enantiómeros.",
+    "value": "A es S y B es R: misma conectividad y todos los estereocentros invertidos, por eso son enantiómeros (imágenes especulares no superponibles).",
     "content_version": 1
   },
   {
@@ -1214,7 +926,7 @@
   {
     "key": "ex.estereo_e_relacion_08.explain",
     "locale": "es",
-    "value": "Comparación que decidió: mismo esqueleto (CC1CCCCC1C), distinta estereoquímica (C[C@H]1CCCC[C@@H]1C vs C[C@@H]1CCCC[C@@H]1C) y B no es el espejo de A (C[C@@H]1CCCC[C@H]1C). Relación: diastereómeros.",
+    "value": "A es (S,S) y B es (R,S): misma conectividad y solo 1 de 2 estereocentros invertido, por eso son diastereómeros (no son imágenes especulares).",
     "content_version": 1
   },
   {
@@ -1250,7 +962,7 @@
   {
     "key": "ex.estereo_e_relacion_09.explain",
     "locale": "es",
-    "value": "Comparación que decidió: misma fórmula (C4H8) pero distinto esqueleto (CC=CC vs C=C(C)C). Relación: isómeros constitucionales.",
+    "value": "A y B tienen la misma fórmula molecular, C₄H₈, pero distinta conectividad entre sus átomos, por eso son isómeros constitucionales.",
     "content_version": 1
   },
   {
@@ -1281,6 +993,294 @@
     "key": "ex.estereo_e_relacion_09.prompt",
     "locale": "es",
     "value": "¿Qué relación hay entre las dos estructuras?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_01.explain",
+    "locale": "es",
+    "value": "Prioridades CIP en el carbono resaltado: 1 = OH, 2 = C₂H₅, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia atrás; recorriendo 1→2→3 el giro es horario, por tanto la configuración es R.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_01.opt.R",
+    "locale": "es",
+    "value": "R",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_01.opt.S",
+    "locale": "es",
+    "value": "S",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_01.prompt",
+    "locale": "es",
+    "value": "¿Qué configuración tiene el carbono resaltado?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_02.explain",
+    "locale": "es",
+    "value": "Prioridades CIP en el carbono resaltado: 1 = OH, 2 = C₂H₅, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia adelante; recorriendo 1→2→3 el giro es horario, por tanto la configuración es S (como el de menor prioridad apunta hacia adelante, se invierte el giro observado).",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_02.opt.R",
+    "locale": "es",
+    "value": "R",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_02.opt.S",
+    "locale": "es",
+    "value": "S",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_02.prompt",
+    "locale": "es",
+    "value": "¿Qué configuración tiene el carbono resaltado?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_03.explain",
+    "locale": "es",
+    "value": "Prioridades CIP en el carbono resaltado: 1 = Br, 2 = C₂H₅, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia atrás; recorriendo 1→2→3 el giro es horario, por tanto la configuración es R.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_03.opt.R",
+    "locale": "es",
+    "value": "R",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_03.opt.S",
+    "locale": "es",
+    "value": "S",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_03.prompt",
+    "locale": "es",
+    "value": "¿Qué configuración tiene el carbono resaltado?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_04.explain",
+    "locale": "es",
+    "value": "Prioridades CIP en el carbono resaltado: 1 = OH, 2 = COOH, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia adelante; recorriendo 1→2→3 el giro es horario, por tanto la configuración es S (como el de menor prioridad apunta hacia adelante, se invierte el giro observado).",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_04.opt.R",
+    "locale": "es",
+    "value": "R",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_04.opt.S",
+    "locale": "es",
+    "value": "S",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_04.prompt",
+    "locale": "es",
+    "value": "¿Qué configuración tiene el carbono resaltado?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_05.explain",
+    "locale": "es",
+    "value": "Prioridades CIP en el carbono resaltado: 1 = NH₂, 2 = COOH, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia atrás; recorriendo 1→2→3 el giro es horario, por tanto la configuración es R.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_05.opt.R",
+    "locale": "es",
+    "value": "R",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_05.opt.S",
+    "locale": "es",
+    "value": "S",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_05.prompt",
+    "locale": "es",
+    "value": "¿Qué configuración tiene el carbono resaltado?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_06.explain",
+    "locale": "es",
+    "value": "Prioridades CIP en el carbono resaltado: 1 = OH, 2 = C₃H₇, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia atrás; recorriendo 1→2→3 el giro es antihorario, por tanto la configuración es S.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_06.opt.R",
+    "locale": "es",
+    "value": "R",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_06.opt.S",
+    "locale": "es",
+    "value": "S",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_06.prompt",
+    "locale": "es",
+    "value": "¿Qué configuración tiene el carbono resaltado?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_07.explain",
+    "locale": "es",
+    "value": "Prioridades CIP en el carbono resaltado: 1 = OH, 2 = C₃H₇, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia adelante; recorriendo 1→2→3 el giro es antihorario, por tanto la configuración es R (como el de menor prioridad apunta hacia adelante, se invierte el giro observado).",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_07.opt.R",
+    "locale": "es",
+    "value": "R",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_07.opt.S",
+    "locale": "es",
+    "value": "S",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_07.prompt",
+    "locale": "es",
+    "value": "¿Qué configuración tiene el carbono resaltado?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_08.explain",
+    "locale": "es",
+    "value": "Prioridades CIP en el carbono resaltado: 1 = Cl, 2 = C₃H₇, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia atrás; recorriendo 1→2→3 el giro es antihorario, por tanto la configuración es S.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_08.opt.R",
+    "locale": "es",
+    "value": "R",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_08.opt.S",
+    "locale": "es",
+    "value": "S",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_08.prompt",
+    "locale": "es",
+    "value": "¿Qué configuración tiene el carbono resaltado?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_09.explain",
+    "locale": "es",
+    "value": "Prioridades CIP en el carbono resaltado: 1 = Cl, 2 = C₃H₇, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia adelante; recorriendo 1→2→3 el giro es antihorario, por tanto la configuración es R (como el de menor prioridad apunta hacia adelante, se invierte el giro observado).",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_09.opt.R",
+    "locale": "es",
+    "value": "R",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_09.opt.S",
+    "locale": "es",
+    "value": "S",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_09.prompt",
+    "locale": "es",
+    "value": "¿Qué configuración tiene el carbono resaltado?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_10.explain",
+    "locale": "es",
+    "value": "Prioridades CIP en el carbono resaltado: 1 = Br, 2 = C₃H₇, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia atrás; recorriendo 1→2→3 el giro es antihorario, por tanto la configuración es S.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_10.opt.R",
+    "locale": "es",
+    "value": "R",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_10.opt.S",
+    "locale": "es",
+    "value": "S",
+    "content_version": 1
+  },
+  {
+    "key": "ex.estereo_e_rs_10.prompt",
+    "locale": "es",
+    "value": "¿Qué configuración tiene el carbono resaltado?",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.estereo_ft_centros.hint",
+    "locale": "es",
+    "value": "Revisa cada carbono sp³ y compara sus cuatro sustituyentes: basta que dos sean iguales para descartarlo.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.estereo_ft_centros.message",
+    "locale": "es",
+    "value": "Un carbono es estereocentro solo si sus cuatro sustituyentes son distintos entre sí (contando el H). Si dos coinciden, no lo es.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.estereo_ft_ez.hint",
+    "locale": "es",
+    "value": "Comprueba primero si algún carbono del doble enlace repite sustituyente; si no, compara los de mayor prioridad de cada lado.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.estereo_ft_ez.message",
+    "locale": "es",
+    "value": "Asigna la prioridad CIP a los dos sustituyentes de cada carbono del doble enlace. Si los de mayor prioridad están del mismo lado es Z; en lados opuestos, E. Si un carbono tiene dos sustituyentes idénticos, no hay isomería geométrica.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.estereo_ft_relaciones.hint",
+    "locale": "es",
+    "value": "Pregúntate en orden: ¿misma conectividad? ¿mismos centros? ¿están todos invertidos o solo algunos?",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.estereo_ft_relaciones.message",
+    "locale": "es",
+    "value": "Compara el esqueleto: si difiere con la misma fórmula son isómeros constitucionales. Con el mismo esqueleto: iguales en todo, idénticas; todos los centros invertidos, enantiómeros; solo algunos, diastereómeros.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.estereo_ft_rs.hint",
+    "locale": "es",
+    "value": "Primero asigna las prioridades 1-4; después fíjate hacia dónde apunta el sustituyente 4 antes de leer el giro.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.estereo_ft_rs.message",
+    "locale": "es",
+    "value": "Ordena los sustituyentes por prioridad CIP (mayor número atómico primero), coloca el de menor prioridad hacia atrás y recorre 1→2→3: horario = R, antihorario = S. Si el de menor prioridad apunta hacia adelante, invierte el resultado.",
     "content_version": 1
   }
 ]

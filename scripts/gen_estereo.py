@@ -37,6 +37,11 @@ MOLECULES: list[tuple[str, str]] = [
     ("(R)-2-bromobutano", "C[C@@H](Br)CC"),
     ("(S)-2-bromobutano", "C[C@H](Br)CC"),
     ("(R)-2-clorobutano", "C[C@@H](Cl)CC"),
+    ("(S)-2-pentanol", "CCC[C@H](C)O"),
+    ("(R)-2-pentanol", "CCC[C@@H](C)O"),
+    ("(S)-2-cloropentano", "CCC[C@H](C)Cl"),
+    ("(R)-2-cloropentano", "CCC[C@@H](C)Cl"),
+    ("(S)-2-bromopentano", "CCC[C@H](C)Br"),
     ("(S)-2-clorobutano", "C[C@H](Cl)CC"),
     ("ácido (S)-láctico", "C[C@H](O)C(=O)O"),
     ("ácido (R)-láctico", "C[C@@H](O)C(=O)O"),
@@ -238,6 +243,42 @@ def mol_2d_wedged(smiles: str) -> Chem.Mol:
     AllChem.Compute2DCoords(m)
     Chem.WedgeMolBonds(m, m.GetConformer())
     return m
+
+
+def descriptors(smiles: str) -> list[str]:
+    """Descriptores CIP de la molécula (R/S por estereocentro y E/Z por doble enlace), calculados
+    con rdCIPLabeler, en el orden de los átomos. Sin estereoquímica asignada: lista vacía."""
+    m = labeled(smiles)
+    out = [cip_code(a) for a in m.GetAtoms() if cip_code(a) in ("R", "S")]
+    out += [cip_code(b) for b in m.GetBonds() if cip_code(b) in ("E", "Z")]
+    return [d for d in out if d]
+
+
+def describe(desc: list[str]) -> str:
+    return "(" + ",".join(desc) + ")" if len(desc) > 1 else (desc[0] if desc else "sin descriptores")
+
+
+def formula_sub(formula: str) -> str:
+    return formula.translate(str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉"))
+
+
+def relation_text(answer: str | None, da: list[str], db: list[str], formula: str) -> str:
+    """Explicación en palabras a partir de los descriptores calculados (nunca SMILES)."""
+    a, b = describe(da), describe(db)
+    if answer == "identicas":
+        return f"A es {a} y B es {b}: misma conectividad y los mismos descriptores, por eso son la misma molécula."
+    if answer == "enantiomeros":
+        return f"A es {a} y B es {b}: misma conectividad y todos los estereocentros invertidos, por eso son enantiómeros (imágenes especulares no superponibles)."
+    if answer == "diastereomeros":
+        if any(d in ("E", "Z") for d in da + db) and not any(d in ("R", "S") for d in da + db):
+            return f"A es {a} y B es {b}: misma conectividad y distinta disposición de los sustituyentes en el doble enlace, por eso son diastereómeros."
+        inverted = sum(1 for x, y in zip(sorted(da), sorted(db)) if x != y)
+        total = max(len(da), len(db))
+        return (f"A es {a} y B es {b}: misma conectividad y solo {inverted} de {total} estereocentros invertido{'s' if inverted != 1 else ''}, "
+                "por eso son diastereómeros (no son imágenes especulares).")
+    if answer == "constitucionales":
+        return f"A y B tienen la misma fórmula molecular, {formula_sub(formula)}, pero distinta conectividad entre sus átomos, por eso son isómeros constitucionales."
+    return "No son isómeros: sus fórmulas moleculares son distintas."
 
 
 # ------------------------------------------------------------ ejercicios
@@ -475,6 +516,7 @@ class Gen:
     # (e) ----------------------------------------------------------------
     def relacion(self, sa: str, sb: str):
         ma, mb = Chem.MolFromSmiles(sa), Chem.MolFromSmiles(sb)
+        desc_a, desc_b = descriptors(sa), descriptors(sb)
         iso_a, iso_b = canon(ma), canon(mb)
         flat_a, flat_b = canon(ma, iso=False), canon(mb, iso=False)
         fa, fb = rdMolDescriptors.CalcMolFormula(ma), rdMolDescriptors.CalcMolFormula(mb)
@@ -507,7 +549,8 @@ class Gen:
                    "constitucionales": flat_a != flat_b and fa == fb}
             checks.append({"nombre": "distractores_incorrectos", "ok": all(not v for k, v in alt.items() if k != answer) and alt[answer],
                            "detalle": str(alt)})
-        expl = f"Comparación que decidió: {why}. Relación: {REL_LABELS.get(answer or '', '?').lower()}."
+        expl = relation_text(answer, desc_a, desc_b, fa)
+        checks.append({"nombre": "explicacion_sin_smiles", "ok": "@" not in expl and "[" not in expl, "detalle": expl})
         self.add("estereo_relacion", sa, "¿Qué relación hay entre las dos estructuras?",
                  list(REL_LABELS.items()), answer or "?", expl, checks, smiles_b=sb)
 
@@ -564,8 +607,11 @@ def main() -> int:
                "treonina"]:
         g.centros(byname[nm])
     # (c) R/S
-    for nm in ["(R)-2-butanol", "(S)-2-butanol", "(R)-2-bromobutano", "(S)-2-bromobutano", "ácido (S)-láctico",
-               "ácido (R)-láctico", "(S)-alanina", "(R)-alanina", "(S)-2-aminobutano", "(R)-2-clorobutano"]:
+    # Mitad con giro horario y mitad antihorario en el dibujo (RDKit fija la orientación 2D por
+    # esqueleto: los de 4 carbonos salen horarios y los de 5 carbonos antihorarios), con el H
+    # hacia atrás y hacia adelante en ambos grupos, para que no baste "cuña = R, discontinua = S".
+    for nm in ["(R)-2-butanol", "(S)-2-butanol", "(R)-2-bromobutano", "ácido (S)-láctico", "(R)-alanina",
+               "(S)-2-pentanol", "(R)-2-pentanol", "(S)-2-cloropentano", "(R)-2-cloropentano", "(S)-2-bromopentano"]:
         g.rs(byname[nm])
     # (d) E/Z
     for nm in ["(E)-2-buteno", "(Z)-2-buteno", "(E)-2-penteno", "(Z)-2-penteno", "(E)-1-cloropropeno",
