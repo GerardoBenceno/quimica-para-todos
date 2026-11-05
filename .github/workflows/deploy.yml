@@ -25,6 +25,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Optimizar arte (arte/originales -> assets/images)
+        run: npm run art
       - name: Validar contenido
         run: npm run validate
       - name: Tests
