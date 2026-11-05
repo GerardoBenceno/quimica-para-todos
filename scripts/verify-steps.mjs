@@ -138,6 +138,10 @@ export async function game({ newPage, shot, URL }) {
   await page.getByRole('link', { name: 'Perfil' }).first().click()
   await expectVisible(page, 'Experiencia total')
   await noHorizontalScroll(page, 'perfil')
+  // Sonido al responder: apagado por defecto; encendido, el repaso siguiente lo toca.
+  const sound = page.getByRole('checkbox', { name: 'Sonido al responder' })
+  if (await sound.isChecked()) throw new Error('perfil: el sonido debería estar apagado por defecto')
+  await sound.check()
   await shot(page, 'juego-03-perfil')
   await page.getByRole('link', { name: 'Repasar' }).first().click()
   await page.getByRole('button', { name: 'Empezar repaso' }).waitFor()

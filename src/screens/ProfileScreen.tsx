@@ -7,6 +7,7 @@ import { useProgressStore, useUserState } from '../stores/progressStore'
 import { useProgressView, useStreak } from '../stores/selectors'
 import { canVibrate, usePrefsStore } from '../stores/prefsStore'
 import { promptInstall, usePwaStore } from '../stores/pwaStore'
+import { canPlaySound } from '../services/sound'
 import { backupFileName, makeBackup, readBackup, type BackupError } from '../core/game/backup'
 import { applyTheme } from '../services/theme'
 import { useT } from '../services/i18nHooks'
@@ -137,6 +138,16 @@ export function ProfileScreen() {
               <span id="vibration">{t('profile.vibration')}</span>
             </label>
             <p className="muted t-14">{t('profile.vibration_help')}</p>
+          </section>
+        )}
+
+        {canPlaySound() && (
+          <section className="section" aria-labelledby="sound">
+            <label className="radio-row" htmlFor="sound-toggle">
+              <input id="sound-toggle" type="checkbox" checked={prefs.sound} onChange={(e) => setPrefs({ sound: e.target.checked })} />
+              <span id="sound">{t('profile.sound')}</span>
+            </label>
+            <p className="muted t-14">{t('profile.sound_help')}</p>
           </section>
         )}
 

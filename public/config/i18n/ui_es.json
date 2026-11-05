@@ -179,6 +179,8 @@
   "profile.settings": "Ajustes",
   "profile.vibration": "Vibrar al responder",
   "profile.vibration_help": "Un toque corto al acertar y dos al fallar. Solo en celulares que lo permiten.",
+  "profile.sound": "Sonido al responder",
+  "profile.sound_help": "Un tono corto y agudo al acertar y otro grave al fallar, a volumen bajo. No suena con la pestaña oculta.",
   "profile.backup_title": "Respaldo de tu avance",
   "profile.backup_lead": "Descarga un archivo con tu progreso para guardarlo o pasarlo a otro dispositivo, e impórtalo ahí.",
   "profile.export": "Descargar respaldo",
