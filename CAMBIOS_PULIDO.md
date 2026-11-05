@@ -32,6 +32,8 @@ Qué cambió respecto al cierre del hito 6, qué quedó pendiente y por qué. El
 
 19. **Escritorio a dos columnas en la ruta del mundo**: desde 960 px la cadena va a la izquierda y la lección en curso (intro, texto y botón de empezar) en un panel fijo a la derecha; por debajo de 960 px el diseño móvil no cambia.
 
+20. **Accesibilidad fina**: las regiones `role="status"` de perfil, recompensas y repaso existen siempre (los lectores de pantalla no anuncian una región que aparece ya con texto), la plantilla de huecos usa `role="group"` en lugar de un párrafo con nombre, y el salto del diagnóstico sin ítems ocurre en un efecto, no durante el render.
+
 ## Para que lo corrija el autor
 
 - `seed/assets.json`: el campo `license` de los 13 assets sigue en `"propio-por-generar"`, pero el arte ya existe. No se cambió porque el seed es del autor; conviene poner la licencia real del arte. Lo mismo para `width` y `height`, que están en `null` (los originales miden 1254 × 1254 y las versiones servidas 512 × 512).

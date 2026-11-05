@@ -35,6 +35,12 @@ export function DiagnosticScreen() {
   }
   const firstLessonOf = (worldId: string | null) => (worldId ? nextLesson(b, view, worldId) : null) ?? nextLesson(b, view)
 
+  // Sin ítems activos: saltar fuera del render (el efecto va antes de cualquier return).
+  useEffect(() => {
+    if (items.length === 0) skip()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [items.length])
+
   const skip = () => {
     saveDiagnostic(items, answers.current, null)
     const lesson = firstLessonOf(firstOpenWorld(b, view))
@@ -89,10 +95,7 @@ export function DiagnosticScreen() {
     )
   }
 
-  if (items.length === 0) {
-    skip()
-    return null
-  }
+  if (items.length === 0) return null
 
   return (
     <ExercisePlayer

@@ -235,11 +235,9 @@ export function ProfileScreen() {
           )}
         </section>
 
-        {message && (
-          <p role="status" className={`panel status-box ${message.error ? 'status-error' : ''}`}>
-            {message.text}
-          </p>
-        )}
+        <p role="status" className={message ? `panel status-box ${message.error ? 'status-error' : ''}` : 'visually-hidden'}>
+          {message?.text ?? ''}
+        </p>
 
         <Link className="link" to={routes.about()}>
           {t('profile.about_link')}

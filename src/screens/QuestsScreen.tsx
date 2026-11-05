@@ -96,11 +96,9 @@ export function QuestsScreen() {
             </p>
           </section>
         )}
-        {msg && (
-          <p role="status" className="panel status-box">
-            {msg}
-          </p>
-        )}
+        <p role="status" className={msg ? 'panel status-box' : 'visually-hidden'}>
+          {msg ?? ''}
+        </p>
         <Link className="link" to={routes.worlds()}>
           {t('quests.back_learn')}
         </Link>

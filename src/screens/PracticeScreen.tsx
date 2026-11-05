@@ -52,11 +52,9 @@ export function PracticeScreen() {
     <AppShell>
       <main id="main" className="narrow page">
         <h1 className="t-28">{t('practice.title')}</h1>
-        {done && (
-          <p role="status" className="panel status-box">
-            {t('practice.done', { n: done.correct, m: done.total })}
-          </p>
-        )}
+        <p role="status" className={done ? 'panel status-box' : 'visually-hidden'}>
+          {done ? t('practice.done', { n: done.correct, m: done.total }) : ''}
+        </p>
         {queue.length === 0 ? (
           <div className="empty">
             <Carbo expression="idle" size={96} />
