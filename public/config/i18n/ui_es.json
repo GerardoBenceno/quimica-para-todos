@@ -156,5 +156,10 @@
   "profile.reset_confirm": "¿Borrar todo tu avance en este dispositivo? No se puede deshacer.",
   "profile.reset_yes": "Sí, borrar",
   "profile.reset_no": "Cancelar",
-  "profile.reset_done": "Progreso reiniciado."
+  "profile.reset_done": "Progreso reiniciado.",
+  "draw.loading": "Cargando el editor de estructuras…",
+  "draw.editor_failed": "No se pudo cargar el editor de estructuras. Revisa tu conexión y vuelve a intentarlo.",
+  "draw.editor_label": "Editor de estructuras",
+  "draw.help": "Dibuja la cadena con la herramienta de enlace sencillo; los hidrógenos no hacen falta.",
+  "choose.option_label": "Estructura {l}"
 }

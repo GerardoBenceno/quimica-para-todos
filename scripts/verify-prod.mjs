@@ -57,7 +57,7 @@ const step = async (name, fn) => {
     results.push(`ok   ${name}`)
   } catch (e) {
     results.push(`FAIL ${name}: ${e.message.split('\n')[0]}`)
-    if (shots) for (const [k, p] of openPages.entries()) await p.screenshot({ path: `${shots}/fallo-${name}-${k}.png`, fullPage: true }).catch(() => {})
+    if (shots) for (const [k, p] of openPages.entries()) if (!p.isClosed()) await p.screenshot({ path: `${shots}/fallo-${name}-${k}.png`, fullPage: true }).catch(() => {})
     problems.push(`${name}: ${e.message.split('\n')[0]}`)
   }
 }

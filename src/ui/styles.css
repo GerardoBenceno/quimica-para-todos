@@ -1257,3 +1257,52 @@ a.vertex:hover {
   flex-wrap: wrap;
   gap: 12px;
 }
+
+/* --- Editor de estructuras -------------------------------------------- */
+.draw {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.draw p {
+  margin: 0;
+}
+.ketcher-host {
+  position: relative;
+  height: min(480px, 62dvh);
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+.ketcher-host > div {
+  height: 100%;
+}
+.draw-checked .ketcher-host {
+  pointer-events: none;
+  opacity: 0.85;
+}
+.editor-loading {
+  height: min(480px, 62dvh);
+  border: 1.5px dashed var(--color-line);
+  border-radius: 8px;
+}
+.structure-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.structure-option {
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-height: 120px;
+  gap: 8px;
+}
+.structure-option .mol {
+  justify-content: center;
+  align-self: center;
+}
+.structure-option .option-mark {
+  align-self: flex-end;
+}

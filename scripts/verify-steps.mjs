@@ -134,3 +134,83 @@ export async function game({ newPage, shot, URL }) {
   void coinsBefore
   await ctx.close()
 }
+
+/** Marca como completadas las lecciones dadas en el estado local y recarga. */
+export async function completeLessons(page, ids) {
+  await page.evaluate((ids) => {
+    const key = Object.keys(localStorage).find((k) => k.startsWith('quimica_app:state:'))
+    const s = JSON.parse(localStorage.getItem(key))
+    for (const id of ids) {
+      s.progress[`lesson:${id}`] = { id: `x:${id}`, user_id: s.user.id, scope_type: 'lesson', scope_id: id, status: 'completed', progress: 1, stars: 0, best_accuracy: 1, updated_at: new Date().toISOString() }
+    }
+    localStorage.setItem(key, JSON.stringify(s))
+  }, ids)
+  await page.reload()
+}
+
+const BEFORE_NUMERACION = ['l_carbono_enlaces', 'l_organico', 'l_sp3', 'l_sp2', 'l_sp', 'l_tipos_carbono', 'l_grupos_intro', 'l_grupos_oxigenados', 'l_grupos_nitrogenados', 'l_alcanos_lineales', 'l_sustituyentes']
+
+/** Avanza en la lección hasta que aparezca un ejercicio que cumpla `until`. */
+async function advanceUntil(page, until) {
+  for (let i = 0; i < 20; i++) {
+    await page.getByRole('button', { name: 'Comprobar' }).waitFor({ timeout: 15000 })
+    if (await until()) return
+    await answerVisible(page)
+    await page.getByRole('button', { name: 'Comprobar' }).click()
+    await page.getByRole('button', { name: 'Continuar', exact: true }).click()
+  }
+  throw new Error('no apareció el ejercicio buscado')
+}
+
+export async function draw({ newPage, shot, URL }) {
+  // Escritorio: se dibuja con Ketcher y se califica con RDKit.js.
+  const { ctx, page } = await newPage({ width: 1280, height: 900 })
+  await firstSession(page, URL)
+  await completeLessons(page, BEFORE_NUMERACION)
+  await page.goto(`${URL}#/leccion/l_numeracion`)
+  await page.getByRole('button', { name: 'Empezar lección' }).click()
+  await advanceUntil(page, () => page.getByText('Dibuja la estructura').first().isVisible())
+  await page.waitForFunction(() => !!window.ketcher, null, { timeout: 60000 })
+  await page.waitForTimeout(1000)
+  await shot(page, 'dibujo-01-editor-escritorio')
+  // Primero una estructura incorrecta (pentano), luego seguimos con la correcta en el siguiente.
+  await page.evaluate(() => window.ketcher.setMolecule('CCCCC'))
+  await page.getByRole('button', { name: 'Comprobar' }).waitFor()
+  await page.waitForFunction(() => !document.querySelector('.player-bottom button')?.disabled, null, { timeout: 15000 })
+  await page.getByRole('button', { name: 'Comprobar' }).click()
+  await expectVisible(page, 'No es correcto', 60000)
+  await shot(page, 'dibujo-02-incorrecto')
+  await page.getByRole('button', { name: 'Continuar', exact: true }).click()
+  // Segundo draw_structure (2,3-dimetilbutano): se dibuja con cuña e hidrógenos explícitos.
+  await page.getByText('Dibuja la estructura').first().waitFor()
+  await page.waitForFunction(() => !!window.ketcher)
+  await page.waitForTimeout(800)
+  await page.evaluate(() => window.ketcher.setMolecule('[H]C([H])([H])C(C)C(C)C'))
+  await page.waitForFunction(() => !document.querySelector('.player-bottom button')?.disabled, null, { timeout: 15000 })
+  await page.getByRole('button', { name: 'Comprobar' }).click()
+  await expectVisible(page, 'Correcto', 60000)
+  await shot(page, 'dibujo-03-correcto')
+  // Prueba de usabilidad del editor a 360 px (la decisión está en DECISIONES.md).
+  await page.getByRole('button', { name: 'Continuar', exact: true }).click()
+  await page.goto(`${URL}#/leccion/l_ramificados`)
+  await page.getByRole('button', { name: 'Empezar lección' }).click()
+  await advanceUntil(page, () => page.getByText('Dibuja la estructura').first().isVisible())
+  await page.setViewportSize({ width: 360, height: 740 })
+  await page.waitForTimeout(1500)
+  await shot(page, 'dibujo-05-editor-360')
+  await ctx.close()
+
+  // 360 px: el editor y la decisión de usabilidad.
+  const m = await newPage({ width: 360, height: 740 })
+  await firstSession(m.page, URL)
+  await completeLessons(m.page, BEFORE_NUMERACION)
+  await m.page.goto(`${URL}#/leccion/l_numeracion`)
+  await m.page.getByRole('button', { name: 'Empezar lección' }).click()
+  // En pantallas angostas cada draw_structure se sustituye por su choose_structure.
+  await advanceUntil(m.page, () => m.page.getByText('Elige la estructura').first().isVisible())
+  await shot(m.page, 'dibujo-04-elige-360')
+  await playLesson(m.page)
+  await expectVisible(m.page, 'Lección completada')
+  await noHorizontalScroll(m.page, '360 resultado')
+  await m.ctx.close()
+}

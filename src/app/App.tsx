@@ -1,4 +1,4 @@
-import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { HashRouter, Navigate, Route, Routes, useParams } from 'react-router-dom'
 import { WelcomeScreen } from '../screens/WelcomeScreen'
 import { DiagnosticScreen } from '../screens/DiagnosticScreen'
 import { WorldMapScreen } from '../screens/WorldMapScreen'
@@ -20,6 +20,12 @@ function Home() {
   return <Navigate to={routes.worlds()} replace />
 }
 
+/** Una lección nueva monta una pantalla nueva (no hereda la sesión de otra). */
+function LessonRoute() {
+  const { lessonId } = useParams()
+  return <LessonScreen key={lessonId} />
+}
+
 export function AppRoutes() {
   return (
     <Routes>
@@ -28,7 +34,7 @@ export function AppRoutes() {
       <Route path="/diagnostico" element={<DiagnosticScreen />} />
       <Route path="/aprender" element={<WorldMapScreen />} />
       <Route path="/mundo/:worldId" element={<WorldPathScreen />} />
-      <Route path="/leccion/:lessonId" element={<LessonScreen />} />
+      <Route path="/leccion/:lessonId" element={<LessonRoute />} />
       <Route path="/resultado/:attemptId" element={<ResultScreen />} />
       <Route path="/repasar" element={<PracticeScreen />} />
       <Route path="/perfil" element={<ProfileScreen />} />

@@ -22,7 +22,9 @@
     ],
     "web": [
       "access.json",
-      "themes.json"
+      "exercises.json",
+      "themes.json",
+      "translations_es.json"
     ]
   }
 }

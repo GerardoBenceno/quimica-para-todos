@@ -56,3 +56,49 @@ describe('ExercisePlayer renderiza cada tipo del seed', () => {
     expect(screen.getByText(/pasó a tu lista para repasar/)).toBeInTheDocument()
   })
 })
+
+describe('tipos web', () => {
+  it('draw_structure: usa el editor registrado y califica con el verificador', async () => {
+    const { bundle: bb } = setupApp({
+      editor: {
+        id: 'falso',
+        load: async () =>
+          function FakeEditor({ onChange }: { onChange(s: string): void }) {
+            return (
+              <button type="button" onClick={() => onChange('CC[C@@H](C)C')}>
+                dibujar
+              </button>
+            )
+          },
+      },
+      matcher: { compare: async (a: string, b: string) => (a.replace(/[@[\]H]/g, '') === b.replace(/[()]/g, '') ? 'match' : 'mismatch') },
+    })
+    const e = bb.exercises.find((x) => x.type === 'draw_structure')!
+    const onRecord = vi.fn()
+    render(
+      <Router>
+        <ExercisePlayer exercises={[e]} attemptId="a" mode="lesson" onRecord={onRecord} onFinish={vi.fn()} onClose={vi.fn()} />
+      </Router>,
+    )
+    expect(screen.getByRole('button', { name: 'Comprobar' })).toBeDisabled()
+    await userEvent.click(await screen.findByRole('button', { name: 'dibujar' }))
+    await userEvent.click(screen.getByRole('button', { name: 'Comprobar' }))
+    expect(onRecord).toHaveBeenCalled()
+  })
+
+  it('choose_structure: muestra estructuras como opciones y valida por value', async () => {
+    const { bundle: bb } = setupApp()
+    const e = bb.exercises.find((x) => x.type === 'choose_structure')!
+    const onRecord = vi.fn()
+    render(
+      <Router>
+        <ExercisePlayer exercises={[e]} attemptId="a" mode="lesson" onRecord={onRecord} onFinish={vi.fn()} onClose={vi.fn()} />
+      </Router>,
+    )
+    const radios = screen.getAllByRole('radio')
+    expect(radios.length).toBe(e.payload.options!.length)
+    await userEvent.click(radios[0])
+    await userEvent.click(screen.getByRole('button', { name: 'Comprobar' }))
+    expect(onRecord.mock.calls[0][2]).toMatch(/correct|incorrect/)
+  })
+})

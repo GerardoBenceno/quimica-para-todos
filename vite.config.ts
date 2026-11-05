@@ -31,10 +31,26 @@ function brandHtml(): Plugin {
 }
 
 // Motores pesados: fuera del precache, en caché de tiempo de ejecución.
-const ENGINE_GLOBS = ['**/assets/supabase-*.js', '**/assets/Provider*.js', '**/*.wasm', '**/vendor/**', '**/assets/ketcher-*.js', '**/assets/ketcher-*.css', '**/assets/engine-*.js', '**/assets/3dmol-*.js', '**/assets/rdkit-*.js', '**/assets/indigo-*.js']
+const ENGINE_GLOBS = ['**/assets/ketcher-*', '**/assets/indigoWorker-*', '**/assets/supabase-*.js', '**/assets/Provider*.js', '**/*.wasm', '**/vendor/**', '**/assets/ketcher-*.js', '**/assets/ketcher-*.css', '**/assets/engine-*.js', '**/assets/3dmol-*.js', '**/assets/rdkit-*.js', '**/assets/indigo-*.js']
 
 export default defineConfig({
   base,
+  build: {
+    // El editor y sus motores van en chunks con nombre fijo para excluirlos
+    // del precache (se cachean al primer uso) sin subir el límite de 2 MiB.
+    chunkSizeWarningLimit: 2048,
+    rollupOptions: {
+      output: {
+        chunkFileNames: (chunk) =>
+          chunk.moduleIds.some((id) => /node_modules[\\/](ketcher-|indigo-)|adapters[\\/]ketcher/.test(id))
+            ? 'assets/ketcher-[hash].js'
+            : 'assets/[name]-[hash].js',
+        assetFileNames: (asset) =>
+          (asset.names ?? []).some((n) => /ketcher|indigo/i.test(n)) ? 'assets/ketcher-[hash][extname]' : 'assets/[name]-[hash][extname]',
+      },
+    },
+  },
+  worker: { format: 'es' },
   define: {
     // Ketcher y sus dependencias esperan "global" de Node.
     global: 'globalThis',
@@ -70,7 +86,7 @@ export default defineConfig({
         runtimeCaching: [
           {
             urlPattern: ({ url }) =>
-              /\.wasm$/.test(url.pathname) || /\/vendor\//.test(url.pathname) || /\/assets\/(ketcher|engine|3dmol|rdkit|indigo)-/.test(url.pathname),
+              /\.wasm$/.test(url.pathname) || /\/vendor\//.test(url.pathname) || /\/assets\/(ketcher|engine|3dmol|rdkit|indigo|indigoWorker)-/.test(url.pathname),
             handler: 'CacheFirst',
             options: { cacheName: 'motores-quimicos', expiration: { maxEntries: 60 } },
           },

@@ -77,4 +77,30 @@ Se listan para que el autor decida; la app las muestra tal como están.
 
 ## Ejercicios derivados o modificados
 
-Se completa en el hito 4 (draw_structure, choose_structure) y en el hito 5 (view_3d).
+Todos viven en `public/content/packs/web/` y los genera `npx tsx scripts/derive-web-pack.ts` desde el seed; no se editan a mano. Ningún ejercicio del seed se modificó. Reglas:
+
+- **draw_structure**: solo de ejercicios de nomenclatura del seed que ya emparejan el nombre correcto con `payload.structure_smiles` (5). No se derivan de grupos funcionales. Los de `e_metano`, `e_propano` y `e_butano` no se derivaron porque su estructura está en el campo `smiles` y en una fórmula escrita, no en `payload.structure_smiles`. La respuesta es el mismo SMILES del seed; la explicación y el feedback son los del ejercicio de origen. El único texto nuevo es el enunciado "Dibuja la estructura: <nombre>" y, para `e_complete_etilmetilhexano`, el nombre completo armado con la plantilla y las piezas correctas del banco ("3-etil-2-metilhexano").
+- **choose_structure**: variante de cada draw_structure para pantallas de menos de 600 px. Los distractores son otros pares nombre-estructura del seed, los de número de átomos más parecido; nunca se dibuja un nombre inválido (3-metilbutano, 3-etilbutano no tienen estructura).
+- **view_3d**: ejercicios de hibridación del seed con estructura (metano, eteno, etino); misma pregunta, opciones y respuesta, con el visor 3D en lugar de la figura. Se excluyen los que preguntan cuál molécula es (e_sp3_molecula, e_sp2_molecula, e_sp_molecula), porque mostrar la molécula revelaría la respuesta.
+
+| Id | Tipo | Origen | Nombre / enunciado | SMILES | Nota |
+|---|---|---|---|---|---|
+| web_draw_e_2metilbutano | draw_structure | e_2metilbutano | 2-metilbutano | `CCC(C)C` | Mismo par nombre-estructura del seed; explicación y feedback del ejercicio de origen. |
+| web_choose_e_2metilbutano | choose_structure | e_2metilbutano | 2-metilbutano | `CCC(C)C` | Variante angosta de web_draw_e_2metilbutano. Distractores (pares del seed): 2,2-dimetilbutano `CCC(C)(C)C`, 2,3-dimetilbutano `CC(C)C(C)C`, 2-metilpentano `CCCC(C)C`. |
+| web_draw_e_23dimetilbutano | draw_structure | e_23dimetilbutano | 2,3-dimetilbutano | `CC(C)C(C)C` | Mismo par nombre-estructura del seed; explicación y feedback del ejercicio de origen. |
+| web_choose_e_23dimetilbutano | choose_structure | e_23dimetilbutano | 2,3-dimetilbutano | `CC(C)C(C)C` | Variante angosta de web_draw_e_23dimetilbutano. Distractores (pares del seed): 2,2-dimetilbutano `CCC(C)(C)C`, 2-metilpentano `CCCC(C)C`, 2-metilbutano `CCC(C)C`. |
+| web_draw_e_complete_etilmetilhexano | draw_structure | e_complete_etilmetilhexano | 3-etil-2-metilhexano | `CC(C)C(CC)CCC` | Mismo par nombre-estructura del seed; explicación y feedback del ejercicio de origen. |
+| web_choose_e_complete_etilmetilhexano | choose_structure | e_complete_etilmetilhexano | 3-etil-2-metilhexano | `CC(C)C(CC)CCC` | Variante angosta de web_draw_e_complete_etilmetilhexano. Distractores (pares del seed): 2,2-dimetilbutano `CCC(C)(C)C`, 2,3-dimetilbutano `CC(C)C(C)C`, 2-metilpentano `CCCC(C)C`. |
+| web_draw_e_22dimetilbutano | draw_structure | e_22dimetilbutano | 2,2-dimetilbutano | `CCC(C)(C)C` | Mismo par nombre-estructura del seed; explicación y feedback del ejercicio de origen. |
+| web_choose_e_22dimetilbutano | choose_structure | e_22dimetilbutano | 2,2-dimetilbutano | `CCC(C)(C)C` | Variante angosta de web_draw_e_22dimetilbutano. Distractores (pares del seed): 2,3-dimetilbutano `CC(C)C(C)C`, 2-metilpentano `CCCC(C)C`, 2-metilbutano `CCC(C)C`. |
+| web_draw_e_2metilpentano | draw_structure | e_2metilpentano | 2-metilpentano | `CCCC(C)C` | Mismo par nombre-estructura del seed; explicación y feedback del ejercicio de origen. |
+| web_choose_e_2metilpentano | choose_structure | e_2metilpentano | 2-metilpentano | `CCCC(C)C` | Variante angosta de web_draw_e_2metilpentano. Distractores (pares del seed): 2,2-dimetilbutano `CCC(C)(C)C`, 2,3-dimetilbutano `CC(C)C(C)C`, 2-metilbutano `CCC(C)C`. |
+| web_v3d_e_sp3_geom | view_3d | e_sp3_geom | ¿Qué geometría tiene un carbono con hibridación sp³? | `C` | Mismo enunciado, opciones y respuesta; agrega el visor 3D rotable. |
+| web_v3d_e_sp3_sigma | view_3d | e_sp3_sigma | Un carbono sp³ forma 4 enlaces sigma y ningún enlace pi. | `C` | Mismo enunciado, opciones y respuesta; agrega el visor 3D rotable. |
+| web_v3d_e_sp3_molecula | view_3d | e_sp3_molecula | ¿Cuál molécula tiene todos sus carbonos con hibridación sp³? | `C` | No derivado: la respuesta es la propia molécula y el visor la revelaría. |
+| web_v3d_e_sp2_geom | view_3d | e_sp2_geom | ¿Qué geometría tiene un carbono sp²? | `C=C` | Mismo enunciado, opciones y respuesta; agrega el visor 3D rotable. |
+| web_v3d_e_sp2_enlaces | view_3d | e_sp2_enlaces | Un carbono sp² forma 3 enlaces sigma y 1 enlace pi. | `C=C` | Mismo enunciado, opciones y respuesta; agrega el visor 3D rotable. |
+| web_v3d_e_sp2_molecula | view_3d | e_sp2_molecula | ¿Cuál molécula contiene carbonos con hibridación sp²? | `C=C` | No derivado: la respuesta es la propia molécula y el visor la revelaría. |
+| web_v3d_e_sp_geom | view_3d | e_sp_geom | ¿Qué geometría tiene un carbono sp? | `C#C` | Mismo enunciado, opciones y respuesta; agrega el visor 3D rotable. |
+| web_v3d_e_sp_enlaces | view_3d | e_sp_enlaces | Un carbono sp forma 2 enlaces sigma y 2 enlaces pi. | `C#C` | Mismo enunciado, opciones y respuesta; agrega el visor 3D rotable. |
+| web_v3d_e_sp_molecula | view_3d | e_sp_molecula | ¿Cuál molécula contiene carbonos con hibridación sp? | `C#C` | No derivado: la respuesta es la propia molécula y el visor la revelaría. |
