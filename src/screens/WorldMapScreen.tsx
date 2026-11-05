@@ -22,8 +22,9 @@ export function WorldMapScreen() {
   const view = useProgressView()
   const navigate = useNavigate()
   const worlds = activeWorlds(b)
+  const ipStatus = s.in_progress ? view.lessons[s.in_progress.lesson_id]?.status : undefined
   const current =
-    (s.in_progress && view.lessons[s.in_progress.lesson_id]?.status !== 'locked' ? s.in_progress.lesson_id : null) ??
+    (ipStatus && ipStatus !== 'locked' ? s.in_progress!.lesson_id : null) ??
     (s.user.recommended_world_id ? nextLesson(b, view, s.user.recommended_world_id) : null) ??
     nextLesson(b, view)
   const pending = Object.values(s.mistakes).filter((m) => !m.resolved).length

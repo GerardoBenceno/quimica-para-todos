@@ -48,6 +48,8 @@ export function touchStreak(s: UserState, now: Date, g: GameValues): { state: Us
     change = 'started'
   } else {
     const gap = dayNumber(today) - dayNumber(st.last_active_date)
+    // Reloj o zona horaria hacia atrás: no se cuenta otro día ni se retrocede la fecha.
+    if (gap <= 0) return { state: s, change: 'none' }
     const missed = gap - 1
     if (gap <= 1) {
       st.count += 1
@@ -73,9 +75,13 @@ export function touchStreak(s: UserState, now: Date, g: GameValues): { state: Us
 export function displayedStreak(s: UserState, now: Date, g: GameValues): number {
   const last = s.streak.last_active_date
   if (!last) return 0
-  const gap = dayNumber(activityDay(now, g.resetHourLocal)) - dayNumber(last)
+  const today = activityDay(now, g.resetHourLocal)
+  const gap = dayNumber(today) - dayNumber(last)
   if (gap <= 1) return s.streak.count
-  return gap - 1 <= s.streak.freezes_available ? s.streak.count : 0
+  const missed = gap - 1
+  // Misma condición que touchStreak: congelaciones disponibles y tope semanal.
+  const used = s.streak.freeze_week === isoWeek(today) ? s.streak.freezes_used_week : 0
+  return missed <= s.streak.freezes_available && used + missed <= g.freezeMaxPerWeek ? s.streak.count : 0
 }
 
 export function activeToday(s: UserState, now: Date, g: GameValues): boolean {

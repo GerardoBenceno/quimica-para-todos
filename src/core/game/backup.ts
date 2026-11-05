@@ -35,11 +35,33 @@ export function readBackup(text: string, userId: string): { ok: true; state: Use
   if (!isRecord(parsed) || parsed.app !== APP_SLUG || !isRecord(parsed.state)) return { ok: false, error: 'not_backup' }
   const s = parsed.state
   if (s.version !== USER_STATE_VERSION || parsed.version !== USER_STATE_VERSION) return { ok: false, error: 'version' }
-  const required = ['user', 'progress', 'lesson_attempts', 'exercise_attempts', 'mistakes', 'diagnostic_results', 'user_rewards', 'streak', 'onboarding']
-  if (!required.every((k) => k in s) || !isRecord(s.user) || !isRecord(s.streak)) return { ok: false, error: 'not_backup' }
-  const state = structuredClone(s) as unknown as UserState
+  if (!isUserStateShape(s)) return { ok: false, error: 'not_backup' }
+  const state = normalizeUserState(structuredClone(s) as unknown as UserState)
   state.user.id = userId
   state.streak.user_id = userId
   state.streak.id = `streak_${userId}`
   return { ok: true, state }
+}
+
+/** Forma mínima con tipos (no solo claves): evita guardar un documento que rompa las pantallas. */
+export function isUserStateShape(s: unknown): boolean {
+  if (!isRecord(s) || !isRecord(s.user) || !isRecord(s.streak) || !isRecord(s.onboarding)) return false
+  if (!Array.isArray(s.lesson_attempts) || !Array.isArray(s.exercise_attempts) || !Array.isArray(s.diagnostic_results) || !Array.isArray(s.user_rewards)) return false
+  if (!isRecord(s.progress) || !isRecord(s.mistakes)) return false
+  const u = s.user
+  if (typeof u.id !== 'string' || typeof u.xp_total !== 'number' || typeof u.coins !== 'number' || typeof u.longest_streak !== 'number') return false
+  if (typeof s.streak.count !== 'number') return false
+  return true
+}
+
+/** Completa campos que versiones anteriores del documento no traían. */
+export function normalizeUserState(state: UserState): UserState {
+  state.streak.freezes_available = typeof state.streak.freezes_available === 'number' ? state.streak.freezes_available : 0
+  state.streak.freezes_used_week = typeof state.streak.freezes_used_week === 'number' ? state.streak.freezes_used_week : 0
+  state.streak.freeze_week = typeof state.streak.freeze_week === 'string' ? state.streak.freeze_week : null
+  state.streak.freezes_used = typeof state.streak.freezes_used === 'number' ? state.streak.freezes_used : 0
+  state.in_progress = state.in_progress && typeof state.in_progress.lesson_id === 'string' ? state.in_progress : null
+  state.user.theme_id = typeof state.user.theme_id === 'string' ? state.user.theme_id : null
+  state.user.recommended_world_id = typeof state.user.recommended_world_id === 'string' ? state.user.recommended_world_id : null
+  return state
 }

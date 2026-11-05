@@ -6,9 +6,9 @@ import { AssetImage } from './AssetImage'
  * (bienvenida, celebración, pistas, diagnóstico, fallo), nunca como adorno
  * permanente.
  */
-export function Carbo({ characterId, expression = 'idle', size = 56, className }: { characterId?: string; expression?: string; size?: number; className?: string }) {
+export function Carbo({ characterId, expression = 'idle', size = 56, className, priority }: { characterId?: string; expression?: string; size?: number; className?: string; priority?: boolean }) {
   const b = useBundle()
   const c = b.characters.find((x) => x.is_active && (characterId ? x.id === characterId : x.role === 'mascot'))
   if (!c) return null
-  return <AssetImage className={`carbo ${className ?? ''}`} assetId={c.expressions[expression] ?? c.sprite_asset_id} size={size} />
+  return <AssetImage className={`carbo ${className ?? ''}`} assetId={c.expressions[expression] ?? c.sprite_asset_id} size={size} priority={priority} />
 }

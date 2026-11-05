@@ -129,7 +129,7 @@ export function WorldPathScreen() {
             const label = t('path.chest_label', { value: c.reward.value, title: t(c.reward.title_key), status: t(`path.chest_${c.status}`) })
             return (
               <div key={c.id} className="chest-wrap" style={style}>
-                <button type="button" className={`chest ${c.status}`} disabled={c.status !== 'ready'} onClick={() => openChest(c)} aria-label={label}>
+                <button type="button" className={`chest ${c.status}`} aria-disabled={c.status !== 'ready' || undefined} onClick={() => c.status === 'ready' && openChest(c)} aria-label={label}>
                   <ChestIcon />
                 </button>
                 <span className="chest-value" aria-hidden="true">

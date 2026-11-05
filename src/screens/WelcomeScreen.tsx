@@ -37,7 +37,7 @@ export function WelcomeScreen() {
             </Link>
           </div>
           <div className="welcome-art illus-block" aria-hidden="true">
-            <Carbo expression="idle" size={200} />
+            <Carbo expression="idle" size={200} priority />
           </div>
         </div>
       </div>

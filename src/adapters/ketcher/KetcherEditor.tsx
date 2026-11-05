@@ -17,8 +17,9 @@ interface KetcherLike {
  */
 const HIDDEN = [
   'layout', 'arom', 'dearom', 'cip', 'check', 'analyse', 'recognize', 'miew', 'settings', 'help', 'about',
-  'fullscreen', 'sgroup', 'reaction-plus', 'arrows', 'reaction-mapping-tools', 'rgroup', 'shape', 'text',
-  'enhanced-stereo', 'create-monomer',
+  'fullscreen', 'sgroup', 'reaction-plus', 'arrows', 'reaction-mapping-tools', 'rgroup', 'shape', 'shapes', 'text',
+  'enhanced-stereo', 'create-monomer', 'images', 'image', 'charge-plus', 'charge-minus', 'templates', 'template-lib',
+  'period-table', 'extended-table', 'any-atom', 'open', 'save', 'copy', 'paste', 'cut', 'copies', 'zoom-in', 'zoom-out', 'zoom-list',
 ] as const
 
 export function makeKetcherEditor(baseUrl: string) {

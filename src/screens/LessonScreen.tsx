@@ -53,6 +53,15 @@ export function LessonScreen() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [autostart, lesson?.id])
 
+  // Intento reanudado con todos los ejercicios ya respondidos: se cierra y va al resultado.
+  useEffect(() => {
+    if (session && lesson && session.startIndex >= session.exercises.length && session.exercises.length > 0) {
+      completeLesson(b, lesson, session.attemptId, session.exercises.length, g)
+      navigate(routes.result(session.attemptId), { replace: true })
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [session?.attemptId])
+
   if (!lesson || !world) return <NotFoundScreen />
   const status = view.lessons[lesson.id]?.status
   if (status === 'locked') {
@@ -80,6 +89,7 @@ export function LessonScreen() {
   }
 
   const exercises = session.exercises
+  if (session.startIndex >= exercises.length) return null
   return (
     <ExercisePlayer
       exercises={exercises}

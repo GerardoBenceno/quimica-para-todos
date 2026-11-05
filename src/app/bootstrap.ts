@@ -32,12 +32,13 @@ export async function bootstrap(): Promise<void> {
     const [featuresJson, uiJson] = await Promise.all([getJson('config/features.json'), getJson('config/ui.json')])
     const ui = uiConfigSchema.parse(uiJson)
     const i18n = new LocalizationService(ui.locale)
-    i18n.addUi((await getJson(ui.ui_strings)) as Record<string, string>)
+    const contentRepo = new JsonPacksContentRepository(BASE)
+    // Textos de UI y contenido se piden a la vez; los textos quedan listos antes para los estados.
+    const [uiStrings, loaded] = await Promise.all([getJson(ui.ui_strings), contentRepo.load()])
+    i18n.addUi(uiStrings as Record<string, string>)
     content.setI18n(i18n)
     document.documentElement.lang = ui.locale
 
-    const contentRepo = new JsonPacksContentRepository(BASE)
-    const loaded = await contentRepo.load()
     if (!loaded.ok) throw new Error(loaded.error.message)
     const bundle = loaded.value
 

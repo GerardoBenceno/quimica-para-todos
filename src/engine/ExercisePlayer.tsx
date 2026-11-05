@@ -84,6 +84,7 @@ export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onR
         onRecord(ex, answer, v, timeMs)
         if (mode !== 'diagnostic') vibrateFor(v)
       }
+      checkedAt.current = performance.now()
       if (mode === 'diagnostic' && v !== 'invalid') next()
       else setVerdict(v)
     } finally {
@@ -124,6 +125,7 @@ export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onR
   // texto, con el editor de estructuras ni con botones que ya responden a Enter.
   const optionsType = answerType(ex)
   const keyOptions = answerShape(optionsType) === 'options' ? presentationOrder(optionsType, ex.payload.options ?? [], attemptId, ex.id) : null
+  const checkedAt = useRef(0)
   const checkRef = useRef(check)
   checkRef.current = check
   const nextRef = useRef(next)
@@ -134,10 +136,13 @@ export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onR
       const el = e.target as HTMLElement | null
       if (el && (el.closest('input, textarea, select, [contenteditable="true"], .ketcher-host') || el.isContentEditable)) return
       if (e.key === 'Enter') {
+        if (e.repeat) return
         // Un botón enfocado que no sea una opción conserva su Enter nativo.
         if (el && el.closest('button, a') && !el.closest('[role="radio"]')) return
         if (checked) {
           if (mode === 'diagnostic') return
+          // Un segundo Enter inmediato no debe saltarse la retroalimentación.
+          if (performance.now() - checkedAt.current < 600) return
           e.preventDefault()
           nextRef.current()
         } else if (hasAnswer(ex, answer) && !busy) {

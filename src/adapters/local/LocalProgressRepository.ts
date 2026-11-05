@@ -3,6 +3,7 @@ import type { UserState } from '../../core/game/state'
 import { USER_STATE_VERSION } from '../../core/game/state'
 import { keyUserState } from '../../core/storageKeys'
 import type { KeyValueStore } from '../../services/safeStorage'
+import { isUserStateShape, normalizeUserState } from '../../core/game/backup'
 
 /** Progreso en localStorage (vía KeyValueStore con respaldo en memoria). */
 export class LocalProgressRepository implements ProgressRepository {
@@ -13,8 +14,8 @@ export class LocalProgressRepository implements ProgressRepository {
     if (!raw) return null
     try {
       const parsed = JSON.parse(raw) as UserState
-      if (parsed?.version !== USER_STATE_VERSION || parsed.user?.id !== userId) return null
-      return parsed
+      if (parsed?.version !== USER_STATE_VERSION || parsed.user?.id !== userId || !isUserStateShape(parsed)) return null
+      return normalizeUserState(parsed)
     } catch {
       return null
     }

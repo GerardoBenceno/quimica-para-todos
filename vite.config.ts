@@ -34,6 +34,14 @@ const siteUrl = (() => {
   const m = /github\.com\/([^/]+)\/([^/]+)/.exec(APP_REPO_URL)
   return m ? `https://${m[1].toLowerCase()}.github.io/${m[2]}/` : base
 })()
+// Imagen de la bienvenida (LCP): se precarga desde el HTML para no esperar a los paquetes.
+const welcomeArt = (() => {
+  const characters = JSON.parse(readFileSync('seed/characters.json', 'utf8')) as { role: string; expressions: Record<string, string> }[]
+  const assets = JSON.parse(readFileSync('seed/assets.json', 'utf8')) as { id: string; uri: string }[]
+  const idle = characters.find((c) => c.role === 'mascot')?.expressions.idle
+  const uri = assets.find((a) => a.id === idle)?.uri ?? ''
+  return uri ? `<link rel="preload" as="image" href="${base}${uri}" imagesrcset="${base}${uri.replace(/\.png$/, '@256.png')} 256w, ${base}${uri} 512w" imagesizes="200px" />` : ''
+})()
 const description = `${uiStrings['app.tagline']} ${uiStrings['welcome.lead']}`
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;')
 
@@ -46,7 +54,8 @@ function brandHtml(): Plugin {
         .replaceAll('%APP_DISPLAY_NAME%', esc(APP_DISPLAY_NAME))
         .replaceAll('%APP_DESCRIPTION%', esc(description))
         .replaceAll('%SITE_URL%', siteUrl)
-        .replaceAll('%THEME_SURFACE%', colors.surface),
+        .replaceAll('%THEME_SURFACE%', colors.surface)
+        .replaceAll('%WELCOME_ART%', welcomeArt),
   }
 }
 
