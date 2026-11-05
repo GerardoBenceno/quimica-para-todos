@@ -1,0 +1,8 @@
+[
+  {
+    "id": "cur_coin",
+    "code": "coin",
+    "name_key": "currency.coin.name",
+    "icon_asset_id": "asset_icon_coin"
+  }
+]

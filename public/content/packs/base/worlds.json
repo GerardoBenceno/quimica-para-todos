@@ -1,0 +1,73 @@
+[
+  {
+    "id": "w_carbono",
+    "slug": "quimica-basica-del-carbono",
+    "title_key": "world.carbono.title",
+    "description_key": "world.carbono.desc",
+    "icon_asset_id": "asset_icon_carbono",
+    "order": 1,
+    "status": "unlocked",
+    "unlock_rule": null,
+    "total_lessons": 6,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "w_grupos",
+    "slug": "grupos-funcionales-y-clasificacion",
+    "title_key": "world.grupos.title",
+    "description_key": "world.grupos.desc",
+    "icon_asset_id": "asset_icon_grupos",
+    "order": 2,
+    "status": "locked",
+    "unlock_rule": {
+      "requires_world": "w_carbono",
+      "min_progress": 1.0
+    },
+    "total_lessons": 3,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "w_nomenclatura_alcanos",
+    "slug": "nomenclatura-de-alcanos",
+    "title_key": "world.alcanos.title",
+    "description_key": "world.alcanos.desc",
+    "icon_asset_id": "asset_icon_alcanos",
+    "order": 3,
+    "status": "locked",
+    "unlock_rule": {
+      "requires_world": "w_grupos",
+      "min_progress": 1.0
+    },
+    "total_lessons": 4,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "w_estereo",
+    "slug": "estereoquimica",
+    "title_key": "world.estereo.title",
+    "description_key": "world.estereo.desc",
+    "icon_asset_id": "asset_icon_estereo",
+    "order": 4,
+    "status": "coming_soon",
+    "unlock_rule": null,
+    "total_lessons": 0,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "w_reacciones",
+    "slug": "bosque-de-reacciones",
+    "title_key": "world.reacciones.title",
+    "description_key": "world.reacciones.desc",
+    "icon_asset_id": "asset_icon_reacciones",
+    "order": 5,
+    "status": "coming_soon",
+    "unlock_rule": null,
+    "total_lessons": 0,
+    "content_version": 1,
+    "is_active": true
+  }
+]

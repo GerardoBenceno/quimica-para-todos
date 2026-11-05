@@ -1,0 +1,373 @@
+{
+  "items": [
+    {
+      "id": "diag_01",
+      "lesson_id": null,
+      "type": "diagnostic",
+      "prompt_key": "ex.diag_01.prompt",
+      "payload": {
+        "options": [
+          {
+            "key": "ex.diag_01.opt.4",
+            "value": "4"
+          },
+          {
+            "key": "ex.diag_01.opt.3",
+            "value": "3"
+          },
+          {
+            "key": "ex.diag_01.opt.2",
+            "value": "2"
+          },
+          {
+            "key": "ex.diag_01.opt.1",
+            "value": "1"
+          }
+        ]
+      },
+      "correct": {
+        "value": "4"
+      },
+      "explanation_key": null,
+      "feedback_template_id": "ft_carbono_enlaces",
+      "difficulty": 1,
+      "xp": 10,
+      "coins": 1,
+      "topic": "carbono_enlaces",
+      "prerequisites": [],
+      "structure_asset_id": null,
+      "smiles": null,
+      "is_diagnostic": true,
+      "content_version": 1,
+      "is_active": true,
+      "weight": 10,
+      "maps_to_world": "w_carbono"
+    },
+    {
+      "id": "diag_02",
+      "lesson_id": null,
+      "type": "diagnostic",
+      "prompt_key": "ex.diag_02.prompt",
+      "payload": {
+        "options": [
+          {
+            "key": "ex.diag_02.opt.tetraedrica",
+            "value": "tetraedrica"
+          },
+          {
+            "key": "ex.diag_02.opt.lineal",
+            "value": "lineal"
+          },
+          {
+            "key": "ex.diag_02.opt.trigonal_plana",
+            "value": "trigonal_plana"
+          },
+          {
+            "key": "ex.diag_02.opt.angular",
+            "value": "angular"
+          }
+        ]
+      },
+      "correct": {
+        "value": "tetraedrica"
+      },
+      "explanation_key": null,
+      "feedback_template_id": "ft_hibridacion_geom",
+      "difficulty": 2,
+      "xp": 10,
+      "coins": 1,
+      "topic": "hibridacion_sp3",
+      "prerequisites": [],
+      "structure_asset_id": null,
+      "smiles": "C",
+      "is_diagnostic": true,
+      "content_version": 1,
+      "is_active": true,
+      "weight": 10,
+      "maps_to_world": "w_carbono"
+    },
+    {
+      "id": "diag_03",
+      "lesson_id": null,
+      "type": "diagnostic",
+      "prompt_key": "ex.diag_03.prompt",
+      "payload": {
+        "options": [
+          {
+            "key": "ex.diag_03.opt.terciario",
+            "value": "terciario"
+          },
+          {
+            "key": "ex.diag_03.opt.primario",
+            "value": "primario"
+          },
+          {
+            "key": "ex.diag_03.opt.secundario",
+            "value": "secundario"
+          },
+          {
+            "key": "ex.diag_03.opt.cuaternario",
+            "value": "cuaternario"
+          }
+        ]
+      },
+      "correct": {
+        "value": "terciario"
+      },
+      "explanation_key": null,
+      "feedback_template_id": "ft_tipos_carbono",
+      "difficulty": 2,
+      "xp": 10,
+      "coins": 1,
+      "topic": "tipos_carbono",
+      "prerequisites": [],
+      "structure_asset_id": null,
+      "smiles": null,
+      "is_diagnostic": true,
+      "content_version": 1,
+      "is_active": true,
+      "weight": 10,
+      "maps_to_world": "w_carbono"
+    },
+    {
+      "id": "diag_04",
+      "lesson_id": null,
+      "type": "diagnostic",
+      "prompt_key": "ex.diag_04.prompt",
+      "payload": {
+        "options": [
+          {
+            "key": "ex.diag_04.opt.alcohol",
+            "value": "alcohol"
+          },
+          {
+            "key": "ex.diag_04.opt.aldehido",
+            "value": "aldehido"
+          },
+          {
+            "key": "ex.diag_04.opt.acido",
+            "value": "acido"
+          },
+          {
+            "key": "ex.diag_04.opt.eter",
+            "value": "eter"
+          }
+        ]
+      },
+      "correct": {
+        "value": "alcohol"
+      },
+      "explanation_key": null,
+      "feedback_template_id": "ft_grupos_funcionales",
+      "difficulty": 2,
+      "xp": 10,
+      "coins": 1,
+      "topic": "grupos_funcionales",
+      "prerequisites": [],
+      "structure_asset_id": null,
+      "smiles": null,
+      "is_diagnostic": true,
+      "content_version": 1,
+      "is_active": true,
+      "weight": 12,
+      "maps_to_world": "w_grupos"
+    },
+    {
+      "id": "diag_05",
+      "lesson_id": null,
+      "type": "diagnostic",
+      "prompt_key": "ex.diag_05.prompt",
+      "payload": {
+        "options": [
+          {
+            "key": "ex.diag_05.opt.acido",
+            "value": "acido"
+          },
+          {
+            "key": "ex.diag_05.opt.alcohol",
+            "value": "alcohol"
+          },
+          {
+            "key": "ex.diag_05.opt.cetona",
+            "value": "cetona"
+          },
+          {
+            "key": "ex.diag_05.opt.ester",
+            "value": "ester"
+          }
+        ]
+      },
+      "correct": {
+        "value": "acido"
+      },
+      "explanation_key": null,
+      "feedback_template_id": "ft_grupos_funcionales",
+      "difficulty": 2,
+      "xp": 10,
+      "coins": 1,
+      "topic": "grupos_funcionales",
+      "prerequisites": [],
+      "structure_asset_id": null,
+      "smiles": null,
+      "is_diagnostic": true,
+      "content_version": 1,
+      "is_active": true,
+      "weight": 12,
+      "maps_to_world": "w_grupos"
+    },
+    {
+      "id": "diag_06",
+      "lesson_id": null,
+      "type": "diagnostic",
+      "prompt_key": "ex.diag_06.prompt",
+      "payload": {
+        "structure_smiles": "CC(=O)C",
+        "structure_asset_id": null,
+        "options": [
+          {
+            "key": "ex.diag_06.opt.cetona",
+            "value": "cetona"
+          },
+          {
+            "key": "ex.diag_06.opt.aldehido",
+            "value": "aldehido"
+          },
+          {
+            "key": "ex.diag_06.opt.alcohol",
+            "value": "alcohol"
+          },
+          {
+            "key": "ex.diag_06.opt.eter",
+            "value": "eter"
+          }
+        ]
+      },
+      "correct": {
+        "value": "cetona"
+      },
+      "explanation_key": null,
+      "feedback_template_id": "ft_grupos_oxigenados",
+      "difficulty": 3,
+      "xp": 12,
+      "coins": 1,
+      "topic": "grupos_oxigenados",
+      "prerequisites": [],
+      "structure_asset_id": null,
+      "smiles": "CC(=O)C",
+      "is_diagnostic": true,
+      "content_version": 1,
+      "is_active": true,
+      "weight": 12,
+      "maps_to_world": "w_grupos"
+    },
+    {
+      "id": "diag_07",
+      "lesson_id": null,
+      "type": "diagnostic",
+      "prompt_key": "ex.diag_07.prompt",
+      "payload": {
+        "options": [
+          {
+            "key": "ex.diag_07.opt.metano",
+            "value": "metano"
+          },
+          {
+            "key": "ex.diag_07.opt.etano",
+            "value": "etano"
+          },
+          {
+            "key": "ex.diag_07.opt.propano",
+            "value": "propano"
+          },
+          {
+            "key": "ex.diag_07.opt.metanol",
+            "value": "metanol"
+          }
+        ]
+      },
+      "correct": {
+        "value": "metano"
+      },
+      "explanation_key": null,
+      "feedback_template_id": "ft_nomenclatura_lineales",
+      "difficulty": 1,
+      "xp": 10,
+      "coins": 1,
+      "topic": "nomenclatura_alcanos_lineales",
+      "prerequisites": [],
+      "structure_asset_id": null,
+      "smiles": "C",
+      "is_diagnostic": true,
+      "content_version": 1,
+      "is_active": true,
+      "weight": 12,
+      "maps_to_world": "w_nomenclatura_alcanos"
+    },
+    {
+      "id": "diag_08",
+      "lesson_id": null,
+      "type": "diagnostic",
+      "prompt_key": "ex.diag_08.prompt",
+      "payload": {
+        "structure_smiles": "CC(C)C(C)C",
+        "structure_asset_id": null,
+        "options": [
+          {
+            "key": "ex.diag_08.opt.23dimetilbutano",
+            "value": "23dimetilbutano"
+          },
+          {
+            "key": "ex.diag_08.opt.2metilpentano",
+            "value": "2metilpentano"
+          },
+          {
+            "key": "ex.diag_08.opt.3etilbutano",
+            "value": "3etilbutano"
+          },
+          {
+            "key": "ex.diag_08.opt.hexano",
+            "value": "hexano"
+          }
+        ]
+      },
+      "correct": {
+        "value": "23dimetilbutano"
+      },
+      "explanation_key": null,
+      "feedback_template_id": "ft_nomenclatura_numeracion",
+      "difficulty": 4,
+      "xp": 12,
+      "coins": 1,
+      "topic": "nomenclatura_alcanos_ramificados",
+      "prerequisites": [],
+      "structure_asset_id": null,
+      "smiles": "CC(C)C(C)C",
+      "is_diagnostic": true,
+      "content_version": 1,
+      "is_active": true,
+      "weight": 14,
+      "maps_to_world": "w_nomenclatura_alcanos"
+    }
+  ],
+  "scoring": {
+    "max_score": 92,
+    "thresholds": [
+      {
+        "max_ratio": 0.4,
+        "label": "Principiante",
+        "recommended_world": "w_carbono"
+      },
+      {
+        "max_ratio": 0.75,
+        "label": "Intermedio",
+        "recommended_world": "w_carbono"
+      },
+      {
+        "max_ratio": 1.0,
+        "label": "Avanzado",
+        "recommended_world": "w_carbono"
+      }
+    ],
+    "note": "recommended_world se acota al primer mundo desbloqueado en el MVP"
+  }
+}

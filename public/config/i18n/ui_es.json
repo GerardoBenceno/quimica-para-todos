@@ -1,0 +1,12 @@
+{
+  "app.tagline": "Aprende química orgánica jugando.",
+  "app.skip_to_content": "Saltar al contenido",
+  "welcome.lead": "Ejercicios de menos de un minuto, con las estructuras dibujadas como en un libro de texto.",
+  "welcome.start": "Empezar",
+  "welcome.no_signup": "Sin registro. Tu avance se guarda en este dispositivo.",
+  "error.content_title": "No se pudo cargar el contenido",
+  "error.retry": "Reintentar",
+  "error.not_found": "No encontramos esta página.",
+  "error.go_home": "Ir al inicio",
+  "offline.notice": "Sin conexión. Puedes seguir con lo que ya está guardado en este dispositivo."
+}

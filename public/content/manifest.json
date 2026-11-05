@@ -1,0 +1,28 @@
+{
+  "packs": [
+    "base",
+    "web"
+  ],
+  "files": {
+    "base": [
+      "app_config.json",
+      "assets.json",
+      "characters.json",
+      "content_versions.json",
+      "currencies.json",
+      "diagnostic.json",
+      "exercises.json",
+      "feedback_templates.json",
+      "lessons.json",
+      "rewards.json",
+      "themes.json",
+      "translations_es.json",
+      "units.json",
+      "worlds.json"
+    ],
+    "web": [
+      "access.json",
+      "themes.json"
+    ]
+  }
+}

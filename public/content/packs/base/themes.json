@@ -1,0 +1,25 @@
+[
+  {
+    "id": "theme_dark_default",
+    "name": "Oscuro base",
+    "is_default": true,
+    "colors": {
+      "primary": "#3DA5FF",
+      "surface": "#0E1726",
+      "background": "#0A1018",
+      "accent": "#FFD54A",
+      "success": "#46C26B",
+      "error": "#FF5C5C",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#9DB2C7",
+      "locked": "#3A4759",
+      "card": "#152133"
+    },
+    "typography": {
+      "font_family": "Inter",
+      "scale": 1.0
+    },
+    "content_version": 1,
+    "is_active": true
+  }
+]
