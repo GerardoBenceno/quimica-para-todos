@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cfg_diag_thresholds",
+    "key": "diagnostic.thresholds",
+    "value": {
+      "levels": [
+        {
+          "max": 3,
+          "label": "Principiante",
+          "world": "w_carbono"
+        },
+        {
+          "max": 6,
+          "label": "Intermedio",
+          "world": "w_carbono"
+        },
+        {
+          "max": 8,
+          "label": "Avanzado",
+          "world": "w_carbono"
+        }
+      ],
+      "note": "En el MVP solo w_carbono está desbloqueado; el mundo recomendado se limita al primer mundo desbloqueado."
+    },
+    "description": "Umbrales de score de diagnóstico (numero de aciertos ponderado) y mundo recomendado",
+    "updated_at": "2026-06-25T00:00:00Z"
+  },
+  {
+    "id": "cfg_xp",
+    "key": "rewards.xp",
+    "value": {
+      "per_exercise": 10,
+      "per_lesson": 20,
+      "timed_bonus": 10
+    },
+    "description": "Reglas de XP",
+    "updated_at": "2026-06-25T00:00:00Z"
+  },
+  {
+    "id": "cfg_coins",
+    "key": "rewards.coins",
+    "value": {
+      "per_lesson": 5,
+      "streak_freeze_cost": 50,
+      "hint_cost": 10
+    },
+    "description": "Reglas de monedas",
+    "updated_at": "2026-06-25T00:00:00Z"
+  },
+  {
+    "id": "cfg_streak",
+    "key": "streak.rules",
+    "value": {
+      "reset_hour_local": 4,
+      "freeze_max_per_week": 2
+    },
+    "description": "Reglas de racha",
+    "updated_at": "2026-06-25T00:00:00Z"
+  },
+  {
+    "id": "cfg_features",
+    "key": "features.flags",
+    "value": {
+      "cloud_sync": false,
+      "ai_feedback": false,
+      "molecules_3d": false,
+      "social": false
+    },
+    "description": "Flags de funcionalidades (off en MVP)",
+    "updated_at": "2026-06-25T00:00:00Z"
+  }
+]

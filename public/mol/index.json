@@ -1,0 +1,192 @@
+{
+  "C": {
+    "id": "m_32096c2e0e",
+    "formula": "CH4",
+    "heavy_atoms": 1,
+    "svg": "mol/svg/m_32096c2e0e.svg",
+    "svg_thumb": "mol/svg/m_32096c2e0e_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_32096c2e0e.sdf"
+  },
+  "C=C": {
+    "id": "m_67f56ffc88",
+    "formula": "C2H4",
+    "heavy_atoms": 2,
+    "svg": "mol/svg/m_67f56ffc88.svg",
+    "svg_thumb": "mol/svg/m_67f56ffc88_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_67f56ffc88.sdf"
+  },
+  "C#C": {
+    "id": "m_1fcc393176",
+    "formula": "C2H2",
+    "heavy_atoms": 2,
+    "svg": "mol/svg/m_1fcc393176.svg",
+    "svg_thumb": "mol/svg/m_1fcc393176_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_1fcc393176.sdf"
+  },
+  "CC(C)(C)C": {
+    "id": "m_08eb63888c",
+    "formula": "C5H12",
+    "heavy_atoms": 5,
+    "svg": "mol/svg/m_08eb63888c.svg",
+    "svg_thumb": "mol/svg/m_08eb63888c_thumb.svg",
+    "svg_highlight": "mol/svg/m_08eb63888c_hl.svg",
+    "highlight_note": "2,2-dimetilpropano",
+    "sdf": "mol/sdf/m_08eb63888c.sdf"
+  },
+  "CCO": {
+    "id": "m_89b394fd02",
+    "formula": "C2H6O",
+    "heavy_atoms": 3,
+    "svg": "mol/svg/m_89b394fd02.svg",
+    "svg_thumb": "mol/svg/m_89b394fd02_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_89b394fd02.sdf"
+  },
+  "CC(=O)O": {
+    "id": "m_6a2307f867",
+    "formula": "C2H4O2",
+    "heavy_atoms": 4,
+    "svg": "mol/svg/m_6a2307f867.svg",
+    "svg_thumb": "mol/svg/m_6a2307f867_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_6a2307f867.sdf"
+  },
+  "CC=O": {
+    "id": "m_df269a697b",
+    "formula": "C2H4O",
+    "heavy_atoms": 3,
+    "svg": "mol/svg/m_df269a697b.svg",
+    "svg_thumb": "mol/svg/m_df269a697b_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_df269a697b.sdf"
+  },
+  "CC(=O)C": {
+    "id": "m_9489a462be",
+    "formula": "C3H6O",
+    "heavy_atoms": 4,
+    "svg": "mol/svg/m_9489a462be.svg",
+    "svg_thumb": "mol/svg/m_9489a462be_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_9489a462be.sdf"
+  },
+  "COC": {
+    "id": "m_bdfa23441f",
+    "formula": "C2H6O",
+    "heavy_atoms": 3,
+    "svg": "mol/svg/m_bdfa23441f.svg",
+    "svg_thumb": "mol/svg/m_bdfa23441f_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_bdfa23441f.sdf"
+  },
+  "CN": {
+    "id": "m_5065f3689a",
+    "formula": "CH5N",
+    "heavy_atoms": 2,
+    "svg": "mol/svg/m_5065f3689a.svg",
+    "svg_thumb": "mol/svg/m_5065f3689a_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_5065f3689a.sdf"
+  },
+  "CC(=O)N": {
+    "id": "m_52c60d060e",
+    "formula": "C2H5NO",
+    "heavy_atoms": 4,
+    "svg": "mol/svg/m_52c60d060e.svg",
+    "svg_thumb": "mol/svg/m_52c60d060e_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_52c60d060e.sdf"
+  },
+  "CCC": {
+    "id": "m_d46432d5b3",
+    "formula": "C3H8",
+    "heavy_atoms": 3,
+    "svg": "mol/svg/m_d46432d5b3.svg",
+    "svg_thumb": "mol/svg/m_d46432d5b3_thumb.svg",
+    "svg_highlight": "mol/svg/m_d46432d5b3_hl.svg",
+    "highlight_note": "propano",
+    "sdf": "mol/sdf/m_d46432d5b3.sdf"
+  },
+  "CCCC": {
+    "id": "m_56900fb1d3",
+    "formula": "C4H10",
+    "heavy_atoms": 4,
+    "svg": "mol/svg/m_56900fb1d3.svg",
+    "svg_thumb": "mol/svg/m_56900fb1d3_thumb.svg",
+    "svg_highlight": "mol/svg/m_56900fb1d3_hl.svg",
+    "highlight_note": "butano",
+    "sdf": "mol/sdf/m_56900fb1d3.sdf"
+  },
+  "CCCCCC": {
+    "id": "m_d88f27a7c7",
+    "formula": "C6H14",
+    "heavy_atoms": 6,
+    "svg": "mol/svg/m_d88f27a7c7.svg",
+    "svg_thumb": "mol/svg/m_d88f27a7c7_thumb.svg",
+    "svg_highlight": "mol/svg/m_d88f27a7c7_hl.svg",
+    "highlight_note": "hexano",
+    "sdf": "mol/sdf/m_d88f27a7c7.sdf"
+  },
+  "CCC(C)C": {
+    "id": "m_b5ee965b45",
+    "formula": "C5H12",
+    "heavy_atoms": 5,
+    "svg": "mol/svg/m_b5ee965b45.svg",
+    "svg_thumb": "mol/svg/m_b5ee965b45_thumb.svg",
+    "svg_highlight": "mol/svg/m_b5ee965b45_hl.svg",
+    "highlight_note": "2-metilbutano",
+    "sdf": "mol/sdf/m_b5ee965b45.sdf"
+  },
+  "CC(C)C(C)C": {
+    "id": "m_a5622ba30f",
+    "formula": "C6H14",
+    "heavy_atoms": 6,
+    "svg": "mol/svg/m_a5622ba30f.svg",
+    "svg_thumb": "mol/svg/m_a5622ba30f_thumb.svg",
+    "svg_highlight": "mol/svg/m_a5622ba30f_hl.svg",
+    "highlight_note": "2,3-dimetilbutano",
+    "sdf": "mol/sdf/m_a5622ba30f.sdf"
+  },
+  "CC(C)C(CC)CCC": {
+    "id": "m_e1421def80",
+    "formula": "C9H20",
+    "heavy_atoms": 9,
+    "svg": "mol/svg/m_e1421def80.svg",
+    "svg_thumb": "mol/svg/m_e1421def80_thumb.svg",
+    "svg_highlight": "mol/svg/m_e1421def80_hl.svg",
+    "highlight_note": "3-etil-2-metilhexano",
+    "sdf": "mol/sdf/m_e1421def80.sdf"
+  },
+  "CCC(C)(C)C": {
+    "id": "m_5c0c31ab0c",
+    "formula": "C6H14",
+    "heavy_atoms": 6,
+    "svg": "mol/svg/m_5c0c31ab0c.svg",
+    "svg_thumb": "mol/svg/m_5c0c31ab0c_thumb.svg",
+    "svg_highlight": "mol/svg/m_5c0c31ab0c_hl.svg",
+    "highlight_note": "2,2-dimetilbutano",
+    "sdf": "mol/sdf/m_5c0c31ab0c.sdf"
+  },
+  "CCCC(C)C": {
+    "id": "m_e13cb409ae",
+    "formula": "C6H14",
+    "heavy_atoms": 6,
+    "svg": "mol/svg/m_e13cb409ae.svg",
+    "svg_thumb": "mol/svg/m_e13cb409ae_thumb.svg",
+    "svg_highlight": "mol/svg/m_e13cb409ae_hl.svg",
+    "highlight_note": "2-metilpentano",
+    "sdf": "mol/sdf/m_e13cb409ae.sdf"
+  }
+}

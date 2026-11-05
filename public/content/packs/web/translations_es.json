@@ -1,0 +1,68 @@
+[
+  {
+    "key": "ex.web_draw_e_complete_etilmetilhexano.name",
+    "locale": "es",
+    "value": "3-etil-2-metilhexano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.web_draw_e_2metilbutano.prompt",
+    "locale": "es",
+    "value": "Dibuja la estructura: 2-metilbutano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.web_choose_e_2metilbutano.prompt",
+    "locale": "es",
+    "value": "Elige la estructura: 2-metilbutano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.web_draw_e_23dimetilbutano.prompt",
+    "locale": "es",
+    "value": "Dibuja la estructura: 2,3-dimetilbutano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.web_choose_e_23dimetilbutano.prompt",
+    "locale": "es",
+    "value": "Elige la estructura: 2,3-dimetilbutano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.web_draw_e_complete_etilmetilhexano.prompt",
+    "locale": "es",
+    "value": "Dibuja la estructura: 3-etil-2-metilhexano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.web_choose_e_complete_etilmetilhexano.prompt",
+    "locale": "es",
+    "value": "Elige la estructura: 3-etil-2-metilhexano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.web_draw_e_22dimetilbutano.prompt",
+    "locale": "es",
+    "value": "Dibuja la estructura: 2,2-dimetilbutano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.web_choose_e_22dimetilbutano.prompt",
+    "locale": "es",
+    "value": "Elige la estructura: 2,2-dimetilbutano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.web_draw_e_2metilpentano.prompt",
+    "locale": "es",
+    "value": "Dibuja la estructura: 2-metilpentano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.web_choose_e_2metilpentano.prompt",
+    "locale": "es",
+    "value": "Elige la estructura: 2-metilpentano",
+    "content_version": 1
+  }
+]

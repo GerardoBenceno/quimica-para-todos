@@ -1,0 +1,28 @@
+[
+  {
+    "id": "rw_chest_small",
+    "type": "chest",
+    "value": 15,
+    "title_key": "reward.chest_small.title",
+    "icon_asset_id": "asset_icon_chest",
+    "trigger": {
+      "on": "lesson_complete",
+      "every": 2
+    },
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "rw_streak_freeze",
+    "type": "streak_freeze",
+    "value": 1,
+    "title_key": "reward.streak_freeze.title",
+    "icon_asset_id": "asset_icon_freeze",
+    "trigger": {
+      "on": "purchase",
+      "cost_coins": 50
+    },
+    "content_version": 1,
+    "is_active": true
+  }
+]

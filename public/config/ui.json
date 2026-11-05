@@ -1,0 +1,6 @@
+{
+  "theme": "web_theme_claro_prusia",
+  "locale": "es",
+  "ui_strings": "config/i18n/ui_es.json",
+  "narrow_breakpoint_px": 600
+}

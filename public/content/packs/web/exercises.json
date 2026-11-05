@@ -1,0 +1,613 @@
+[
+  {
+    "id": "web_draw_e_2metilbutano",
+    "lesson_id": "l_numeracion",
+    "type": "draw_structure",
+    "prompt_key": "ex.web_draw_e_2metilbutano.prompt",
+    "payload": {
+      "name_key": "ex.e_2metilbutano.opt.2metilbutano",
+      "source_exercise_id": "e_2metilbutano"
+    },
+    "correct": {
+      "smiles": "CCC(C)C"
+    },
+    "explanation_key": "ex.e_2metilbutano.explain",
+    "feedback_template_id": "ft_nomenclatura_numeracion",
+    "difficulty": 3,
+    "xp": 12,
+    "coins": 1,
+    "topic": "nomenclatura_numeracion",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CCC(C)C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "web_choose_e_2metilbutano",
+    "lesson_id": "l_numeracion",
+    "type": "choose_structure",
+    "prompt_key": "ex.web_choose_e_2metilbutano.prompt",
+    "payload": {
+      "name_key": "ex.e_2metilbutano.opt.2metilbutano",
+      "source_exercise_id": "e_2metilbutano",
+      "variant_of": "web_draw_e_2metilbutano",
+      "options": [
+        {
+          "key": "ex.e_2metilbutano.opt.2metilbutano",
+          "value": "2metilbutano",
+          "smiles": "CCC(C)C"
+        },
+        {
+          "key": "ex.e_22dimetilbutano.opt.22dimetilbutano",
+          "value": "22dimetilbutano",
+          "smiles": "CCC(C)(C)C"
+        },
+        {
+          "key": "ex.e_23dimetilbutano.opt.23dimetilbutano",
+          "value": "23dimetilbutano",
+          "smiles": "CC(C)C(C)C"
+        },
+        {
+          "key": "ex.e_2metilpentano.opt.2metilpentano",
+          "value": "2metilpentano",
+          "smiles": "CCCC(C)C"
+        }
+      ]
+    },
+    "correct": {
+      "value": "2metilbutano"
+    },
+    "explanation_key": "ex.e_2metilbutano.explain",
+    "feedback_template_id": "ft_nomenclatura_numeracion",
+    "difficulty": 3,
+    "xp": 12,
+    "coins": 1,
+    "topic": "nomenclatura_numeracion",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CCC(C)C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "web_draw_e_23dimetilbutano",
+    "lesson_id": "l_numeracion",
+    "type": "draw_structure",
+    "prompt_key": "ex.web_draw_e_23dimetilbutano.prompt",
+    "payload": {
+      "name_key": "ex.e_23dimetilbutano.opt.23dimetilbutano",
+      "source_exercise_id": "e_23dimetilbutano"
+    },
+    "correct": {
+      "smiles": "CC(C)C(C)C"
+    },
+    "explanation_key": "ex.e_23dimetilbutano.explain",
+    "feedback_template_id": "ft_nomenclatura_numeracion",
+    "difficulty": 3,
+    "xp": 12,
+    "coins": 1,
+    "topic": "nomenclatura_numeracion",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CC(C)C(C)C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "web_choose_e_23dimetilbutano",
+    "lesson_id": "l_numeracion",
+    "type": "choose_structure",
+    "prompt_key": "ex.web_choose_e_23dimetilbutano.prompt",
+    "payload": {
+      "name_key": "ex.e_23dimetilbutano.opt.23dimetilbutano",
+      "source_exercise_id": "e_23dimetilbutano",
+      "variant_of": "web_draw_e_23dimetilbutano",
+      "options": [
+        {
+          "key": "ex.e_23dimetilbutano.opt.23dimetilbutano",
+          "value": "23dimetilbutano",
+          "smiles": "CC(C)C(C)C"
+        },
+        {
+          "key": "ex.e_22dimetilbutano.opt.22dimetilbutano",
+          "value": "22dimetilbutano",
+          "smiles": "CCC(C)(C)C"
+        },
+        {
+          "key": "ex.e_2metilpentano.opt.2metilpentano",
+          "value": "2metilpentano",
+          "smiles": "CCCC(C)C"
+        },
+        {
+          "key": "ex.e_2metilbutano.opt.2metilbutano",
+          "value": "2metilbutano",
+          "smiles": "CCC(C)C"
+        }
+      ]
+    },
+    "correct": {
+      "value": "23dimetilbutano"
+    },
+    "explanation_key": "ex.e_23dimetilbutano.explain",
+    "feedback_template_id": "ft_nomenclatura_numeracion",
+    "difficulty": 3,
+    "xp": 12,
+    "coins": 1,
+    "topic": "nomenclatura_numeracion",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CC(C)C(C)C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "web_draw_e_complete_etilmetilhexano",
+    "lesson_id": "l_ramificados",
+    "type": "draw_structure",
+    "prompt_key": "ex.web_draw_e_complete_etilmetilhexano.prompt",
+    "payload": {
+      "name_key": "ex.web_draw_e_complete_etilmetilhexano.name",
+      "source_exercise_id": "e_complete_etilmetilhexano"
+    },
+    "correct": {
+      "smiles": "CC(C)C(CC)CCC"
+    },
+    "explanation_key": "ex.e_complete_etilmetilhexano.explain",
+    "feedback_template_id": "ft_nomenclatura_sustituyentes",
+    "difficulty": 4,
+    "xp": 15,
+    "coins": 2,
+    "topic": "nomenclatura_alcanos_ramificados",
+    "prerequisites": [
+      "nomenclatura_sustituyentes",
+      "nomenclatura_numeracion"
+    ],
+    "structure_asset_id": null,
+    "smiles": "CC(C)C(CC)CCC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "web_choose_e_complete_etilmetilhexano",
+    "lesson_id": "l_ramificados",
+    "type": "choose_structure",
+    "prompt_key": "ex.web_choose_e_complete_etilmetilhexano.prompt",
+    "payload": {
+      "name_key": "ex.web_draw_e_complete_etilmetilhexano.name",
+      "source_exercise_id": "e_complete_etilmetilhexano",
+      "variant_of": "web_draw_e_complete_etilmetilhexano",
+      "options": [
+        {
+          "key": "ex.web_draw_e_complete_etilmetilhexano.name",
+          "value": "complete_etilmetilhexano",
+          "smiles": "CC(C)C(CC)CCC"
+        },
+        {
+          "key": "ex.e_22dimetilbutano.opt.22dimetilbutano",
+          "value": "22dimetilbutano",
+          "smiles": "CCC(C)(C)C"
+        },
+        {
+          "key": "ex.e_23dimetilbutano.opt.23dimetilbutano",
+          "value": "23dimetilbutano",
+          "smiles": "CC(C)C(C)C"
+        },
+        {
+          "key": "ex.e_2metilpentano.opt.2metilpentano",
+          "value": "2metilpentano",
+          "smiles": "CCCC(C)C"
+        }
+      ]
+    },
+    "correct": {
+      "value": "complete_etilmetilhexano"
+    },
+    "explanation_key": "ex.e_complete_etilmetilhexano.explain",
+    "feedback_template_id": "ft_nomenclatura_sustituyentes",
+    "difficulty": 4,
+    "xp": 15,
+    "coins": 2,
+    "topic": "nomenclatura_alcanos_ramificados",
+    "prerequisites": [
+      "nomenclatura_sustituyentes",
+      "nomenclatura_numeracion"
+    ],
+    "structure_asset_id": null,
+    "smiles": "CC(C)C(CC)CCC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "web_draw_e_22dimetilbutano",
+    "lesson_id": "l_ramificados",
+    "type": "draw_structure",
+    "prompt_key": "ex.web_draw_e_22dimetilbutano.prompt",
+    "payload": {
+      "name_key": "ex.e_22dimetilbutano.opt.22dimetilbutano",
+      "source_exercise_id": "e_22dimetilbutano"
+    },
+    "correct": {
+      "smiles": "CCC(C)(C)C"
+    },
+    "explanation_key": "ex.e_22dimetilbutano.explain",
+    "feedback_template_id": "ft_nomenclatura_numeracion",
+    "difficulty": 4,
+    "xp": 12,
+    "coins": 1,
+    "topic": "nomenclatura_alcanos_ramificados",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CCC(C)(C)C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "web_choose_e_22dimetilbutano",
+    "lesson_id": "l_ramificados",
+    "type": "choose_structure",
+    "prompt_key": "ex.web_choose_e_22dimetilbutano.prompt",
+    "payload": {
+      "name_key": "ex.e_22dimetilbutano.opt.22dimetilbutano",
+      "source_exercise_id": "e_22dimetilbutano",
+      "variant_of": "web_draw_e_22dimetilbutano",
+      "options": [
+        {
+          "key": "ex.e_22dimetilbutano.opt.22dimetilbutano",
+          "value": "22dimetilbutano",
+          "smiles": "CCC(C)(C)C"
+        },
+        {
+          "key": "ex.e_23dimetilbutano.opt.23dimetilbutano",
+          "value": "23dimetilbutano",
+          "smiles": "CC(C)C(C)C"
+        },
+        {
+          "key": "ex.e_2metilpentano.opt.2metilpentano",
+          "value": "2metilpentano",
+          "smiles": "CCCC(C)C"
+        },
+        {
+          "key": "ex.e_2metilbutano.opt.2metilbutano",
+          "value": "2metilbutano",
+          "smiles": "CCC(C)C"
+        }
+      ]
+    },
+    "correct": {
+      "value": "22dimetilbutano"
+    },
+    "explanation_key": "ex.e_22dimetilbutano.explain",
+    "feedback_template_id": "ft_nomenclatura_numeracion",
+    "difficulty": 4,
+    "xp": 12,
+    "coins": 1,
+    "topic": "nomenclatura_alcanos_ramificados",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CCC(C)(C)C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "web_draw_e_2metilpentano",
+    "lesson_id": "l_ramificados",
+    "type": "draw_structure",
+    "prompt_key": "ex.web_draw_e_2metilpentano.prompt",
+    "payload": {
+      "name_key": "ex.e_2metilpentano.opt.2metilpentano",
+      "source_exercise_id": "e_2metilpentano"
+    },
+    "correct": {
+      "smiles": "CCCC(C)C"
+    },
+    "explanation_key": "ex.e_2metilpentano.explain",
+    "feedback_template_id": "ft_nomenclatura_numeracion",
+    "difficulty": 4,
+    "xp": 12,
+    "coins": 1,
+    "topic": "nomenclatura_alcanos_ramificados",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CCCC(C)C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "web_choose_e_2metilpentano",
+    "lesson_id": "l_ramificados",
+    "type": "choose_structure",
+    "prompt_key": "ex.web_choose_e_2metilpentano.prompt",
+    "payload": {
+      "name_key": "ex.e_2metilpentano.opt.2metilpentano",
+      "source_exercise_id": "e_2metilpentano",
+      "variant_of": "web_draw_e_2metilpentano",
+      "options": [
+        {
+          "key": "ex.e_2metilpentano.opt.2metilpentano",
+          "value": "2metilpentano",
+          "smiles": "CCCC(C)C"
+        },
+        {
+          "key": "ex.e_22dimetilbutano.opt.22dimetilbutano",
+          "value": "22dimetilbutano",
+          "smiles": "CCC(C)(C)C"
+        },
+        {
+          "key": "ex.e_23dimetilbutano.opt.23dimetilbutano",
+          "value": "23dimetilbutano",
+          "smiles": "CC(C)C(C)C"
+        },
+        {
+          "key": "ex.e_2metilbutano.opt.2metilbutano",
+          "value": "2metilbutano",
+          "smiles": "CCC(C)C"
+        }
+      ]
+    },
+    "correct": {
+      "value": "2metilpentano"
+    },
+    "explanation_key": "ex.e_2metilpentano.explain",
+    "feedback_template_id": "ft_nomenclatura_numeracion",
+    "difficulty": 4,
+    "xp": 12,
+    "coins": 1,
+    "topic": "nomenclatura_alcanos_ramificados",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CCCC(C)C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "web_v3d_e_sp3_geom",
+    "lesson_id": "l_sp3",
+    "type": "view_3d",
+    "prompt_key": "ex.e_sp3_geom.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sp3_geom.opt.tetraedrica",
+          "value": "tetraedrica"
+        },
+        {
+          "key": "ex.e_sp3_geom.opt.trigonal_plana",
+          "value": "trigonal_plana"
+        },
+        {
+          "key": "ex.e_sp3_geom.opt.lineal",
+          "value": "lineal"
+        },
+        {
+          "key": "ex.e_sp3_geom.opt.angular",
+          "value": "angular"
+        }
+      ],
+      "structure_smiles": "C",
+      "source_exercise_id": "e_sp3_geom",
+      "base_type": "multiple_choice"
+    },
+    "correct": {
+      "value": "tetraedrica"
+    },
+    "explanation_key": "ex.e_sp3_geom.explain",
+    "feedback_template_id": "ft_hibridacion_geom",
+    "difficulty": 1,
+    "xp": 10,
+    "coins": 1,
+    "topic": "hibridacion_sp3",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "web_v3d_e_sp3_sigma",
+    "lesson_id": "l_sp3",
+    "type": "view_3d",
+    "prompt_key": "ex.e_sp3_sigma.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sp3_sigma.opt.true",
+          "value": "true"
+        },
+        {
+          "key": "ex.e_sp3_sigma.opt.false",
+          "value": "false"
+        }
+      ],
+      "structure_smiles": "C",
+      "source_exercise_id": "e_sp3_sigma",
+      "base_type": "true_false"
+    },
+    "correct": {
+      "value": "true"
+    },
+    "explanation_key": "ex.e_sp3_sigma.explain",
+    "feedback_template_id": "ft_hibridacion_general",
+    "difficulty": 2,
+    "xp": 8,
+    "coins": 1,
+    "topic": "hibridacion_sp3",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "web_v3d_e_sp2_geom",
+    "lesson_id": "l_sp2",
+    "type": "view_3d",
+    "prompt_key": "ex.e_sp2_geom.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sp2_geom.opt.trigonal_plana",
+          "value": "trigonal_plana"
+        },
+        {
+          "key": "ex.e_sp2_geom.opt.tetraedrica",
+          "value": "tetraedrica"
+        },
+        {
+          "key": "ex.e_sp2_geom.opt.lineal",
+          "value": "lineal"
+        },
+        {
+          "key": "ex.e_sp2_geom.opt.piramidal",
+          "value": "piramidal"
+        }
+      ],
+      "structure_smiles": "C=C",
+      "source_exercise_id": "e_sp2_geom",
+      "base_type": "multiple_choice"
+    },
+    "correct": {
+      "value": "trigonal_plana"
+    },
+    "explanation_key": "ex.e_sp2_geom.explain",
+    "feedback_template_id": "ft_hibridacion_geom",
+    "difficulty": 1,
+    "xp": 10,
+    "coins": 1,
+    "topic": "hibridacion_sp2",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C=C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "web_v3d_e_sp2_enlaces",
+    "lesson_id": "l_sp2",
+    "type": "view_3d",
+    "prompt_key": "ex.e_sp2_enlaces.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sp2_enlaces.opt.true",
+          "value": "true"
+        },
+        {
+          "key": "ex.e_sp2_enlaces.opt.false",
+          "value": "false"
+        }
+      ],
+      "structure_smiles": "C=C",
+      "source_exercise_id": "e_sp2_enlaces",
+      "base_type": "true_false"
+    },
+    "correct": {
+      "value": "true"
+    },
+    "explanation_key": "ex.e_sp2_enlaces.explain",
+    "feedback_template_id": "ft_hibridacion_general",
+    "difficulty": 2,
+    "xp": 8,
+    "coins": 1,
+    "topic": "hibridacion_sp2",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C=C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "web_v3d_e_sp_geom",
+    "lesson_id": "l_sp",
+    "type": "view_3d",
+    "prompt_key": "ex.e_sp_geom.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sp_geom.opt.lineal",
+          "value": "lineal"
+        },
+        {
+          "key": "ex.e_sp_geom.opt.trigonal_plana",
+          "value": "trigonal_plana"
+        },
+        {
+          "key": "ex.e_sp_geom.opt.tetraedrica",
+          "value": "tetraedrica"
+        },
+        {
+          "key": "ex.e_sp_geom.opt.angular",
+          "value": "angular"
+        }
+      ],
+      "structure_smiles": "C#C",
+      "source_exercise_id": "e_sp_geom",
+      "base_type": "multiple_choice"
+    },
+    "correct": {
+      "value": "lineal"
+    },
+    "explanation_key": "ex.e_sp_geom.explain",
+    "feedback_template_id": "ft_hibridacion_geom",
+    "difficulty": 1,
+    "xp": 10,
+    "coins": 1,
+    "topic": "hibridacion_sp",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C#C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "web_v3d_e_sp_enlaces",
+    "lesson_id": "l_sp",
+    "type": "view_3d",
+    "prompt_key": "ex.e_sp_enlaces.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sp_enlaces.opt.true",
+          "value": "true"
+        },
+        {
+          "key": "ex.e_sp_enlaces.opt.false",
+          "value": "false"
+        }
+      ],
+      "structure_smiles": "C#C",
+      "source_exercise_id": "e_sp_enlaces",
+      "base_type": "true_false"
+    },
+    "correct": {
+      "value": "true"
+    },
+    "explanation_key": "ex.e_sp_enlaces.explain",
+    "feedback_template_id": "ft_hibridacion_general",
+    "difficulty": 3,
+    "xp": 8,
+    "coins": 1,
+    "topic": "hibridacion_sp",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C#C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  }
+]
