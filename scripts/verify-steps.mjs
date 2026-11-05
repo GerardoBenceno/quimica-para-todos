@@ -406,6 +406,11 @@ export async function a11y({ newPage, URL }) {
       await page.goto(`${URL}${hash}`)
       await expectVisible(page, text)
       await page.waitForTimeout(300)
+      if (hash === '#/acerca') {
+        // Versión inyectada en el build: fecha y commit corto.
+        const version = (await page.locator('.version-line').innerText()).trim()
+        if (!/^Versión \d{4}-\d{2}-\d{2} · ([0-9a-f]{7}|local)$/.test(version)) throw new Error(`versión inesperada en Acerca de: ${version}`)
+      }
       await run(page, hash)
     }
     await ctx.close()

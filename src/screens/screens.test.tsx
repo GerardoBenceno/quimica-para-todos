@@ -5,6 +5,7 @@ import { useProgressStore } from '../stores/progressStore'
 import { usePrefsStore } from '../stores/prefsStore'
 import { ProfileScreen } from './ProfileScreen'
 import { PracticeScreen } from './PracticeScreen'
+import { AboutScreen } from './AboutScreen'
 import { AdSlot } from '../ui/AdSlot'
 import { LockBadge } from '../ui/LockBadge'
 
@@ -60,6 +61,18 @@ describe('pantallas de gamificación', () => {
     )
     const counts = screen.getAllByText(/veces|vez/).map((x) => x.textContent)
     expect(counts).toEqual(['3 veces', '1 vez'])
+  })
+})
+
+describe('Acerca de', () => {
+  it('muestra la versión con la fecha del build y el commit corto', () => {
+    setupApp()
+    render(
+      <Router>
+        <AboutScreen />
+      </Router>,
+    )
+    expect(screen.getByText(/^Versión \d{4}-\d{2}-\d{2} · ([0-9a-f]{7}|local)$/)).toBeInTheDocument()
   })
 })
 

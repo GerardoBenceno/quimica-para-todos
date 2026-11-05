@@ -210,7 +210,7 @@
   "about.license": "Licencia del contenido y del arte: [completar]",
   "about.mascot": "Carbo, la mascota, y las ilustraciones de los mundos son arte propio del proyecto.",
   "about.source": "Código fuente",
-  "about.version": "Versión {version}",
+  "about.version": "Versión {date} · {commit}",
   "about.back": "Volver",
   "review.title": "Revisión del curso",
   "review.lead": "Todos los ejercicios de todos los paquetes, con su respuesta, explicación, estructura y fórmula calculada, para revisar la química de un vistazo. Esta vista no aparece en la navegación.",
