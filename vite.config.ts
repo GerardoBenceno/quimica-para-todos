@@ -51,6 +51,31 @@ function brandHtml(): Plugin {
 }
 
 /**
+ * CSS del shell en línea: el único archivo CSS de la primera pantalla (unos
+ * 22 KB) se incrusta en index.html en lugar de enlazarse, así no hay petición
+ * bloqueante antes del primer render. El CSS de Ketcher sigue en su chunk
+ * diferido. Las URL de las fuentes ya vienen absolutas con la base.
+ */
+function inlineCss(): Plugin {
+  return {
+    name: 'inline-css',
+    apply: 'build',
+    enforce: 'post',
+    transformIndexHtml(html, ctx) {
+      const bundle = ctx.bundle
+      if (!bundle) return html
+      return html.replace(/<link rel="stylesheet"[^>]*href="([^"]+)"[^>]*>/g, (tag, href: string) => {
+        const name = href.startsWith(base) ? href.slice(base.length) : href
+        const asset = bundle[name]
+        if (!asset || asset.type !== 'asset' || typeof asset.source !== 'string') return tag
+        delete bundle[name]
+        return `<style>${asset.source}</style>`
+      })
+    },
+  }
+}
+
+/**
  * 404.html propia para GitHub Pages: cualquier ruta fuera de la base del repo
  * responde con la marca, un texto claro y el enlace a la app, con los colores
  * del tema y los textos de ui_es.json (sin fuentes ni scripts, carga al instante).
@@ -124,6 +149,7 @@ export default defineConfig({
   plugins: [
     react(),
     brandHtml(),
+    inlineCss(),
     notFoundHtml(),
     VitePWA({
       registerType: 'autoUpdate',
