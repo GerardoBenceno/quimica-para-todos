@@ -1,0 +1,16 @@
+<svg version='1.1' baseProfile='full'
+              xmlns='http://www.w3.org/2000/svg'
+                      xmlns:rdkit='http://www.rdkit.org/xml'
+                      xmlns:xlink='http://www.w3.org/1999/xlink'
+                  xml:space='preserve'
+width='96px' height='62px' viewBox='0 0 96 62'>
+<path class='bond-2 atom-1 atom-3' d='M 56.6,12.7 L 59.2,17.2 L 38.4,29.2 L 35.8,24.7 Z' style='fill: var(--mol-highlight, #D5E1F1);fill-rule:evenodd;fill-opacity:1;stroke:var(--mol-highlight, #D5E1F1);stroke-width:0.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />
+<ellipse cx='37.1' cy='26.9' rx='4.0' ry='4.0' class='atom-1'  style='fill: var(--mol-highlight, #D5E1F1);fill-rule:evenodd;stroke:var(--mol-highlight, #D5E1F1);stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<ellipse cx='57.9' cy='14.9' rx='4.0' ry='4.0' class='atom-3'  style='fill: var(--mol-highlight, #D5E1F1);fill-rule:evenodd;stroke:var(--mol-highlight, #D5E1F1);stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-0 atom-0 atom-1' d='M 16.3,14.9 L 37.1,26.9' style='fill:none;fill-rule:evenodd;stroke:currentColor;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1 atom-1 atom-2' d='M 37.1,26.9 L 37.1,50.9' style='fill:none;fill-rule:evenodd;stroke:currentColor;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-2 atom-1 atom-3' d='M 37.1,26.9 L 57.9,14.9' style='fill:none;fill-rule:evenodd;stroke:currentColor;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-2 atom-1 atom-3' d='M 40.7,29.0 L 57.9,19.1' style='fill:none;fill-rule:evenodd;stroke:currentColor;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-3 atom-3 atom-4' d='M 57.9,14.9 L 78.7,26.9' style='fill:none;fill-rule:evenodd;stroke:currentColor;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path d='M 56.9,15.5 L 57.9,14.9 L 59.0,15.5' style='fill:none;stroke:currentColor;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />
+</svg>

@@ -268,7 +268,9 @@ export async function compare({ newPage, shot, URL }) {
   const { ctx, page } = await newPage({ width: 1280, height: 900 })
   await firstSession(page, URL)
   await completeLessons(page, found.before)
-  await page.goto(`${URL}#/leccion/${found.ex.lesson_id}`)
+  // El mundo en borrador (Próximamente) solo se abre con ?borrador=1 antes del hash.
+  await page.goto(`${URL}?borrador=1#/leccion/${found.ex.lesson_id}`)
+  await page.reload()
   await page.getByRole('button', { name: 'Empezar lección' }).click()
   await advanceUntil(page, () => page.locator('.compare-figures').isVisible())
   const figures = page.locator('.compare-figure [role="img"]')

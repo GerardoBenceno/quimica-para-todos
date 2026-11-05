@@ -592,6 +592,773 @@
     "is_active": true
   },
   {
+    "id": "estereo_e_ez_01",
+    "lesson_id": "estereo_l_ez",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_ez_01.prompt",
+    "payload": {
+      "structure_smiles": "C/[CH:1]=[CH:2]/C",
+      "options": [
+        {
+          "key": "ex.estereo_e_ez_01.opt.Z",
+          "value": "Z"
+        },
+        {
+          "key": "ex.estereo_e_ez_01.opt.E",
+          "value": "E"
+        },
+        {
+          "key": "ex.estereo_e_ez_01.opt.sin",
+          "value": "sin"
+        }
+      ]
+    },
+    "correct": {
+      "value": "E"
+    },
+    "explanation_key": "ex.estereo_e_ez_01.explain",
+    "feedback_template_id": "estereo_ft_ez",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_ez",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C/[CH:1]=[CH:2]/C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_ez_02",
+    "lesson_id": "estereo_l_ez",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_ez_02.prompt",
+    "payload": {
+      "structure_smiles": "C/[CH:1]=[CH:2]\\C",
+      "options": [
+        {
+          "key": "ex.estereo_e_ez_02.opt.E",
+          "value": "E"
+        },
+        {
+          "key": "ex.estereo_e_ez_02.opt.Z",
+          "value": "Z"
+        },
+        {
+          "key": "ex.estereo_e_ez_02.opt.sin",
+          "value": "sin"
+        }
+      ]
+    },
+    "correct": {
+      "value": "Z"
+    },
+    "explanation_key": "ex.estereo_e_ez_02.explain",
+    "feedback_template_id": "estereo_ft_ez",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_ez",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C/[CH:1]=[CH:2]\\C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_ez_03",
+    "lesson_id": "estereo_l_ez",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_ez_03.prompt",
+    "payload": {
+      "structure_smiles": "C/[CH:1]=[CH:2]/CC",
+      "options": [
+        {
+          "key": "ex.estereo_e_ez_03.opt.E",
+          "value": "E"
+        },
+        {
+          "key": "ex.estereo_e_ez_03.opt.sin",
+          "value": "sin"
+        },
+        {
+          "key": "ex.estereo_e_ez_03.opt.Z",
+          "value": "Z"
+        }
+      ]
+    },
+    "correct": {
+      "value": "E"
+    },
+    "explanation_key": "ex.estereo_e_ez_03.explain",
+    "feedback_template_id": "estereo_ft_ez",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_ez",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C/[CH:1]=[CH:2]/CC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_ez_04",
+    "lesson_id": "estereo_l_ez",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_ez_04.prompt",
+    "payload": {
+      "structure_smiles": "C/[CH:1]=[CH:2]\\CC",
+      "options": [
+        {
+          "key": "ex.estereo_e_ez_04.opt.E",
+          "value": "E"
+        },
+        {
+          "key": "ex.estereo_e_ez_04.opt.Z",
+          "value": "Z"
+        },
+        {
+          "key": "ex.estereo_e_ez_04.opt.sin",
+          "value": "sin"
+        }
+      ]
+    },
+    "correct": {
+      "value": "Z"
+    },
+    "explanation_key": "ex.estereo_e_ez_04.explain",
+    "feedback_template_id": "estereo_ft_ez",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_ez",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C/[CH:1]=[CH:2]\\CC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_ez_05",
+    "lesson_id": "estereo_l_ez",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_ez_05.prompt",
+    "payload": {
+      "structure_smiles": "Cl/[CH:1]=[CH:2]/C",
+      "options": [
+        {
+          "key": "ex.estereo_e_ez_05.opt.E",
+          "value": "E"
+        },
+        {
+          "key": "ex.estereo_e_ez_05.opt.sin",
+          "value": "sin"
+        },
+        {
+          "key": "ex.estereo_e_ez_05.opt.Z",
+          "value": "Z"
+        }
+      ]
+    },
+    "correct": {
+      "value": "E"
+    },
+    "explanation_key": "ex.estereo_e_ez_05.explain",
+    "feedback_template_id": "estereo_ft_ez",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_ez",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "Cl/[CH:1]=[CH:2]/C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_ez_06",
+    "lesson_id": "estereo_l_ez",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_ez_06.prompt",
+    "payload": {
+      "structure_smiles": "Cl/[CH:1]=[CH:2]\\C",
+      "options": [
+        {
+          "key": "ex.estereo_e_ez_06.opt.sin",
+          "value": "sin"
+        },
+        {
+          "key": "ex.estereo_e_ez_06.opt.Z",
+          "value": "Z"
+        },
+        {
+          "key": "ex.estereo_e_ez_06.opt.E",
+          "value": "E"
+        }
+      ]
+    },
+    "correct": {
+      "value": "Z"
+    },
+    "explanation_key": "ex.estereo_e_ez_06.explain",
+    "feedback_template_id": "estereo_ft_ez",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_ez",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "Cl/[CH:1]=[CH:2]\\C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_ez_07",
+    "lesson_id": "estereo_l_ez",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_ez_07.prompt",
+    "payload": {
+      "structure_smiles": "C[C:1](C)=[CH:2]C",
+      "options": [
+        {
+          "key": "ex.estereo_e_ez_07.opt.sin",
+          "value": "sin"
+        },
+        {
+          "key": "ex.estereo_e_ez_07.opt.Z",
+          "value": "Z"
+        },
+        {
+          "key": "ex.estereo_e_ez_07.opt.E",
+          "value": "E"
+        }
+      ]
+    },
+    "correct": {
+      "value": "sin"
+    },
+    "explanation_key": "ex.estereo_e_ez_07.explain",
+    "feedback_template_id": "estereo_ft_ez",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_ez",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C:1](C)=[CH:2]C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_ez_08",
+    "lesson_id": "estereo_l_ez",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_ez_08.prompt",
+    "payload": {
+      "structure_smiles": "[CH2:1]=[CH:2]CC",
+      "options": [
+        {
+          "key": "ex.estereo_e_ez_08.opt.Z",
+          "value": "Z"
+        },
+        {
+          "key": "ex.estereo_e_ez_08.opt.sin",
+          "value": "sin"
+        },
+        {
+          "key": "ex.estereo_e_ez_08.opt.E",
+          "value": "E"
+        }
+      ]
+    },
+    "correct": {
+      "value": "sin"
+    },
+    "explanation_key": "ex.estereo_e_ez_08.explain",
+    "feedback_template_id": "estereo_ft_ez",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_ez",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "[CH2:1]=[CH:2]CC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_ez_09",
+    "lesson_id": "estereo_l_ez",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_ez_09.prompt",
+    "payload": {
+      "structure_smiles": "Cl/[CH:1]=[CH:2]\\Cl",
+      "options": [
+        {
+          "key": "ex.estereo_e_ez_09.opt.E",
+          "value": "E"
+        },
+        {
+          "key": "ex.estereo_e_ez_09.opt.sin",
+          "value": "sin"
+        },
+        {
+          "key": "ex.estereo_e_ez_09.opt.Z",
+          "value": "Z"
+        }
+      ]
+    },
+    "correct": {
+      "value": "Z"
+    },
+    "explanation_key": "ex.estereo_e_ez_09.explain",
+    "feedback_template_id": "estereo_ft_ez",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_ez",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "Cl/[CH:1]=[CH:2]\\Cl",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_ez_10",
+    "lesson_id": "estereo_l_ez",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_ez_10.prompt",
+    "payload": {
+      "structure_smiles": "CC/[CH:1]=[CH:2]/CC",
+      "options": [
+        {
+          "key": "ex.estereo_e_ez_10.opt.Z",
+          "value": "Z"
+        },
+        {
+          "key": "ex.estereo_e_ez_10.opt.sin",
+          "value": "sin"
+        },
+        {
+          "key": "ex.estereo_e_ez_10.opt.E",
+          "value": "E"
+        }
+      ]
+    },
+    "correct": {
+      "value": "E"
+    },
+    "explanation_key": "ex.estereo_e_ez_10.explain",
+    "feedback_template_id": "estereo_ft_ez",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_ez",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CC/[CH:1]=[CH:2]/CC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_relacion_01",
+    "lesson_id": "estereo_l_relaciones",
+    "type": "compare_structures",
+    "prompt_key": "ex.estereo_e_relacion_01.prompt",
+    "payload": {
+      "structure_smiles": "C[C@@H](O)CC",
+      "structure_smiles_b": "C[C@H](O)CC",
+      "options": [
+        {
+          "key": "ex.estereo_e_relacion_01.opt.diastereomeros",
+          "value": "diastereomeros"
+        },
+        {
+          "key": "ex.estereo_e_relacion_01.opt.enantiomeros",
+          "value": "enantiomeros"
+        },
+        {
+          "key": "ex.estereo_e_relacion_01.opt.identicas",
+          "value": "identicas"
+        },
+        {
+          "key": "ex.estereo_e_relacion_01.opt.constitucionales",
+          "value": "constitucionales"
+        }
+      ]
+    },
+    "correct": {
+      "value": "enantiomeros"
+    },
+    "explanation_key": "ex.estereo_e_relacion_01.explain",
+    "feedback_template_id": "estereo_ft_relaciones",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_relacion",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@@H](O)CC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_relacion_02",
+    "lesson_id": "estereo_l_relaciones",
+    "type": "compare_structures",
+    "prompt_key": "ex.estereo_e_relacion_02.prompt",
+    "payload": {
+      "structure_smiles": "C[C@@H](Br)CC",
+      "structure_smiles_b": "C[C@@H](Br)CC",
+      "options": [
+        {
+          "key": "ex.estereo_e_relacion_02.opt.identicas",
+          "value": "identicas"
+        },
+        {
+          "key": "ex.estereo_e_relacion_02.opt.diastereomeros",
+          "value": "diastereomeros"
+        },
+        {
+          "key": "ex.estereo_e_relacion_02.opt.enantiomeros",
+          "value": "enantiomeros"
+        },
+        {
+          "key": "ex.estereo_e_relacion_02.opt.constitucionales",
+          "value": "constitucionales"
+        }
+      ]
+    },
+    "correct": {
+      "value": "identicas"
+    },
+    "explanation_key": "ex.estereo_e_relacion_02.explain",
+    "feedback_template_id": "estereo_ft_relaciones",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_relacion",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@@H](Br)CC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_relacion_03",
+    "lesson_id": "estereo_l_relaciones",
+    "type": "compare_structures",
+    "prompt_key": "ex.estereo_e_relacion_03.prompt",
+    "payload": {
+      "structure_smiles": "C[C@@H](Br)[C@H](Br)C",
+      "structure_smiles_b": "C[C@@H](Br)[C@@H](Br)C",
+      "options": [
+        {
+          "key": "ex.estereo_e_relacion_03.opt.enantiomeros",
+          "value": "enantiomeros"
+        },
+        {
+          "key": "ex.estereo_e_relacion_03.opt.identicas",
+          "value": "identicas"
+        },
+        {
+          "key": "ex.estereo_e_relacion_03.opt.constitucionales",
+          "value": "constitucionales"
+        },
+        {
+          "key": "ex.estereo_e_relacion_03.opt.diastereomeros",
+          "value": "diastereomeros"
+        }
+      ]
+    },
+    "correct": {
+      "value": "diastereomeros"
+    },
+    "explanation_key": "ex.estereo_e_relacion_03.explain",
+    "feedback_template_id": "estereo_ft_relaciones",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_relacion",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@@H](Br)[C@H](Br)C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_relacion_04",
+    "lesson_id": "estereo_l_relaciones",
+    "type": "compare_structures",
+    "prompt_key": "ex.estereo_e_relacion_04.prompt",
+    "payload": {
+      "structure_smiles": "C[C@H]1CCCC[C@@H]1C",
+      "structure_smiles_b": "C[C@H]1CCCC[C@H]1C",
+      "options": [
+        {
+          "key": "ex.estereo_e_relacion_04.opt.enantiomeros",
+          "value": "enantiomeros"
+        },
+        {
+          "key": "ex.estereo_e_relacion_04.opt.diastereomeros",
+          "value": "diastereomeros"
+        },
+        {
+          "key": "ex.estereo_e_relacion_04.opt.identicas",
+          "value": "identicas"
+        },
+        {
+          "key": "ex.estereo_e_relacion_04.opt.constitucionales",
+          "value": "constitucionales"
+        }
+      ]
+    },
+    "correct": {
+      "value": "diastereomeros"
+    },
+    "explanation_key": "ex.estereo_e_relacion_04.explain",
+    "feedback_template_id": "estereo_ft_relaciones",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_relacion",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@H]1CCCC[C@@H]1C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_relacion_05",
+    "lesson_id": "estereo_l_relaciones",
+    "type": "compare_structures",
+    "prompt_key": "ex.estereo_e_relacion_05.prompt",
+    "payload": {
+      "structure_smiles": "C[C@H](O)CC",
+      "structure_smiles_b": "CCCCO",
+      "options": [
+        {
+          "key": "ex.estereo_e_relacion_05.opt.identicas",
+          "value": "identicas"
+        },
+        {
+          "key": "ex.estereo_e_relacion_05.opt.enantiomeros",
+          "value": "enantiomeros"
+        },
+        {
+          "key": "ex.estereo_e_relacion_05.opt.constitucionales",
+          "value": "constitucionales"
+        },
+        {
+          "key": "ex.estereo_e_relacion_05.opt.diastereomeros",
+          "value": "diastereomeros"
+        }
+      ]
+    },
+    "correct": {
+      "value": "constitucionales"
+    },
+    "explanation_key": "ex.estereo_e_relacion_05.explain",
+    "feedback_template_id": "estereo_ft_relaciones",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_relacion",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@H](O)CC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_relacion_06",
+    "lesson_id": "estereo_l_relaciones",
+    "type": "compare_structures",
+    "prompt_key": "ex.estereo_e_relacion_06.prompt",
+    "payload": {
+      "structure_smiles": "C/C=C/C",
+      "structure_smiles_b": "C/C=C\\C",
+      "options": [
+        {
+          "key": "ex.estereo_e_relacion_06.opt.identicas",
+          "value": "identicas"
+        },
+        {
+          "key": "ex.estereo_e_relacion_06.opt.constitucionales",
+          "value": "constitucionales"
+        },
+        {
+          "key": "ex.estereo_e_relacion_06.opt.enantiomeros",
+          "value": "enantiomeros"
+        },
+        {
+          "key": "ex.estereo_e_relacion_06.opt.diastereomeros",
+          "value": "diastereomeros"
+        }
+      ]
+    },
+    "correct": {
+      "value": "diastereomeros"
+    },
+    "explanation_key": "ex.estereo_e_relacion_06.explain",
+    "feedback_template_id": "estereo_ft_relaciones",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_relacion",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C/C=C/C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_relacion_07",
+    "lesson_id": "estereo_l_relaciones",
+    "type": "compare_structures",
+    "prompt_key": "ex.estereo_e_relacion_07.prompt",
+    "payload": {
+      "structure_smiles": "C[C@H](N)C(=O)O",
+      "structure_smiles_b": "C[C@@H](N)C(=O)O",
+      "options": [
+        {
+          "key": "ex.estereo_e_relacion_07.opt.diastereomeros",
+          "value": "diastereomeros"
+        },
+        {
+          "key": "ex.estereo_e_relacion_07.opt.identicas",
+          "value": "identicas"
+        },
+        {
+          "key": "ex.estereo_e_relacion_07.opt.enantiomeros",
+          "value": "enantiomeros"
+        },
+        {
+          "key": "ex.estereo_e_relacion_07.opt.constitucionales",
+          "value": "constitucionales"
+        }
+      ]
+    },
+    "correct": {
+      "value": "enantiomeros"
+    },
+    "explanation_key": "ex.estereo_e_relacion_07.explain",
+    "feedback_template_id": "estereo_ft_relaciones",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_relacion",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@H](N)C(=O)O",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_relacion_08",
+    "lesson_id": "estereo_l_relaciones",
+    "type": "compare_structures",
+    "prompt_key": "ex.estereo_e_relacion_08.prompt",
+    "payload": {
+      "structure_smiles": "C[C@H]1CCCC[C@@H]1C",
+      "structure_smiles_b": "C[C@@H]1CCCC[C@@H]1C",
+      "options": [
+        {
+          "key": "ex.estereo_e_relacion_08.opt.identicas",
+          "value": "identicas"
+        },
+        {
+          "key": "ex.estereo_e_relacion_08.opt.diastereomeros",
+          "value": "diastereomeros"
+        },
+        {
+          "key": "ex.estereo_e_relacion_08.opt.constitucionales",
+          "value": "constitucionales"
+        },
+        {
+          "key": "ex.estereo_e_relacion_08.opt.enantiomeros",
+          "value": "enantiomeros"
+        }
+      ]
+    },
+    "correct": {
+      "value": "diastereomeros"
+    },
+    "explanation_key": "ex.estereo_e_relacion_08.explain",
+    "feedback_template_id": "estereo_ft_relaciones",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_relacion",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@H]1CCCC[C@@H]1C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_relacion_09",
+    "lesson_id": "estereo_l_relaciones",
+    "type": "compare_structures",
+    "prompt_key": "ex.estereo_e_relacion_09.prompt",
+    "payload": {
+      "structure_smiles": "C/C=C/C",
+      "structure_smiles_b": "CC(C)=C",
+      "options": [
+        {
+          "key": "ex.estereo_e_relacion_09.opt.enantiomeros",
+          "value": "enantiomeros"
+        },
+        {
+          "key": "ex.estereo_e_relacion_09.opt.identicas",
+          "value": "identicas"
+        },
+        {
+          "key": "ex.estereo_e_relacion_09.opt.diastereomeros",
+          "value": "diastereomeros"
+        },
+        {
+          "key": "ex.estereo_e_relacion_09.opt.constitucionales",
+          "value": "constitucionales"
+        }
+      ]
+    },
+    "correct": {
+      "value": "constitucionales"
+    },
+    "explanation_key": "ex.estereo_e_relacion_09.explain",
+    "feedback_template_id": "estereo_ft_relaciones",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_relacion",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C/C=C/C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
     "id": "estereo_e_es_centro_01",
     "lesson_id": "estereo_l_centros",
     "type": "multiple_choice",

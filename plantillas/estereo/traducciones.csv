@@ -109,3 +109,107 @@ feedback.estereo_ft_relaciones.hint,es,Pregúntate en orden: ¿misma conectivida
 feedback.estereo_ft_relaciones.message,es,"Compara el esqueleto: si difiere con la misma fórmula son isómeros constitucionales. Con el mismo esqueleto: iguales en todo, idénticas; todos los centros invertidos, enantiómeros; solo algunos, diastereómeros.",1
 feedback.estereo_ft_rs.hint,es,Primero asigna las prioridades 1-4; después fíjate hacia dónde apunta el sustituyente 4 antes de leer el giro.,1
 feedback.estereo_ft_rs.message,es,"Ordena los sustituyentes por prioridad CIP (mayor número atómico primero), coloca el de menor prioridad hacia atrás y recorre 1→2→3: horario = R, antihorario = S. Si el de menor prioridad apunta hacia adelante, invierte el resultado.",1
+ex.estereo_e_ez_01.explain,es,"Prioridades CIP en cada carbono del doble enlace: C2: 1 = CH₃, 2 = H; C3: 1 = CH₃, 2 = H. Los sustituyentes de mayor prioridad (CH₃ y CH₃) quedan en lados opuestos del doble enlace, por tanto la isomería es E.",1
+ex.estereo_e_ez_01.opt.E,es,E,1
+ex.estereo_e_ez_01.opt.Z,es,Z,1
+ex.estereo_e_ez_01.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_01.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_ez_02.explain,es,"Prioridades CIP en cada carbono del doble enlace: C2: 1 = CH₃, 2 = H; C3: 1 = CH₃, 2 = H. Los sustituyentes de mayor prioridad (CH₃ y CH₃) quedan del mismo lado del doble enlace, por tanto la isomería es Z.",1
+ex.estereo_e_ez_02.opt.E,es,E,1
+ex.estereo_e_ez_02.opt.Z,es,Z,1
+ex.estereo_e_ez_02.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_02.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_ez_03.explain,es,"Prioridades CIP en cada carbono del doble enlace: C2: 1 = CH₃, 2 = H; C3: 1 = C₂H₅, 2 = H. Los sustituyentes de mayor prioridad (CH₃ y C₂H₅) quedan en lados opuestos del doble enlace, por tanto la isomería es E.",1
+ex.estereo_e_ez_03.opt.E,es,E,1
+ex.estereo_e_ez_03.opt.Z,es,Z,1
+ex.estereo_e_ez_03.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_03.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_ez_04.explain,es,"Prioridades CIP en cada carbono del doble enlace: C2: 1 = CH₃, 2 = H; C3: 1 = C₂H₅, 2 = H. Los sustituyentes de mayor prioridad (CH₃ y C₂H₅) quedan del mismo lado del doble enlace, por tanto la isomería es Z.",1
+ex.estereo_e_ez_04.opt.E,es,E,1
+ex.estereo_e_ez_04.opt.Z,es,Z,1
+ex.estereo_e_ez_04.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_04.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_ez_05.explain,es,"Prioridades CIP en cada carbono del doble enlace: C2: 1 = Cl, 2 = H; C3: 1 = CH₃, 2 = H. Los sustituyentes de mayor prioridad (Cl y CH₃) quedan en lados opuestos del doble enlace, por tanto la isomería es E.",1
+ex.estereo_e_ez_05.opt.E,es,E,1
+ex.estereo_e_ez_05.opt.Z,es,Z,1
+ex.estereo_e_ez_05.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_05.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_ez_06.explain,es,"Prioridades CIP en cada carbono del doble enlace: C2: 1 = Cl, 2 = H; C3: 1 = CH₃, 2 = H. Los sustituyentes de mayor prioridad (Cl y CH₃) quedan del mismo lado del doble enlace, por tanto la isomería es Z.",1
+ex.estereo_e_ez_06.opt.E,es,E,1
+ex.estereo_e_ez_06.opt.Z,es,Z,1
+ex.estereo_e_ez_06.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_06.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_ez_07.explain,es,"Sustituyentes en cada carbono del doble enlace: C2: 1 = CH₃, 2 = CH₃; C4: 1 = CH₃, 2 = H. C2 tiene dos sustituyentes idénticos (CH₃ y CH₃), así que intercambiarlos no cambia nada: el doble enlace no presenta isomería geométrica.",1
+ex.estereo_e_ez_07.opt.E,es,E,1
+ex.estereo_e_ez_07.opt.Z,es,Z,1
+ex.estereo_e_ez_07.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_07.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_ez_08.explain,es,"Sustituyentes en cada carbono del doble enlace: C1: 1 = H, 2 = H; C2: 1 = C₂H₅, 2 = H. C1 tiene dos sustituyentes idénticos (H y H), así que intercambiarlos no cambia nada: el doble enlace no presenta isomería geométrica.",1
+ex.estereo_e_ez_08.opt.E,es,E,1
+ex.estereo_e_ez_08.opt.Z,es,Z,1
+ex.estereo_e_ez_08.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_08.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_ez_09.explain,es,"Prioridades CIP en cada carbono del doble enlace: C2: 1 = Cl, 2 = H; C3: 1 = Cl, 2 = H. Los sustituyentes de mayor prioridad (Cl y Cl) quedan del mismo lado del doble enlace, por tanto la isomería es Z.",1
+ex.estereo_e_ez_09.opt.E,es,E,1
+ex.estereo_e_ez_09.opt.Z,es,Z,1
+ex.estereo_e_ez_09.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_09.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_ez_10.explain,es,"Prioridades CIP en cada carbono del doble enlace: C3: 1 = C₂H₅, 2 = H; C4: 1 = C₂H₅, 2 = H. Los sustituyentes de mayor prioridad (C₂H₅ y C₂H₅) quedan en lados opuestos del doble enlace, por tanto la isomería es E.",1
+ex.estereo_e_ez_10.opt.E,es,E,1
+ex.estereo_e_ez_10.opt.Z,es,Z,1
+ex.estereo_e_ez_10.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_10.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_relacion_01.explain,es,Comparación que decidió: mismo esqueleto (CCC(C)O) y B (CC[C@H](C)O) es la imagen especular de A (todos los centros invertidos: CC[C@H](C)O). Relación: enantiómeros.,1
+ex.estereo_e_relacion_01.opt.constitucionales,es,Isómeros constitucionales,1
+ex.estereo_e_relacion_01.opt.diastereomeros,es,Diastereómeros,1
+ex.estereo_e_relacion_01.opt.enantiomeros,es,Enantiómeros,1
+ex.estereo_e_relacion_01.opt.identicas,es,Idénticas,1
+ex.estereo_e_relacion_01.prompt,es,¿Qué relación hay entre las dos estructuras?,1
+ex.estereo_e_relacion_02.explain,es,Comparación que decidió: el SMILES canónico isomérico coincide (CC[C@@H](C)Br). Relación: idénticas.,1
+ex.estereo_e_relacion_02.opt.constitucionales,es,Isómeros constitucionales,1
+ex.estereo_e_relacion_02.opt.diastereomeros,es,Diastereómeros,1
+ex.estereo_e_relacion_02.opt.enantiomeros,es,Enantiómeros,1
+ex.estereo_e_relacion_02.opt.identicas,es,Idénticas,1
+ex.estereo_e_relacion_02.prompt,es,¿Qué relación hay entre las dos estructuras?,1
+ex.estereo_e_relacion_03.explain,es,"Comparación que decidió: mismo esqueleto (CC(Br)C(C)Br), distinta estereoquímica (C[C@@H](Br)[C@@H](C)Br vs C[C@H](Br)[C@@H](C)Br) y B no es el espejo de A (C[C@H](Br)[C@H](C)Br). Relación: diastereómeros.",1
+ex.estereo_e_relacion_03.opt.constitucionales,es,Isómeros constitucionales,1
+ex.estereo_e_relacion_03.opt.diastereomeros,es,Diastereómeros,1
+ex.estereo_e_relacion_03.opt.enantiomeros,es,Enantiómeros,1
+ex.estereo_e_relacion_03.opt.identicas,es,Idénticas,1
+ex.estereo_e_relacion_03.prompt,es,¿Qué relación hay entre las dos estructuras?,1
+ex.estereo_e_relacion_04.explain,es,"Comparación que decidió: mismo esqueleto (CC1CCCCC1C), distinta estereoquímica (C[C@H]1CCCC[C@@H]1C vs C[C@@H]1CCCC[C@@H]1C) y B no es el espejo de A (C[C@@H]1CCCC[C@H]1C). Relación: diastereómeros.",1
+ex.estereo_e_relacion_04.opt.constitucionales,es,Isómeros constitucionales,1
+ex.estereo_e_relacion_04.opt.diastereomeros,es,Diastereómeros,1
+ex.estereo_e_relacion_04.opt.enantiomeros,es,Enantiómeros,1
+ex.estereo_e_relacion_04.opt.identicas,es,Idénticas,1
+ex.estereo_e_relacion_04.prompt,es,¿Qué relación hay entre las dos estructuras?,1
+ex.estereo_e_relacion_05.explain,es,Comparación que decidió: misma fórmula (C4H10O) pero distinto esqueleto (CCC(C)O vs CCCCO). Relación: isómeros constitucionales.,1
+ex.estereo_e_relacion_05.opt.constitucionales,es,Isómeros constitucionales,1
+ex.estereo_e_relacion_05.opt.diastereomeros,es,Diastereómeros,1
+ex.estereo_e_relacion_05.opt.enantiomeros,es,Enantiómeros,1
+ex.estereo_e_relacion_05.opt.identicas,es,Idénticas,1
+ex.estereo_e_relacion_05.prompt,es,¿Qué relación hay entre las dos estructuras?,1
+ex.estereo_e_relacion_06.explain,es,"Comparación que decidió: mismo esqueleto (CC=CC), distinta estereoquímica (C/C=C/C vs C/C=C\C) y B no es el espejo de A (C/C=C/C). Relación: diastereómeros.",1
+ex.estereo_e_relacion_06.opt.constitucionales,es,Isómeros constitucionales,1
+ex.estereo_e_relacion_06.opt.diastereomeros,es,Diastereómeros,1
+ex.estereo_e_relacion_06.opt.enantiomeros,es,Enantiómeros,1
+ex.estereo_e_relacion_06.opt.identicas,es,Idénticas,1
+ex.estereo_e_relacion_06.prompt,es,¿Qué relación hay entre las dos estructuras?,1
+ex.estereo_e_relacion_07.explain,es,Comparación que decidió: mismo esqueleto (CC(N)C(=O)O) y B (C[C@@H](N)C(=O)O) es la imagen especular de A (todos los centros invertidos: C[C@@H](N)C(=O)O). Relación: enantiómeros.,1
+ex.estereo_e_relacion_07.opt.constitucionales,es,Isómeros constitucionales,1
+ex.estereo_e_relacion_07.opt.diastereomeros,es,Diastereómeros,1
+ex.estereo_e_relacion_07.opt.enantiomeros,es,Enantiómeros,1
+ex.estereo_e_relacion_07.opt.identicas,es,Idénticas,1
+ex.estereo_e_relacion_07.prompt,es,¿Qué relación hay entre las dos estructuras?,1
+ex.estereo_e_relacion_08.explain,es,"Comparación que decidió: mismo esqueleto (CC1CCCCC1C), distinta estereoquímica (C[C@H]1CCCC[C@@H]1C vs C[C@@H]1CCCC[C@@H]1C) y B no es el espejo de A (C[C@@H]1CCCC[C@H]1C). Relación: diastereómeros.",1
+ex.estereo_e_relacion_08.opt.constitucionales,es,Isómeros constitucionales,1
+ex.estereo_e_relacion_08.opt.diastereomeros,es,Diastereómeros,1
+ex.estereo_e_relacion_08.opt.enantiomeros,es,Enantiómeros,1
+ex.estereo_e_relacion_08.opt.identicas,es,Idénticas,1
+ex.estereo_e_relacion_08.prompt,es,¿Qué relación hay entre las dos estructuras?,1
+ex.estereo_e_relacion_09.explain,es,Comparación que decidió: misma fórmula (C4H8) pero distinto esqueleto (CC=CC vs C=C(C)C). Relación: isómeros constitucionales.,1
+ex.estereo_e_relacion_09.opt.constitucionales,es,Isómeros constitucionales,1
+ex.estereo_e_relacion_09.opt.diastereomeros,es,Diastereómeros,1
+ex.estereo_e_relacion_09.opt.enantiomeros,es,Enantiómeros,1
+ex.estereo_e_relacion_09.opt.identicas,es,Idénticas,1
+ex.estereo_e_relacion_09.prompt,es,¿Qué relación hay entre las dos estructuras?,1

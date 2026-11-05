@@ -349,6 +349,156 @@
     "highlight_note": null,
     "sdf": "mol/sdf/m_6001accc62.sdf"
   },
+  "C/[CH:1]=[CH:2]/C": {
+    "id": "m_a95fb1807c",
+    "formula": "C4H8",
+    "heavy_atoms": 4,
+    "svg": "mol/svg/m_a95fb1807c.svg",
+    "svg_thumb": "mol/svg/m_a95fb1807c_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_a95fb1807c.sdf"
+  },
+  "C/[CH:1]=[CH:2]\\C": {
+    "id": "m_a390a08fa7",
+    "formula": "C4H8",
+    "heavy_atoms": 4,
+    "svg": "mol/svg/m_a390a08fa7.svg",
+    "svg_thumb": "mol/svg/m_a390a08fa7_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_a390a08fa7.sdf"
+  },
+  "C/[CH:1]=[CH:2]/CC": {
+    "id": "m_34273531c8",
+    "formula": "C5H10",
+    "heavy_atoms": 5,
+    "svg": "mol/svg/m_34273531c8.svg",
+    "svg_thumb": "mol/svg/m_34273531c8_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_34273531c8.sdf"
+  },
+  "C/[CH:1]=[CH:2]\\CC": {
+    "id": "m_9aa26f55ce",
+    "formula": "C5H10",
+    "heavy_atoms": 5,
+    "svg": "mol/svg/m_9aa26f55ce.svg",
+    "svg_thumb": "mol/svg/m_9aa26f55ce_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_9aa26f55ce.sdf"
+  },
+  "Cl/[CH:1]=[CH:2]/C": {
+    "id": "m_771c5cf813",
+    "formula": "C3H5Cl",
+    "heavy_atoms": 4,
+    "svg": "mol/svg/m_771c5cf813.svg",
+    "svg_thumb": "mol/svg/m_771c5cf813_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_771c5cf813.sdf"
+  },
+  "Cl/[CH:1]=[CH:2]\\C": {
+    "id": "m_23822ac3f0",
+    "formula": "C3H5Cl",
+    "heavy_atoms": 4,
+    "svg": "mol/svg/m_23822ac3f0.svg",
+    "svg_thumb": "mol/svg/m_23822ac3f0_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_23822ac3f0.sdf"
+  },
+  "C[C:1](C)=[CH:2]C": {
+    "id": "m_d53469abee",
+    "formula": "C5H10",
+    "heavy_atoms": 5,
+    "svg": "mol/svg/m_d53469abee.svg",
+    "svg_thumb": "mol/svg/m_d53469abee_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_d53469abee.sdf"
+  },
+  "[CH2:1]=[CH:2]CC": {
+    "id": "m_cbf6546f17",
+    "formula": "C4H8",
+    "heavy_atoms": 4,
+    "svg": "mol/svg/m_cbf6546f17.svg",
+    "svg_thumb": "mol/svg/m_cbf6546f17_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_cbf6546f17.sdf"
+  },
+  "Cl/[CH:1]=[CH:2]\\Cl": {
+    "id": "m_6dee322d0d",
+    "formula": "C2H2Cl2",
+    "heavy_atoms": 4,
+    "svg": "mol/svg/m_6dee322d0d.svg",
+    "svg_thumb": "mol/svg/m_6dee322d0d_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_6dee322d0d.sdf"
+  },
+  "CC/[CH:1]=[CH:2]/CC": {
+    "id": "m_8015d64653",
+    "formula": "C6H12",
+    "heavy_atoms": 6,
+    "svg": "mol/svg/m_8015d64653.svg",
+    "svg_thumb": "mol/svg/m_8015d64653_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_8015d64653.sdf"
+  },
+  "C[C@@H](Br)CC": {
+    "id": "m_aeca82e644",
+    "formula": "C4H9Br",
+    "heavy_atoms": 5,
+    "svg": "mol/svg/m_aeca82e644.svg",
+    "svg_thumb": "mol/svg/m_aeca82e644_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_aeca82e644.sdf"
+  },
+  "C[C@H]1CCCC[C@@H]1C": {
+    "id": "m_8f166214bf",
+    "formula": "C8H16",
+    "heavy_atoms": 8,
+    "svg": "mol/svg/m_8f166214bf.svg",
+    "svg_thumb": "mol/svg/m_8f166214bf_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_8f166214bf.sdf"
+  },
+  "C[C@H](O)CC": {
+    "id": "m_f932c64640",
+    "formula": "C4H10O",
+    "heavy_atoms": 5,
+    "svg": "mol/svg/m_f932c64640.svg",
+    "svg_thumb": "mol/svg/m_f932c64640_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_f932c64640.sdf"
+  },
+  "C/C=C/C": {
+    "id": "m_ce8f5b20a3",
+    "formula": "C4H8",
+    "heavy_atoms": 4,
+    "svg": "mol/svg/m_ce8f5b20a3.svg",
+    "svg_thumb": "mol/svg/m_ce8f5b20a3_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_ce8f5b20a3.sdf"
+  },
+  "C[C@H](N)C(=O)O": {
+    "id": "m_0d034201dd",
+    "formula": "C3H7NO2",
+    "heavy_atoms": 6,
+    "svg": "mol/svg/m_0d034201dd.svg",
+    "svg_thumb": "mol/svg/m_0d034201dd_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_0d034201dd.sdf"
+  },
   "C[CH:1](C)Cl": {
     "id": "m_13bf766a6f",
     "formula": "C3H7Cl",

@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+import { readFileSync } from 'node:fs'
 import { mergePacks, type RawPack } from './bundle'
 import { checkIntegrity } from './integrity'
 import { loadBundleFromDisk, loadRawPacks } from '../../../scripts/packs'
@@ -20,7 +21,10 @@ const world = (id: string, order = 1) => ({
 describe('carga y unión de paquetes', () => {
   it('parsea los paquetes reales y une en el orden del manifest', () => {
     const raw = loadRawPacks()
-    expect(raw.map((p) => p.id).slice(0, 2)).toEqual(['base', 'web'])
+    // El orden y la lista de paquetes son los del manifest real (puede crecer con paquetes importados).
+    const manifest = JSON.parse(readFileSync('public/content/manifest.json', 'utf8')) as { packs: string[] }
+    expect(raw.map((p) => p.id)).toEqual(manifest.packs)
+    expect(manifest.packs.slice(0, 2)).toEqual(['base', 'web'])
     const b = loadBundleFromDisk()
     expect(b.worlds).toHaveLength(5)
     // Conteos del seed (paquete base); otros paquetes agregan los suyos.
