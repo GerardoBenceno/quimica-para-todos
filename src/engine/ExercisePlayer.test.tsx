@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from 'vitest'
 import { render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { ExercisePlayer } from './ExercisePlayer'
+import { nearlySameText } from './answerText'
 import { setupApp, Router } from '../test/helpers'
 import type { Exercise, ExerciseType } from '../models'
 import { highlightKind } from '../ui/MoleculeView'
@@ -184,5 +185,14 @@ describe('compare_structures', () => {
     expect(highlightKind('CCO')).toBeNull()
     expect(highlightKind('C[C@@H:1](O)CC')).toBe('atom')
     expect(highlightKind('[CH3:1][CH2:2]O')).toBe('bond')
+  })
+})
+
+describe('retroalimentación sin repetir la explicación', () => {
+  it('detecta textos prácticamente iguales', () => {
+    expect(nearlySameText('El carbono forma 4 enlaces.', 'el carbono forma 4 enlaces')).toBe(true)
+    expect(nearlySameText('El carbono forma 4 enlaces covalentes.', 'El carbono forma 4 enlaces covalentes, por eso es tetravalente.')).toBe(true)
+    expect(nearlySameText('Revisa las prioridades CIP.', 'El carbono tiene 4 electrones de valencia.')).toBe(false)
+    expect(nearlySameText('', 'algo')).toBe(false)
   })
 })

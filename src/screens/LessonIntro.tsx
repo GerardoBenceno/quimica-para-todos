@@ -17,7 +17,7 @@ import { feedbackSmiles } from '../engine/answerText'
 /** Átomos explícitos de un SMILES (aproximado); una figura de un solo átomo no ilustra nada. */
 const atomCount = (smiles: string) => (smiles.match(/Cl|Br|[BCNOPSFI]|\[[^\]]+\]|[bcnops]/g) ?? []).length
 
-export function LessonIntro({ lessonId, headingLevel, onStart }: { lessonId: string; headingLevel: 1 | 2; onStart(): void }) {
+export function LessonIntro({ lessonId, headingLevel, onStart, hidePathLink = false }: { lessonId: string; headingLevel: 1 | 2; onStart(): void; hidePathLink?: boolean }) {
   const t = useT()
   const b = useBundle()
   const s = useUserState()
@@ -52,9 +52,11 @@ export function LessonIntro({ lessonId, headingLevel, onStart }: { lessonId: str
           {t(ip && ip.answered > 0 ? 'lesson.continue' : 'lesson.start')}
         </button>
         {ip && ip.answered > 0 && <span className="muted t-15">{t('lesson.progress_so_far', { n: ip.answered, m: ip.total })}</span>}
-        <Link className="link" to={routes.world(world.id)}>
-          {t('lesson.see_path')}
-        </Link>
+        {!hidePathLink && (
+          <Link className="link" to={routes.world(world.id)}>
+            {t('lesson.see_path')}
+          </Link>
+        )}
       </div>
     </section>
   )

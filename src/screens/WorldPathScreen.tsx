@@ -244,6 +244,7 @@ export function WorldPathScreen() {
                   state: { autostart: true },
                 })
               }
+              hidePathLink
             />
           </aside>
         )}

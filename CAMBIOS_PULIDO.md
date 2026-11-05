@@ -54,6 +54,8 @@ Qué cambió respecto al cierre del hito 6, qué quedó pendiente y por qué. El
 
 Lista de borradores guardados en el navegador (guardar, cargar, borrar) y descarga conjunta de todos los del mismo paquete en un solo CSV.
 
+28. **Ajustes de interfaz**: la hoja de retroalimentación no repite el mensaje de la plantilla cuando dice prácticamente lo mismo que la explicación (iguales tras normalizar, uno contenido en el otro o al menos 80 % de palabras en común; función `nearlySameText` con test) y conserva el aviso de "pasó a tu lista para repasar"; en la ruta del mundo en computadora, el panel de la lección en curso ya no muestra "Ver la ruta del mundo".
+
 ## Para que lo corrija el autor
 
 - `seed/assets.json`: el campo `license` de los 13 assets sigue en `"propio-por-generar"`, pero el arte ya existe. No se cambió porque el seed es del autor; conviene poner la licencia real del arte. Lo mismo para `width` y `height`, que están en `null` (los originales miden 1254 × 1254 y las versiones servidas 512 × 512).
