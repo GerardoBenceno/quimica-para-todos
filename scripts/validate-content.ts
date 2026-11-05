@@ -10,7 +10,7 @@ import { manifestSchema, uiConfigSchema, featuresSchema } from '../src/core/sche
 import { PUBLIC, ROOT, loadMolIndex, loadRawPacks, readJson } from './packs'
 
 // La comprobación de moléculas se activa en el hito 2, con public/mol/index.json.
-const MOL_CHECK = false
+const MOL_CHECK = true
 
 const issues: Issue[] = []
 const error = (message: string) => issues.push({ level: 'error', message })

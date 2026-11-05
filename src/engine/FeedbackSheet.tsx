@@ -1,0 +1,61 @@
+import { useEffect, useRef } from 'react'
+import type { Exercise } from '../models'
+import type { Verdict } from '../core/game/validate'
+import { useBundle } from '../stores/contentStore'
+import { useT } from '../services/i18nHooks'
+import { ChemText } from '../ui/ChemText'
+import { MoleculeView } from '../ui/MoleculeView'
+import { CheckIcon, CrossIcon } from '../ui/icons'
+import { correctAnswerText, feedbackSmiles } from './answerText'
+
+/**
+ * Hoja inferior con veredicto, respuesta correcta, explicación del seed, la
+ * estructura con lo relevante resaltado y el mensaje de feedback_template.
+ * No bloquea el avance.
+ */
+export function FeedbackSheet({ exercise, verdict, onContinue, practice }: { exercise: Exercise; verdict: Verdict; onContinue(): void; practice?: boolean }) {
+  const t = useT()
+  const b = useBundle()
+  const headRef = useRef<HTMLHeadingElement>(null)
+  useEffect(() => headRef.current?.focus(), [])
+  const ok = verdict === 'correct'
+  const template = b.feedbackTemplates.find((f) => f.id === exercise.feedback_template_id && f.is_active)
+  const smiles = feedbackSmiles(exercise)
+  const answer = correctAnswerText(exercise, t)
+
+  return (
+    <section className={`sheet ${ok ? 'sheet-ok' : 'sheet-bad'}`} aria-labelledby="sheet-title">
+      <div className="sheet-inner">
+        <h2 id="sheet-title" className="sheet-verdict" tabIndex={-1} ref={headRef}>
+          <span className="verdict-badge">{ok ? <CheckIcon size={18} /> : <CrossIcon size={18} />}</span>
+          {t(ok ? 'feedback.correct' : 'feedback.incorrect')}
+        </h2>
+        {!ok && answer && (
+          <p className="sheet-answer">
+            <ChemText text={t('feedback.answer_is', { answer })} />
+          </p>
+        )}
+        <div className="sheet-body">
+          {smiles && (
+            <figure className="figure figure-small">
+              <MoleculeView smiles={smiles} variant="highlight" label={t('figure.structure_of', { name: answer || smiles })} />
+            </figure>
+          )}
+          {exercise.explanation_key && (
+            <p className="sheet-explain">
+              <ChemText text={t(exercise.explanation_key)} />
+            </p>
+          )}
+        </div>
+        {!ok && template && (
+          <p className="sheet-template muted">
+            <ChemText text={t(template.message_key)} /> {t(practice ? 'feedback.still_in_review' : 'feedback.added_to_review')}
+          </p>
+        )}
+        <button type="button" className="btn btn-primary btn-block" onClick={onContinue}>
+          {t('feedback.continue')}
+        </button>
+      </div>
+    </section>
+  )
+}

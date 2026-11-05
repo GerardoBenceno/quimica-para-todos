@@ -62,6 +62,7 @@ export interface StructureEditor {
 export interface MoleculeEntry {
   id: string
   formula: string
+  heavy_atoms: number
   svg: string
   svg_thumb: string
   svg_highlight: string | null

@@ -1,0 +1,55 @@
+<svg version='1.1' baseProfile='full'
+              xmlns='http://www.w3.org/2000/svg'
+                      xmlns:rdkit='http://www.rdkit.org/xml'
+                      xmlns:xlink='http://www.w3.org/1999/xlink'
+                  xml:space='preserve'
+width='25px' height='15px' viewBox='0 0 25 15'>
+<path class='atom-0' d='M 3.8 5.5
+Q 3.8 3.7, 4.6 2.8
+Q 5.5 1.8, 7.1 1.8
+Q 8.6 1.8, 9.4 2.9
+L 8.7 3.4
+Q 8.1 2.6, 7.1 2.6
+Q 6.0 2.6, 5.4 3.4
+Q 4.8 4.1, 4.8 5.5
+Q 4.8 7.0, 5.4 7.7
+Q 6.0 8.4, 7.2 8.4
+Q 8.0 8.4, 9.0 7.9
+L 9.2 8.7
+Q 8.9 9.0, 8.3 9.1
+Q 7.7 9.3, 7.1 9.3
+Q 5.5 9.3, 4.6 8.3
+Q 3.8 7.3, 3.8 5.5
+' fill='currentColor'/>
+<path class='atom-0' d='M 10.4 1.9
+L 11.4 1.9
+L 11.4 5.0
+L 15.1 5.0
+L 15.1 1.9
+L 16.1 1.9
+L 16.1 9.2
+L 15.1 9.2
+L 15.1 5.8
+L 11.4 5.8
+L 11.4 9.2
+L 10.4 9.2
+L 10.4 1.9
+' fill='currentColor'/>
+<path class='atom-0' d='M 20.6 11.2
+L 21.2 11.2
+L 21.2 11.7
+L 20.6 11.7
+L 20.6 12.8
+L 20.0 12.8
+L 20.0 11.7
+L 17.5 11.7
+L 17.5 11.3
+L 19.6 8.0
+L 20.6 8.0
+L 20.6 11.2
+M 18.3 11.2
+L 20.0 11.2
+L 20.0 8.4
+L 18.3 11.2
+' fill='currentColor'/>
+</svg>

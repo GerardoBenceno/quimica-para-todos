@@ -20,3 +20,74 @@ export async function welcome({ newPage, shot, URL }) {
   await shot(page, '01-bienvenida')
   await ctx.close()
 }
+
+/** Responde el ejercicio visible: primera opción, o llena los huecos con el banco. */
+async function answerVisible(page) {
+  const radios = page.getByRole('radio')
+  if ((await radios.count()) > 0) {
+    await radios.first().click()
+    return
+  }
+  const chips = page.locator('.bank .chip:not([disabled])')
+  while ((await page.locator('.blank.empty').count()) > 0 && (await chips.count()) > 0) await chips.first().click()
+}
+
+/** Juega la lección abierta hasta la pantalla de resultado. */
+export async function playLesson(page, shot, prefix) {
+  let i = 0
+  for (;;) {
+    if (await page.getByText('Lección completada').first().isVisible().catch(() => false)) break
+    await answerVisible(page)
+    if (i === 0 && shot) await shot(page, `${prefix}-ejercicio`)
+    await page.getByRole('button', { name: 'Comprobar' }).click()
+    await page.getByRole('button', { name: 'Continuar', exact: true }).waitFor({ timeout: 10000 })
+    if (i === 0 && shot) await shot(page, `${prefix}-retro`)
+    await page.getByRole('button', { name: 'Continuar', exact: true }).click()
+    i++
+    if (i > 30) throw new Error('la lección no termina')
+    await page.waitForTimeout(100)
+  }
+  return i
+}
+
+export async function flow({ newPage, shot, URL }) {
+  for (const [label, viewport] of [['movil', null], ['escritorio', { width: 1280, height: 860 }]]) {
+    const { ctx, page } = await newPage(viewport)
+    await page.goto(URL)
+    await page.getByRole('button', { name: 'Empezar' }).click()
+    // Diagnóstico completo.
+    for (let k = 0; k < 8; k++) {
+      await page.getByText(`Pregunta ${k + 1} de 8`).waitFor()
+      await page.getByRole('radio').nth(k % 2).click()
+      if (k === 0) await shot(page, `${label}-02-diagnostico`)
+      await page.getByRole('button', { name: 'Siguiente' }).click()
+    }
+    await expectVisible(page, 'Tu punto de partida')
+    await shot(page, `${label}-03-diagnostico-resultado`)
+    await page.getByRole('button', { name: 'Empezar mi primera lección' }).click()
+    await page.getByRole('button', { name: 'Empezar lección' }).click()
+    const n = await playLesson(page, shot, `${label}-04`)
+    if (n < 1) throw new Error('lección sin ejercicios')
+    await shot(page, `${label}-05-resultado`)
+    await page.getByRole('button', { name: 'Ver el mapa de mundos' }).click()
+    await expectVisible(page, 'Tu ruta')
+    await page.waitForTimeout(300)
+    await shot(page, `${label}-06-mapa`)
+    await noHorizontalScroll(page, `${label} mapa`)
+    await page.getByRole('link', { name: 'Química básica del carbono' }).first().click()
+    await expectVisible(page, 'lecciones completadas')
+    await page.waitForTimeout(300)
+    await shot(page, `${label}-07-ruta`)
+    await noHorizontalScroll(page, `${label} ruta`)
+    // Persistencia local: recargar conserva el avance.
+    await page.reload()
+    await expectVisible(page, '1 de 6 lecciones completadas')
+    await ctx.close()
+  }
+}
+
+/** Sin desplazamiento horizontal de la página. */
+export async function noHorizontalScroll(page, where) {
+  const over = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
+  if (over > 1) throw new Error(`${where}: desplazamiento horizontal de ${over}px`)
+}
