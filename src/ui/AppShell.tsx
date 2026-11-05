@@ -25,7 +25,7 @@ export function StatsBar() {
       <span className="stat">
         <StreakDots count={streak} />
         <span>
-          <strong className="num">{t('stats.streak_days', { n: streak })}</strong> {t('stats.streak_suffix')}
+          <strong className="num">{t('stats.streak_days', { n: streak })}</strong> {t('stats.streak_suffix', { n: streak })}
         </span>
       </span>
       <span className="stat">

@@ -128,7 +128,7 @@ export function ResultScreen() {
           ) : (
             <>
               {next && (
-                <button type="button" className="btn btn-primary btn-block" onClick={() => navigate(routes.lesson(next.id), { replace: true })}>
+                <button type="button" className="btn btn-primary btn-block" onClick={() => navigate(routes.lesson(next.id), { replace: true, state: { autostart: true } })}>
                   {t(nextIdx >= 0 ? 'result.continue_with' : 'result.continue_next_world', { n: nextIdx + 1 })}
                 </button>
               )}

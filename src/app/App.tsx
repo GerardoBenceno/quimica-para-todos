@@ -6,6 +6,9 @@ import { WorldPathScreen } from '../screens/WorldPathScreen'
 import { LessonScreen } from '../screens/LessonScreen'
 import { ResultScreen } from '../screens/ResultScreen'
 import { NotFoundScreen } from '../screens/NotFoundScreen'
+import { PracticeScreen } from '../screens/PracticeScreen'
+import { ProfileScreen } from '../screens/ProfileScreen'
+import { QuestsScreen } from '../screens/QuestsScreen'
 import { useProgressStore } from '../stores/progressStore'
 import { routes } from './routes'
 
@@ -27,6 +30,9 @@ export function AppRoutes() {
       <Route path="/mundo/:worldId" element={<WorldPathScreen />} />
       <Route path="/leccion/:lessonId" element={<LessonScreen />} />
       <Route path="/resultado/:attemptId" element={<ResultScreen />} />
+      <Route path="/repasar" element={<PracticeScreen />} />
+      <Route path="/perfil" element={<ProfileScreen />} />
+      <Route path="/recompensas" element={<QuestsScreen />} />
       <Route path="*" element={<NotFoundScreen />} />
     </Routes>
   )

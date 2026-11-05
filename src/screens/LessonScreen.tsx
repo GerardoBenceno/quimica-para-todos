@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useEffect, useMemo, useState } from 'react'
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { servicesOrNull } from '../app/services'
 import type { Exercise } from '../models'
 import { useBundle } from '../stores/contentStore'
@@ -24,6 +24,8 @@ export function LessonScreen() {
   const view = useProgressView()
   const narrow = useNarrow()
   const navigate = useNavigate()
+  const location = useLocation()
+  const autostart = (location.state as { autostart?: boolean } | null)?.autostart === true
   const [session, setSession] = useState<{ attemptId: string; startIndex: number; exercises: Exercise[] } | null>(null)
 
   const lesson = b.lessons.find((l) => l.id === lessonId && l.is_active)
@@ -41,6 +43,15 @@ export function LessonScreen() {
         : [],
     [b, lesson, narrow, flags],
   )
+
+  const status0 = lesson ? view.lessons[lesson.id]?.status : undefined
+  // Desde el mapa o la ruta, "Empezar lección" entra directo a los ejercicios.
+  useEffect(() => {
+    if (autostart && lesson && !session && status0 && status0 !== 'locked') {
+      setSession({ ...beginLesson(lesson.id, plan.length), exercises: plan })
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autostart, lesson?.id])
 
   if (!lesson || !world) return <NotFoundScreen />
   const status = view.lessons[lesson.id]?.status

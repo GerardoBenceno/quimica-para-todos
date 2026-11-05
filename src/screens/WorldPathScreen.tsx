@@ -138,7 +138,7 @@ export function WorldPathScreen() {
           })}
         </div>
         {currentIndex >= 0 && (
-          <button type="button" className="btn btn-primary btn-block" onClick={() => navigate(routes.lesson(lessons[currentIndex].id))}>
+          <button type="button" className="btn btn-primary btn-block" onClick={() => navigate(routes.lesson(lessons[currentIndex].id), { state: { autostart: true } })}>
             {t('path.continue_with', { n: currentIndex + 1 })}
           </button>
         )}

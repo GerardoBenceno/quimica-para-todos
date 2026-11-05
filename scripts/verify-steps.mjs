@@ -33,10 +33,14 @@ async function answerVisible(page) {
 }
 
 /** Juega la lección abierta hasta la pantalla de resultado. */
-export async function playLesson(page, shot, prefix) {
+export async function playLesson(page, shot, prefix, practice = false) {
   let i = 0
   for (;;) {
-    if (await page.getByText('Lección completada').first().isVisible().catch(() => false)) break
+    const endText = practice ? 'Repaso terminado' : 'Lección completada'
+    const end = page.getByText(endText).first()
+    const check = page.getByRole('button', { name: 'Comprobar' })
+    await end.or(check).first().waitFor({ timeout: 15000 })
+    if (await end.isVisible().catch(() => false)) break
     await answerVisible(page)
     if (i === 0 && shot) await shot(page, `${prefix}-ejercicio`)
     await page.getByRole('button', { name: 'Comprobar' }).click()
@@ -90,4 +94,43 @@ export async function flow({ newPage, shot, URL }) {
 export async function noHorizontalScroll(page, where) {
   const over = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
   if (over > 1) throw new Error(`${where}: desplazamiento horizontal de ${over}px`)
+}
+
+/** Atraviesa la primera sesión hasta el mapa (sin capturas). */
+export async function firstSession(page, URL) {
+  await page.goto(URL)
+  await page.getByRole('button', { name: 'Empezar' }).click()
+  await page.getByRole('button', { name: 'No sé, empezar desde el principio' }).click()
+  await page.getByRole('button', { name: 'Empezar lección' }).click()
+  await playLesson(page)
+  await page.getByRole('button', { name: 'Ver el mapa de mundos' }).click()
+  await expectVisible(page, 'Tu ruta')
+}
+
+export async function game({ newPage, shot, URL }) {
+  const { ctx, page } = await newPage()
+  await firstSession(page, URL)
+  // Segunda lección: habilita el primer cofre.
+  await page.getByRole('button', { name: /Empezar lección|Continuar lección/ }).click()
+  await playLesson(page)
+  await page.getByRole('button', { name: 'Volver a la ruta' }).click()
+  await expectVisible(page, '2 de 6 lecciones completadas')
+  await shot(page, 'juego-01-ruta-cofre')
+  const coinsBefore = await page.locator('.stats .stat').nth(2).innerText().catch(() => '')
+  await page.getByRole('link', { name: 'Recompensas' }).first().click()
+  await page.getByRole('button', { name: /Abrir \(\+15 monedas\)/ }).click()
+  await expectVisible(page, 'Sumaste 15 monedas')
+  await shot(page, 'juego-02-recompensas')
+  await page.getByRole('link', { name: 'Perfil' }).first().click()
+  await expectVisible(page, 'Experiencia total')
+  await noHorizontalScroll(page, 'perfil')
+  await shot(page, 'juego-03-perfil')
+  await page.getByRole('link', { name: 'Repasar' }).first().click()
+  await page.getByRole('button', { name: 'Empezar repaso' }).waitFor()
+  await shot(page, 'juego-04-repasar')
+  await page.getByRole('button', { name: 'Empezar repaso' }).click()
+  await playLesson(page, null, null, true)
+  await expectVisible(page, 'Repaso terminado')
+  void coinsBefore
+  await ctx.close()
 }

@@ -90,7 +90,7 @@ export function WorldMapScreen() {
         </section>
         <div className="home-current">
           {current ? (
-            <LessonIntro lessonId={current} headingLevel={1} onStart={() => navigate(routes.lesson(current))} />
+            <LessonIntro lessonId={current} headingLevel={1} onStart={() => navigate(routes.lesson(current), { state: { autostart: true } })} />
           ) : (
             <h1 className="t-28">{t('map.all_done')}</h1>
           )}

@@ -29,11 +29,13 @@ await new Promise((resolve, reject) => {
 })
 
 const problems = []
+const openPages = []
 const browser = await chromium.launch()
 
 async function newPage(viewport) {
   const ctx = await browser.newContext(viewport ? { viewport } : { ...devices['Pixel 5'] })
   const page = await ctx.newPage()
+  openPages.push(page)
   page.on('response', (r) => {
     if (r.status() >= 400) problems.push(`HTTP ${r.status()} ${r.url()}`)
   })
@@ -55,6 +57,7 @@ const step = async (name, fn) => {
     results.push(`ok   ${name}`)
   } catch (e) {
     results.push(`FAIL ${name}: ${e.message.split('\n')[0]}`)
+    if (shots) for (const [k, p] of openPages.entries()) await p.screenshot({ path: `${shots}/fallo-${name}-${k}.png`, fullPage: true }).catch(() => {})
     problems.push(`${name}: ${e.message.split('\n')[0]}`)
   }
 }
