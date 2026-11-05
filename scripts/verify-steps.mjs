@@ -1,4 +1,6 @@
 // Pasos de verificación con Playwright para scripts/verify-prod.mjs.
+import { existsSync, readdirSync, readFileSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
 const expectVisible = async (page, text, timeout = 15000) => {
   await page.getByText(text, { exact: false }).first().waitFor({ state: 'visible', timeout })
 }
@@ -16,6 +18,13 @@ export async function welcome({ newPage, shot, URL }) {
   })
   if (!manifest || manifest.start_url !== '/quimica-para-todos/' || manifest.scope !== '/quimica-para-todos/') {
     throw new Error(`manifest con start_url/scope incorrectos: ${JSON.stringify(manifest)}`)
+  }
+  // Metadatos para compartir y 404 propia de GitHub Pages.
+  const og = await page.evaluate(() => document.querySelector('meta[property="og:image"]')?.getAttribute('content') ?? '')
+  if (!og.endsWith('/og.png')) throw new Error(`og:image inesperado: ${og}`)
+  for (const file of ['og.png', '404.html']) {
+    const st = await page.evaluate(async (u) => (await fetch(u)).status, `${URL}${file}`)
+    if (st !== 200) throw new Error(`${file}: HTTP ${st}`)
   }
   await shot(page, '01-bienvenida')
   await ctx.close()
@@ -234,6 +243,56 @@ export async function view3d({ newPage, shot, URL }) {
   await ctx.close()
 }
 
+/** Primer ejercicio compare_structures con lección en los paquetes, y las lecciones que lo preceden. */
+function findCompareExercise() {
+  const packsDir = fileURLToPath(new URL('../public/content/packs/', import.meta.url))
+  const packs = readdirSync(packsDir).sort((a, b) => (a === 'base' ? -1 : b === 'base' ? 1 : a.localeCompare(b)))
+  const read = (pack, file) => {
+    const p = `${packsDir}${pack}/${file}`
+    return existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : []
+  }
+  const lessons = packs.flatMap((pack) => read(pack, 'lessons.json'))
+  const exercises = packs.flatMap((pack) => read(pack, 'exercises.json'))
+  const ex = exercises.find((e) => e.type === 'compare_structures' && e.is_active !== false && e.lesson_id)
+  if (!ex) return null
+  const at = lessons.findIndex((l) => l.id === ex.lesson_id)
+  return { ex, before: lessons.slice(0, Math.max(0, at)).map((l) => l.id) }
+}
+
+export async function compare({ newPage, shot, URL }) {
+  const found = findCompareExercise()
+  if (!found) {
+    console.log('sin ejercicios compare_structures')
+    return
+  }
+  const { ctx, page } = await newPage({ width: 1280, height: 900 })
+  await firstSession(page, URL)
+  await completeLessons(page, found.before)
+  // El mundo en borrador (Próximamente) solo se abre con ?borrador=1 antes del hash.
+  await page.goto(`${URL}?borrador=1#/leccion/${found.ex.lesson_id}`)
+  await page.reload()
+  await page.getByRole('button', { name: 'Empezar lección' }).click()
+  await advanceUntil(page, () => page.locator('.compare-figures').isVisible())
+  const figures = page.locator('.compare-figure [role="img"]')
+  await figures.nth(1).waitFor({ timeout: 15000 })
+  if ((await figures.count()) !== 2) throw new Error(`compare_structures: ${await figures.count()} figuras, se esperaban 2`)
+  for (const text of ['Estructura A', 'Estructura B']) await expectVisible(page, text)
+  if ((await page.getByRole('radio').count()) < 2) throw new Error('compare_structures: sin opciones')
+  await shot(page, 'compare-01-escritorio')
+  // Angosto: una figura debajo de la otra y sin desplazamiento horizontal.
+  await page.setViewportSize({ width: 360, height: 740 })
+  await page.waitForTimeout(300)
+  const [a, b] = await Promise.all([figures.nth(0).boundingBox(), figures.nth(1).boundingBox()])
+  if (!a || !b || b.y < a.y + a.height) throw new Error('compare_structures: a 360 px las figuras no se apilan')
+  await noHorizontalScroll(page, 'compare 360')
+  await shot(page, 'compare-02-360')
+  await answerVisible(page)
+  await page.getByRole('button', { name: 'Comprobar' }).click()
+  await page.getByRole('button', { name: 'Continuar', exact: true }).waitFor({ timeout: 10000 })
+  await shot(page, 'compare-03-retro')
+  await ctx.close()
+}
+
 export async function offline({ newPage, shot, URL, BASE }) {
   const { ctx, page } = await newPage()
   await page.goto(URL)
@@ -323,7 +382,7 @@ export async function a11y({ newPage, URL }) {
     await expectVisible(page, 'Tu ruta')
     await page.waitForTimeout(300)
     await run(page, 'mapa')
-    for (const [hash, text] of [['#/mundo/w_carbono', 'lecciones completadas'], ['#/perfil', 'Experiencia total'], ['#/recompensas', 'Tienda'], ['#/repasar', 'Empezar repaso']]) {
+    for (const [hash, text] of [['#/mundo/w_carbono', 'lecciones completadas'], ['#/perfil', 'Experiencia total'], ['#/recompensas', 'Tienda'], ['#/repasar', 'Empezar repaso'], ['#/acerca', 'Hecho con'], ['#/no-existe', 'Esta página no existe'], ['#/revision', 'Revisión del curso'], ['#/editor', 'Editor de ejercicios']]) {
       await page.goto(`${URL}${hash}`)
       await expectVisible(page, text)
       await page.waitForTimeout(300)

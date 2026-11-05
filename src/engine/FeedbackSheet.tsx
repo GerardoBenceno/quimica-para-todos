@@ -6,7 +6,8 @@ import { useT } from '../services/i18nHooks'
 import { ChemText } from '../ui/ChemText'
 import { MoleculeView } from '../ui/MoleculeView'
 import { CheckIcon, CrossIcon } from '../ui/icons'
-import { correctAnswerText, feedbackSmiles } from './answerText'
+import { Carbo } from '../ui/Carbo'
+import { correctAnswerText, feedbackSmiles, nearlySameText } from './answerText'
 
 /**
  * Hoja inferior con veredicto, respuesta correcta, explicación del seed, la
@@ -22,6 +23,10 @@ export function FeedbackSheet({ exercise, verdict, onContinue, practice }: { exe
   const template = b.feedbackTemplates.find((f) => f.id === exercise.feedback_template_id && f.is_active)
   const smiles = feedbackSmiles(exercise)
   const answer = correctAnswerText(exercise, t)
+  const explanation = exercise.explanation_key ? t(exercise.explanation_key) : ''
+  // Si el mensaje de la plantilla dice prácticamente lo mismo que la explicación, no se repite.
+  const templateMessage = template ? t(template.message_key) : ''
+  const showTemplate = !!templateMessage && !(explanation && nearlySameText(templateMessage, explanation))
 
   return (
     <section className={`sheet ${ok ? 'sheet-ok' : 'sheet-bad'}`} aria-labelledby="sheet-title">
@@ -41,16 +46,24 @@ export function FeedbackSheet({ exercise, verdict, onContinue, practice }: { exe
               <MoleculeView smiles={smiles} variant="highlight" label={t('figure.structure_of', { name: answer || smiles })} />
             </figure>
           )}
-          {exercise.explanation_key && (
+          {explanation && (
             <p className="sheet-explain">
-              <ChemText text={t(exercise.explanation_key)} />
+              <ChemText text={explanation} />
             </p>
           )}
         </div>
         {!ok && template && (
-          <p className="sheet-template muted">
-            <ChemText text={t(template.message_key)} /> {t(practice ? 'feedback.still_in_review' : 'feedback.added_to_review')}
-          </p>
+          <div className="sheet-template">
+            <Carbo expression="sad" size={40} />
+            <p className="muted">
+              {showTemplate && (
+                <>
+                  <ChemText text={templateMessage} />{' '}
+                </>
+              )}
+              {t(practice ? 'feedback.still_in_review' : 'feedback.added_to_review')}
+            </p>
+          </div>
         )}
         <button type="button" className="btn btn-primary btn-block" onClick={onContinue}>
           {t('feedback.continue')}

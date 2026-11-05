@@ -1,0 +1,5 @@
+id,unit_id,title_key,order,type,intro,xp_reward,coin_reward,star_count,unlock_rule,content_version,is_active
+estereo_l_centros,estereo_u_estereo,lesson.estereo_l_centros.title,1,standard,"{""text_key"":""lesson.estereo_l_centros.intro"",""image_asset_id"":null,""youtube_id"":null}",20,5,0,,1,true
+estereo_l_rs,estereo_u_estereo,lesson.estereo_l_rs.title,2,standard,"{""text_key"":""lesson.estereo_l_rs.intro"",""image_asset_id"":null,""youtube_id"":null}",20,5,0,,1,true
+estereo_l_ez,estereo_u_estereo,lesson.estereo_l_ez.title,3,standard,"{""text_key"":""lesson.estereo_l_ez.intro"",""image_asset_id"":null,""youtube_id"":null}",20,5,0,,1,true
+estereo_l_relaciones,estereo_u_estereo,lesson.estereo_l_relaciones.title,4,standard,"{""text_key"":""lesson.estereo_l_relaciones.intro"",""image_asset_id"":null,""youtube_id"":null}",20,5,0,,1,true

@@ -1,0 +1,215 @@
+key,locale,value,content_version
+lesson.estereo_l_centros.intro,es,"Un estereocentro es un átomo, casi siempre un carbono sp³, unido a cuatro sustituyentes distintos. Si se intercambian dos de esos sustituyentes se obtiene un estereoisómero diferente. Una molécula con un solo estereocentro es quiral: no se puede superponer con su imagen especular.",1
+lesson.estereo_l_centros.title,es,Estereocentros,1
+lesson.estereo_l_ez.intro,es,"El doble enlace C=C no permite la rotación libre, así que los sustituyentes quedan fijos a uno u otro lado del eje del doble enlace. En cada carbono del doble enlace se elige el sustituyente de mayor prioridad según las reglas CIP. Si los dos grupos de mayor prioridad están del mismo lado, el isómero es Z; si están en lados opuestos, es E.",1
+lesson.estereo_l_ez.title,es,Isomería E y Z,1
+lesson.estereo_l_relaciones.intro,es,"Los isómeros constitucionales tienen la misma fórmula molecular pero distinta conectividad entre sus átomos. Los estereoisómeros comparten la conectividad y solo difieren en la disposición espacial. Entre ellos, los enantiómeros son imágenes especulares no superponibles, mientras que los diastereómeros son estereoisómeros que no son imágenes especulares entre sí.",1
+lesson.estereo_l_relaciones.title,es,Relaciones entre estereoisómeros,1
+lesson.estereo_l_rs.intro,es,"Las reglas de prioridad de Cahn, Ingold y Prelog (CIP) ordenan los cuatro sustituyentes de un estereocentro: tiene mayor prioridad el átomo de mayor número atómico unido directamente al centro y, en caso de empate, se comparan los átomos siguientes. Con el sustituyente de menor prioridad orientado hacia atrás, se recorre la secuencia de prioridades 1, 2 y 3: si gira en sentido horario la configuración es R y si gira en sentido antihorario es S.",1
+lesson.estereo_l_rs.title,es,Configuración R y S,1
+unit.estereo.subtitle,es,"Estereocentros, R/S, E/Z y relaciones",1
+unit.estereo.title,es,Estereoisomería,1
+ex.estereo_e_centros_01.explain,es,"Estereocentros encontrados: 1. Carbonos con cuatro sustituyentes distintos: C2 (OH, C₂H₅, CH₃, H).",1
+ex.estereo_e_centros_01.opt.0,es,'0,1
+ex.estereo_e_centros_01.opt.1,es,'1,1
+ex.estereo_e_centros_01.opt.2,es,'2,1
+ex.estereo_e_centros_01.opt.3,es,'3,1
+ex.estereo_e_centros_01.prompt,es,¿Cuántos estereocentros tiene esta molécula?,1
+ex.estereo_e_centros_02.explain,es,Estereocentros encontrados: 0. Ningún carbono tiene cuatro sustituyentes distintos.,1
+ex.estereo_e_centros_02.opt.0,es,'0,1
+ex.estereo_e_centros_02.opt.1,es,'1,1
+ex.estereo_e_centros_02.opt.2,es,'2,1
+ex.estereo_e_centros_02.opt.3,es,'3,1
+ex.estereo_e_centros_02.prompt,es,¿Cuántos estereocentros tiene esta molécula?,1
+ex.estereo_e_centros_03.explain,es,"Estereocentros encontrados: 1. Carbonos con cuatro sustituyentes distintos: C2 (OH, COOH, CH₃, H).",1
+ex.estereo_e_centros_03.opt.0,es,'0,1
+ex.estereo_e_centros_03.opt.1,es,'1,1
+ex.estereo_e_centros_03.opt.2,es,'2,1
+ex.estereo_e_centros_03.opt.3,es,'3,1
+ex.estereo_e_centros_03.prompt,es,¿Cuántos estereocentros tiene esta molécula?,1
+ex.estereo_e_centros_04.explain,es,"Estereocentros encontrados: 2. Carbonos con cuatro sustituyentes distintos: C2 (Br, CHBrCH₃, CH₃, H); C4 (Br, CHBrCH₃, CH₃, H).",1
+ex.estereo_e_centros_04.opt.0,es,'0,1
+ex.estereo_e_centros_04.opt.1,es,'1,1
+ex.estereo_e_centros_04.opt.2,es,'2,1
+ex.estereo_e_centros_04.opt.3,es,'3,1
+ex.estereo_e_centros_04.prompt,es,¿Cuántos estereocentros tiene esta molécula?,1
+ex.estereo_e_centros_05.explain,es,Estereocentros encontrados: 2. Carbonos con cuatro sustituyentes distintos: C2; C7.,1
+ex.estereo_e_centros_05.opt.0,es,'0,1
+ex.estereo_e_centros_05.opt.1,es,'1,1
+ex.estereo_e_centros_05.opt.2,es,'2,1
+ex.estereo_e_centros_05.opt.3,es,'3,1
+ex.estereo_e_centros_05.prompt,es,¿Cuántos estereocentros tiene esta molécula?,1
+ex.estereo_e_centros_06.explain,es,"Estereocentros encontrados: 2. Carbonos con cuatro sustituyentes distintos: C2 (OH, CH(NH₂)COOH, CH₃, H); C4 (NH₂, COOH, CH(OH)CH₃, H).",1
+ex.estereo_e_centros_06.opt.0,es,'0,1
+ex.estereo_e_centros_06.opt.1,es,'1,1
+ex.estereo_e_centros_06.opt.2,es,'2,1
+ex.estereo_e_centros_06.opt.3,es,'3,1
+ex.estereo_e_centros_06.prompt,es,¿Cuántos estereocentros tiene esta molécula?,1
+ex.estereo_e_es_centro_01.explain,es,"Sí: el carbono resaltado tiene cuatro sustituyentes distintos (OH, C₂H₅, CH₃, H), por eso es un estereocentro.",1
+ex.estereo_e_es_centro_01.opt.no,es,No,1
+ex.estereo_e_es_centro_01.opt.si,es,Sí,1
+ex.estereo_e_es_centro_01.prompt,es,¿El carbono resaltado es un estereocentro?,1
+ex.estereo_e_es_centro_02.explain,es,"No: el carbono resaltado tiene sustituyentes repetidos (Cl, CH₃, CH₃, H; se repite CH₃), por eso no es un estereocentro.",1
+ex.estereo_e_es_centro_02.opt.no,es,No,1
+ex.estereo_e_es_centro_02.opt.si,es,Sí,1
+ex.estereo_e_es_centro_02.prompt,es,¿El carbono resaltado es un estereocentro?,1
+ex.estereo_e_es_centro_03.explain,es,"Sí: el carbono resaltado tiene cuatro sustituyentes distintos (NH₂, COOH, CH₃, H), por eso es un estereocentro.",1
+ex.estereo_e_es_centro_03.opt.no,es,No,1
+ex.estereo_e_es_centro_03.opt.si,es,Sí,1
+ex.estereo_e_es_centro_03.prompt,es,¿El carbono resaltado es un estereocentro?,1
+ex.estereo_e_es_centro_04.explain,es,"No: el carbono resaltado tiene sustituyentes repetidos (OH, CH₃, CH₃, H; se repite CH₃), por eso no es un estereocentro.",1
+ex.estereo_e_es_centro_04.opt.no,es,No,1
+ex.estereo_e_es_centro_04.opt.si,es,Sí,1
+ex.estereo_e_es_centro_04.prompt,es,¿El carbono resaltado es un estereocentro?,1
+ex.estereo_e_ez_01.explain,es,"Prioridades CIP en cada carbono del doble enlace: C2: 1 = CH₃, 2 = H; C3: 1 = CH₃, 2 = H. Los sustituyentes de mayor prioridad (CH₃ y CH₃) quedan en lados opuestos del doble enlace, por tanto la isomería es E.",1
+ex.estereo_e_ez_01.opt.E,es,E,1
+ex.estereo_e_ez_01.opt.Z,es,Z,1
+ex.estereo_e_ez_01.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_01.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_ez_02.explain,es,"Prioridades CIP en cada carbono del doble enlace: C2: 1 = CH₃, 2 = H; C3: 1 = CH₃, 2 = H. Los sustituyentes de mayor prioridad (CH₃ y CH₃) quedan del mismo lado del doble enlace, por tanto la isomería es Z.",1
+ex.estereo_e_ez_02.opt.E,es,E,1
+ex.estereo_e_ez_02.opt.Z,es,Z,1
+ex.estereo_e_ez_02.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_02.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_ez_03.explain,es,"Prioridades CIP en cada carbono del doble enlace: C2: 1 = CH₃, 2 = H; C3: 1 = C₂H₅, 2 = H. Los sustituyentes de mayor prioridad (CH₃ y C₂H₅) quedan en lados opuestos del doble enlace, por tanto la isomería es E.",1
+ex.estereo_e_ez_03.opt.E,es,E,1
+ex.estereo_e_ez_03.opt.Z,es,Z,1
+ex.estereo_e_ez_03.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_03.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_ez_04.explain,es,"Prioridades CIP en cada carbono del doble enlace: C2: 1 = CH₃, 2 = H; C3: 1 = C₂H₅, 2 = H. Los sustituyentes de mayor prioridad (CH₃ y C₂H₅) quedan del mismo lado del doble enlace, por tanto la isomería es Z.",1
+ex.estereo_e_ez_04.opt.E,es,E,1
+ex.estereo_e_ez_04.opt.Z,es,Z,1
+ex.estereo_e_ez_04.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_04.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_ez_05.explain,es,"Prioridades CIP en cada carbono del doble enlace: C2: 1 = Cl, 2 = H; C3: 1 = CH₃, 2 = H. Los sustituyentes de mayor prioridad (Cl y CH₃) quedan en lados opuestos del doble enlace, por tanto la isomería es E.",1
+ex.estereo_e_ez_05.opt.E,es,E,1
+ex.estereo_e_ez_05.opt.Z,es,Z,1
+ex.estereo_e_ez_05.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_05.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_ez_06.explain,es,"Prioridades CIP en cada carbono del doble enlace: C2: 1 = Cl, 2 = H; C3: 1 = CH₃, 2 = H. Los sustituyentes de mayor prioridad (Cl y CH₃) quedan del mismo lado del doble enlace, por tanto la isomería es Z.",1
+ex.estereo_e_ez_06.opt.E,es,E,1
+ex.estereo_e_ez_06.opt.Z,es,Z,1
+ex.estereo_e_ez_06.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_06.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_ez_07.explain,es,"Sustituyentes en cada carbono del doble enlace: C2: 1 = CH₃, 2 = CH₃; C4: 1 = CH₃, 2 = H. C2 tiene dos sustituyentes idénticos (CH₃ y CH₃), así que intercambiarlos no cambia nada: el doble enlace no presenta isomería geométrica.",1
+ex.estereo_e_ez_07.opt.E,es,E,1
+ex.estereo_e_ez_07.opt.Z,es,Z,1
+ex.estereo_e_ez_07.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_07.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_ez_08.explain,es,"Sustituyentes en cada carbono del doble enlace: C1: 1 = H, 2 = H; C2: 1 = C₂H₅, 2 = H. C1 tiene dos sustituyentes idénticos (H y H), así que intercambiarlos no cambia nada: el doble enlace no presenta isomería geométrica.",1
+ex.estereo_e_ez_08.opt.E,es,E,1
+ex.estereo_e_ez_08.opt.Z,es,Z,1
+ex.estereo_e_ez_08.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_08.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_ez_09.explain,es,"Prioridades CIP en cada carbono del doble enlace: C2: 1 = Cl, 2 = H; C3: 1 = Cl, 2 = H. Los sustituyentes de mayor prioridad (Cl y Cl) quedan del mismo lado del doble enlace, por tanto la isomería es Z.",1
+ex.estereo_e_ez_09.opt.E,es,E,1
+ex.estereo_e_ez_09.opt.Z,es,Z,1
+ex.estereo_e_ez_09.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_09.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_ez_10.explain,es,"Prioridades CIP en cada carbono del doble enlace: C3: 1 = C₂H₅, 2 = H; C4: 1 = C₂H₅, 2 = H. Los sustituyentes de mayor prioridad (C₂H₅ y C₂H₅) quedan en lados opuestos del doble enlace, por tanto la isomería es E.",1
+ex.estereo_e_ez_10.opt.E,es,E,1
+ex.estereo_e_ez_10.opt.Z,es,Z,1
+ex.estereo_e_ez_10.opt.sin,es,Sin isomería geométrica,1
+ex.estereo_e_ez_10.prompt,es,¿Qué isomería tiene el doble enlace resaltado?,1
+ex.estereo_e_relacion_01.explain,es,"A es R y B es S: misma conectividad y todos los estereocentros invertidos, por eso son enantiómeros (imágenes especulares no superponibles).",1
+ex.estereo_e_relacion_01.opt.constitucionales,es,Isómeros constitucionales,1
+ex.estereo_e_relacion_01.opt.diastereomeros,es,Diastereómeros,1
+ex.estereo_e_relacion_01.opt.enantiomeros,es,Enantiómeros,1
+ex.estereo_e_relacion_01.opt.identicas,es,Idénticas,1
+ex.estereo_e_relacion_01.prompt,es,¿Qué relación hay entre las dos estructuras?,1
+ex.estereo_e_relacion_02.explain,es,"A es R y B es R: misma conectividad y los mismos descriptores, por eso son la misma molécula.",1
+ex.estereo_e_relacion_02.opt.constitucionales,es,Isómeros constitucionales,1
+ex.estereo_e_relacion_02.opt.diastereomeros,es,Diastereómeros,1
+ex.estereo_e_relacion_02.opt.enantiomeros,es,Enantiómeros,1
+ex.estereo_e_relacion_02.opt.identicas,es,Idénticas,1
+ex.estereo_e_relacion_02.prompt,es,¿Qué relación hay entre las dos estructuras?,1
+ex.estereo_e_relacion_03.explain,es,"A es (R,R) y B es (R,S): misma conectividad y solo 1 de 2 estereocentros invertido, por eso son diastereómeros (no son imágenes especulares).",1
+ex.estereo_e_relacion_03.opt.constitucionales,es,Isómeros constitucionales,1
+ex.estereo_e_relacion_03.opt.diastereomeros,es,Diastereómeros,1
+ex.estereo_e_relacion_03.opt.enantiomeros,es,Enantiómeros,1
+ex.estereo_e_relacion_03.opt.identicas,es,Idénticas,1
+ex.estereo_e_relacion_03.prompt,es,¿Qué relación hay entre las dos estructuras?,1
+ex.estereo_e_relacion_04.explain,es,"A es (S,S) y B es (S,R): misma conectividad y solo 1 de 2 estereocentros invertido, por eso son diastereómeros (no son imágenes especulares).",1
+ex.estereo_e_relacion_04.opt.constitucionales,es,Isómeros constitucionales,1
+ex.estereo_e_relacion_04.opt.diastereomeros,es,Diastereómeros,1
+ex.estereo_e_relacion_04.opt.enantiomeros,es,Enantiómeros,1
+ex.estereo_e_relacion_04.opt.identicas,es,Idénticas,1
+ex.estereo_e_relacion_04.prompt,es,¿Qué relación hay entre las dos estructuras?,1
+ex.estereo_e_relacion_05.explain,es,"A y B tienen la misma fórmula molecular, C₄H₁₀O, pero distinta conectividad entre sus átomos, por eso son isómeros constitucionales.",1
+ex.estereo_e_relacion_05.opt.constitucionales,es,Isómeros constitucionales,1
+ex.estereo_e_relacion_05.opt.diastereomeros,es,Diastereómeros,1
+ex.estereo_e_relacion_05.opt.enantiomeros,es,Enantiómeros,1
+ex.estereo_e_relacion_05.opt.identicas,es,Idénticas,1
+ex.estereo_e_relacion_05.prompt,es,¿Qué relación hay entre las dos estructuras?,1
+ex.estereo_e_relacion_06.explain,es,"A es E y B es Z: misma conectividad y distinta disposición de los sustituyentes en el doble enlace, por eso son diastereómeros.",1
+ex.estereo_e_relacion_06.opt.constitucionales,es,Isómeros constitucionales,1
+ex.estereo_e_relacion_06.opt.diastereomeros,es,Diastereómeros,1
+ex.estereo_e_relacion_06.opt.enantiomeros,es,Enantiómeros,1
+ex.estereo_e_relacion_06.opt.identicas,es,Idénticas,1
+ex.estereo_e_relacion_06.prompt,es,¿Qué relación hay entre las dos estructuras?,1
+ex.estereo_e_relacion_07.explain,es,"A es S y B es R: misma conectividad y todos los estereocentros invertidos, por eso son enantiómeros (imágenes especulares no superponibles).",1
+ex.estereo_e_relacion_07.opt.constitucionales,es,Isómeros constitucionales,1
+ex.estereo_e_relacion_07.opt.diastereomeros,es,Diastereómeros,1
+ex.estereo_e_relacion_07.opt.enantiomeros,es,Enantiómeros,1
+ex.estereo_e_relacion_07.opt.identicas,es,Idénticas,1
+ex.estereo_e_relacion_07.prompt,es,¿Qué relación hay entre las dos estructuras?,1
+ex.estereo_e_relacion_08.explain,es,"A es (S,S) y B es (R,S): misma conectividad y solo 1 de 2 estereocentros invertido, por eso son diastereómeros (no son imágenes especulares).",1
+ex.estereo_e_relacion_08.opt.constitucionales,es,Isómeros constitucionales,1
+ex.estereo_e_relacion_08.opt.diastereomeros,es,Diastereómeros,1
+ex.estereo_e_relacion_08.opt.enantiomeros,es,Enantiómeros,1
+ex.estereo_e_relacion_08.opt.identicas,es,Idénticas,1
+ex.estereo_e_relacion_08.prompt,es,¿Qué relación hay entre las dos estructuras?,1
+ex.estereo_e_relacion_09.explain,es,"A y B tienen la misma fórmula molecular, C₄H₈, pero distinta conectividad entre sus átomos, por eso son isómeros constitucionales.",1
+ex.estereo_e_relacion_09.opt.constitucionales,es,Isómeros constitucionales,1
+ex.estereo_e_relacion_09.opt.diastereomeros,es,Diastereómeros,1
+ex.estereo_e_relacion_09.opt.enantiomeros,es,Enantiómeros,1
+ex.estereo_e_relacion_09.opt.identicas,es,Idénticas,1
+ex.estereo_e_relacion_09.prompt,es,¿Qué relación hay entre las dos estructuras?,1
+ex.estereo_e_rs_01.explain,es,"Prioridades CIP en el carbono resaltado: 1 = OH, 2 = C₂H₅, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia atrás; recorriendo 1→2→3 el giro es horario, por tanto la configuración es R.",1
+ex.estereo_e_rs_01.opt.R,es,R,1
+ex.estereo_e_rs_01.opt.S,es,S,1
+ex.estereo_e_rs_01.prompt,es,¿Qué configuración tiene el carbono resaltado?,1
+ex.estereo_e_rs_02.explain,es,"Prioridades CIP en el carbono resaltado: 1 = OH, 2 = C₂H₅, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia adelante; recorriendo 1→2→3 el giro es horario, por tanto la configuración es S (como el de menor prioridad apunta hacia adelante, se invierte el giro observado).",1
+ex.estereo_e_rs_02.opt.R,es,R,1
+ex.estereo_e_rs_02.opt.S,es,S,1
+ex.estereo_e_rs_02.prompt,es,¿Qué configuración tiene el carbono resaltado?,1
+ex.estereo_e_rs_03.explain,es,"Prioridades CIP en el carbono resaltado: 1 = Br, 2 = C₂H₅, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia atrás; recorriendo 1→2→3 el giro es horario, por tanto la configuración es R.",1
+ex.estereo_e_rs_03.opt.R,es,R,1
+ex.estereo_e_rs_03.opt.S,es,S,1
+ex.estereo_e_rs_03.prompt,es,¿Qué configuración tiene el carbono resaltado?,1
+ex.estereo_e_rs_04.explain,es,"Prioridades CIP en el carbono resaltado: 1 = OH, 2 = COOH, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia adelante; recorriendo 1→2→3 el giro es horario, por tanto la configuración es S (como el de menor prioridad apunta hacia adelante, se invierte el giro observado).",1
+ex.estereo_e_rs_04.opt.R,es,R,1
+ex.estereo_e_rs_04.opt.S,es,S,1
+ex.estereo_e_rs_04.prompt,es,¿Qué configuración tiene el carbono resaltado?,1
+ex.estereo_e_rs_05.explain,es,"Prioridades CIP en el carbono resaltado: 1 = NH₂, 2 = COOH, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia atrás; recorriendo 1→2→3 el giro es horario, por tanto la configuración es R.",1
+ex.estereo_e_rs_05.opt.R,es,R,1
+ex.estereo_e_rs_05.opt.S,es,S,1
+ex.estereo_e_rs_05.prompt,es,¿Qué configuración tiene el carbono resaltado?,1
+ex.estereo_e_rs_06.explain,es,"Prioridades CIP en el carbono resaltado: 1 = OH, 2 = C₃H₇, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia atrás; recorriendo 1→2→3 el giro es antihorario, por tanto la configuración es S.",1
+ex.estereo_e_rs_06.opt.R,es,R,1
+ex.estereo_e_rs_06.opt.S,es,S,1
+ex.estereo_e_rs_06.prompt,es,¿Qué configuración tiene el carbono resaltado?,1
+ex.estereo_e_rs_07.explain,es,"Prioridades CIP en el carbono resaltado: 1 = OH, 2 = C₃H₇, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia adelante; recorriendo 1→2→3 el giro es antihorario, por tanto la configuración es R (como el de menor prioridad apunta hacia adelante, se invierte el giro observado).",1
+ex.estereo_e_rs_07.opt.R,es,R,1
+ex.estereo_e_rs_07.opt.S,es,S,1
+ex.estereo_e_rs_07.prompt,es,¿Qué configuración tiene el carbono resaltado?,1
+ex.estereo_e_rs_08.explain,es,"Prioridades CIP en el carbono resaltado: 1 = Cl, 2 = C₃H₇, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia atrás; recorriendo 1→2→3 el giro es antihorario, por tanto la configuración es S.",1
+ex.estereo_e_rs_08.opt.R,es,R,1
+ex.estereo_e_rs_08.opt.S,es,S,1
+ex.estereo_e_rs_08.prompt,es,¿Qué configuración tiene el carbono resaltado?,1
+ex.estereo_e_rs_09.explain,es,"Prioridades CIP en el carbono resaltado: 1 = Cl, 2 = C₃H₇, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia adelante; recorriendo 1→2→3 el giro es antihorario, por tanto la configuración es R (como el de menor prioridad apunta hacia adelante, se invierte el giro observado).",1
+ex.estereo_e_rs_09.opt.R,es,R,1
+ex.estereo_e_rs_09.opt.S,es,S,1
+ex.estereo_e_rs_09.prompt,es,¿Qué configuración tiene el carbono resaltado?,1
+ex.estereo_e_rs_10.explain,es,"Prioridades CIP en el carbono resaltado: 1 = Br, 2 = C₃H₇, 3 = CH₃, 4 = H (menor). El sustituyente de menor prioridad apunta hacia atrás; recorriendo 1→2→3 el giro es antihorario, por tanto la configuración es S.",1
+ex.estereo_e_rs_10.opt.R,es,R,1
+ex.estereo_e_rs_10.opt.S,es,S,1
+ex.estereo_e_rs_10.prompt,es,¿Qué configuración tiene el carbono resaltado?,1
+feedback.estereo_ft_centros.hint,es,Revisa cada carbono sp³ y compara sus cuatro sustituyentes: basta que dos sean iguales para descartarlo.,1
+feedback.estereo_ft_centros.message,es,"Un carbono es estereocentro solo si sus cuatro sustituyentes son distintos entre sí (contando el H). Si dos coinciden, no lo es.",1
+feedback.estereo_ft_ez.hint,es,"Comprueba primero si algún carbono del doble enlace repite sustituyente; si no, compara los de mayor prioridad de cada lado.",1
+feedback.estereo_ft_ez.message,es,"Asigna la prioridad CIP a los dos sustituyentes de cada carbono del doble enlace. Si los de mayor prioridad están del mismo lado es Z; en lados opuestos, E. Si un carbono tiene dos sustituyentes idénticos, no hay isomería geométrica.",1
+feedback.estereo_ft_relaciones.hint,es,Pregúntate en orden: ¿misma conectividad? ¿mismos centros? ¿están todos invertidos o solo algunos?,1
+feedback.estereo_ft_relaciones.message,es,"Compara el esqueleto: si difiere con la misma fórmula son isómeros constitucionales. Con el mismo esqueleto: iguales en todo, idénticas; todos los centros invertidos, enantiómeros; solo algunos, diastereómeros.",1
+feedback.estereo_ft_rs.hint,es,Primero asigna las prioridades 1-4; después fíjate hacia dónde apunta el sustituyente 4 antes de leer el giro.,1
+feedback.estereo_ft_rs.message,es,"Ordena los sustituyentes por prioridad CIP (mayor número atómico primero), coloca el de menor prioridad hacia atrás y recorre 1→2→3: horario = R, antihorario = S. Si el de menor prioridad apunta hacia adelante, invierte el resultado.",1

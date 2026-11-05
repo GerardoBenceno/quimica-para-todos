@@ -10,4 +10,9 @@ export const routes = {
   practice: () => '/repasar',
   profile: () => '/perfil',
   quests: () => '/recompensas',
+  about: () => '/acerca',
+  /** Ruta oculta para que el autor revise todo el curso; sin enlace en la navegación. */
+  review: () => '/revision',
+  /** Ruta oculta: editor del autor con vista previa en vivo. */
+  editor: () => '/editor',
 }

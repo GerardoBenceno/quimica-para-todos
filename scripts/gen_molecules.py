@@ -257,16 +257,27 @@ def draw(mol: Chem.Mol, bond_length: int, chain: list[int] | None = None) -> str
     o.annotationFontScale = 1.25
     hl_atoms: list[int] = []
     hl_bonds: list[int] = []
+    # Átomos con número de mapa en el SMILES ([C:1]): se resaltan (y el enlace
+    # entre dos mapeados) con el mismo centinela, y el mapa se borra para que
+    # no aparezca como rótulo.
+    mapped = [a.GetIdx() for a in m.GetAtoms() if a.GetAtomMapNum()]
+    for a in m.GetAtoms():
+        a.SetAtomMapNum(0)
     if chain:
-        o.highlightBondWidthMultiplier = 8
-        o.highlightRadius = 0.25
-        o.fillHighlights = True
         for i, a in enumerate(chain):
             m.GetAtomWithIdx(a).SetProp("atomNote", str(i + 1))
         hl_atoms = list(chain)
         hl_bonds = [m.GetBondBetweenAtoms(a, b).GetIdx() for a, b in zip(chain, chain[1:])]
+    elif mapped:
+        hl_atoms = mapped
+        hl_bonds = [b.GetIdx() for b in m.GetBonds()
+                    if b.GetBeginAtomIdx() in mapped and b.GetEndAtomIdx() in mapped]
+    if hl_atoms:
+        o.highlightBondWidthMultiplier = 8
+        o.highlightRadius = 0.25
+        o.fillHighlights = True
     rdMolDraw2D.PrepareMolForDrawing(m)
-    if chain:
+    if hl_atoms:
         colors = {a: SENTINEL_RGB for a in hl_atoms}
         bcolors = {b: SENTINEL_RGB for b in hl_bonds}
         d.DrawMolecule(m, highlightAtoms=hl_atoms, highlightBonds=hl_bonds,

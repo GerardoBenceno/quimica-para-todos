@@ -240,6 +240,8 @@ export const featuresSchema = z.object({
   molecules3d: z.boolean(),
   aiFeedback: z.boolean(),
   social: z.boolean(),
+  /** Mundo de estereoquímica (paquete estereo) jugable; apagado = "Próximamente". */
+  mundoEstereo: z.boolean().optional(),
 })
 
 export const uiConfigSchema = z.object({

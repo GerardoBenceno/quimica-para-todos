@@ -1,0 +1,6 @@
+id,slug,title_key,description_key,icon_asset_id,order,status,unlock_rule,total_lessons,content_version,is_active
+w_carbono,quimica-basica-del-carbono,world.carbono.title,world.carbono.desc,asset_icon_carbono,1,unlocked,,6,1,true
+w_grupos,grupos-funcionales-y-clasificacion,world.grupos.title,world.grupos.desc,asset_icon_grupos,2,locked,"{""requires_world"":""w_carbono"",""min_progress"":1}",3,1,true
+w_nomenclatura_alcanos,nomenclatura-de-alcanos,world.alcanos.title,world.alcanos.desc,asset_icon_alcanos,3,locked,"{""requires_world"":""w_grupos"",""min_progress"":1}",4,1,true
+w_estereo,estereoquimica,world.estereo.title,world.estereo.desc,asset_icon_estereo,4,coming_soon,,0,1,true
+w_reacciones,bosque-de-reacciones,world.reacciones.title,world.reacciones.desc,asset_icon_reacciones,5,coming_soon,,0,1,true

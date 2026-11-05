@@ -34,7 +34,7 @@ export function FillBlanksView({ exercise, attemptId, answer, onAnswer, checked,
 
   return (
     <div className="fill">
-      <p className="fill-template" aria-labelledby={promptId}>
+      <div className="fill-template" role="group" aria-labelledby={promptId}>
         {parts.map((p, i) => {
           const m = /^\{([^}]+)\}$/.exec(p)
           if (!m) return <Fragment key={i}>{p}</Fragment>
@@ -56,7 +56,7 @@ export function FillBlanksView({ exercise, attemptId, answer, onAnswer, checked,
             </button>
           )
         })}
-      </p>
+      </div>
       <div className="bank" role="group" aria-label={t('exercise.bank')}>
         {bank.map((o) => {
           const used = Object.values(filled).includes(o.value)

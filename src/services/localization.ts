@@ -10,16 +10,23 @@ export type TParams = Record<string, string | number>
 export class LocalizationService {
   private table = new Map<string, string>()
   private warned = new Set<string>()
+  private ui = new Set<string>()
 
   constructor(readonly locale: string) {}
 
   addContent(entries: Translation[]) {
-    for (const t of entries) if (t.locale === this.locale) this.table.set(t.key, t.value)
+    for (const t of entries) {
+      if (t.locale !== this.locale) continue
+      if (this.ui.has(t.key)) throw new Error(`Clave de UI "${t.key}" choca con una clave de contenido`)
+      this.table.set(t.key, t.value)
+    }
   }
 
+  /** En cualquier orden de carga, una clave de UI que choque con una de contenido es error. */
   addUi(strings: Record<string, string>) {
     for (const [k, v] of Object.entries(strings)) {
-      if (this.table.has(k)) throw new Error(`Clave de UI "${k}" choca con una clave de contenido`)
+      if (this.table.has(k) && !this.ui.has(k)) throw new Error(`Clave de UI "${k}" choca con una clave de contenido`)
+      this.ui.add(k)
       this.table.set(k, v)
     }
   }

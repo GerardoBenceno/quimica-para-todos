@@ -1,0 +1,5 @@
+id,key,topic,message_key,hint_key,severity,content_version,is_active
+estereo_ft_centros,estereo_ft_centros,estereo_centros,feedback.estereo_ft_centros.message,feedback.estereo_ft_centros.hint,correction,1,true
+estereo_ft_rs,estereo_ft_rs,estereo_rs,feedback.estereo_ft_rs.message,feedback.estereo_ft_rs.hint,correction,1,true
+estereo_ft_ez,estereo_ft_ez,estereo_ez,feedback.estereo_ft_ez.message,feedback.estereo_ft_ez.hint,correction,1,true
+estereo_ft_relaciones,estereo_ft_relaciones,estereo_relacion,feedback.estereo_ft_relaciones.message,feedback.estereo_ft_relaciones.hint,correction,1,true

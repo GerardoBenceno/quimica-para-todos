@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import type { Exercise } from '../models'
-import { hasAnswer, validateAnswer, type Answer, type Verdict } from '../core/game/validate'
+import { answerType, hasAnswer, validateAnswer, type Answer, type Verdict } from '../core/game/validate'
+import { answerShape } from '../core/exerciseTypes'
+import { presentationOrder } from '../core/game/shuffle'
 import { spendCoins } from '../core/game/rewards'
 import { useBundle } from '../stores/contentStore'
 import { useProgressStore, useUserState } from '../stores/progressStore'
@@ -12,6 +14,8 @@ import { MoleculeView } from '../ui/MoleculeView'
 import { AssetImage } from '../ui/AssetImage'
 import { ProgressBar } from '../ui/ProgressBar'
 import { CrossIcon } from '../ui/icons'
+import { Carbo } from '../ui/Carbo'
+import { vibrateFor } from '../stores/prefsStore'
 import { FeedbackSheet } from './FeedbackSheet'
 import { exerciseTypeDef } from './registry'
 import { promptSmiles } from './answerText'
@@ -29,6 +33,8 @@ export interface ExercisePlayerProps {
   onClose(): void
   /** Texto del encabezado del diagnóstico (con enlace para saltar). */
   footer?: React.ReactNode
+  /** Vista previa del editor: respuesta inicial y si ya está comprobada. */
+  preview?: { answer: Answer | null; checked: boolean }
 }
 
 /**
@@ -36,7 +42,7 @@ export interface ExercisePlayerProps {
  * deshabilitado hasta que haya respuesta. En lección y práctica muestra la
  * hoja de retroalimentación; en el diagnóstico avanza sin revelar.
  */
-export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onRecord, onFinish, onClose, footer }: ExercisePlayerProps) {
+export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onRecord, onFinish, onClose, footer, preview }: ExercisePlayerProps) {
   const t = useT()
   const b = useBundle()
   const g = useGameValues()
@@ -44,8 +50,10 @@ export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onR
   const update = useProgressStore((s) => s.update)
 
   const [index, setIndex] = useState(Math.min(startIndex, Math.max(0, exercises.length - 1)))
-  const [answer, setAnswer] = useState<Answer | null>(null)
-  const [verdict, setVerdict] = useState<Verdict | null>(null)
+  const first = exercises[Math.min(startIndex, Math.max(0, exercises.length - 1))]
+  const [answer, setAnswer] = useState<Answer | null>(preview?.answer ?? null)
+  const [verdict, setVerdict] = useState<Verdict | null>(preview?.checked && preview.answer && first ? validateAnswer(first, preview.answer) : null)
+  const mounted = useRef(false)
   const [busy, setBusy] = useState(false)
   const [hint, setHint] = useState(false)
   const started = useRef(performance.now())
@@ -54,10 +62,14 @@ export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onR
   const ex = exercises[index]
   useEffect(() => {
     started.current = performance.now()
-    setAnswer(null)
-    setVerdict(null)
-    setHint(false)
-    promptRef.current?.focus()
+    if (mounted.current) {
+      setAnswer(null)
+      setVerdict(null)
+      setHint(false)
+    }
+    mounted.current = true
+    if (!preview) promptRef.current?.focus()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index])
 
   if (!ex) return null
@@ -76,7 +88,11 @@ export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onR
     try {
       const v = def?.check ? await def.check(ex, answer) : validateAnswer(ex, answer)
       const timeMs = performance.now() - started.current
-      if (v !== 'invalid') onRecord(ex, answer, v, timeMs)
+      if (v !== 'invalid') {
+        onRecord(ex, answer, v, timeMs)
+        if (mode !== 'diagnostic') vibrateFor(v)
+      }
+      checkedAt.current = performance.now()
       if (mode === 'diagnostic' && v !== 'invalid') next()
       else setVerdict(v)
     } finally {
@@ -111,6 +127,50 @@ export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onR
 
   const canHint = mode !== 'diagnostic' && !!template?.hint_key && !checked
   const affordable = state.user.coins >= g.hintCost
+
+  // Atajos de teclado: 1 a 9 eligen la opción visible (en su orden barajado),
+  // Enter comprueba y, ya comprobado, continúa. No interfieren con campos de
+  // texto, con el editor de estructuras ni con botones que ya responden a Enter.
+  const optionsType = answerType(ex)
+  const keyOptions = answerShape(optionsType) === 'options' ? presentationOrder(optionsType, ex.payload.options ?? [], attemptId, ex.id) : null
+  const checkedAt = useRef(0)
+  const checkRef = useRef(check)
+  checkRef.current = check
+  const nextRef = useRef(next)
+  nextRef.current = next
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey) return
+      const el = e.target as HTMLElement | null
+      if (el && (el.closest('input, textarea, select, [contenteditable="true"], .ketcher-host') || el.isContentEditable)) return
+      if (e.key === 'Enter') {
+        if (e.repeat) return
+        // Un botón enfocado que no sea una opción conserva su Enter nativo.
+        if (el && el.closest('button, a') && !el.closest('[role="radio"]')) return
+        if (checked) {
+          if (mode === 'diagnostic') return
+          // Un segundo Enter inmediato no debe saltarse la retroalimentación.
+          if (performance.now() - checkedAt.current < 600) return
+          e.preventDefault()
+          nextRef.current()
+        } else if (hasAnswer(ex, answer) && !busy) {
+          e.preventDefault()
+          void checkRef.current()
+        }
+        return
+      }
+      if (keyOptions && !checked && /^[1-9]$/.test(e.key)) {
+        const o = keyOptions[Number(e.key) - 1]
+        if (!o) return
+        e.preventDefault()
+        changeAnswer({ value: o.value })
+        const radios = document.querySelectorAll<HTMLElement>('[role="radio"]')
+        radios[Number(e.key) - 1]?.focus()
+      }
+    }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  })
 
   return (
     <div className="player">
@@ -154,9 +214,12 @@ export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onR
         {canHint && (
           <div className="hint">
             {hint ? (
-              <p className="hint-text" role="status">
-                <ChemText text={t(template!.hint_key!)} />
-              </p>
+              <div className="hint-text" role="status">
+                <Carbo expression="think" size={40} />
+                <p>
+                  <ChemText text={t(template!.hint_key!)} />
+                </p>
+              </div>
             ) : (
               <button type="button" className="link" onClick={useHint} disabled={!affordable}>
                 {g.hintCost > 0 ? t('exercise.hint_cost', { n: g.hintCost }) : t('exercise.hint')}
@@ -167,6 +230,7 @@ export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onR
         )}
 
         {footer}
+        {keyOptions && !checked && <p className="muted t-13 kbd-hint">{t('exercise.keyboard_hint', { n: keyOptions.length })}</p>}
       </main>
 
       {!checked && (

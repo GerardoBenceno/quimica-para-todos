@@ -1,0 +1,42 @@
+[
+  {
+    "id": "estereo_ft_centros",
+    "key": "estereo_ft_centros",
+    "topic": "estereo_centros",
+    "message_key": "feedback.estereo_ft_centros.message",
+    "hint_key": "feedback.estereo_ft_centros.hint",
+    "severity": "correction",
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_ft_rs",
+    "key": "estereo_ft_rs",
+    "topic": "estereo_rs",
+    "message_key": "feedback.estereo_ft_rs.message",
+    "hint_key": "feedback.estereo_ft_rs.hint",
+    "severity": "correction",
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_ft_ez",
+    "key": "estereo_ft_ez",
+    "topic": "estereo_ez",
+    "message_key": "feedback.estereo_ft_ez.message",
+    "hint_key": "feedback.estereo_ft_ez.hint",
+    "severity": "correction",
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_ft_relaciones",
+    "key": "estereo_ft_relaciones",
+    "topic": "estereo_relacion",
+    "message_key": "feedback.estereo_ft_relaciones.message",
+    "hint_key": "feedback.estereo_ft_relaciones.hint",
+    "severity": "correction",
+    "content_version": 1,
+    "is_active": true
+  }
+]

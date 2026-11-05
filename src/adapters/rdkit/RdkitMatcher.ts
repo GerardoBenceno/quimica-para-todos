@@ -1,5 +1,7 @@
 import type { StructureMatcher } from '../../ports'
 import { compareStructures, type RDKitLike } from '../../core/chem/canonical'
+import { molecularFormula } from '../../core/chem/formula'
+import { sanitizeSvg } from '../../core/chem/svgSafety'
 
 declare global {
   interface Window {
@@ -49,5 +51,28 @@ export class RdkitMatcher implements StructureMatcher {
   async compare(drawn: string, target: string) {
     const rd = await this.load()
     return compareStructures(rd, drawn, target)
+  }
+
+  async formula(smiles: string) {
+    const rd = await this.load()
+    return molecularFormula(rd, smiles)
+  }
+
+  async svg(smiles: string) {
+    const rd = await this.load()
+    type MolWithSvg = { is_valid(): boolean; delete(): void; get_svg?(w: number, h: number): string }
+    let m: MolWithSvg | null = null
+    try {
+      m = rd.get_mol(smiles) as MolWithSvg | null
+      if (!m || !m.is_valid() || !m.get_svg) return null
+      // Tinta con currentColor para que siga al tema, como los SVG pregenerados.
+      // Sin colores literales en el código (regla del tema): negro y blanco de RDKit por patrón.
+      const text = m.get_svg(300, 200).replace(/#0{6}/gi, 'currentColor').replace(/<rect[^>]*fill:#F{6}[^>]*>/i, '')
+      return sanitizeSvg(text)
+    } catch {
+      return null
+    } finally {
+      m?.delete()
+    }
   }
 }

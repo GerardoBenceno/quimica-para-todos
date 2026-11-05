@@ -231,7 +231,7 @@ sup {
 /* --- Barra de progreso ------------------------------------------------ */
 .progress {
   height: 6px;
-  background: var(--color-line);
+  background: var(--color-progress-track);
   border-radius: 3px;
   overflow: hidden;
 }
@@ -270,13 +270,72 @@ sup {
   flex: 1;
   display: flex;
   align-items: center;
-  padding: 48px 0;
+  padding: 32px 0 48px;
+}
+.welcome-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px 48px;
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 980px;
+  margin: 0 auto;
 }
 .welcome-inner {
+  flex: 1 1 360px;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: flex-start;
+}
+.welcome-art {
+  flex: 0 0 auto;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 719px) {
+  .welcome-card {
+    padding: 24px 20px 28px;
+    gap: 16px;
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+  .welcome-art {
+    width: 100%;
+    height: 200px;
+  }
+  .welcome-art .carbo {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* --- Superficies cálidas y bloques pastel planos ---------------------- */
+.panel-warm {
+  background: var(--color-surface-warm);
+}
+.band {
+  background: var(--color-block-soft);
+  color: var(--color-text-primary);
+}
+.band .muted,
+.band p {
+  color: var(--color-text-primary);
+}
+.illus-block {
+  background: var(--color-block-pale);
+  border-radius: 8px;
+}
+.carbo,
+.reward-art,
+.world-icon img {
+  object-fit: contain;
 }
 .brand {
   display: flex;
@@ -315,8 +374,57 @@ sup {
   white-space: pre-wrap;
   font-size: var(--fs-13);
   color: var(--color-text-secondary);
+  margin: 8px 0 0;
+}
+.state-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px;
+  width: 100%;
+}
+.state-panel p {
+  margin: 0;
+}
+.tech-detail {
+  width: 100%;
+  font-size: var(--fs-14);
+  color: var(--color-text-secondary);
+}
+.tech-detail summary {
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.brand-loading {
+  font-size: var(--fs-22);
+}
+.viewer3d-canvas.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px dashed var(--color-line);
+}
+.editor-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
 }
 
+.update-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 16px;
+  background: var(--color-primary-selected-bg);
+  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-line);
+  font-size: var(--fs-14);
+  padding: 4px 16px;
+}
 .offline-banner {
   background: var(--color-accent-bg);
   color: var(--color-text-primary);
@@ -667,6 +775,10 @@ sup {
 .figure-intro {
   min-height: 240px;
 }
+.figure-plain {
+  border: 0;
+  background: var(--color-illustration-bg);
+}
 .intro-actions {
   display: flex;
   align-items: center;
@@ -706,7 +818,6 @@ sup {
 }
 .carbo {
   flex: none;
-  border-radius: 8px;
 }
 .figure-small {
   min-height: 0;
@@ -717,22 +828,72 @@ sup {
 
 /* --- Ruta del mundo --------------------------------------------------- */
 .path-header {
-  background: var(--color-surface);
-  border-bottom: 1px solid var(--color-line);
   padding: 16px 0 20px;
 }
 .path-head-row {
   display: flex;
   gap: 8px;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 16px;
+}
+.path-head-text {
+  flex: 1;
+  min-width: 0;
 }
 .path-head-row p {
   margin: 4px 0 0;
 }
+.path-head-icon {
+  flex: none;
+}
+.world-icon {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.world-row.soon .world-icon {
+  opacity: 0.55;
+}
 .path-main {
   padding-top: 8px;
   padding-bottom: 32px;
+}
+.path-col {
+  width: 100%;
+}
+/* Escritorio: la ruta y la lección en curso lado a lado; en móvil solo la ruta. */
+.path-side {
+  display: none;
+}
+@media (min-width: 960px) {
+  .path-main {
+    max-width: 1160px;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+  }
+  .path-col {
+    flex: 0 0 440px;
+  }
+  .path-side {
+    display: block;
+    flex: 1 1 0;
+    min-width: 0;
+    position: sticky;
+    top: 24px;
+    padding: 24px 28px;
+  }
+  .path-side .t-36 {
+    font-size: var(--fs-28);
+  }
+  .path-header .narrow {
+    max-width: 1160px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 .chain {
   position: relative;
@@ -1064,11 +1225,23 @@ a.vertex:hover {
   color: var(--color-text-secondary);
 }
 .hint-text {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
   margin: 0;
   padding: 12px 16px;
   background: var(--color-surface);
   border: 1px solid var(--color-line);
   border-radius: 8px;
+}
+.hint-text p {
+  margin: 0;
+  padding-top: 8px;
+}
+.diag-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 .diag-footer {
   display: flex;
@@ -1078,6 +1251,17 @@ a.vertex:hover {
 }
 .diag-footer p {
   margin: 8px 0 0;
+}
+
+/* Aviso de atajos: solo donde hay teclado físico probable. */
+.kbd-hint {
+  display: none;
+  margin: 0;
+}
+@media (hover: hover) and (pointer: fine) {
+  .kbd-hint {
+    display: block;
+  }
 }
 
 /* --- Hoja de retroalimentación ---------------------------------------- */
@@ -1147,17 +1331,35 @@ a.vertex:hover {
   line-height: 1.5;
 }
 .sheet-template {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sheet-template p {
   margin: 0;
 }
 
 /* --- Resultado -------------------------------------------------------- */
 .result-top {
-  background: var(--color-surface);
-  border-bottom: 1px solid var(--color-line);
   padding: 24px 0 16px;
 }
 .result-top p {
   margin: 8px 0 0;
+}
+.result-head {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.result-head h1:focus {
+  outline: none;
+}
+.result-head p {
+  margin: 4px 0 0;
+}
+.result-carbo {
+  flex: none;
 }
 .chain-mini {
   max-width: 400px;
@@ -1210,6 +1412,30 @@ a.vertex:hover {
   margin: 0;
   width: 100%;
 }
+.status-error {
+  border-color: var(--color-error);
+  background: var(--color-error-bg);
+}
+.settings-title {
+  margin-top: 16px;
+}
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+}
+.version-line {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.about-section p {
+  margin: 0;
+}
+.about-section p + p {
+  margin-top: 8px;
+}
 .reward-list {
   list-style: none;
   margin: 0;
@@ -1233,6 +1459,15 @@ a.vertex:hover {
   gap: 2px;
 }
 .reward-row .chest {
+  margin: 0;
+}
+.reward-art {
+  flex: none;
+}
+.balance-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin: 0;
 }
 .radio-row {
@@ -1280,6 +1515,12 @@ a.vertex:hover {
 }
 .ketcher-host > div {
   height: 100%;
+}
+/* Los estilos de MUI dentro de Ketcher anulan el foco visible global. */
+.ketcher-host button:focus-visible,
+.ketcher-host [role='button']:focus-visible {
+  outline: 3px solid var(--color-focus) !important;
+  outline-offset: 1px;
 }
 .draw-checked .ketcher-host {
   pointer-events: none;
@@ -1345,4 +1586,326 @@ a.vertex:hover {
 }
 .state-loading {
   align-items: center;
+}
+
+/* --- Vista de revisión (ruta oculta #/revision) ------------------------ */
+.review-page {
+  max-width: 1160px;
+}
+.review-lead {
+  margin: 0;
+}
+.review-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px 20px;
+  width: 100%;
+}
+.review-filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--fs-14);
+  color: var(--color-text-secondary);
+}
+.review-filters select {
+  font: inherit;
+  font-size: var(--fs-16);
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-control-border);
+  border-radius: 4px;
+  min-height: 44px;
+  padding: 0 12px;
+  min-width: 180px;
+}
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.review-card {
+  padding: 16px 20px;
+  break-inside: avoid;
+}
+.review-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 16px;
+  margin-bottom: 12px;
+}
+.review-card-head code {
+  font-size: var(--fs-16);
+}
+.review-meta {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-14);
+}
+.review-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  align-items: flex-start;
+}
+.review-text {
+  flex: 1 1 420px;
+  min-width: 0;
+}
+.review-figure {
+  flex: 0 1 280px;
+  min-height: 120px;
+  margin: 0;
+}
+.review-dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 16px;
+  font-size: var(--fs-15);
+}
+.review-dl dt {
+  color: var(--color-text-secondary);
+}
+.review-dl dd {
+  margin: 0;
+  min-width: 0;
+}
+.review-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.review-options li {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+.review-options .review-ok {
+  font-weight: 600;
+  color: var(--color-success);
+}
+.review-mark {
+  min-width: 1em;
+}
+.review-smiles {
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+.review-issues li {
+  color: var(--color-error);
+}
+@media (max-width: 599px) {
+  .review-dl {
+    grid-template-columns: 1fr;
+    gap: 2px 0;
+  }
+  .review-dl dt {
+    margin-top: 8px;
+  }
+}
+
+/* --- Impresión: solo el contenido de revisión, sin navegación ----------- */
+@media print {
+  .app-header,
+  .tabbar,
+  .offline-banner,
+  .skip-link,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: var(--color-surface);
+    color: var(--color-text-primary);
+  }
+  .with-tabbar {
+    padding-bottom: 0;
+  }
+  .review-card {
+    border: 1px solid var(--color-control-border);
+    page-break-inside: avoid;
+  }
+  .review-filters {
+    display: none;
+  }
+}
+
+/* --- Comparar estructuras --------------------------------------------- */
+.compare-figures {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.compare-figure {
+  margin: 0;
+  min-height: 140px;
+}
+.compare-figure figcaption {
+  margin-top: 8px;
+  font-weight: 600;
+}
+@media (max-width: 599px) {
+  .compare-figures {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* --- Editor del autor (ruta oculta #/editor) ---------------------------- */
+.editor-page {
+  max-width: 1160px;
+}
+.editor-tabs {
+  display: none;
+  gap: 16px;
+}
+.editor-layout {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  width: 100%;
+}
+.editor-col {
+  min-width: 0;
+}
+.editor-col-form {
+  flex: 0 1 460px;
+}
+.editor-col-preview {
+  flex: 1 1 0;
+  position: sticky;
+  top: 16px;
+}
+.editor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.editor-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+}
+.editor-row .editor-field {
+  flex: 1 1 180px;
+}
+.editor-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.editor-field label,
+.editor-options legend {
+  font-weight: 600;
+  font-size: var(--fs-15);
+}
+.editor-form input:not([type='radio']),
+.editor-form select,
+.editor-form textarea {
+  font: inherit;
+  font-size: var(--fs-16);
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-control-border);
+  border-radius: 4px;
+  min-height: 44px;
+  padding: 8px 12px;
+  width: 100%;
+}
+.editor-form textarea {
+  resize: vertical;
+}
+.editor-error {
+  color: var(--color-error);
+}
+.editor-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.editor-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.editor-radio {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  cursor: pointer;
+}
+.editor-option input[type='radio'] {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+.editor-letter {
+  min-width: 1.2em;
+  color: var(--color-text-secondary);
+}
+.editor-smiles-ok {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.editor-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.editor-preview-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+.editor-seg {
+  display: flex;
+  gap: 16px;
+}
+.editor-seg .link.active {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-primary);
+}
+.editor-frame {
+  border: 1px solid var(--color-control-border);
+  border-radius: 8px;
+  background: var(--color-background);
+  overflow: auto;
+  max-height: 80vh;
+}
+.editor-frame.phone {
+  width: 390px;
+  max-width: 100%;
+}
+.editor-frame .player {
+  min-height: 0;
+}
+.editor-frame .player-bottom,
+.editor-frame .sheet {
+  position: static;
+}
+@media (max-width: 959px) {
+  .editor-tabs {
+    display: flex;
+  }
+  .editor-layout {
+    display: block;
+  }
+  .editor-col-preview {
+    position: static;
+  }
+  .editor-layout.tab-edit .editor-col-preview,
+  .editor-layout.tab-preview .editor-col-form {
+    display: none;
+  }
 }

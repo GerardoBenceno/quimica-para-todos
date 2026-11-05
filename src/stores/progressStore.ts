@@ -9,6 +9,8 @@ interface ProgressStore {
   /** Aplica una transformación pura y guarda el resultado bajo el userId. */
   update(fn: (s: UserState) => UserState): UserState
   reset(locale: string): Promise<void>
+  /** Sustituye el documento completo (importar respaldo) y lo guarda. */
+  replace(state: UserState): Promise<void>
 }
 
 export const useProgressStore = create<ProgressStore>((set, get) => ({
@@ -25,6 +27,10 @@ export const useProgressStore = create<ProgressStore>((set, get) => ({
       void servicesOrNull()?.progress.save(next.user.id, next)
     }
     return next
+  },
+  replace: async (state) => {
+    set({ state })
+    await servicesOrNull()?.progress.save(state.user.id, state)
   },
   reset: async (locale) => {
     const cur = get().state

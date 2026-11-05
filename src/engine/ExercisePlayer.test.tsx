@@ -2,8 +2,10 @@ import { describe, expect, it, vi } from 'vitest'
 import { render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { ExercisePlayer } from './ExercisePlayer'
+import { nearlySameText } from './answerText'
 import { setupApp, Router } from '../test/helpers'
-import type { ExerciseType } from '../models'
+import type { Exercise, ExerciseType } from '../models'
+import { highlightKind } from '../ui/MoleculeView'
 
 const { bundle, i18n } = setupApp()
 const ex = (type: ExerciseType) => bundle.exercises.find((e) => e.type === type)!
@@ -38,6 +40,20 @@ describe('ExercisePlayer renderiza cada tipo del seed', () => {
       if (type !== 'diagnostic') expect(await screen.findByRole('heading', { name: /Correcto/ })).toBeInTheDocument()
     },
   )
+
+  it('atajos: 1 a 4 eligen la opción visible y Enter comprueba y continúa', async () => {
+    const onRecord = vi.fn()
+    const e = renderPlayer('multiple_choice', onRecord)
+    const radios = screen.getAllByRole('radio')
+    const correctLabel = i18n.t(e.payload.options!.find((o) => o.value === e.correct.value)!.key)
+    const idx = radios.findIndex((r) => r.textContent?.includes(correctLabel))
+    await userEvent.keyboard(String(idx + 1))
+    expect(radios[idx]).toHaveAttribute('aria-checked', 'true')
+    await userEvent.keyboard('{Enter}')
+    expect(onRecord).toHaveBeenCalledWith(e, { value: e.correct.value }, 'correct', expect.any(Number))
+    const next = await screen.findByRole('button', { name: 'Continuar' })
+    expect(next).toBeInTheDocument()
+  })
 
   it('las letras a) b) c) d) se asignan después de barajar', () => {
     renderPlayer('multiple_choice')
@@ -129,5 +145,54 @@ describe('view_3d', () => {
     await userEvent.click(screen.getAllByRole('radio').find((r) => r.textContent?.includes(label))!)
     await userEvent.click(screen.getByRole('button', { name: 'Comprobar' }))
     expect(onRecord.mock.calls[0][2]).toBe('correct')
+  })
+})
+
+describe('compare_structures', () => {
+  it('muestra dos figuras rotuladas, opciones como radios y acierta por value', async () => {
+    const mc = ex('multiple_choice')
+    const e: Exercise = {
+      ...mc,
+      id: 'ex_compare_test',
+      type: 'compare_structures',
+      payload: { structure_smiles: 'C[C@@H:1](O)CC', structure_smiles_b: 'CC(=O)C', options: mc.payload.options },
+      correct: mc.correct,
+    }
+    const onRecord = vi.fn()
+    render(
+      <Router>
+        <ExercisePlayer exercises={[e]} attemptId="a1" mode="lesson" onRecord={onRecord} onFinish={vi.fn()} onClose={vi.fn()} />
+      </Router>,
+    )
+    const figures = await screen.findAllByRole('img', { name: /^Estructura [AB] del ejercicio/ })
+    expect(figures).toHaveLength(2)
+    expect(figures[0]).toHaveAttribute('aria-label', 'Estructura A del ejercicio. Estructura con un átomo resaltado')
+    expect(screen.getByText('Estructura A')).toBeInTheDocument()
+    expect(screen.getByText('Estructura B')).toBeInTheDocument()
+    // La vista dibuja sus figuras: el reproductor no repite la del enunciado.
+    expect(screen.queryByRole('img', { name: 'Estructura del ejercicio' })).not.toBeInTheDocument()
+    const radios = screen.getAllByRole('radio')
+    expect(radios).toHaveLength(e.payload.options!.length)
+    const btn = screen.getByRole('button', { name: 'Comprobar' })
+    expect(btn).toBeDisabled()
+    const correctLabel = i18n.t(e.payload.options!.find((o) => o.value === e.correct.value)!.key)
+    await userEvent.click(radios.find((r) => r.textContent?.includes(correctLabel))!)
+    await userEvent.click(btn)
+    expect(onRecord).toHaveBeenCalledWith(e, { value: e.correct.value }, 'correct', expect.any(Number))
+  })
+
+  it('highlightKind: un mapa de átomos es un átomo, dos son un enlace', () => {
+    expect(highlightKind('CCO')).toBeNull()
+    expect(highlightKind('C[C@@H:1](O)CC')).toBe('atom')
+    expect(highlightKind('[CH3:1][CH2:2]O')).toBe('bond')
+  })
+})
+
+describe('retroalimentación sin repetir la explicación', () => {
+  it('detecta textos prácticamente iguales', () => {
+    expect(nearlySameText('El carbono forma 4 enlaces.', 'el carbono forma 4 enlaces')).toBe(true)
+    expect(nearlySameText('El carbono forma 4 enlaces covalentes.', 'El carbono forma 4 enlaces covalentes, por eso es tetravalente.')).toBe(true)
+    expect(nearlySameText('Revisa las prioridades CIP.', 'El carbono tiene 4 electrones de valencia.')).toBe(false)
+    expect(nearlySameText('', 'algo')).toBe(false)
   })
 })

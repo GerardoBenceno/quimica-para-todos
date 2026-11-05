@@ -1,0 +1,3865 @@
+{
+  "resumen": {
+    "auditados": 47,
+    "por_pack": {
+      "seed": 31,
+      "web": 16
+    },
+    "coincide": 47,
+    "discrepancia": 0,
+    "sin_referencia": 0,
+    "comprobaciones": 242
+  },
+  "ejercicios": [
+    {
+      "id": "e_cual_organico",
+      "pack": "seed",
+      "type": "multiple_choice",
+      "smiles": "C",
+      "smiles_todos": [
+        "C"
+      ],
+      "formula": "CH4",
+      "n_carbonos": 1,
+      "cadena_mas_larga": 1,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Metano (CH₄)",
+        "enunciado": "¿Cuál de estos compuestos es orgánico?",
+        "explicacion": "El metano es un hidrocarburo: carbono e hidrógeno. El CO₂ se trata tradicionalmente como inorgánico.",
+        "nombres_alcano": [
+          "metano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "formula_texto",
+            "texto": "CH₄",
+            "valor": "CH4",
+            "fuente": "respuesta correcta"
+          }
+        ],
+        "familias_afirmadas": [
+          {
+            "familia": "hidrocarburo",
+            "fuente": "explicación"
+          }
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «metano → CH4» vs RDKit «CH4»",
+        "[OK] estructura_nombre (respuesta correcta): texto «metano → C» vs RDKit «C»",
+        "[OK] formula_texto (respuesta correcta): texto «CH₄ → CH4» vs RDKit «CH4»",
+        "[OK] familia (explicación): texto «hidrocarburo» vs RDKit «solo C e H»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "metano → CH4",
+          "rdkit": "CH4",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "metano → C",
+          "rdkit": "C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "formula_texto",
+          "afirma": "CH₄ → CH4",
+          "rdkit": "CH4",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "familia",
+          "afirma": "hidrocarburo",
+          "rdkit": "solo C e H",
+          "ok": true,
+          "fuente": "explicación"
+        }
+      ]
+    },
+    {
+      "id": "e_sp3_geom",
+      "pack": "seed",
+      "type": "multiple_choice",
+      "smiles": "C",
+      "smiles_todos": [
+        "C"
+      ],
+      "formula": "CH4",
+      "n_carbonos": 1,
+      "cadena_mas_larga": 1,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Tetraédrica",
+        "enunciado": "¿Qué geometría tiene un carbono con hibridación sp³?",
+        "explicacion": "Cuatro híbridos sp³ apuntan a los vértices de un tetraedro.",
+        "hibridacion": [
+          "sp3"
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] hibridacion (enunciado): texto «sp3» vs RDKit «sp3»",
+        "[OK] geometria (respuesta correcta): texto «Tetraédrica» vs RDKit «hibridación de los C: sp3»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "hibridacion",
+          "afirma": "sp3",
+          "rdkit": "sp3",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "geometria",
+          "afirma": "Tetraédrica",
+          "rdkit": "hibridación de los C: sp3",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        }
+      ]
+    },
+    {
+      "id": "e_sp3_sigma",
+      "pack": "seed",
+      "type": "true_false",
+      "smiles": "C",
+      "smiles_todos": [
+        "C"
+      ],
+      "formula": "CH4",
+      "n_carbonos": 1,
+      "cadena_mas_larga": 1,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Verdadero",
+        "enunciado": "Un carbono sp³ forma 4 enlaces sigma y ningún enlace pi.",
+        "explicacion": "Los 4 híbridos sp³ forman 4 sigma; no hay orbital p libre para pi.",
+        "hibridacion": [
+          "sp3"
+        ],
+        "sigma_pi": {
+          "sigma": 4,
+          "pi": 0
+        }
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] hibridacion (enunciado): texto «sp3» vs RDKit «sp3»",
+        "[OK] sigma_pi (enunciado): texto «4 sigma / 0 pi (respuesta: true)» vs RDKit «por carbono (sigma, pi) = [(4, 0)]»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "hibridacion",
+          "afirma": "sp3",
+          "rdkit": "sp3",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "sigma_pi",
+          "afirma": "4 sigma / 0 pi (respuesta: true)",
+          "rdkit": "por carbono (sigma, pi) = [(4, 0)]",
+          "ok": true,
+          "fuente": "enunciado"
+        }
+      ]
+    },
+    {
+      "id": "e_sp3_molecula",
+      "pack": "seed",
+      "type": "multiple_choice",
+      "smiles": "C",
+      "smiles_todos": [
+        "C"
+      ],
+      "formula": "CH4",
+      "n_carbonos": 1,
+      "cadena_mas_larga": 1,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Metano (CH₄)",
+        "enunciado": "¿Cuál molécula tiene todos sus carbonos con hibridación sp³?",
+        "explicacion": "El metano solo tiene enlaces simples: carbono sp³. Eteno es sp² y etino es sp.",
+        "nombres_alcano": [
+          "metano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "formula_texto",
+            "texto": "CH₄",
+            "valor": "CH4",
+            "fuente": "respuesta correcta"
+          }
+        ],
+        "familias_afirmadas": [
+          {
+            "familia": "alcano",
+            "fuente": "explicación"
+          }
+        ],
+        "hibridacion": [
+          "sp3"
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «metano → CH4» vs RDKit «CH4»",
+        "[OK] estructura_nombre (respuesta correcta): texto «metano → C» vs RDKit «C»",
+        "[OK] formula_texto (respuesta correcta): texto «CH₄ → CH4» vs RDKit «CH4»",
+        "[OK] familia (explicación): texto «alcano» vs RDKit «alcano»",
+        "[OK] hibridacion (enunciado): texto «sp3» vs RDKit «sp3»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "metano → CH4",
+          "rdkit": "CH4",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "metano → C",
+          "rdkit": "C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "formula_texto",
+          "afirma": "CH₄ → CH4",
+          "rdkit": "CH4",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "familia",
+          "afirma": "alcano",
+          "rdkit": "alcano",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "hibridacion",
+          "afirma": "sp3",
+          "rdkit": "sp3",
+          "ok": true,
+          "fuente": "enunciado"
+        }
+      ]
+    },
+    {
+      "id": "e_sp2_geom",
+      "pack": "seed",
+      "type": "multiple_choice",
+      "smiles": "C=C",
+      "smiles_todos": [
+        "C=C"
+      ],
+      "formula": "C2H4",
+      "n_carbonos": 2,
+      "cadena_mas_larga": 2,
+      "grupos_detectados": [
+        "alqueno"
+      ],
+      "hibridacion_carbonos": [
+        "sp2"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Trigonal plana",
+        "enunciado": "¿Qué geometría tiene un carbono sp²?",
+        "explicacion": "Tres híbridos sp² en un plano: geometría trigonal plana.",
+        "hibridacion": [
+          "sp2"
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] hibridacion (enunciado): texto «sp2» vs RDKit «sp2»",
+        "[OK] geometria (respuesta correcta): texto «Trigonal plana» vs RDKit «hibridación de los C: sp2»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "hibridacion",
+          "afirma": "sp2",
+          "rdkit": "sp2",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "geometria",
+          "afirma": "Trigonal plana",
+          "rdkit": "hibridación de los C: sp2",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        }
+      ]
+    },
+    {
+      "id": "e_sp2_enlaces",
+      "pack": "seed",
+      "type": "true_false",
+      "smiles": "C=C",
+      "smiles_todos": [
+        "C=C"
+      ],
+      "formula": "C2H4",
+      "n_carbonos": 2,
+      "cadena_mas_larga": 2,
+      "grupos_detectados": [
+        "alqueno"
+      ],
+      "hibridacion_carbonos": [
+        "sp2"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Verdadero",
+        "enunciado": "Un carbono sp² forma 3 enlaces sigma y 1 enlace pi.",
+        "explicacion": "Tres sigma con los híbridos sp² y un pi con el orbital p restante (el doble enlace).",
+        "familias_afirmadas": [
+          {
+            "familia": "alqueno",
+            "fuente": "explicación"
+          }
+        ],
+        "hibridacion": [
+          "sp2"
+        ],
+        "sigma_pi": {
+          "sigma": 3,
+          "pi": 1
+        }
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] familia (explicación): texto «alqueno» vs RDKit «alqueno»",
+        "[OK] hibridacion (enunciado): texto «sp2» vs RDKit «sp2»",
+        "[OK] sigma_pi (enunciado): texto «3 sigma / 1 pi (respuesta: true)» vs RDKit «por carbono (sigma, pi) = [(3, 1)]»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "familia",
+          "afirma": "alqueno",
+          "rdkit": "alqueno",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "hibridacion",
+          "afirma": "sp2",
+          "rdkit": "sp2",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "sigma_pi",
+          "afirma": "3 sigma / 1 pi (respuesta: true)",
+          "rdkit": "por carbono (sigma, pi) = [(3, 1)]",
+          "ok": true,
+          "fuente": "enunciado"
+        }
+      ]
+    },
+    {
+      "id": "e_sp2_molecula",
+      "pack": "seed",
+      "type": "multiple_choice",
+      "smiles": "C=C",
+      "smiles_todos": [
+        "C=C"
+      ],
+      "formula": "C2H4",
+      "n_carbonos": 2,
+      "cadena_mas_larga": 2,
+      "grupos_detectados": [
+        "alqueno"
+      ],
+      "hibridacion_carbonos": [
+        "sp2"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Eteno (CH₂=CH₂)",
+        "enunciado": "¿Cuál molécula contiene carbonos con hibridación sp²?",
+        "explicacion": "El doble enlace del eteno implica carbonos sp².",
+        "carbonos_afirmados": [
+          {
+            "tipo": "formula_texto",
+            "texto": "CH₂=CH₂",
+            "valor": "C2H4",
+            "fuente": "respuesta correcta"
+          }
+        ],
+        "familias_afirmadas": [
+          {
+            "familia": "alqueno",
+            "fuente": "explicación"
+          }
+        ],
+        "hibridacion": [
+          "sp2"
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_texto (respuesta correcta): texto «CH₂=CH₂ → C2H4» vs RDKit «C2H4»",
+        "[OK] familia (explicación): texto «alqueno» vs RDKit «alqueno»",
+        "[OK] hibridacion (enunciado): texto «sp2» vs RDKit «sp2»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_texto",
+          "afirma": "CH₂=CH₂ → C2H4",
+          "rdkit": "C2H4",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "familia",
+          "afirma": "alqueno",
+          "rdkit": "alqueno",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "hibridacion",
+          "afirma": "sp2",
+          "rdkit": "sp2",
+          "ok": true,
+          "fuente": "enunciado"
+        }
+      ]
+    },
+    {
+      "id": "e_sp_geom",
+      "pack": "seed",
+      "type": "multiple_choice",
+      "smiles": "C#C",
+      "smiles_todos": [
+        "C#C"
+      ],
+      "formula": "C2H2",
+      "n_carbonos": 2,
+      "cadena_mas_larga": 2,
+      "grupos_detectados": [
+        "alquino"
+      ],
+      "hibridacion_carbonos": [
+        "sp"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Lineal",
+        "enunciado": "¿Qué geometría tiene un carbono sp?",
+        "explicacion": "Dos híbridos sp opuestos: geometría lineal.",
+        "hibridacion": [
+          "sp"
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] hibridacion (enunciado): texto «sp» vs RDKit «sp»",
+        "[OK] geometria (respuesta correcta): texto «Lineal» vs RDKit «hibridación de los C: sp»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "hibridacion",
+          "afirma": "sp",
+          "rdkit": "sp",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "geometria",
+          "afirma": "Lineal",
+          "rdkit": "hibridación de los C: sp",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        }
+      ]
+    },
+    {
+      "id": "e_sp_enlaces",
+      "pack": "seed",
+      "type": "true_false",
+      "smiles": "C#C",
+      "smiles_todos": [
+        "C#C"
+      ],
+      "formula": "C2H2",
+      "n_carbonos": 2,
+      "cadena_mas_larga": 2,
+      "grupos_detectados": [
+        "alquino"
+      ],
+      "hibridacion_carbonos": [
+        "sp"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Verdadero",
+        "enunciado": "Un carbono sp forma 2 enlaces sigma y 2 enlaces pi.",
+        "explicacion": "Dos sigma con los híbridos sp y dos pi con los dos orbitales p (el triple enlace).",
+        "familias_afirmadas": [
+          {
+            "familia": "alquino",
+            "fuente": "explicación"
+          }
+        ],
+        "hibridacion": [
+          "sp"
+        ],
+        "sigma_pi": {
+          "sigma": 2,
+          "pi": 2
+        }
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] familia (explicación): texto «alquino» vs RDKit «alquino»",
+        "[OK] hibridacion (enunciado): texto «sp» vs RDKit «sp»",
+        "[OK] sigma_pi (enunciado): texto «2 sigma / 2 pi (respuesta: true)» vs RDKit «por carbono (sigma, pi) = [(2, 2)]»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "familia",
+          "afirma": "alquino",
+          "rdkit": "alquino",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "hibridacion",
+          "afirma": "sp",
+          "rdkit": "sp",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "sigma_pi",
+          "afirma": "2 sigma / 2 pi (respuesta: true)",
+          "rdkit": "por carbono (sigma, pi) = [(2, 2)]",
+          "ok": true,
+          "fuente": "enunciado"
+        }
+      ]
+    },
+    {
+      "id": "e_sp_molecula",
+      "pack": "seed",
+      "type": "multiple_choice",
+      "smiles": "C#C",
+      "smiles_todos": [
+        "C#C"
+      ],
+      "formula": "C2H2",
+      "n_carbonos": 2,
+      "cadena_mas_larga": 2,
+      "grupos_detectados": [
+        "alquino"
+      ],
+      "hibridacion_carbonos": [
+        "sp"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Etino (CH≡CH)",
+        "enunciado": "¿Cuál molécula contiene carbonos con hibridación sp?",
+        "explicacion": "El triple enlace del etino implica carbonos sp.",
+        "carbonos_afirmados": [
+          {
+            "tipo": "formula_texto",
+            "texto": "CH≡CH",
+            "valor": "C2H2",
+            "fuente": "respuesta correcta"
+          }
+        ],
+        "familias_afirmadas": [
+          {
+            "familia": "alquino",
+            "fuente": "explicación"
+          }
+        ],
+        "hibridacion": [
+          "sp"
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_texto (respuesta correcta): texto «CH≡CH → C2H2» vs RDKit «C2H2»",
+        "[OK] familia (explicación): texto «alquino» vs RDKit «alquino»",
+        "[OK] hibridacion (enunciado): texto «sp» vs RDKit «sp»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_texto",
+          "afirma": "CH≡CH → C2H2",
+          "rdkit": "C2H2",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "familia",
+          "afirma": "alquino",
+          "rdkit": "alquino",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "hibridacion",
+          "afirma": "sp",
+          "rdkit": "sp",
+          "ok": true,
+          "fuente": "enunciado"
+        }
+      ]
+    },
+    {
+      "id": "e_tipo_cuaternario",
+      "pack": "seed",
+      "type": "identify_group",
+      "smiles": "CC(C)(C)C",
+      "smiles_todos": [
+        "CC(C)(C)C"
+      ],
+      "formula": "C5H12",
+      "n_carbonos": 5,
+      "cadena_mas_larga": 3,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Cuaternario",
+        "enunciado": "En el 2,2-dimetilpropano (neopentano), ¿cómo es el carbono central?",
+        "explicacion": "El carbono central está unido a 4 carbonos: es cuaternario.",
+        "nombres_alcano": [
+          "2,2-dimetilpropano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "carbono_unido_a",
+            "texto": "unido a 4 carbonos",
+            "valor": 4,
+            "fuente": "explicación"
+          }
+        ],
+        "tipo_carbono": "Cuaternario"
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (enunciado): texto «2,2-dimetilpropano → C5H12» vs RDKit «C5H12»",
+        "[OK] estructura_nombre (enunciado): texto «2,2-dimetilpropano → CC(C)(C)C» vs RDKit «CC(C)(C)C»",
+        "[OK] carbono_unido_a (explicación): texto «unido a 4 carbonos» vs RDKit «carbonos con N vecinos C: {1: 4, 4: 1}»",
+        "[OK] tipo_carbono (respuesta correcta (carbono central)): texto «Cuaternario» vs RDKit «carbonos por nº de vecinos C: {1: 4, 4: 1}»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "2,2-dimetilpropano → C5H12",
+          "rdkit": "C5H12",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "2,2-dimetilpropano → CC(C)(C)C",
+          "rdkit": "CC(C)(C)C",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "carbono_unido_a",
+          "afirma": "unido a 4 carbonos",
+          "rdkit": "carbonos con N vecinos C: {1: 4, 4: 1}",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "tipo_carbono",
+          "afirma": "Cuaternario",
+          "rdkit": "carbonos por nº de vecinos C: {1: 4, 4: 1}",
+          "ok": true,
+          "fuente": "respuesta correcta (carbono central)"
+        }
+      ]
+    },
+    {
+      "id": "e_id_etanol",
+      "pack": "seed",
+      "type": "identify_group",
+      "smiles": "CCO",
+      "smiles_todos": [
+        "CCO"
+      ],
+      "formula": "C2H6O",
+      "n_carbonos": 2,
+      "cadena_mas_larga": 2,
+      "grupos_detectados": [
+        "alcohol"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Alcohol",
+        "enunciado": "¿A qué familia pertenece esta estructura?",
+        "explicacion": "CCO es etanol: tiene -OH, es un alcohol.",
+        "familias_afirmadas": [
+          {
+            "familia": "alcohol",
+            "fuente": "respuesta correcta"
+          },
+          {
+            "familia": "alcohol",
+            "fuente": "explicación"
+          }
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] familia (respuesta correcta): texto «alcohol» vs RDKit «alcohol»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "familia",
+          "afirma": "alcohol",
+          "rdkit": "alcohol",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        }
+      ]
+    },
+    {
+      "id": "e_id_acetico",
+      "pack": "seed",
+      "type": "identify_group",
+      "smiles": "CC(=O)O",
+      "smiles_todos": [
+        "CC(=O)O"
+      ],
+      "formula": "C2H4O2",
+      "n_carbonos": 2,
+      "cadena_mas_larga": 2,
+      "grupos_detectados": [
+        "acido_carboxilico"
+      ],
+      "hibridacion_carbonos": [
+        "sp2",
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Ácido carboxílico",
+        "enunciado": "¿A qué familia pertenece esta estructura?",
+        "explicacion": "CC(=O)O es ácido acético: grupo -COOH.",
+        "familias_afirmadas": [
+          {
+            "familia": "ácido carboxílico",
+            "fuente": "respuesta correcta"
+          },
+          {
+            "familia": "ácido carboxílico",
+            "fuente": "explicación"
+          }
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] familia (respuesta correcta): texto «ácido carboxílico» vs RDKit «ácido carboxílico»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "familia",
+          "afirma": "ácido carboxílico",
+          "rdkit": "ácido carboxílico",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        }
+      ]
+    },
+    {
+      "id": "e_id_acetaldehido",
+      "pack": "seed",
+      "type": "identify_group",
+      "smiles": "CC=O",
+      "smiles_todos": [
+        "CC=O"
+      ],
+      "formula": "C2H4O",
+      "n_carbonos": 2,
+      "cadena_mas_larga": 2,
+      "grupos_detectados": [
+        "aldehido"
+      ],
+      "hibridacion_carbonos": [
+        "sp2",
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Aldehído",
+        "enunciado": "¿Qué grupo funcional es?",
+        "explicacion": "CC=O es acetaldehído: carbonilo terminal con H, un aldehído.",
+        "familias_afirmadas": [
+          {
+            "familia": "aldehído",
+            "fuente": "respuesta correcta"
+          },
+          {
+            "familia": "aldehído",
+            "fuente": "explicación"
+          }
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] familia (respuesta correcta): texto «aldehído» vs RDKit «aldehído»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "familia",
+          "afirma": "aldehído",
+          "rdkit": "aldehído",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        }
+      ]
+    },
+    {
+      "id": "e_id_acetona",
+      "pack": "seed",
+      "type": "identify_group",
+      "smiles": "CC(=O)C",
+      "smiles_todos": [
+        "CC(=O)C"
+      ],
+      "formula": "C3H6O",
+      "n_carbonos": 3,
+      "cadena_mas_larga": 3,
+      "grupos_detectados": [
+        "cetona"
+      ],
+      "hibridacion_carbonos": [
+        "sp2",
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Cetona",
+        "enunciado": "¿Qué grupo funcional es?",
+        "explicacion": "CC(=O)C es acetona: carbonilo entre dos carbonos, una cetona.",
+        "familias_afirmadas": [
+          {
+            "familia": "cetona",
+            "fuente": "respuesta correcta"
+          },
+          {
+            "familia": "cetona",
+            "fuente": "explicación"
+          }
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] familia (respuesta correcta): texto «cetona» vs RDKit «cetona»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "familia",
+          "afirma": "cetona",
+          "rdkit": "cetona",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        }
+      ]
+    },
+    {
+      "id": "e_id_eter",
+      "pack": "seed",
+      "type": "identify_group",
+      "smiles": "COC",
+      "smiles_todos": [
+        "COC"
+      ],
+      "formula": "C2H6O",
+      "n_carbonos": 2,
+      "cadena_mas_larga": 1,
+      "grupos_detectados": [
+        "eter"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Éter",
+        "enunciado": "¿Qué grupo funcional es?",
+        "explicacion": "COC es dimetil éter: oxígeno entre dos carbonos (C-O-C), un éter.",
+        "familias_afirmadas": [
+          {
+            "familia": "éter",
+            "fuente": "respuesta correcta"
+          },
+          {
+            "familia": "éter",
+            "fuente": "explicación"
+          }
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] familia (respuesta correcta): texto «éter» vs RDKit «éter»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "familia",
+          "afirma": "éter",
+          "rdkit": "éter",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        }
+      ]
+    },
+    {
+      "id": "e_id_amina",
+      "pack": "seed",
+      "type": "identify_group",
+      "smiles": "CN",
+      "smiles_todos": [
+        "CN"
+      ],
+      "formula": "CH5N",
+      "n_carbonos": 1,
+      "cadena_mas_larga": 1,
+      "grupos_detectados": [
+        "amina"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Amina",
+        "enunciado": "¿Qué grupo funcional es?",
+        "explicacion": "CN es metilamina: grupo -NH2 unido a carbono, una amina.",
+        "familias_afirmadas": [
+          {
+            "familia": "amina",
+            "fuente": "respuesta correcta"
+          },
+          {
+            "familia": "amina",
+            "fuente": "explicación"
+          }
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] familia (respuesta correcta): texto «amina» vs RDKit «amina»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "familia",
+          "afirma": "amina",
+          "rdkit": "amina",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        }
+      ]
+    },
+    {
+      "id": "e_id_amida",
+      "pack": "seed",
+      "type": "identify_group",
+      "smiles": "CC(=O)N",
+      "smiles_todos": [
+        "CC(=O)N"
+      ],
+      "formula": "C2H5NO",
+      "n_carbonos": 2,
+      "cadena_mas_larga": 2,
+      "grupos_detectados": [
+        "amida"
+      ],
+      "hibridacion_carbonos": [
+        "sp2",
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Amida",
+        "enunciado": "¿Qué grupo funcional es?",
+        "explicacion": "CC(=O)N es acetamida: carbonilo unido a nitrógeno, una amida.",
+        "familias_afirmadas": [
+          {
+            "familia": "amida",
+            "fuente": "respuesta correcta"
+          },
+          {
+            "familia": "amida",
+            "fuente": "explicación"
+          }
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] familia (respuesta correcta): texto «amida» vs RDKit «amida»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "familia",
+          "afirma": "amida",
+          "rdkit": "amida",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        }
+      ]
+    },
+    {
+      "id": "e_metano",
+      "pack": "seed",
+      "type": "multiple_choice",
+      "smiles": "C",
+      "smiles_todos": [
+        "C"
+      ],
+      "formula": "CH4",
+      "n_carbonos": 1,
+      "cadena_mas_larga": 1,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Metano",
+        "enunciado": "¿Cómo se llama el alcano de un solo carbono (CH₄)?",
+        "explicacion": "1 carbono: metano.",
+        "nombres_alcano": [
+          "metano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "formula_texto",
+            "texto": "CH₄",
+            "valor": "CH4",
+            "fuente": "enunciado"
+          },
+          {
+            "tipo": "carbonos",
+            "texto": "un solo carbono",
+            "valor": 1,
+            "fuente": "enunciado"
+          },
+          {
+            "tipo": "carbonos",
+            "texto": "1 carbono:",
+            "valor": 1,
+            "fuente": "explicación"
+          }
+        ],
+        "familias_afirmadas": [
+          {
+            "familia": "alcano",
+            "fuente": "enunciado"
+          }
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «metano → CH4» vs RDKit «CH4»",
+        "[OK] estructura_nombre (respuesta correcta): texto «metano → C» vs RDKit «C»",
+        "[OK] formula_texto (enunciado): texto «CH₄ → CH4» vs RDKit «CH4»",
+        "[OK] n_carbonos (enunciado): texto «un solo carbono» vs RDKit «C = 1»",
+        "[OK] n_carbonos (explicación): texto «1 carbono:» vs RDKit «C = 1»",
+        "[OK] familia (enunciado): texto «alcano» vs RDKit «alcano»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "metano → CH4",
+          "rdkit": "CH4",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "metano → C",
+          "rdkit": "C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "formula_texto",
+          "afirma": "CH₄ → CH4",
+          "rdkit": "CH4",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "n_carbonos",
+          "afirma": "un solo carbono",
+          "rdkit": "C = 1",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "n_carbonos",
+          "afirma": "1 carbono:",
+          "rdkit": "C = 1",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "familia",
+          "afirma": "alcano",
+          "rdkit": "alcano",
+          "ok": true,
+          "fuente": "enunciado"
+        }
+      ]
+    },
+    {
+      "id": "e_propano",
+      "pack": "seed",
+      "type": "multiple_choice",
+      "smiles": "CCC",
+      "smiles_todos": [
+        "CCC"
+      ],
+      "formula": "C3H8",
+      "n_carbonos": 3,
+      "cadena_mas_larga": 3,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Propano",
+        "enunciado": "¿Cómo se llama el alcano CH₃-CH₂-CH₃?",
+        "explicacion": "3 carbonos en cadena: propano.",
+        "nombres_alcano": [
+          "propano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "formula_texto",
+            "texto": "CH₃-CH₂-CH₃",
+            "valor": "C3H8",
+            "fuente": "enunciado"
+          },
+          {
+            "tipo": "carbonos",
+            "texto": "3 carbonos en cadena",
+            "valor": 3,
+            "fuente": "explicación"
+          }
+        ],
+        "familias_afirmadas": [
+          {
+            "familia": "alcano",
+            "fuente": "enunciado"
+          }
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «propano → C3H8» vs RDKit «C3H8»",
+        "[OK] estructura_nombre (respuesta correcta): texto «propano → CCC» vs RDKit «CCC»",
+        "[OK] formula_texto (enunciado): texto «CH₃-CH₂-CH₃ → C3H8» vs RDKit «C3H8»",
+        "[OK] n_carbonos (explicación): texto «3 carbonos en cadena» vs RDKit «C = 3, cadena = 3»",
+        "[OK] familia (enunciado): texto «alcano» vs RDKit «alcano»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "propano → C3H8",
+          "rdkit": "C3H8",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "propano → CCC",
+          "rdkit": "CCC",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "formula_texto",
+          "afirma": "CH₃-CH₂-CH₃ → C3H8",
+          "rdkit": "C3H8",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "n_carbonos",
+          "afirma": "3 carbonos en cadena",
+          "rdkit": "C = 3, cadena = 3",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "familia",
+          "afirma": "alcano",
+          "rdkit": "alcano",
+          "ok": true,
+          "fuente": "enunciado"
+        }
+      ]
+    },
+    {
+      "id": "e_butano",
+      "pack": "seed",
+      "type": "multiple_choice",
+      "smiles": "CCCC",
+      "smiles_todos": [
+        "CCCC"
+      ],
+      "formula": "C4H10",
+      "n_carbonos": 4,
+      "cadena_mas_larga": 4,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Butano",
+        "enunciado": "¿Cómo se llama CH₃-CH₂-CH₂-CH₃?",
+        "explicacion": "4 carbonos lineales: butano.",
+        "nombres_alcano": [
+          "butano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "formula_texto",
+            "texto": "CH₃-CH₂-CH₂-CH₃",
+            "valor": "C4H10",
+            "fuente": "enunciado"
+          },
+          {
+            "tipo": "carbonos",
+            "texto": "4 carbonos lineales",
+            "valor": 4,
+            "fuente": "explicación"
+          }
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «butano → C4H10» vs RDKit «C4H10»",
+        "[OK] estructura_nombre (respuesta correcta): texto «butano → CCCC» vs RDKit «CCCC»",
+        "[OK] formula_texto (enunciado): texto «CH₃-CH₂-CH₂-CH₃ → C4H10» vs RDKit «C4H10»",
+        "[OK] n_carbonos (explicación): texto «4 carbonos lineales» vs RDKit «C = 4, cadena = 4»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "butano → C4H10",
+          "rdkit": "C4H10",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "butano → CCCC",
+          "rdkit": "CCCC",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "formula_texto",
+          "afirma": "CH₃-CH₂-CH₂-CH₃ → C4H10",
+          "rdkit": "C4H10",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "n_carbonos",
+          "afirma": "4 carbonos lineales",
+          "rdkit": "C = 4, cadena = 4",
+          "ok": true,
+          "fuente": "explicación"
+        }
+      ]
+    },
+    {
+      "id": "e_hexano_n",
+      "pack": "seed",
+      "type": "multiple_choice",
+      "smiles": "CCCCCC",
+      "smiles_todos": [
+        "CCCCCC"
+      ],
+      "formula": "C6H14",
+      "n_carbonos": 6,
+      "cadena_mas_larga": 6,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "6",
+        "enunciado": "El hexano tiene ¿cuántos carbonos?",
+        "explicacion": "Hexa = 6: el hexano tiene 6 carbonos.",
+        "nombres_alcano": [
+          "hexano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "carbonos",
+            "texto": "tiene 6 carbonos",
+            "valor": 6,
+            "fuente": "explicación"
+          },
+          {
+            "tipo": "carbonos",
+            "texto": "respuesta 6",
+            "valor": 6,
+            "fuente": "respuesta correcta"
+          }
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (enunciado): texto «hexano → C6H14» vs RDKit «C6H14»",
+        "[OK] estructura_nombre (enunciado): texto «hexano → CCCCCC» vs RDKit «CCCCCC»",
+        "[OK] n_carbonos (explicación): texto «tiene 6 carbonos» vs RDKit «C = 6»",
+        "[OK] n_carbonos (respuesta correcta): texto «respuesta correcta = 6» vs RDKit «C = 6»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "hexano → C6H14",
+          "rdkit": "C6H14",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "hexano → CCCCCC",
+          "rdkit": "CCCCCC",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "n_carbonos",
+          "afirma": "tiene 6 carbonos",
+          "rdkit": "C = 6",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "n_carbonos",
+          "afirma": "respuesta correcta = 6",
+          "rdkit": "C = 6",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        }
+      ]
+    },
+    {
+      "id": "e_2metilbutano",
+      "pack": "seed",
+      "type": "identify_group",
+      "smiles": "CCC(C)C",
+      "smiles_todos": [
+        "CCC(C)C"
+      ],
+      "formula": "C5H12",
+      "n_carbonos": 5,
+      "cadena_mas_larga": 4,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "2-metilbutano",
+        "enunciado": "¿Cuál es el nombre IUPAC de esta estructura?",
+        "explicacion": "Cadena de 4 carbonos (butano) con un metil en el carbono 2: 2-metilbutano. Numerando para el menor localizador no es 3-metilbutano.",
+        "nombres_alcano": [
+          "2-metilbutano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "cadena",
+            "texto": "Cadena de 4 carbonos",
+            "valor": 4,
+            "fuente": "explicación"
+          }
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «2-metilbutano → C5H12» vs RDKit «C5H12»",
+        "[OK] estructura_nombre (respuesta correcta): texto «2-metilbutano → CCC(C)C» vs RDKit «CCC(C)C»",
+        "[OK] cadena_carbonos (explicación): texto «Cadena de 4 carbonos» vs RDKit «cadena más larga = 4»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "2-metilbutano → C5H12",
+          "rdkit": "C5H12",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "2-metilbutano → CCC(C)C",
+          "rdkit": "CCC(C)C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "cadena_carbonos",
+          "afirma": "Cadena de 4 carbonos",
+          "rdkit": "cadena más larga = 4",
+          "ok": true,
+          "fuente": "explicación"
+        }
+      ]
+    },
+    {
+      "id": "e_23dimetilbutano",
+      "pack": "seed",
+      "type": "identify_group",
+      "smiles": "CC(C)C(C)C",
+      "smiles_todos": [
+        "CC(C)C(C)C"
+      ],
+      "formula": "C6H14",
+      "n_carbonos": 6,
+      "cadena_mas_larga": 4,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "2,3-dimetilbutano",
+        "enunciado": "¿Cuál es el nombre IUPAC de esta estructura?",
+        "explicacion": "Cadena principal de 4 carbonos con metilos en C2 y C3: 2,3-dimetilbutano. '3-etilbutano' no es válido porque la cadena más larga sería mayor.",
+        "nombres_alcano": [
+          "2,3-dimetilbutano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "cadena",
+            "texto": "Cadena principal de 4 carbonos",
+            "valor": 4,
+            "fuente": "explicación"
+          }
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «2,3-dimetilbutano → C6H14» vs RDKit «C6H14»",
+        "[OK] estructura_nombre (respuesta correcta): texto «2,3-dimetilbutano → CC(C)C(C)C» vs RDKit «CC(C)C(C)C»",
+        "[OK] cadena_carbonos (explicación): texto «Cadena principal de 4 carbonos» vs RDKit «cadena más larga = 4»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "2,3-dimetilbutano → C6H14",
+          "rdkit": "C6H14",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "2,3-dimetilbutano → CC(C)C(C)C",
+          "rdkit": "CC(C)C(C)C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "cadena_carbonos",
+          "afirma": "Cadena principal de 4 carbonos",
+          "rdkit": "cadena más larga = 4",
+          "ok": true,
+          "fuente": "explicación"
+        }
+      ]
+    },
+    {
+      "id": "e_complete_etilmetilhexano",
+      "pack": "seed",
+      "type": "fill_blanks",
+      "smiles": "CC(C)C(CC)CCC",
+      "smiles_todos": [
+        "CC(C)C(CC)CCC"
+      ],
+      "formula": "C9H20",
+      "n_carbonos": 9,
+      "cadena_mas_larga": 6,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "3-etil-2-metilhexano",
+        "enunciado": "Completa el nombre IUPAC de la estructura mostrada:",
+        "explicacion": "Cadena principal de 6 carbonos (hexano), metil en C2 y etil en C3. En el nombre el etil va antes (alfabético): 3-etil-2-metilhexano.",
+        "nombres_alcano": [
+          "3-etil-2-metilhexano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "cadena",
+            "texto": "Cadena principal de 6 carbonos",
+            "valor": 6,
+            "fuente": "explicación"
+          }
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «3-etil-2-metilhexano → C9H20» vs RDKit «C9H20»",
+        "[OK] estructura_nombre (respuesta correcta): texto «3-etil-2-metilhexano → CCCC(CC)C(C)C» vs RDKit «CCCC(CC)C(C)C»",
+        "[OK] cadena_carbonos (explicación): texto «Cadena principal de 6 carbonos» vs RDKit «cadena más larga = 6»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "3-etil-2-metilhexano → C9H20",
+          "rdkit": "C9H20",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "3-etil-2-metilhexano → CCCC(CC)C(C)C",
+          "rdkit": "CCCC(CC)C(C)C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "cadena_carbonos",
+          "afirma": "Cadena principal de 6 carbonos",
+          "rdkit": "cadena más larga = 6",
+          "ok": true,
+          "fuente": "explicación"
+        }
+      ]
+    },
+    {
+      "id": "e_22dimetilbutano",
+      "pack": "seed",
+      "type": "identify_group",
+      "smiles": "CCC(C)(C)C",
+      "smiles_todos": [
+        "CCC(C)(C)C"
+      ],
+      "formula": "C6H14",
+      "n_carbonos": 6,
+      "cadena_mas_larga": 4,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "2,2-dimetilbutano",
+        "enunciado": "¿Cuál es el nombre IUPAC de esta estructura?",
+        "explicacion": "Cadena de 4 carbonos con dos metilos en el mismo carbono 2: 2,2-dimetilbutano.",
+        "nombres_alcano": [
+          "2,2-dimetilbutano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "cadena",
+            "texto": "Cadena de 4 carbonos",
+            "valor": 4,
+            "fuente": "explicación"
+          }
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «2,2-dimetilbutano → C6H14» vs RDKit «C6H14»",
+        "[OK] estructura_nombre (respuesta correcta): texto «2,2-dimetilbutano → CCC(C)(C)C» vs RDKit «CCC(C)(C)C»",
+        "[OK] cadena_carbonos (explicación): texto «Cadena de 4 carbonos» vs RDKit «cadena más larga = 4»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "2,2-dimetilbutano → C6H14",
+          "rdkit": "C6H14",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "2,2-dimetilbutano → CCC(C)(C)C",
+          "rdkit": "CCC(C)(C)C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "cadena_carbonos",
+          "afirma": "Cadena de 4 carbonos",
+          "rdkit": "cadena más larga = 4",
+          "ok": true,
+          "fuente": "explicación"
+        }
+      ]
+    },
+    {
+      "id": "e_2metilpentano",
+      "pack": "seed",
+      "type": "identify_group",
+      "smiles": "CCCC(C)C",
+      "smiles_todos": [
+        "CCCC(C)C"
+      ],
+      "formula": "C6H14",
+      "n_carbonos": 6,
+      "cadena_mas_larga": 5,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "2-metilpentano",
+        "enunciado": "¿Cuál es el nombre IUPAC de esta estructura?",
+        "explicacion": "Cadena principal de 5 carbonos (pentano) con un metil en C2: 2-metilpentano.",
+        "nombres_alcano": [
+          "2-metilpentano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "cadena",
+            "texto": "Cadena principal de 5 carbonos",
+            "valor": 5,
+            "fuente": "explicación"
+          }
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «2-metilpentano → C6H14» vs RDKit «C6H14»",
+        "[OK] estructura_nombre (respuesta correcta): texto «2-metilpentano → CCCC(C)C» vs RDKit «CCCC(C)C»",
+        "[OK] cadena_carbonos (explicación): texto «Cadena principal de 5 carbonos» vs RDKit «cadena más larga = 5»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "2-metilpentano → C6H14",
+          "rdkit": "C6H14",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "2-metilpentano → CCCC(C)C",
+          "rdkit": "CCCC(C)C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "cadena_carbonos",
+          "afirma": "Cadena principal de 5 carbonos",
+          "rdkit": "cadena más larga = 5",
+          "ok": true,
+          "fuente": "explicación"
+        }
+      ]
+    },
+    {
+      "id": "diag_02",
+      "pack": "seed",
+      "type": "diagnostic",
+      "smiles": "C",
+      "smiles_todos": [
+        "C"
+      ],
+      "formula": "CH4",
+      "n_carbonos": 1,
+      "cadena_mas_larga": 1,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Tetraédrica",
+        "enunciado": "¿Qué geometría tiene un carbono sp³?",
+        "hibridacion": [
+          "sp3"
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] hibridacion (enunciado): texto «sp3» vs RDKit «sp3»",
+        "[OK] geometria (respuesta correcta): texto «Tetraédrica» vs RDKit «hibridación de los C: sp3»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "hibridacion",
+          "afirma": "sp3",
+          "rdkit": "sp3",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "geometria",
+          "afirma": "Tetraédrica",
+          "rdkit": "hibridación de los C: sp3",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        }
+      ]
+    },
+    {
+      "id": "diag_06",
+      "pack": "seed",
+      "type": "diagnostic",
+      "smiles": "CC(=O)C",
+      "smiles_todos": [
+        "CC(=O)C"
+      ],
+      "formula": "C3H6O",
+      "n_carbonos": 3,
+      "cadena_mas_larga": 3,
+      "grupos_detectados": [
+        "cetona"
+      ],
+      "hibridacion_carbonos": [
+        "sp2",
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Cetona",
+        "enunciado": "¿Qué grupo funcional es?",
+        "familias_afirmadas": [
+          {
+            "familia": "cetona",
+            "fuente": "respuesta correcta"
+          }
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] familia (respuesta correcta): texto «cetona» vs RDKit «cetona»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "familia",
+          "afirma": "cetona",
+          "rdkit": "cetona",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        }
+      ]
+    },
+    {
+      "id": "diag_07",
+      "pack": "seed",
+      "type": "diagnostic",
+      "smiles": "C",
+      "smiles_todos": [
+        "C"
+      ],
+      "formula": "CH4",
+      "n_carbonos": 1,
+      "cadena_mas_larga": 1,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Metano",
+        "enunciado": "¿Cómo se llama el alcano CH₄?",
+        "nombres_alcano": [
+          "metano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "formula_texto",
+            "texto": "CH₄",
+            "valor": "CH4",
+            "fuente": "enunciado"
+          }
+        ],
+        "familias_afirmadas": [
+          {
+            "familia": "alcano",
+            "fuente": "enunciado"
+          }
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «metano → CH4» vs RDKit «CH4»",
+        "[OK] estructura_nombre (respuesta correcta): texto «metano → C» vs RDKit «C»",
+        "[OK] formula_texto (enunciado): texto «CH₄ → CH4» vs RDKit «CH4»",
+        "[OK] familia (enunciado): texto «alcano» vs RDKit «alcano»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "metano → CH4",
+          "rdkit": "CH4",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "metano → C",
+          "rdkit": "C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "formula_texto",
+          "afirma": "CH₄ → CH4",
+          "rdkit": "CH4",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "familia",
+          "afirma": "alcano",
+          "rdkit": "alcano",
+          "ok": true,
+          "fuente": "enunciado"
+        }
+      ]
+    },
+    {
+      "id": "diag_08",
+      "pack": "seed",
+      "type": "diagnostic",
+      "smiles": "CC(C)C(C)C",
+      "smiles_todos": [
+        "CC(C)C(C)C"
+      ],
+      "formula": "C6H14",
+      "n_carbonos": 6,
+      "cadena_mas_larga": 4,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "2,3-dimetilbutano",
+        "enunciado": "¿Cuál es el nombre IUPAC de esta estructura?",
+        "nombres_alcano": [
+          "2,3-dimetilbutano"
+        ]
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «2,3-dimetilbutano → C6H14» vs RDKit «C6H14»",
+        "[OK] estructura_nombre (respuesta correcta): texto «2,3-dimetilbutano → CC(C)C(C)C» vs RDKit «CC(C)C(C)C»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "2,3-dimetilbutano → C6H14",
+          "rdkit": "C6H14",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "2,3-dimetilbutano → CC(C)C(C)C",
+          "rdkit": "CC(C)C(C)C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        }
+      ]
+    },
+    {
+      "id": "web_draw_e_2metilbutano",
+      "pack": "web",
+      "type": "draw_structure",
+      "smiles": "CCC(C)C",
+      "smiles_todos": [
+        "CCC(C)C"
+      ],
+      "formula": "C5H12",
+      "n_carbonos": 5,
+      "cadena_mas_larga": 4,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "2-metilbutano",
+        "enunciado": "Dibuja la estructura: 2-metilbutano",
+        "explicacion": "Cadena de 4 carbonos (butano) con un metil en el carbono 2: 2-metilbutano. Numerando para el menor localizador no es 3-metilbutano.",
+        "nombres_alcano": [
+          "2-metilbutano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "cadena",
+            "texto": "Cadena de 4 carbonos",
+            "valor": 4,
+            "fuente": "explicación"
+          }
+        ],
+        "origen": "e_2metilbutano"
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «2-metilbutano → C5H12» vs RDKit «C5H12»",
+        "[OK] estructura_nombre (respuesta correcta): texto «2-metilbutano → CCC(C)C» vs RDKit «CCC(C)C»",
+        "[OK] cadena_carbonos (explicación): texto «Cadena de 4 carbonos» vs RDKit «cadena más larga = 4»",
+        "[OK] web_smiles_origen (origen e_2metilbutano): texto «CCC(C)C» vs RDKit «CCC(C)C»",
+        "[OK] web_draw_correct (origen e_2metilbutano): texto «CCC(C)C» vs RDKit «CCC(C)C»",
+        "[OK] web_nombre_origen (origen e_2metilbutano): texto «2-metilbutano» vs RDKit «2-metilbutano»",
+        "[OK] web_nombre_en_enunciado (enunciado derivado): texto «Dibuja la estructura: 2-metilbutano» vs RDKit «2-metilbutano»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "2-metilbutano → C5H12",
+          "rdkit": "C5H12",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "2-metilbutano → CCC(C)C",
+          "rdkit": "CCC(C)C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "cadena_carbonos",
+          "afirma": "Cadena de 4 carbonos",
+          "rdkit": "cadena más larga = 4",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "web_smiles_origen",
+          "afirma": "CCC(C)C",
+          "rdkit": "CCC(C)C",
+          "ok": true,
+          "fuente": "origen e_2metilbutano"
+        },
+        {
+          "tipo": "web_draw_correct",
+          "afirma": "CCC(C)C",
+          "rdkit": "CCC(C)C",
+          "ok": true,
+          "fuente": "origen e_2metilbutano"
+        },
+        {
+          "tipo": "web_nombre_origen",
+          "afirma": "2-metilbutano",
+          "rdkit": "2-metilbutano",
+          "ok": true,
+          "fuente": "origen e_2metilbutano"
+        },
+        {
+          "tipo": "web_nombre_en_enunciado",
+          "afirma": "Dibuja la estructura: 2-metilbutano",
+          "rdkit": "2-metilbutano",
+          "ok": true,
+          "fuente": "enunciado derivado"
+        }
+      ]
+    },
+    {
+      "id": "web_choose_e_2metilbutano",
+      "pack": "web",
+      "type": "choose_structure",
+      "smiles": "CCC(C)C",
+      "smiles_todos": [
+        "CCC(C)C",
+        "CCC(C)(C)C",
+        "CC(C)C(C)C",
+        "CCCC(C)C"
+      ],
+      "formula": "C5H12",
+      "n_carbonos": 5,
+      "cadena_mas_larga": 4,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "2-metilbutano",
+        "enunciado": "Elige la estructura: 2-metilbutano",
+        "explicacion": "Cadena de 4 carbonos (butano) con un metil en el carbono 2: 2-metilbutano. Numerando para el menor localizador no es 3-metilbutano.",
+        "nombres_alcano": [
+          "2-metilbutano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "cadena",
+            "texto": "Cadena de 4 carbonos",
+            "valor": 4,
+            "fuente": "explicación"
+          }
+        ],
+        "origen": "e_2metilbutano"
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «2-metilbutano → C5H12» vs RDKit «C5H12»",
+        "[OK] estructura_nombre (respuesta correcta): texto «2-metilbutano → CCC(C)C» vs RDKit «CCC(C)C»",
+        "[OK] cadena_carbonos (explicación): texto «Cadena de 4 carbonos» vs RDKit «cadena más larga = 4»",
+        "[OK] web_smiles_origen (origen e_2metilbutano): texto «CCC(C)C» vs RDKit «CCC(C)C»",
+        "[OK] web_nombre_origen (origen e_2metilbutano): texto «2-metilbutano» vs RDKit «2-metilbutano»",
+        "[OK] web_nombre_en_enunciado (enunciado derivado): texto «Elige la estructura: 2-metilbutano» vs RDKit «2-metilbutano»",
+        "[OK] web_opciones_distintas (opciones): texto «['CCC(C)C', 'CCC(C)(C)C', 'CC(C)C(C)C', 'CCCC(C)C']» vs RDKit «SMILES canónicos distintos»",
+        "[OK] web_opcion_correcta (opción correcta): texto «CCC(C)C» vs RDKit «CCC(C)C»",
+        "[OK] web_distractor_par_seed (opciones): texto «2-metilbutano = CCC(C)C» vs RDKit «e_2metilbutano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «2-metilbutano → CCC(C)C» vs RDKit «CCC(C)C»",
+        "[OK] web_distractor_par_seed (opciones): texto «2,2-dimetilbutano = CCC(C)(C)C» vs RDKit «e_22dimetilbutano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «2,2-dimetilbutano → CCC(C)(C)C» vs RDKit «CCC(C)(C)C»",
+        "[OK] web_distractor_par_seed (opciones): texto «2,3-dimetilbutano = CC(C)C(C)C» vs RDKit «e_23dimetilbutano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «2,3-dimetilbutano → CC(C)C(C)C» vs RDKit «CC(C)C(C)C»",
+        "[OK] web_distractor_par_seed (opciones): texto «2-metilpentano = CCCC(C)C» vs RDKit «e_2metilpentano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «2-metilpentano → CCCC(C)C» vs RDKit «CCCC(C)C»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "2-metilbutano → C5H12",
+          "rdkit": "C5H12",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "2-metilbutano → CCC(C)C",
+          "rdkit": "CCC(C)C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "cadena_carbonos",
+          "afirma": "Cadena de 4 carbonos",
+          "rdkit": "cadena más larga = 4",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "web_smiles_origen",
+          "afirma": "CCC(C)C",
+          "rdkit": "CCC(C)C",
+          "ok": true,
+          "fuente": "origen e_2metilbutano"
+        },
+        {
+          "tipo": "web_nombre_origen",
+          "afirma": "2-metilbutano",
+          "rdkit": "2-metilbutano",
+          "ok": true,
+          "fuente": "origen e_2metilbutano"
+        },
+        {
+          "tipo": "web_nombre_en_enunciado",
+          "afirma": "Elige la estructura: 2-metilbutano",
+          "rdkit": "2-metilbutano",
+          "ok": true,
+          "fuente": "enunciado derivado"
+        },
+        {
+          "tipo": "web_opciones_distintas",
+          "afirma": [
+            "CCC(C)C",
+            "CCC(C)(C)C",
+            "CC(C)C(C)C",
+            "CCCC(C)C"
+          ],
+          "rdkit": "SMILES canónicos distintos",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_opcion_correcta",
+          "afirma": "CCC(C)C",
+          "rdkit": "CCC(C)C",
+          "ok": true,
+          "fuente": "opción correcta"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "2-metilbutano = CCC(C)C",
+          "rdkit": "e_2metilbutano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "2-metilbutano → CCC(C)C",
+          "rdkit": "CCC(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "2,2-dimetilbutano = CCC(C)(C)C",
+          "rdkit": "e_22dimetilbutano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "2,2-dimetilbutano → CCC(C)(C)C",
+          "rdkit": "CCC(C)(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "2,3-dimetilbutano = CC(C)C(C)C",
+          "rdkit": "e_23dimetilbutano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "2,3-dimetilbutano → CC(C)C(C)C",
+          "rdkit": "CC(C)C(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "2-metilpentano = CCCC(C)C",
+          "rdkit": "e_2metilpentano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "2-metilpentano → CCCC(C)C",
+          "rdkit": "CCCC(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        }
+      ]
+    },
+    {
+      "id": "web_draw_e_23dimetilbutano",
+      "pack": "web",
+      "type": "draw_structure",
+      "smiles": "CC(C)C(C)C",
+      "smiles_todos": [
+        "CC(C)C(C)C"
+      ],
+      "formula": "C6H14",
+      "n_carbonos": 6,
+      "cadena_mas_larga": 4,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "2,3-dimetilbutano",
+        "enunciado": "Dibuja la estructura: 2,3-dimetilbutano",
+        "explicacion": "Cadena principal de 4 carbonos con metilos en C2 y C3: 2,3-dimetilbutano. '3-etilbutano' no es válido porque la cadena más larga sería mayor.",
+        "nombres_alcano": [
+          "2,3-dimetilbutano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "cadena",
+            "texto": "Cadena principal de 4 carbonos",
+            "valor": 4,
+            "fuente": "explicación"
+          }
+        ],
+        "origen": "e_23dimetilbutano"
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «2,3-dimetilbutano → C6H14» vs RDKit «C6H14»",
+        "[OK] estructura_nombre (respuesta correcta): texto «2,3-dimetilbutano → CC(C)C(C)C» vs RDKit «CC(C)C(C)C»",
+        "[OK] cadena_carbonos (explicación): texto «Cadena principal de 4 carbonos» vs RDKit «cadena más larga = 4»",
+        "[OK] web_smiles_origen (origen e_23dimetilbutano): texto «CC(C)C(C)C» vs RDKit «CC(C)C(C)C»",
+        "[OK] web_draw_correct (origen e_23dimetilbutano): texto «CC(C)C(C)C» vs RDKit «CC(C)C(C)C»",
+        "[OK] web_nombre_origen (origen e_23dimetilbutano): texto «2,3-dimetilbutano» vs RDKit «2,3-dimetilbutano»",
+        "[OK] web_nombre_en_enunciado (enunciado derivado): texto «Dibuja la estructura: 2,3-dimetilbutano» vs RDKit «2,3-dimetilbutano»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "2,3-dimetilbutano → C6H14",
+          "rdkit": "C6H14",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "2,3-dimetilbutano → CC(C)C(C)C",
+          "rdkit": "CC(C)C(C)C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "cadena_carbonos",
+          "afirma": "Cadena principal de 4 carbonos",
+          "rdkit": "cadena más larga = 4",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "web_smiles_origen",
+          "afirma": "CC(C)C(C)C",
+          "rdkit": "CC(C)C(C)C",
+          "ok": true,
+          "fuente": "origen e_23dimetilbutano"
+        },
+        {
+          "tipo": "web_draw_correct",
+          "afirma": "CC(C)C(C)C",
+          "rdkit": "CC(C)C(C)C",
+          "ok": true,
+          "fuente": "origen e_23dimetilbutano"
+        },
+        {
+          "tipo": "web_nombre_origen",
+          "afirma": "2,3-dimetilbutano",
+          "rdkit": "2,3-dimetilbutano",
+          "ok": true,
+          "fuente": "origen e_23dimetilbutano"
+        },
+        {
+          "tipo": "web_nombre_en_enunciado",
+          "afirma": "Dibuja la estructura: 2,3-dimetilbutano",
+          "rdkit": "2,3-dimetilbutano",
+          "ok": true,
+          "fuente": "enunciado derivado"
+        }
+      ]
+    },
+    {
+      "id": "web_choose_e_23dimetilbutano",
+      "pack": "web",
+      "type": "choose_structure",
+      "smiles": "CC(C)C(C)C",
+      "smiles_todos": [
+        "CC(C)C(C)C",
+        "CCC(C)(C)C",
+        "CCCC(C)C",
+        "CCC(C)C"
+      ],
+      "formula": "C6H14",
+      "n_carbonos": 6,
+      "cadena_mas_larga": 4,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "2,3-dimetilbutano",
+        "enunciado": "Elige la estructura: 2,3-dimetilbutano",
+        "explicacion": "Cadena principal de 4 carbonos con metilos en C2 y C3: 2,3-dimetilbutano. '3-etilbutano' no es válido porque la cadena más larga sería mayor.",
+        "nombres_alcano": [
+          "2,3-dimetilbutano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "cadena",
+            "texto": "Cadena principal de 4 carbonos",
+            "valor": 4,
+            "fuente": "explicación"
+          }
+        ],
+        "origen": "e_23dimetilbutano"
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «2,3-dimetilbutano → C6H14» vs RDKit «C6H14»",
+        "[OK] estructura_nombre (respuesta correcta): texto «2,3-dimetilbutano → CC(C)C(C)C» vs RDKit «CC(C)C(C)C»",
+        "[OK] cadena_carbonos (explicación): texto «Cadena principal de 4 carbonos» vs RDKit «cadena más larga = 4»",
+        "[OK] web_smiles_origen (origen e_23dimetilbutano): texto «CC(C)C(C)C» vs RDKit «CC(C)C(C)C»",
+        "[OK] web_nombre_origen (origen e_23dimetilbutano): texto «2,3-dimetilbutano» vs RDKit «2,3-dimetilbutano»",
+        "[OK] web_nombre_en_enunciado (enunciado derivado): texto «Elige la estructura: 2,3-dimetilbutano» vs RDKit «2,3-dimetilbutano»",
+        "[OK] web_opciones_distintas (opciones): texto «['CC(C)C(C)C', 'CCC(C)(C)C', 'CCCC(C)C', 'CCC(C)C']» vs RDKit «SMILES canónicos distintos»",
+        "[OK] web_opcion_correcta (opción correcta): texto «CC(C)C(C)C» vs RDKit «CC(C)C(C)C»",
+        "[OK] web_distractor_par_seed (opciones): texto «2,3-dimetilbutano = CC(C)C(C)C» vs RDKit «e_23dimetilbutano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «2,3-dimetilbutano → CC(C)C(C)C» vs RDKit «CC(C)C(C)C»",
+        "[OK] web_distractor_par_seed (opciones): texto «2,2-dimetilbutano = CCC(C)(C)C» vs RDKit «e_22dimetilbutano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «2,2-dimetilbutano → CCC(C)(C)C» vs RDKit «CCC(C)(C)C»",
+        "[OK] web_distractor_par_seed (opciones): texto «2-metilpentano = CCCC(C)C» vs RDKit «e_2metilpentano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «2-metilpentano → CCCC(C)C» vs RDKit «CCCC(C)C»",
+        "[OK] web_distractor_par_seed (opciones): texto «2-metilbutano = CCC(C)C» vs RDKit «e_2metilbutano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «2-metilbutano → CCC(C)C» vs RDKit «CCC(C)C»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "2,3-dimetilbutano → C6H14",
+          "rdkit": "C6H14",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "2,3-dimetilbutano → CC(C)C(C)C",
+          "rdkit": "CC(C)C(C)C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "cadena_carbonos",
+          "afirma": "Cadena principal de 4 carbonos",
+          "rdkit": "cadena más larga = 4",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "web_smiles_origen",
+          "afirma": "CC(C)C(C)C",
+          "rdkit": "CC(C)C(C)C",
+          "ok": true,
+          "fuente": "origen e_23dimetilbutano"
+        },
+        {
+          "tipo": "web_nombre_origen",
+          "afirma": "2,3-dimetilbutano",
+          "rdkit": "2,3-dimetilbutano",
+          "ok": true,
+          "fuente": "origen e_23dimetilbutano"
+        },
+        {
+          "tipo": "web_nombre_en_enunciado",
+          "afirma": "Elige la estructura: 2,3-dimetilbutano",
+          "rdkit": "2,3-dimetilbutano",
+          "ok": true,
+          "fuente": "enunciado derivado"
+        },
+        {
+          "tipo": "web_opciones_distintas",
+          "afirma": [
+            "CC(C)C(C)C",
+            "CCC(C)(C)C",
+            "CCCC(C)C",
+            "CCC(C)C"
+          ],
+          "rdkit": "SMILES canónicos distintos",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_opcion_correcta",
+          "afirma": "CC(C)C(C)C",
+          "rdkit": "CC(C)C(C)C",
+          "ok": true,
+          "fuente": "opción correcta"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "2,3-dimetilbutano = CC(C)C(C)C",
+          "rdkit": "e_23dimetilbutano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "2,3-dimetilbutano → CC(C)C(C)C",
+          "rdkit": "CC(C)C(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "2,2-dimetilbutano = CCC(C)(C)C",
+          "rdkit": "e_22dimetilbutano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "2,2-dimetilbutano → CCC(C)(C)C",
+          "rdkit": "CCC(C)(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "2-metilpentano = CCCC(C)C",
+          "rdkit": "e_2metilpentano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "2-metilpentano → CCCC(C)C",
+          "rdkit": "CCCC(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "2-metilbutano = CCC(C)C",
+          "rdkit": "e_2metilbutano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "2-metilbutano → CCC(C)C",
+          "rdkit": "CCC(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        }
+      ]
+    },
+    {
+      "id": "web_draw_e_complete_etilmetilhexano",
+      "pack": "web",
+      "type": "draw_structure",
+      "smiles": "CC(C)C(CC)CCC",
+      "smiles_todos": [
+        "CC(C)C(CC)CCC"
+      ],
+      "formula": "C9H20",
+      "n_carbonos": 9,
+      "cadena_mas_larga": 6,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "3-etil-2-metilhexano",
+        "enunciado": "Dibuja la estructura: 3-etil-2-metilhexano",
+        "explicacion": "Cadena principal de 6 carbonos (hexano), metil en C2 y etil en C3. En el nombre el etil va antes (alfabético): 3-etil-2-metilhexano.",
+        "nombres_alcano": [
+          "3-etil-2-metilhexano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "cadena",
+            "texto": "Cadena principal de 6 carbonos",
+            "valor": 6,
+            "fuente": "explicación"
+          }
+        ],
+        "origen": "e_complete_etilmetilhexano"
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «3-etil-2-metilhexano → C9H20» vs RDKit «C9H20»",
+        "[OK] estructura_nombre (respuesta correcta): texto «3-etil-2-metilhexano → CCCC(CC)C(C)C» vs RDKit «CCCC(CC)C(C)C»",
+        "[OK] cadena_carbonos (explicación): texto «Cadena principal de 6 carbonos» vs RDKit «cadena más larga = 6»",
+        "[OK] web_smiles_origen (origen e_complete_etilmetilhexano): texto «CC(C)C(CC)CCC» vs RDKit «CC(C)C(CC)CCC»",
+        "[OK] web_draw_correct (origen e_complete_etilmetilhexano): texto «CC(C)C(CC)CCC» vs RDKit «CC(C)C(CC)CCC»",
+        "[OK] web_nombre_origen (origen e_complete_etilmetilhexano): texto «3-etil-2-metilhexano» vs RDKit «3-etil-2-metilhexano»",
+        "[OK] web_nombre_en_enunciado (enunciado derivado): texto «Dibuja la estructura: 3-etil-2-metilhexano» vs RDKit «3-etil-2-metilhexano»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "3-etil-2-metilhexano → C9H20",
+          "rdkit": "C9H20",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "3-etil-2-metilhexano → CCCC(CC)C(C)C",
+          "rdkit": "CCCC(CC)C(C)C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "cadena_carbonos",
+          "afirma": "Cadena principal de 6 carbonos",
+          "rdkit": "cadena más larga = 6",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "web_smiles_origen",
+          "afirma": "CC(C)C(CC)CCC",
+          "rdkit": "CC(C)C(CC)CCC",
+          "ok": true,
+          "fuente": "origen e_complete_etilmetilhexano"
+        },
+        {
+          "tipo": "web_draw_correct",
+          "afirma": "CC(C)C(CC)CCC",
+          "rdkit": "CC(C)C(CC)CCC",
+          "ok": true,
+          "fuente": "origen e_complete_etilmetilhexano"
+        },
+        {
+          "tipo": "web_nombre_origen",
+          "afirma": "3-etil-2-metilhexano",
+          "rdkit": "3-etil-2-metilhexano",
+          "ok": true,
+          "fuente": "origen e_complete_etilmetilhexano"
+        },
+        {
+          "tipo": "web_nombre_en_enunciado",
+          "afirma": "Dibuja la estructura: 3-etil-2-metilhexano",
+          "rdkit": "3-etil-2-metilhexano",
+          "ok": true,
+          "fuente": "enunciado derivado"
+        }
+      ]
+    },
+    {
+      "id": "web_choose_e_complete_etilmetilhexano",
+      "pack": "web",
+      "type": "choose_structure",
+      "smiles": "CC(C)C(CC)CCC",
+      "smiles_todos": [
+        "CC(C)C(CC)CCC",
+        "CCC(C)(C)C",
+        "CC(C)C(C)C",
+        "CCCC(C)C"
+      ],
+      "formula": "C9H20",
+      "n_carbonos": 9,
+      "cadena_mas_larga": 6,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "3-etil-2-metilhexano",
+        "enunciado": "Elige la estructura: 3-etil-2-metilhexano",
+        "explicacion": "Cadena principal de 6 carbonos (hexano), metil en C2 y etil en C3. En el nombre el etil va antes (alfabético): 3-etil-2-metilhexano.",
+        "nombres_alcano": [
+          "3-etil-2-metilhexano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "cadena",
+            "texto": "Cadena principal de 6 carbonos",
+            "valor": 6,
+            "fuente": "explicación"
+          }
+        ],
+        "origen": "e_complete_etilmetilhexano"
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «3-etil-2-metilhexano → C9H20» vs RDKit «C9H20»",
+        "[OK] estructura_nombre (respuesta correcta): texto «3-etil-2-metilhexano → CCCC(CC)C(C)C» vs RDKit «CCCC(CC)C(C)C»",
+        "[OK] cadena_carbonos (explicación): texto «Cadena principal de 6 carbonos» vs RDKit «cadena más larga = 6»",
+        "[OK] web_smiles_origen (origen e_complete_etilmetilhexano): texto «CC(C)C(CC)CCC» vs RDKit «CC(C)C(CC)CCC»",
+        "[OK] web_nombre_origen (origen e_complete_etilmetilhexano): texto «3-etil-2-metilhexano» vs RDKit «3-etil-2-metilhexano»",
+        "[OK] web_nombre_en_enunciado (enunciado derivado): texto «Elige la estructura: 3-etil-2-metilhexano» vs RDKit «3-etil-2-metilhexano»",
+        "[OK] web_opciones_distintas (opciones): texto «['CC(C)C(CC)CCC', 'CCC(C)(C)C', 'CC(C)C(C)C', 'CCCC(C)C']» vs RDKit «SMILES canónicos distintos»",
+        "[OK] web_opcion_correcta (opción correcta): texto «CC(C)C(CC)CCC» vs RDKit «CC(C)C(CC)CCC»",
+        "[OK] web_distractor_par_seed (opciones): texto «3-etil-2-metilhexano = CC(C)C(CC)CCC» vs RDKit «e_complete_etilmetilhexano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «3-etil-2-metilhexano → CCCC(CC)C(C)C» vs RDKit «CCCC(CC)C(C)C»",
+        "[OK] web_distractor_par_seed (opciones): texto «2,2-dimetilbutano = CCC(C)(C)C» vs RDKit «e_22dimetilbutano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «2,2-dimetilbutano → CCC(C)(C)C» vs RDKit «CCC(C)(C)C»",
+        "[OK] web_distractor_par_seed (opciones): texto «2,3-dimetilbutano = CC(C)C(C)C» vs RDKit «e_23dimetilbutano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «2,3-dimetilbutano → CC(C)C(C)C» vs RDKit «CC(C)C(C)C»",
+        "[OK] web_distractor_par_seed (opciones): texto «2-metilpentano = CCCC(C)C» vs RDKit «e_2metilpentano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «2-metilpentano → CCCC(C)C» vs RDKit «CCCC(C)C»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "3-etil-2-metilhexano → C9H20",
+          "rdkit": "C9H20",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "3-etil-2-metilhexano → CCCC(CC)C(C)C",
+          "rdkit": "CCCC(CC)C(C)C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "cadena_carbonos",
+          "afirma": "Cadena principal de 6 carbonos",
+          "rdkit": "cadena más larga = 6",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "web_smiles_origen",
+          "afirma": "CC(C)C(CC)CCC",
+          "rdkit": "CC(C)C(CC)CCC",
+          "ok": true,
+          "fuente": "origen e_complete_etilmetilhexano"
+        },
+        {
+          "tipo": "web_nombre_origen",
+          "afirma": "3-etil-2-metilhexano",
+          "rdkit": "3-etil-2-metilhexano",
+          "ok": true,
+          "fuente": "origen e_complete_etilmetilhexano"
+        },
+        {
+          "tipo": "web_nombre_en_enunciado",
+          "afirma": "Elige la estructura: 3-etil-2-metilhexano",
+          "rdkit": "3-etil-2-metilhexano",
+          "ok": true,
+          "fuente": "enunciado derivado"
+        },
+        {
+          "tipo": "web_opciones_distintas",
+          "afirma": [
+            "CC(C)C(CC)CCC",
+            "CCC(C)(C)C",
+            "CC(C)C(C)C",
+            "CCCC(C)C"
+          ],
+          "rdkit": "SMILES canónicos distintos",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_opcion_correcta",
+          "afirma": "CC(C)C(CC)CCC",
+          "rdkit": "CC(C)C(CC)CCC",
+          "ok": true,
+          "fuente": "opción correcta"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "3-etil-2-metilhexano = CC(C)C(CC)CCC",
+          "rdkit": "e_complete_etilmetilhexano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "3-etil-2-metilhexano → CCCC(CC)C(C)C",
+          "rdkit": "CCCC(CC)C(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "2,2-dimetilbutano = CCC(C)(C)C",
+          "rdkit": "e_22dimetilbutano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "2,2-dimetilbutano → CCC(C)(C)C",
+          "rdkit": "CCC(C)(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "2,3-dimetilbutano = CC(C)C(C)C",
+          "rdkit": "e_23dimetilbutano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "2,3-dimetilbutano → CC(C)C(C)C",
+          "rdkit": "CC(C)C(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "2-metilpentano = CCCC(C)C",
+          "rdkit": "e_2metilpentano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "2-metilpentano → CCCC(C)C",
+          "rdkit": "CCCC(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        }
+      ]
+    },
+    {
+      "id": "web_draw_e_22dimetilbutano",
+      "pack": "web",
+      "type": "draw_structure",
+      "smiles": "CCC(C)(C)C",
+      "smiles_todos": [
+        "CCC(C)(C)C"
+      ],
+      "formula": "C6H14",
+      "n_carbonos": 6,
+      "cadena_mas_larga": 4,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "2,2-dimetilbutano",
+        "enunciado": "Dibuja la estructura: 2,2-dimetilbutano",
+        "explicacion": "Cadena de 4 carbonos con dos metilos en el mismo carbono 2: 2,2-dimetilbutano.",
+        "nombres_alcano": [
+          "2,2-dimetilbutano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "cadena",
+            "texto": "Cadena de 4 carbonos",
+            "valor": 4,
+            "fuente": "explicación"
+          }
+        ],
+        "origen": "e_22dimetilbutano"
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «2,2-dimetilbutano → C6H14» vs RDKit «C6H14»",
+        "[OK] estructura_nombre (respuesta correcta): texto «2,2-dimetilbutano → CCC(C)(C)C» vs RDKit «CCC(C)(C)C»",
+        "[OK] cadena_carbonos (explicación): texto «Cadena de 4 carbonos» vs RDKit «cadena más larga = 4»",
+        "[OK] web_smiles_origen (origen e_22dimetilbutano): texto «CCC(C)(C)C» vs RDKit «CCC(C)(C)C»",
+        "[OK] web_draw_correct (origen e_22dimetilbutano): texto «CCC(C)(C)C» vs RDKit «CCC(C)(C)C»",
+        "[OK] web_nombre_origen (origen e_22dimetilbutano): texto «2,2-dimetilbutano» vs RDKit «2,2-dimetilbutano»",
+        "[OK] web_nombre_en_enunciado (enunciado derivado): texto «Dibuja la estructura: 2,2-dimetilbutano» vs RDKit «2,2-dimetilbutano»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "2,2-dimetilbutano → C6H14",
+          "rdkit": "C6H14",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "2,2-dimetilbutano → CCC(C)(C)C",
+          "rdkit": "CCC(C)(C)C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "cadena_carbonos",
+          "afirma": "Cadena de 4 carbonos",
+          "rdkit": "cadena más larga = 4",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "web_smiles_origen",
+          "afirma": "CCC(C)(C)C",
+          "rdkit": "CCC(C)(C)C",
+          "ok": true,
+          "fuente": "origen e_22dimetilbutano"
+        },
+        {
+          "tipo": "web_draw_correct",
+          "afirma": "CCC(C)(C)C",
+          "rdkit": "CCC(C)(C)C",
+          "ok": true,
+          "fuente": "origen e_22dimetilbutano"
+        },
+        {
+          "tipo": "web_nombre_origen",
+          "afirma": "2,2-dimetilbutano",
+          "rdkit": "2,2-dimetilbutano",
+          "ok": true,
+          "fuente": "origen e_22dimetilbutano"
+        },
+        {
+          "tipo": "web_nombre_en_enunciado",
+          "afirma": "Dibuja la estructura: 2,2-dimetilbutano",
+          "rdkit": "2,2-dimetilbutano",
+          "ok": true,
+          "fuente": "enunciado derivado"
+        }
+      ]
+    },
+    {
+      "id": "web_choose_e_22dimetilbutano",
+      "pack": "web",
+      "type": "choose_structure",
+      "smiles": "CCC(C)(C)C",
+      "smiles_todos": [
+        "CCC(C)(C)C",
+        "CC(C)C(C)C",
+        "CCCC(C)C",
+        "CCC(C)C"
+      ],
+      "formula": "C6H14",
+      "n_carbonos": 6,
+      "cadena_mas_larga": 4,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "2,2-dimetilbutano",
+        "enunciado": "Elige la estructura: 2,2-dimetilbutano",
+        "explicacion": "Cadena de 4 carbonos con dos metilos en el mismo carbono 2: 2,2-dimetilbutano.",
+        "nombres_alcano": [
+          "2,2-dimetilbutano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "cadena",
+            "texto": "Cadena de 4 carbonos",
+            "valor": 4,
+            "fuente": "explicación"
+          }
+        ],
+        "origen": "e_22dimetilbutano"
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «2,2-dimetilbutano → C6H14» vs RDKit «C6H14»",
+        "[OK] estructura_nombre (respuesta correcta): texto «2,2-dimetilbutano → CCC(C)(C)C» vs RDKit «CCC(C)(C)C»",
+        "[OK] cadena_carbonos (explicación): texto «Cadena de 4 carbonos» vs RDKit «cadena más larga = 4»",
+        "[OK] web_smiles_origen (origen e_22dimetilbutano): texto «CCC(C)(C)C» vs RDKit «CCC(C)(C)C»",
+        "[OK] web_nombre_origen (origen e_22dimetilbutano): texto «2,2-dimetilbutano» vs RDKit «2,2-dimetilbutano»",
+        "[OK] web_nombre_en_enunciado (enunciado derivado): texto «Elige la estructura: 2,2-dimetilbutano» vs RDKit «2,2-dimetilbutano»",
+        "[OK] web_opciones_distintas (opciones): texto «['CCC(C)(C)C', 'CC(C)C(C)C', 'CCCC(C)C', 'CCC(C)C']» vs RDKit «SMILES canónicos distintos»",
+        "[OK] web_opcion_correcta (opción correcta): texto «CCC(C)(C)C» vs RDKit «CCC(C)(C)C»",
+        "[OK] web_distractor_par_seed (opciones): texto «2,2-dimetilbutano = CCC(C)(C)C» vs RDKit «e_22dimetilbutano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «2,2-dimetilbutano → CCC(C)(C)C» vs RDKit «CCC(C)(C)C»",
+        "[OK] web_distractor_par_seed (opciones): texto «2,3-dimetilbutano = CC(C)C(C)C» vs RDKit «e_23dimetilbutano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «2,3-dimetilbutano → CC(C)C(C)C» vs RDKit «CC(C)C(C)C»",
+        "[OK] web_distractor_par_seed (opciones): texto «2-metilpentano = CCCC(C)C» vs RDKit «e_2metilpentano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «2-metilpentano → CCCC(C)C» vs RDKit «CCCC(C)C»",
+        "[OK] web_distractor_par_seed (opciones): texto «2-metilbutano = CCC(C)C» vs RDKit «e_2metilbutano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «2-metilbutano → CCC(C)C» vs RDKit «CCC(C)C»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "2,2-dimetilbutano → C6H14",
+          "rdkit": "C6H14",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "2,2-dimetilbutano → CCC(C)(C)C",
+          "rdkit": "CCC(C)(C)C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "cadena_carbonos",
+          "afirma": "Cadena de 4 carbonos",
+          "rdkit": "cadena más larga = 4",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "web_smiles_origen",
+          "afirma": "CCC(C)(C)C",
+          "rdkit": "CCC(C)(C)C",
+          "ok": true,
+          "fuente": "origen e_22dimetilbutano"
+        },
+        {
+          "tipo": "web_nombre_origen",
+          "afirma": "2,2-dimetilbutano",
+          "rdkit": "2,2-dimetilbutano",
+          "ok": true,
+          "fuente": "origen e_22dimetilbutano"
+        },
+        {
+          "tipo": "web_nombre_en_enunciado",
+          "afirma": "Elige la estructura: 2,2-dimetilbutano",
+          "rdkit": "2,2-dimetilbutano",
+          "ok": true,
+          "fuente": "enunciado derivado"
+        },
+        {
+          "tipo": "web_opciones_distintas",
+          "afirma": [
+            "CCC(C)(C)C",
+            "CC(C)C(C)C",
+            "CCCC(C)C",
+            "CCC(C)C"
+          ],
+          "rdkit": "SMILES canónicos distintos",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_opcion_correcta",
+          "afirma": "CCC(C)(C)C",
+          "rdkit": "CCC(C)(C)C",
+          "ok": true,
+          "fuente": "opción correcta"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "2,2-dimetilbutano = CCC(C)(C)C",
+          "rdkit": "e_22dimetilbutano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "2,2-dimetilbutano → CCC(C)(C)C",
+          "rdkit": "CCC(C)(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "2,3-dimetilbutano = CC(C)C(C)C",
+          "rdkit": "e_23dimetilbutano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "2,3-dimetilbutano → CC(C)C(C)C",
+          "rdkit": "CC(C)C(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "2-metilpentano = CCCC(C)C",
+          "rdkit": "e_2metilpentano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "2-metilpentano → CCCC(C)C",
+          "rdkit": "CCCC(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "2-metilbutano = CCC(C)C",
+          "rdkit": "e_2metilbutano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "2-metilbutano → CCC(C)C",
+          "rdkit": "CCC(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        }
+      ]
+    },
+    {
+      "id": "web_draw_e_2metilpentano",
+      "pack": "web",
+      "type": "draw_structure",
+      "smiles": "CCCC(C)C",
+      "smiles_todos": [
+        "CCCC(C)C"
+      ],
+      "formula": "C6H14",
+      "n_carbonos": 6,
+      "cadena_mas_larga": 5,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "2-metilpentano",
+        "enunciado": "Dibuja la estructura: 2-metilpentano",
+        "explicacion": "Cadena principal de 5 carbonos (pentano) con un metil en C2: 2-metilpentano.",
+        "nombres_alcano": [
+          "2-metilpentano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "cadena",
+            "texto": "Cadena principal de 5 carbonos",
+            "valor": 5,
+            "fuente": "explicación"
+          }
+        ],
+        "origen": "e_2metilpentano"
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «2-metilpentano → C6H14» vs RDKit «C6H14»",
+        "[OK] estructura_nombre (respuesta correcta): texto «2-metilpentano → CCCC(C)C» vs RDKit «CCCC(C)C»",
+        "[OK] cadena_carbonos (explicación): texto «Cadena principal de 5 carbonos» vs RDKit «cadena más larga = 5»",
+        "[OK] web_smiles_origen (origen e_2metilpentano): texto «CCCC(C)C» vs RDKit «CCCC(C)C»",
+        "[OK] web_draw_correct (origen e_2metilpentano): texto «CCCC(C)C» vs RDKit «CCCC(C)C»",
+        "[OK] web_nombre_origen (origen e_2metilpentano): texto «2-metilpentano» vs RDKit «2-metilpentano»",
+        "[OK] web_nombre_en_enunciado (enunciado derivado): texto «Dibuja la estructura: 2-metilpentano» vs RDKit «2-metilpentano»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "2-metilpentano → C6H14",
+          "rdkit": "C6H14",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "2-metilpentano → CCCC(C)C",
+          "rdkit": "CCCC(C)C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "cadena_carbonos",
+          "afirma": "Cadena principal de 5 carbonos",
+          "rdkit": "cadena más larga = 5",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "web_smiles_origen",
+          "afirma": "CCCC(C)C",
+          "rdkit": "CCCC(C)C",
+          "ok": true,
+          "fuente": "origen e_2metilpentano"
+        },
+        {
+          "tipo": "web_draw_correct",
+          "afirma": "CCCC(C)C",
+          "rdkit": "CCCC(C)C",
+          "ok": true,
+          "fuente": "origen e_2metilpentano"
+        },
+        {
+          "tipo": "web_nombre_origen",
+          "afirma": "2-metilpentano",
+          "rdkit": "2-metilpentano",
+          "ok": true,
+          "fuente": "origen e_2metilpentano"
+        },
+        {
+          "tipo": "web_nombre_en_enunciado",
+          "afirma": "Dibuja la estructura: 2-metilpentano",
+          "rdkit": "2-metilpentano",
+          "ok": true,
+          "fuente": "enunciado derivado"
+        }
+      ]
+    },
+    {
+      "id": "web_choose_e_2metilpentano",
+      "pack": "web",
+      "type": "choose_structure",
+      "smiles": "CCCC(C)C",
+      "smiles_todos": [
+        "CCCC(C)C",
+        "CCC(C)(C)C",
+        "CC(C)C(C)C",
+        "CCC(C)C"
+      ],
+      "formula": "C6H14",
+      "n_carbonos": 6,
+      "cadena_mas_larga": 5,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "2-metilpentano",
+        "enunciado": "Elige la estructura: 2-metilpentano",
+        "explicacion": "Cadena principal de 5 carbonos (pentano) con un metil en C2: 2-metilpentano.",
+        "nombres_alcano": [
+          "2-metilpentano"
+        ],
+        "carbonos_afirmados": [
+          {
+            "tipo": "cadena",
+            "texto": "Cadena principal de 5 carbonos",
+            "valor": 5,
+            "fuente": "explicación"
+          }
+        ],
+        "origen": "e_2metilpentano"
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] formula_nombre (respuesta correcta): texto «2-metilpentano → C6H14» vs RDKit «C6H14»",
+        "[OK] estructura_nombre (respuesta correcta): texto «2-metilpentano → CCCC(C)C» vs RDKit «CCCC(C)C»",
+        "[OK] cadena_carbonos (explicación): texto «Cadena principal de 5 carbonos» vs RDKit «cadena más larga = 5»",
+        "[OK] web_smiles_origen (origen e_2metilpentano): texto «CCCC(C)C» vs RDKit «CCCC(C)C»",
+        "[OK] web_nombre_origen (origen e_2metilpentano): texto «2-metilpentano» vs RDKit «2-metilpentano»",
+        "[OK] web_nombre_en_enunciado (enunciado derivado): texto «Elige la estructura: 2-metilpentano» vs RDKit «2-metilpentano»",
+        "[OK] web_opciones_distintas (opciones): texto «['CCCC(C)C', 'CCC(C)(C)C', 'CC(C)C(C)C', 'CCC(C)C']» vs RDKit «SMILES canónicos distintos»",
+        "[OK] web_opcion_correcta (opción correcta): texto «CCCC(C)C» vs RDKit «CCCC(C)C»",
+        "[OK] web_distractor_par_seed (opciones): texto «2-metilpentano = CCCC(C)C» vs RDKit «e_2metilpentano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «2-metilpentano → CCCC(C)C» vs RDKit «CCCC(C)C»",
+        "[OK] web_distractor_par_seed (opciones): texto «2,2-dimetilbutano = CCC(C)(C)C» vs RDKit «e_22dimetilbutano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «2,2-dimetilbutano → CCC(C)(C)C» vs RDKit «CCC(C)(C)C»",
+        "[OK] web_distractor_par_seed (opciones): texto «2,3-dimetilbutano = CC(C)C(C)C» vs RDKit «e_23dimetilbutano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «2,3-dimetilbutano → CC(C)C(C)C» vs RDKit «CC(C)C(C)C»",
+        "[OK] web_distractor_par_seed (opciones): texto «2-metilbutano = CCC(C)C» vs RDKit «e_2metilbutano»",
+        "[OK] web_distractor_nombre_estructura (opciones): texto «2-metilbutano → CCC(C)C» vs RDKit «CCC(C)C»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "formula_nombre",
+          "afirma": "2-metilpentano → C6H14",
+          "rdkit": "C6H14",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "estructura_nombre",
+          "afirma": "2-metilpentano → CCCC(C)C",
+          "rdkit": "CCCC(C)C",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "cadena_carbonos",
+          "afirma": "Cadena principal de 5 carbonos",
+          "rdkit": "cadena más larga = 5",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "web_smiles_origen",
+          "afirma": "CCCC(C)C",
+          "rdkit": "CCCC(C)C",
+          "ok": true,
+          "fuente": "origen e_2metilpentano"
+        },
+        {
+          "tipo": "web_nombre_origen",
+          "afirma": "2-metilpentano",
+          "rdkit": "2-metilpentano",
+          "ok": true,
+          "fuente": "origen e_2metilpentano"
+        },
+        {
+          "tipo": "web_nombre_en_enunciado",
+          "afirma": "Elige la estructura: 2-metilpentano",
+          "rdkit": "2-metilpentano",
+          "ok": true,
+          "fuente": "enunciado derivado"
+        },
+        {
+          "tipo": "web_opciones_distintas",
+          "afirma": [
+            "CCCC(C)C",
+            "CCC(C)(C)C",
+            "CC(C)C(C)C",
+            "CCC(C)C"
+          ],
+          "rdkit": "SMILES canónicos distintos",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_opcion_correcta",
+          "afirma": "CCCC(C)C",
+          "rdkit": "CCCC(C)C",
+          "ok": true,
+          "fuente": "opción correcta"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "2-metilpentano = CCCC(C)C",
+          "rdkit": "e_2metilpentano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "2-metilpentano → CCCC(C)C",
+          "rdkit": "CCCC(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "2,2-dimetilbutano = CCC(C)(C)C",
+          "rdkit": "e_22dimetilbutano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "2,2-dimetilbutano → CCC(C)(C)C",
+          "rdkit": "CCC(C)(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "2,3-dimetilbutano = CC(C)C(C)C",
+          "rdkit": "e_23dimetilbutano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "2,3-dimetilbutano → CC(C)C(C)C",
+          "rdkit": "CC(C)C(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_par_seed",
+          "afirma": "2-metilbutano = CCC(C)C",
+          "rdkit": "e_2metilbutano",
+          "ok": true,
+          "fuente": "opciones"
+        },
+        {
+          "tipo": "web_distractor_nombre_estructura",
+          "afirma": "2-metilbutano → CCC(C)C",
+          "rdkit": "CCC(C)C",
+          "ok": true,
+          "fuente": "opciones"
+        }
+      ]
+    },
+    {
+      "id": "web_v3d_e_sp3_geom",
+      "pack": "web",
+      "type": "view_3d",
+      "smiles": "C",
+      "smiles_todos": [
+        "C"
+      ],
+      "formula": "CH4",
+      "n_carbonos": 1,
+      "cadena_mas_larga": 1,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Tetraédrica",
+        "enunciado": "¿Qué geometría tiene un carbono con hibridación sp³?",
+        "explicacion": "Cuatro híbridos sp³ apuntan a los vértices de un tetraedro.",
+        "hibridacion": [
+          "sp3"
+        ],
+        "origen": "e_sp3_geom"
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] hibridacion (enunciado): texto «sp3» vs RDKit «sp3»",
+        "[OK] geometria (respuesta correcta): texto «Tetraédrica» vs RDKit «hibridación de los C: sp3»",
+        "[OK] web_smiles_origen (origen e_sp3_geom): texto «C» vs RDKit «C»",
+        "[OK] web_nombre_origen (origen e_sp3_geom): texto «Tetraédrica» vs RDKit «Tetraédrica»",
+        "[OK] web_v3d_opciones (origen e_sp3_geom): texto «mismas opciones que el origen» vs RDKit «iguales»",
+        "[OK] web_v3d_correct (origen e_sp3_geom): texto «{'value': 'tetraedrica'}» vs RDKit «{'value': 'tetraedrica'}»",
+        "[OK] web_v3d_prompt (origen e_sp3_geom): texto «ex.e_sp3_geom.prompt» vs RDKit «ex.e_sp3_geom.prompt»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "hibridacion",
+          "afirma": "sp3",
+          "rdkit": "sp3",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "geometria",
+          "afirma": "Tetraédrica",
+          "rdkit": "hibridación de los C: sp3",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "web_smiles_origen",
+          "afirma": "C",
+          "rdkit": "C",
+          "ok": true,
+          "fuente": "origen e_sp3_geom"
+        },
+        {
+          "tipo": "web_nombre_origen",
+          "afirma": "Tetraédrica",
+          "rdkit": "Tetraédrica",
+          "ok": true,
+          "fuente": "origen e_sp3_geom"
+        },
+        {
+          "tipo": "web_v3d_opciones",
+          "afirma": "mismas opciones que el origen",
+          "rdkit": "iguales",
+          "ok": true,
+          "fuente": "origen e_sp3_geom"
+        },
+        {
+          "tipo": "web_v3d_correct",
+          "afirma": {
+            "value": "tetraedrica"
+          },
+          "rdkit": {
+            "value": "tetraedrica"
+          },
+          "ok": true,
+          "fuente": "origen e_sp3_geom"
+        },
+        {
+          "tipo": "web_v3d_prompt",
+          "afirma": "ex.e_sp3_geom.prompt",
+          "rdkit": "ex.e_sp3_geom.prompt",
+          "ok": true,
+          "fuente": "origen e_sp3_geom"
+        }
+      ]
+    },
+    {
+      "id": "web_v3d_e_sp3_sigma",
+      "pack": "web",
+      "type": "view_3d",
+      "smiles": "C",
+      "smiles_todos": [
+        "C"
+      ],
+      "formula": "CH4",
+      "n_carbonos": 1,
+      "cadena_mas_larga": 1,
+      "grupos_detectados": [
+        "alcano"
+      ],
+      "hibridacion_carbonos": [
+        "sp3"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Verdadero",
+        "enunciado": "Un carbono sp³ forma 4 enlaces sigma y ningún enlace pi.",
+        "explicacion": "Los 4 híbridos sp³ forman 4 sigma; no hay orbital p libre para pi.",
+        "hibridacion": [
+          "sp3"
+        ],
+        "sigma_pi": {
+          "sigma": 4,
+          "pi": 0
+        },
+        "origen": "e_sp3_sigma"
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] hibridacion (enunciado): texto «sp3» vs RDKit «sp3»",
+        "[OK] sigma_pi (enunciado): texto «4 sigma / 0 pi (respuesta: true)» vs RDKit «por carbono (sigma, pi) = [(4, 0)]»",
+        "[OK] web_smiles_origen (origen e_sp3_sigma): texto «C» vs RDKit «C»",
+        "[OK] web_nombre_origen (origen e_sp3_sigma): texto «Verdadero» vs RDKit «Verdadero»",
+        "[OK] web_v3d_opciones (origen e_sp3_sigma): texto «mismas opciones que el origen» vs RDKit «iguales»",
+        "[OK] web_v3d_correct (origen e_sp3_sigma): texto «{'value': 'true'}» vs RDKit «{'value': 'true'}»",
+        "[OK] web_v3d_prompt (origen e_sp3_sigma): texto «ex.e_sp3_sigma.prompt» vs RDKit «ex.e_sp3_sigma.prompt»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "hibridacion",
+          "afirma": "sp3",
+          "rdkit": "sp3",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "sigma_pi",
+          "afirma": "4 sigma / 0 pi (respuesta: true)",
+          "rdkit": "por carbono (sigma, pi) = [(4, 0)]",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "web_smiles_origen",
+          "afirma": "C",
+          "rdkit": "C",
+          "ok": true,
+          "fuente": "origen e_sp3_sigma"
+        },
+        {
+          "tipo": "web_nombre_origen",
+          "afirma": "Verdadero",
+          "rdkit": "Verdadero",
+          "ok": true,
+          "fuente": "origen e_sp3_sigma"
+        },
+        {
+          "tipo": "web_v3d_opciones",
+          "afirma": "mismas opciones que el origen",
+          "rdkit": "iguales",
+          "ok": true,
+          "fuente": "origen e_sp3_sigma"
+        },
+        {
+          "tipo": "web_v3d_correct",
+          "afirma": {
+            "value": "true"
+          },
+          "rdkit": {
+            "value": "true"
+          },
+          "ok": true,
+          "fuente": "origen e_sp3_sigma"
+        },
+        {
+          "tipo": "web_v3d_prompt",
+          "afirma": "ex.e_sp3_sigma.prompt",
+          "rdkit": "ex.e_sp3_sigma.prompt",
+          "ok": true,
+          "fuente": "origen e_sp3_sigma"
+        }
+      ]
+    },
+    {
+      "id": "web_v3d_e_sp2_geom",
+      "pack": "web",
+      "type": "view_3d",
+      "smiles": "C=C",
+      "smiles_todos": [
+        "C=C"
+      ],
+      "formula": "C2H4",
+      "n_carbonos": 2,
+      "cadena_mas_larga": 2,
+      "grupos_detectados": [
+        "alqueno"
+      ],
+      "hibridacion_carbonos": [
+        "sp2"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Trigonal plana",
+        "enunciado": "¿Qué geometría tiene un carbono sp²?",
+        "explicacion": "Tres híbridos sp² en un plano: geometría trigonal plana.",
+        "hibridacion": [
+          "sp2"
+        ],
+        "origen": "e_sp2_geom"
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] hibridacion (enunciado): texto «sp2» vs RDKit «sp2»",
+        "[OK] geometria (respuesta correcta): texto «Trigonal plana» vs RDKit «hibridación de los C: sp2»",
+        "[OK] web_smiles_origen (origen e_sp2_geom): texto «C=C» vs RDKit «C=C»",
+        "[OK] web_nombre_origen (origen e_sp2_geom): texto «Trigonal plana» vs RDKit «Trigonal plana»",
+        "[OK] web_v3d_opciones (origen e_sp2_geom): texto «mismas opciones que el origen» vs RDKit «iguales»",
+        "[OK] web_v3d_correct (origen e_sp2_geom): texto «{'value': 'trigonal_plana'}» vs RDKit «{'value': 'trigonal_plana'}»",
+        "[OK] web_v3d_prompt (origen e_sp2_geom): texto «ex.e_sp2_geom.prompt» vs RDKit «ex.e_sp2_geom.prompt»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "hibridacion",
+          "afirma": "sp2",
+          "rdkit": "sp2",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "geometria",
+          "afirma": "Trigonal plana",
+          "rdkit": "hibridación de los C: sp2",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "web_smiles_origen",
+          "afirma": "C=C",
+          "rdkit": "C=C",
+          "ok": true,
+          "fuente": "origen e_sp2_geom"
+        },
+        {
+          "tipo": "web_nombre_origen",
+          "afirma": "Trigonal plana",
+          "rdkit": "Trigonal plana",
+          "ok": true,
+          "fuente": "origen e_sp2_geom"
+        },
+        {
+          "tipo": "web_v3d_opciones",
+          "afirma": "mismas opciones que el origen",
+          "rdkit": "iguales",
+          "ok": true,
+          "fuente": "origen e_sp2_geom"
+        },
+        {
+          "tipo": "web_v3d_correct",
+          "afirma": {
+            "value": "trigonal_plana"
+          },
+          "rdkit": {
+            "value": "trigonal_plana"
+          },
+          "ok": true,
+          "fuente": "origen e_sp2_geom"
+        },
+        {
+          "tipo": "web_v3d_prompt",
+          "afirma": "ex.e_sp2_geom.prompt",
+          "rdkit": "ex.e_sp2_geom.prompt",
+          "ok": true,
+          "fuente": "origen e_sp2_geom"
+        }
+      ]
+    },
+    {
+      "id": "web_v3d_e_sp2_enlaces",
+      "pack": "web",
+      "type": "view_3d",
+      "smiles": "C=C",
+      "smiles_todos": [
+        "C=C"
+      ],
+      "formula": "C2H4",
+      "n_carbonos": 2,
+      "cadena_mas_larga": 2,
+      "grupos_detectados": [
+        "alqueno"
+      ],
+      "hibridacion_carbonos": [
+        "sp2"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Verdadero",
+        "enunciado": "Un carbono sp² forma 3 enlaces sigma y 1 enlace pi.",
+        "explicacion": "Tres sigma con los híbridos sp² y un pi con el orbital p restante (el doble enlace).",
+        "familias_afirmadas": [
+          {
+            "familia": "alqueno",
+            "fuente": "explicación"
+          }
+        ],
+        "hibridacion": [
+          "sp2"
+        ],
+        "sigma_pi": {
+          "sigma": 3,
+          "pi": 1
+        },
+        "origen": "e_sp2_enlaces"
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] familia (explicación): texto «alqueno» vs RDKit «alqueno»",
+        "[OK] hibridacion (enunciado): texto «sp2» vs RDKit «sp2»",
+        "[OK] sigma_pi (enunciado): texto «3 sigma / 1 pi (respuesta: true)» vs RDKit «por carbono (sigma, pi) = [(3, 1)]»",
+        "[OK] web_smiles_origen (origen e_sp2_enlaces): texto «C=C» vs RDKit «C=C»",
+        "[OK] web_nombre_origen (origen e_sp2_enlaces): texto «Verdadero» vs RDKit «Verdadero»",
+        "[OK] web_v3d_opciones (origen e_sp2_enlaces): texto «mismas opciones que el origen» vs RDKit «iguales»",
+        "[OK] web_v3d_correct (origen e_sp2_enlaces): texto «{'value': 'true'}» vs RDKit «{'value': 'true'}»",
+        "[OK] web_v3d_prompt (origen e_sp2_enlaces): texto «ex.e_sp2_enlaces.prompt» vs RDKit «ex.e_sp2_enlaces.prompt»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "familia",
+          "afirma": "alqueno",
+          "rdkit": "alqueno",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "hibridacion",
+          "afirma": "sp2",
+          "rdkit": "sp2",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "sigma_pi",
+          "afirma": "3 sigma / 1 pi (respuesta: true)",
+          "rdkit": "por carbono (sigma, pi) = [(3, 1)]",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "web_smiles_origen",
+          "afirma": "C=C",
+          "rdkit": "C=C",
+          "ok": true,
+          "fuente": "origen e_sp2_enlaces"
+        },
+        {
+          "tipo": "web_nombre_origen",
+          "afirma": "Verdadero",
+          "rdkit": "Verdadero",
+          "ok": true,
+          "fuente": "origen e_sp2_enlaces"
+        },
+        {
+          "tipo": "web_v3d_opciones",
+          "afirma": "mismas opciones que el origen",
+          "rdkit": "iguales",
+          "ok": true,
+          "fuente": "origen e_sp2_enlaces"
+        },
+        {
+          "tipo": "web_v3d_correct",
+          "afirma": {
+            "value": "true"
+          },
+          "rdkit": {
+            "value": "true"
+          },
+          "ok": true,
+          "fuente": "origen e_sp2_enlaces"
+        },
+        {
+          "tipo": "web_v3d_prompt",
+          "afirma": "ex.e_sp2_enlaces.prompt",
+          "rdkit": "ex.e_sp2_enlaces.prompt",
+          "ok": true,
+          "fuente": "origen e_sp2_enlaces"
+        }
+      ]
+    },
+    {
+      "id": "web_v3d_e_sp_geom",
+      "pack": "web",
+      "type": "view_3d",
+      "smiles": "C#C",
+      "smiles_todos": [
+        "C#C"
+      ],
+      "formula": "C2H2",
+      "n_carbonos": 2,
+      "cadena_mas_larga": 2,
+      "grupos_detectados": [
+        "alquino"
+      ],
+      "hibridacion_carbonos": [
+        "sp"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Lineal",
+        "enunciado": "¿Qué geometría tiene un carbono sp?",
+        "explicacion": "Dos híbridos sp opuestos: geometría lineal.",
+        "hibridacion": [
+          "sp"
+        ],
+        "origen": "e_sp_geom"
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] hibridacion (enunciado): texto «sp» vs RDKit «sp»",
+        "[OK] geometria (respuesta correcta): texto «Lineal» vs RDKit «hibridación de los C: sp»",
+        "[OK] web_smiles_origen (origen e_sp_geom): texto «C#C» vs RDKit «C#C»",
+        "[OK] web_nombre_origen (origen e_sp_geom): texto «Lineal» vs RDKit «Lineal»",
+        "[OK] web_v3d_opciones (origen e_sp_geom): texto «mismas opciones que el origen» vs RDKit «iguales»",
+        "[OK] web_v3d_correct (origen e_sp_geom): texto «{'value': 'lineal'}» vs RDKit «{'value': 'lineal'}»",
+        "[OK] web_v3d_prompt (origen e_sp_geom): texto «ex.e_sp_geom.prompt» vs RDKit «ex.e_sp_geom.prompt»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "hibridacion",
+          "afirma": "sp",
+          "rdkit": "sp",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "geometria",
+          "afirma": "Lineal",
+          "rdkit": "hibridación de los C: sp",
+          "ok": true,
+          "fuente": "respuesta correcta"
+        },
+        {
+          "tipo": "web_smiles_origen",
+          "afirma": "C#C",
+          "rdkit": "C#C",
+          "ok": true,
+          "fuente": "origen e_sp_geom"
+        },
+        {
+          "tipo": "web_nombre_origen",
+          "afirma": "Lineal",
+          "rdkit": "Lineal",
+          "ok": true,
+          "fuente": "origen e_sp_geom"
+        },
+        {
+          "tipo": "web_v3d_opciones",
+          "afirma": "mismas opciones que el origen",
+          "rdkit": "iguales",
+          "ok": true,
+          "fuente": "origen e_sp_geom"
+        },
+        {
+          "tipo": "web_v3d_correct",
+          "afirma": {
+            "value": "lineal"
+          },
+          "rdkit": {
+            "value": "lineal"
+          },
+          "ok": true,
+          "fuente": "origen e_sp_geom"
+        },
+        {
+          "tipo": "web_v3d_prompt",
+          "afirma": "ex.e_sp_geom.prompt",
+          "rdkit": "ex.e_sp_geom.prompt",
+          "ok": true,
+          "fuente": "origen e_sp_geom"
+        }
+      ]
+    },
+    {
+      "id": "web_v3d_e_sp_enlaces",
+      "pack": "web",
+      "type": "view_3d",
+      "smiles": "C#C",
+      "smiles_todos": [
+        "C#C"
+      ],
+      "formula": "C2H2",
+      "n_carbonos": 2,
+      "cadena_mas_larga": 2,
+      "grupos_detectados": [
+        "alquino"
+      ],
+      "hibridacion_carbonos": [
+        "sp"
+      ],
+      "afirmado": {
+        "nombre_correcto": "Verdadero",
+        "enunciado": "Un carbono sp forma 2 enlaces sigma y 2 enlaces pi.",
+        "explicacion": "Dos sigma con los híbridos sp y dos pi con los dos orbitales p (el triple enlace).",
+        "familias_afirmadas": [
+          {
+            "familia": "alquino",
+            "fuente": "explicación"
+          }
+        ],
+        "hibridacion": [
+          "sp"
+        ],
+        "sigma_pi": {
+          "sigma": 2,
+          "pi": 2
+        },
+        "origen": "e_sp_enlaces"
+      },
+      "resultado": "coincide",
+      "detalle": [
+        "[OK] familia (explicación): texto «alquino» vs RDKit «alquino»",
+        "[OK] hibridacion (enunciado): texto «sp» vs RDKit «sp»",
+        "[OK] sigma_pi (enunciado): texto «2 sigma / 2 pi (respuesta: true)» vs RDKit «por carbono (sigma, pi) = [(2, 2)]»",
+        "[OK] web_smiles_origen (origen e_sp_enlaces): texto «C#C» vs RDKit «C#C»",
+        "[OK] web_nombre_origen (origen e_sp_enlaces): texto «Verdadero» vs RDKit «Verdadero»",
+        "[OK] web_v3d_opciones (origen e_sp_enlaces): texto «mismas opciones que el origen» vs RDKit «iguales»",
+        "[OK] web_v3d_correct (origen e_sp_enlaces): texto «{'value': 'true'}» vs RDKit «{'value': 'true'}»",
+        "[OK] web_v3d_prompt (origen e_sp_enlaces): texto «ex.e_sp_enlaces.prompt» vs RDKit «ex.e_sp_enlaces.prompt»"
+      ],
+      "comprobaciones": [
+        {
+          "tipo": "familia",
+          "afirma": "alquino",
+          "rdkit": "alquino",
+          "ok": true,
+          "fuente": "explicación"
+        },
+        {
+          "tipo": "hibridacion",
+          "afirma": "sp",
+          "rdkit": "sp",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "sigma_pi",
+          "afirma": "2 sigma / 2 pi (respuesta: true)",
+          "rdkit": "por carbono (sigma, pi) = [(2, 2)]",
+          "ok": true,
+          "fuente": "enunciado"
+        },
+        {
+          "tipo": "web_smiles_origen",
+          "afirma": "C#C",
+          "rdkit": "C#C",
+          "ok": true,
+          "fuente": "origen e_sp_enlaces"
+        },
+        {
+          "tipo": "web_nombre_origen",
+          "afirma": "Verdadero",
+          "rdkit": "Verdadero",
+          "ok": true,
+          "fuente": "origen e_sp_enlaces"
+        },
+        {
+          "tipo": "web_v3d_opciones",
+          "afirma": "mismas opciones que el origen",
+          "rdkit": "iguales",
+          "ok": true,
+          "fuente": "origen e_sp_enlaces"
+        },
+        {
+          "tipo": "web_v3d_correct",
+          "afirma": {
+            "value": "true"
+          },
+          "rdkit": {
+            "value": "true"
+          },
+          "ok": true,
+          "fuente": "origen e_sp_enlaces"
+        },
+        {
+          "tipo": "web_v3d_prompt",
+          "afirma": "ex.e_sp_enlaces.prompt",
+          "rdkit": "ex.e_sp_enlaces.prompt",
+          "ok": true,
+          "fuente": "origen e_sp_enlaces"
+        }
+      ]
+    }
+  ]
+}

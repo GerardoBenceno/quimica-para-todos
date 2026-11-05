@@ -1,0 +1,407 @@
+key,locale,value,content_version
+asset.asset_carbo_happy.alt,es,Mascota Carbo feliz,1
+asset.asset_carbo_idle.alt,es,Mascota Carbo en reposo,1
+asset.asset_carbo_sad.alt,es,Mascota Carbo triste,1
+asset.asset_carbo_think.alt,es,Mascota Carbo pensando,1
+asset.asset_icon_alcanos.alt,es,Ícono del mundo nomenclatura,1
+asset.asset_icon_carbono.alt,es,Ícono del mundo carbono,1
+asset.asset_icon_chest.alt,es,Ícono de cofre,1
+asset.asset_icon_coin.alt,es,Ícono de moneda,1
+asset.asset_icon_estereo.alt,es,Ícono estereoquímica,1
+asset.asset_icon_freeze.alt,es,Ícono de congelar racha,1
+asset.asset_icon_grupos.alt,es,Ícono del mundo grupos funcionales,1
+asset.asset_icon_reacciones.alt,es,Ícono reacciones,1
+asset.asset_metano_tetraedrico.alt,es,Metano tetraédrico,1
+character.carbo.name,es,Carbo,1
+currency.coin.name,es,Monedas,1
+ex.diag_01.opt.1,es,'1,1
+ex.diag_01.opt.2,es,'2,1
+ex.diag_01.opt.3,es,'3,1
+ex.diag_01.opt.4,es,'4,1
+ex.diag_01.prompt,es,¿Cuántos enlaces covalentes forma el carbono?,1
+ex.diag_02.opt.angular,es,Angular,1
+ex.diag_02.opt.lineal,es,Lineal,1
+ex.diag_02.opt.tetraedrica,es,Tetraédrica,1
+ex.diag_02.opt.trigonal_plana,es,Trigonal plana,1
+ex.diag_02.prompt,es,¿Qué geometría tiene un carbono sp³?,1
+ex.diag_03.opt.cuaternario,es,Cuaternario,1
+ex.diag_03.opt.primario,es,Primario,1
+ex.diag_03.opt.secundario,es,Secundario,1
+ex.diag_03.opt.terciario,es,Terciario,1
+ex.diag_03.prompt,es,Un carbono unido a 3 carbonos es:,1
+ex.diag_04.opt.acido,es,Ácidos,1
+ex.diag_04.opt.alcohol,es,Alcoholes,1
+ex.diag_04.opt.aldehido,es,Aldehídos,1
+ex.diag_04.opt.eter,es,Éteres,1
+ex.diag_04.prompt,es,El grupo -OH unido a un carbono saturado corresponde a:,2
+ex.diag_05.opt.acido,es,Ácidos carboxílicos,1
+ex.diag_05.opt.alcohol,es,Alcoholes,1
+ex.diag_05.opt.cetona,es,Cetonas,1
+ex.diag_05.opt.ester,es,Ésteres,1
+ex.diag_05.prompt,es,El grupo -COOH corresponde a:,1
+ex.diag_06.opt.alcohol,es,Alcohol,1
+ex.diag_06.opt.aldehido,es,Aldehído,1
+ex.diag_06.opt.cetona,es,Cetona,1
+ex.diag_06.opt.eter,es,Éter,1
+ex.diag_06.prompt,es,¿Qué grupo funcional es?,1
+ex.diag_07.opt.etano,es,Etano,1
+ex.diag_07.opt.metano,es,Metano,1
+ex.diag_07.opt.metanol,es,Metanol,1
+ex.diag_07.opt.propano,es,Propano,1
+ex.diag_07.prompt,es,¿Cómo se llama el alcano CH₄?,1
+ex.diag_08.opt.23dimetilbutano,es,"2,3-dimetilbutano",1
+ex.diag_08.opt.2metilpentano,es,2-metilpentano,1
+ex.diag_08.opt.3etilbutano,es,3-etilbutano,1
+ex.diag_08.opt.hexano,es,Hexano,1
+ex.diag_08.prompt,es,¿Cuál es el nombre IUPAC de esta estructura?,1
+ex.e_22dimetilbutano.explain,es,"Cadena de 4 carbonos con dos metilos en el mismo carbono 2: 2,2-dimetilbutano.",1
+ex.e_22dimetilbutano.opt.22dimetilbutano,es,"2,2-dimetilbutano",1
+ex.e_22dimetilbutano.opt.23dimetilbutano,es,"2,3-dimetilbutano",1
+ex.e_22dimetilbutano.opt.2metilpentano,es,2-metilpentano,1
+ex.e_22dimetilbutano.opt.hexano,es,Hexano,1
+ex.e_22dimetilbutano.prompt,es,¿Cuál es el nombre IUPAC de esta estructura?,1
+ex.e_23dimetilbutano.explain,es,"Cadena principal de 4 carbonos con metilos en C2 y C3: 2,3-dimetilbutano. '3-etilbutano' no es válido porque la cadena más larga sería mayor.",1
+ex.e_23dimetilbutano.opt.22dimetilbutano,es,"2,2-dimetilbutano",1
+ex.e_23dimetilbutano.opt.23dimetilbutano,es,"2,3-dimetilbutano",1
+ex.e_23dimetilbutano.opt.2metilpentano,es,2-metilpentano,1
+ex.e_23dimetilbutano.opt.3etilbutano,es,3-etilbutano,1
+ex.e_23dimetilbutano.prompt,es,¿Cuál es el nombre IUPAC de esta estructura?,1
+ex.e_2metilbutano.explain,es,Cadena de 4 carbonos (butano) con un metil en el carbono 2: 2-metilbutano. Numerando para el menor localizador no es 3-metilbutano.,1
+ex.e_2metilbutano.opt.2metilbutano,es,2-metilbutano,1
+ex.e_2metilbutano.opt.2metilpropano,es,2-metilpropano,1
+ex.e_2metilbutano.opt.3metilbutano,es,3-metilbutano,1
+ex.e_2metilbutano.opt.pentano,es,Pentano,1
+ex.e_2metilbutano.prompt,es,¿Cuál es el nombre IUPAC de esta estructura?,1
+ex.e_2metilpentano.explain,es,Cadena principal de 5 carbonos (pentano) con un metil en C2: 2-metilpentano.,1
+ex.e_2metilpentano.opt.2metilbutano,es,2-metilbutano,1
+ex.e_2metilpentano.opt.2metilpentano,es,2-metilpentano,1
+ex.e_2metilpentano.opt.3metilpentano,es,3-metilpentano,1
+ex.e_2metilpentano.opt.hexano,es,Hexano,1
+ex.e_2metilpentano.prompt,es,¿Cuál es el nombre IUPAC de esta estructura?,1
+ex.e_amida_def.explain,es,El enlace C(=O)-N es la firma de una amida.,1
+ex.e_amida_def.opt.false,es,Falso,1
+ex.e_amida_def.opt.true,es,Verdadero,1
+ex.e_amida_def.prompt,es,Una amida contiene un grupo carbonilo unido directamente a un nitrógeno.,1
+ex.e_butano.explain,es,4 carbonos lineales: butano.,1
+ex.e_butano.opt.butano,es,Butano,1
+ex.e_butano.opt.hexano,es,Hexano,1
+ex.e_butano.opt.pentano,es,Pentano,1
+ex.e_butano.opt.propano,es,Propano,1
+ex.e_butano.prompt,es,¿Cómo se llama CH₃-CH₂-CH₂-CH₃?,1
+ex.e_carbono_enlaces.explain,es,El carbono tiene 4 electrones de valencia y completa el octeto formando 4 enlaces covalentes.,1
+ex.e_carbono_enlaces.opt.1,es,'1,1
+ex.e_carbono_enlaces.opt.2,es,'2,1
+ex.e_carbono_enlaces.opt.3,es,'3,1
+ex.e_carbono_enlaces.opt.4,es,'4,1
+ex.e_carbono_enlaces.prompt,es,¿Cuántos enlaces covalentes forma normalmente el carbono?,1
+ex.e_carbono_valencia.explain,es,El carbono está en el grupo 14: tiene 4 electrones de valencia.,1
+ex.e_carbono_valencia.opt.2,es,'2,1
+ex.e_carbono_valencia.opt.4,es,'4,1
+ex.e_carbono_valencia.opt.6,es,'6,1
+ex.e_carbono_valencia.opt.8,es,'8,1
+ex.e_carbono_valencia.prompt,es,¿Cuántos electrones de valencia tiene el carbono?,1
+ex.e_catenacion.explain,es,La catenación del carbono explica la enorme variedad de compuestos orgánicos.,1
+ex.e_catenacion.opt.false,es,Falso,1
+ex.e_catenacion.opt.true,es,Verdadero,1
+ex.e_catenacion.prompt,es,El carbono puede unirse consigo mismo formando cadenas largas (catenación).,1
+ex.e_cetona_def.explain,es,"Si el C=O está entre dos carbonos es cetona; si está al final con un H, es aldehído.",1
+ex.e_cetona_def.opt.false,es,Falso,1
+ex.e_cetona_def.opt.true,es,Verdadero,1
+ex.e_cetona_def.prompt,es,Una cetona tiene el grupo carbonilo (C=O) ubicado entre dos carbonos.,1
+ex.e_complete_etilmetilhexano.bank.butil,es,butil,1
+ex.e_complete_etilmetilhexano.bank.etil,es,etil,1
+ex.e_complete_etilmetilhexano.bank.metil,es,metil,1
+ex.e_complete_etilmetilhexano.bank.propil,es,propil,1
+ex.e_complete_etilmetilhexano.explain,es,"Cadena principal de 6 carbonos (hexano), metil en C2 y etil en C3. En el nombre el etil va antes (alfabético): 3-etil-2-metilhexano.",1
+ex.e_complete_etilmetilhexano.prompt,es,Completa el nombre IUPAC de la estructura mostrada:,1
+ex.e_cual_organico.explain,es,El metano es un hidrocarburo: carbono e hidrógeno. El CO₂ se trata tradicionalmente como inorgánico.,1
+ex.e_cual_organico.opt.agua,es,Agua (H₂O),1
+ex.e_cual_organico.opt.co2,es,Dióxido de carbono (CO₂),1
+ex.e_cual_organico.opt.metano,es,Metano (CH₄),1
+ex.e_cual_organico.opt.nacl,es,Cloruro de sodio (NaCl),1
+ex.e_cual_organico.prompt,es,¿Cuál de estos compuestos es orgánico?,1
+ex.e_define_organico.explain,es,La química orgánica es la química de los compuestos del carbono.,1
+ex.e_define_organico.opt.carbono,es,Carbono,1
+ex.e_define_organico.opt.hidrogeno,es,Hidrógeno,1
+ex.e_define_organico.opt.nitrogeno,es,Nitrógeno,1
+ex.e_define_organico.opt.oxigeno,es,Oxígeno,1
+ex.e_define_organico.prompt,es,¿Qué elemento debe estar presente para clasificar un compuesto como orgánico?,1
+ex.e_enlace_ionico.explain,es,"El carbono comparte electrones: forma enlaces covalentes, no iónicos.",1
+ex.e_enlace_ionico.opt.false,es,Falso,1
+ex.e_enlace_ionico.opt.true,es,Verdadero,1
+ex.e_enlace_ionico.prompt,es,El carbono forma principalmente enlaces iónicos al unir átomos.,1
+ex.e_grupo_cooh.explain,es,-COOH (carboxilo) define un ácido carboxílico.,1
+ex.e_grupo_cooh.opt.acido,es,Ácidos carboxílicos,1
+ex.e_grupo_cooh.opt.alcohol,es,Alcoholes,1
+ex.e_grupo_cooh.opt.aldehido,es,Aldehídos,1
+ex.e_grupo_cooh.opt.ester,es,Ésteres,1
+ex.e_grupo_cooh.prompt,es,El grupo -COOH corresponde a:,1
+ex.e_grupo_nh2.explain,es,"Un -NH₂ unido a un grupo alquilo es una amina primaria. Si el nitrógeno estuviera unido al carbono de un C=O, sería una amida.",2
+ex.e_grupo_nh2.opt.alcohol,es,Alcoholes,1
+ex.e_grupo_nh2.opt.amida,es,Amidas,1
+ex.e_grupo_nh2.opt.amina,es,Aminas,1
+ex.e_grupo_nh2.opt.nitrilo,es,Nitrilos,1
+ex.e_grupo_nh2.prompt,es,El grupo -NH₂ unido a un grupo alquilo corresponde a:,2
+ex.e_grupo_oh.explain,es,"Un -OH unido a un carbono saturado, es decir, con solo enlaces sencillos, define un alcohol. En el -COOH el OH está unido a un carbonilo y forma parte de un ácido carboxílico.",2
+ex.e_grupo_oh.opt.acido,es,Ácidos carboxílicos,1
+ex.e_grupo_oh.opt.alcohol,es,Alcoholes,1
+ex.e_grupo_oh.opt.aldehido,es,Aldehídos,1
+ex.e_grupo_oh.opt.cetona,es,Cetonas,1
+ex.e_grupo_oh.prompt,es,El grupo -OH unido a un carbono saturado corresponde a la familia de los:,2
+ex.e_hexano_n.explain,es,Hexa = 6: el hexano tiene 6 carbonos.,1
+ex.e_hexano_n.opt.5,es,'5,1
+ex.e_hexano_n.opt.6,es,'6,1
+ex.e_hexano_n.opt.7,es,'7,1
+ex.e_hexano_n.opt.8,es,'8,1
+ex.e_hexano_n.prompt,es,El hexano tiene ¿cuántos carbonos?,1
+ex.e_id_acetaldehido.explain,es,"CC=O es acetaldehído: carbonilo terminal con H, un aldehído.",1
+ex.e_id_acetaldehido.opt.acido,es,Ácido carboxílico,1
+ex.e_id_acetaldehido.opt.alcohol,es,Alcohol,1
+ex.e_id_acetaldehido.opt.aldehido,es,Aldehído,1
+ex.e_id_acetaldehido.opt.cetona,es,Cetona,1
+ex.e_id_acetaldehido.prompt,es,¿Qué grupo funcional es?,1
+ex.e_id_acetico.explain,es,CC(=O)O es ácido acético: grupo -COOH.,1
+ex.e_id_acetico.opt.acido,es,Ácido carboxílico,1
+ex.e_id_acetico.opt.alcohol,es,Alcohol,1
+ex.e_id_acetico.opt.cetona,es,Cetona,1
+ex.e_id_acetico.opt.ester,es,Éster,1
+ex.e_id_acetico.prompt,es,¿A qué familia pertenece esta estructura?,1
+ex.e_id_acetona.explain,es,"CC(=O)C es acetona: carbonilo entre dos carbonos, una cetona.",1
+ex.e_id_acetona.opt.alcohol,es,Alcohol,1
+ex.e_id_acetona.opt.aldehido,es,Aldehído,1
+ex.e_id_acetona.opt.cetona,es,Cetona,1
+ex.e_id_acetona.opt.eter,es,Éter,1
+ex.e_id_acetona.prompt,es,¿Qué grupo funcional es?,1
+ex.e_id_amida.explain,es,"CC(=O)N es acetamida: carbonilo unido a nitrógeno, una amida.",1
+ex.e_id_amida.opt.acido,es,Ácido carboxílico,1
+ex.e_id_amida.opt.amida,es,Amida,1
+ex.e_id_amida.opt.amina,es,Amina,1
+ex.e_id_amida.opt.cetona,es,Cetona,1
+ex.e_id_amida.prompt,es,¿Qué grupo funcional es?,1
+ex.e_id_amina.explain,es,"CN es metilamina: grupo -NH2 unido a carbono, una amina.",1
+ex.e_id_amina.opt.alcohol,es,Alcohol,1
+ex.e_id_amina.opt.amida,es,Amida,1
+ex.e_id_amina.opt.amina,es,Amina,1
+ex.e_id_amina.opt.eter,es,Éter,1
+ex.e_id_amina.prompt,es,¿Qué grupo funcional es?,1
+ex.e_id_etanol.explain,es,"CCO es etanol: tiene -OH, es un alcohol.",1
+ex.e_id_etanol.opt.acido,es,Ácido carboxílico,1
+ex.e_id_etanol.opt.alcohol,es,Alcohol,1
+ex.e_id_etanol.opt.aldehido,es,Aldehído,1
+ex.e_id_etanol.opt.eter,es,Éter,1
+ex.e_id_etanol.prompt,es,¿A qué familia pertenece esta estructura?,1
+ex.e_id_eter.explain,es,"COC es dimetil éter: oxígeno entre dos carbonos (C-O-C), un éter.",1
+ex.e_id_eter.opt.alcohol,es,Alcohol,1
+ex.e_id_eter.opt.cetona,es,Cetona,1
+ex.e_id_eter.opt.ester,es,Éster,1
+ex.e_id_eter.opt.eter,es,Éter,1
+ex.e_id_eter.prompt,es,¿Qué grupo funcional es?,1
+ex.e_metano.explain,es,1 carbono: metano.,1
+ex.e_metano.opt.butano,es,Butano,1
+ex.e_metano.opt.etano,es,Etano,1
+ex.e_metano.opt.metano,es,Metano,1
+ex.e_metano.opt.propano,es,Propano,1
+ex.e_metano.prompt,es,¿Cómo se llama el alcano de un solo carbono (CH₄)?,1
+ex.e_num_alfabetico.explain,es,Los sustituyentes se nombran en orden alfabético (etil antes que metil).,1
+ex.e_num_alfabetico.opt.alfabetico,es,Alfabético,1
+ex.e_num_alfabetico.opt.aparicion,es,Según aparecen en la cadena,1
+ex.e_num_alfabetico.opt.inverso,es,Inverso al alfabeto,1
+ex.e_num_alfabetico.opt.tamano,es,De mayor a menor tamaño,1
+ex.e_num_alfabetico.prompt,es,"Cuando hay varios sustituyentes distintos, se citan en el nombre en orden:",1
+ex.e_num_menor.explain,es,Se elige la numeración que minimiza los localizadores.,1
+ex.e_num_menor.opt.false,es,Falso,1
+ex.e_num_menor.opt.true,es,Verdadero,1
+ex.e_num_menor.prompt,es,La cadena principal se numera desde el extremo que da los menores localizadores a los sustituyentes.,1
+ex.e_propano.explain,es,3 carbonos en cadena: propano.,1
+ex.e_propano.opt.butano,es,Butano,1
+ex.e_propano.opt.etano,es,Etano,1
+ex.e_propano.opt.pentano,es,Pentano,1
+ex.e_propano.opt.propano,es,Propano,1
+ex.e_propano.prompt,es,¿Cómo se llama el alcano CH₃-CH₂-CH₃?,1
+ex.e_sp2_angulo.explain,es,La geometría trigonal plana corresponde a 120°.,1
+ex.e_sp2_angulo.opt.109,es,109.5°,1
+ex.e_sp2_angulo.opt.120,es,120°,1
+ex.e_sp2_angulo.opt.180,es,180°,1
+ex.e_sp2_angulo.opt.90,es,90°,1
+ex.e_sp2_angulo.prompt,es,¿Cuál es el ángulo de enlace aproximado en un carbono sp²?,1
+ex.e_sp2_enlaces.explain,es,Tres sigma con los híbridos sp² y un pi con el orbital p restante (el doble enlace).,1
+ex.e_sp2_enlaces.opt.false,es,Falso,1
+ex.e_sp2_enlaces.opt.true,es,Verdadero,1
+ex.e_sp2_enlaces.prompt,es,Un carbono sp² forma 3 enlaces sigma y 1 enlace pi.,1
+ex.e_sp2_geom.explain,es,Tres híbridos sp² en un plano: geometría trigonal plana.,1
+ex.e_sp2_geom.opt.lineal,es,Lineal,1
+ex.e_sp2_geom.opt.piramidal,es,Piramidal,1
+ex.e_sp2_geom.opt.tetraedrica,es,Tetraédrica,1
+ex.e_sp2_geom.opt.trigonal_plana,es,Trigonal plana,1
+ex.e_sp2_geom.prompt,es,¿Qué geometría tiene un carbono sp²?,1
+ex.e_sp2_molecula.explain,es,El doble enlace del eteno implica carbonos sp².,1
+ex.e_sp2_molecula.opt.etano,es,Etano (CH₃-CH₃),1
+ex.e_sp2_molecula.opt.eteno,es,Eteno (CH₂=CH₂),1
+ex.e_sp2_molecula.opt.etino,es,Etino (CH≡CH),1
+ex.e_sp2_molecula.opt.metano,es,Metano (CH₄),1
+ex.e_sp2_molecula.prompt,es,¿Cuál molécula contiene carbonos con hibridación sp²?,1
+ex.e_sp3_angulo.explain,es,La geometría tetraédrica corresponde a ángulos de 109.5°.,1
+ex.e_sp3_angulo.opt.109,es,109.5°,1
+ex.e_sp3_angulo.opt.120,es,120°,1
+ex.e_sp3_angulo.opt.180,es,180°,1
+ex.e_sp3_angulo.opt.90,es,90°,1
+ex.e_sp3_angulo.prompt,es,¿Cuál es el ángulo de enlace aproximado en un carbono sp³?,1
+ex.e_sp3_geom.explain,es,Cuatro híbridos sp³ apuntan a los vértices de un tetraedro.,1
+ex.e_sp3_geom.opt.angular,es,Angular,1
+ex.e_sp3_geom.opt.lineal,es,Lineal,1
+ex.e_sp3_geom.opt.tetraedrica,es,Tetraédrica,1
+ex.e_sp3_geom.opt.trigonal_plana,es,Trigonal plana,1
+ex.e_sp3_geom.prompt,es,¿Qué geometría tiene un carbono con hibridación sp³?,1
+ex.e_sp3_molecula.explain,es,El metano solo tiene enlaces simples: carbono sp³. Eteno es sp² y etino es sp.,1
+ex.e_sp3_molecula.opt.benceno,es,Benceno,1
+ex.e_sp3_molecula.opt.eteno,es,Eteno (CH₂=CH₂),1
+ex.e_sp3_molecula.opt.etino,es,Etino (CH≡CH),1
+ex.e_sp3_molecula.opt.metano,es,Metano (CH₄),1
+ex.e_sp3_molecula.prompt,es,¿Cuál molécula tiene todos sus carbonos con hibridación sp³?,1
+ex.e_sp3_sigma.explain,es,Los 4 híbridos sp³ forman 4 sigma; no hay orbital p libre para pi.,1
+ex.e_sp3_sigma.opt.false,es,Falso,1
+ex.e_sp3_sigma.opt.true,es,Verdadero,1
+ex.e_sp3_sigma.prompt,es,Un carbono sp³ forma 4 enlaces sigma y ningún enlace pi.,1
+ex.e_sp_angulo.explain,es,La geometría lineal corresponde a 180°.,1
+ex.e_sp_angulo.opt.109,es,109.5°,1
+ex.e_sp_angulo.opt.120,es,120°,1
+ex.e_sp_angulo.opt.180,es,180°,1
+ex.e_sp_angulo.opt.90,es,90°,1
+ex.e_sp_angulo.prompt,es,¿Cuál es el ángulo de enlace en un carbono sp?,1
+ex.e_sp_enlaces.explain,es,Dos sigma con los híbridos sp y dos pi con los dos orbitales p (el triple enlace).,1
+ex.e_sp_enlaces.opt.false,es,Falso,1
+ex.e_sp_enlaces.opt.true,es,Verdadero,1
+ex.e_sp_enlaces.prompt,es,Un carbono sp forma 2 enlaces sigma y 2 enlaces pi.,1
+ex.e_sp_geom.explain,es,Dos híbridos sp opuestos: geometría lineal.,1
+ex.e_sp_geom.opt.angular,es,Angular,1
+ex.e_sp_geom.opt.lineal,es,Lineal,1
+ex.e_sp_geom.opt.tetraedrica,es,Tetraédrica,1
+ex.e_sp_geom.opt.trigonal_plana,es,Trigonal plana,1
+ex.e_sp_geom.prompt,es,¿Qué geometría tiene un carbono sp?,1
+ex.e_sp_molecula.explain,es,El triple enlace del etino implica carbonos sp.,1
+ex.e_sp_molecula.opt.etano,es,Etano (CH₃-CH₃),1
+ex.e_sp_molecula.opt.eteno,es,Eteno (CH₂=CH₂),1
+ex.e_sp_molecula.opt.etino,es,Etino (CH≡CH),1
+ex.e_sp_molecula.opt.propano,es,Propano,1
+ex.e_sp_molecula.prompt,es,¿Cuál molécula contiene carbonos con hibridación sp?,1
+ex.e_sust_etil.explain,es,-CH2CH3 (2 carbonos) como sustituyente es etil.,1
+ex.e_sust_etil.opt.butil,es,Butil,1
+ex.e_sust_etil.opt.etil,es,Etil,1
+ex.e_sust_etil.opt.metil,es,Metil,1
+ex.e_sust_etil.opt.propil,es,Propil,1
+ex.e_sust_etil.prompt,es,El sustituyente -CH₂CH₃ se llama:,1
+ex.e_sust_metil.explain,es,-CH3 como cadena lateral es metil.,1
+ex.e_sust_metil.opt.butil,es,Butil,1
+ex.e_sust_metil.opt.etil,es,Etil,1
+ex.e_sust_metil.opt.metil,es,Metil,1
+ex.e_sust_metil.opt.propil,es,Propil,1
+ex.e_sust_metil.prompt,es,El sustituyente -CH₃ se llama:,1
+ex.e_sust_propil.explain,es,Prop = 3: el propil tiene 3 carbonos.,1
+ex.e_sust_propil.opt.false,es,Falso,1
+ex.e_sust_propil.opt.true,es,Verdadero,1
+ex.e_sust_propil.prompt,es,Un grupo propil tiene 3 carbonos.,1
+ex.e_sust_terminacion.explain,es,Alcano -> sustituyente: -ano cambia a -il (metano -> metil).,1
+ex.e_sust_terminacion.opt.eno,es,-eno,1
+ex.e_sust_terminacion.opt.il,es,-il,1
+ex.e_sust_terminacion.opt.ol,es,-ol,1
+ex.e_sust_terminacion.opt.ona,es,-ona,1
+ex.e_sust_terminacion.prompt,es,Para nombrar un sustituyente alquilo se cambia la terminación -ano por:,1
+ex.e_tipo_cuaternario.explain,es,El carbono central está unido a 4 carbonos: es cuaternario.,1
+ex.e_tipo_cuaternario.opt.cuaternario,es,Cuaternario,1
+ex.e_tipo_cuaternario.opt.primario,es,Primario,1
+ex.e_tipo_cuaternario.opt.secundario,es,Secundario,1
+ex.e_tipo_cuaternario.opt.terciario,es,Terciario,1
+ex.e_tipo_cuaternario.prompt,es,"En el 2,2-dimetilpropano (neopentano), ¿cómo es el carbono central?",1
+ex.e_tipo_primario.explain,es,Primario = unido a 1 carbono. Los carbonos de los extremos suelen serlo.,1
+ex.e_tipo_primario.opt.cuaternario,es,Cuaternario,1
+ex.e_tipo_primario.opt.primario,es,Primario,1
+ex.e_tipo_primario.opt.secundario,es,Secundario,1
+ex.e_tipo_primario.opt.terciario,es,Terciario,1
+ex.e_tipo_primario.prompt,es,Un carbono unido a un solo carbono se clasifica como:,1
+ex.e_tipo_secundario.explain,es,Secundario = unido a 2 carbonos.,1
+ex.e_tipo_secundario.opt.false,es,Falso,1
+ex.e_tipo_secundario.opt.true,es,Verdadero,1
+ex.e_tipo_secundario.prompt,es,Un carbono secundario está unido a 2 carbonos.,1
+ex.e_tipo_terciario.explain,es,Terciario = unido a 3 carbonos.,1
+ex.e_tipo_terciario.opt.cuaternario,es,Cuaternario,1
+ex.e_tipo_terciario.opt.primario,es,Primario,1
+ex.e_tipo_terciario.opt.secundario,es,Secundario,1
+ex.e_tipo_terciario.opt.terciario,es,Terciario,1
+ex.e_tipo_terciario.prompt,es,Un carbono unido directamente a otros 3 carbonos se clasifica como:,1
+ex.e_wohler.explain,es,La síntesis de Wöhler refutó el vitalismo: lo orgánico no necesitaba 'fuerza vital'.,1
+ex.e_wohler.opt.atomica,es,atómica.,1
+ex.e_wohler.opt.celular,es,celular.,1
+ex.e_wohler.opt.vitalista,es,vitalista.,1
+ex.e_wohler.prompt,es,Dato curioso: en 1828 Wöhler obtuvo urea a partir de una sal inorgánica. Esto refutó la teoría...,1
+feedback.ft_carbono_enlaces.hint,es,Cuenta los electrones del grupo 14.,1
+feedback.ft_carbono_enlaces.message,es,"El carbono tiene 4 electrones de valencia, por eso forma 4 enlaces covalentes.",1
+feedback.ft_grupos_funcionales.hint,es,Fíjate en dónde está el oxígeno y si hay un hidrógeno en el carbonilo.,1
+feedback.ft_grupos_funcionales.message,es,Revisa el grupo: -OH sobre un carbono saturado es alcohol; -CHO es aldehído; C=O entre dos carbonos es cetona; -COOH es ácido carboxílico.,2
+feedback.ft_grupos_nitrogenados.hint,es,¿Hay un carbonilo junto al nitrógeno?,1
+feedback.ft_grupos_nitrogenados.message,es,"-NH₂ unido a un grupo alquilo es amina; si el nitrógeno está unido al carbono de un C=O, es amida.",2
+feedback.ft_grupos_oxigenados.hint,es,"¿Hay un C=O? Si lo hay, fíjate si está al final de la cadena o entre dos carbonos. Si no lo hay, revisa si el oxígeno une dos carbonos.",2
+feedback.ft_grupos_oxigenados.message,es,C=O terminal con H es aldehído; C=O entre carbonos es cetona; C-O-C es éter; -COOH es ácido.,1
+feedback.ft_hibridacion_general.hint,es,Cada enlace pi viene de un doble o triple enlace.,1
+feedback.ft_hibridacion_general.message,es,sp³ = 4 sigma; sp² = 3 sigma + 1 pi; sp = 2 sigma + 2 pi.,1
+feedback.ft_hibridacion_geom.hint,es,"Cuenta los enlaces simples, dobles o triples del carbono.",1
+feedback.ft_hibridacion_geom.message,es,"Relaciona hibridación y geometría: sp³ tetraédrica (109.5°), sp² trigonal plana (120°), sp lineal (180°).",1
+feedback.ft_nomenclatura_lineales.hint,es,El número de carbonos da el prefijo.,1
+feedback.ft_nomenclatura_lineales.message,es,"Cuenta los carbonos de la cadena y usa el prefijo: met, et, prop, but, pent, hex + -ano.",1
+feedback.ft_nomenclatura_numeracion.hint,es,Prueba numerar desde ambos extremos y compara.,1
+feedback.ft_nomenclatura_numeracion.message,es,Elige la cadena más larga y numera desde el extremo que da los menores localizadores.,1
+feedback.ft_nomenclatura_sustituyentes.hint,es,Compara el número de carbonos de la cadena lateral.,1
+feedback.ft_nomenclatura_sustituyentes.message,es,"Los sustituyentes cambian -ano por -il: metil, etil, propil, butil. En el nombre van en orden alfabético.",1
+feedback.ft_organico.hint,es,"El carbono es necesario, pero no basta. Recuerda que el CO₂ se considera inorgánico.",2
+feedback.ft_organico.message,es,"Los compuestos orgánicos contienen carbono, casi siempre unido a hidrógeno. Algunos compuestos del carbono, como el CO₂, se clasifican tradicionalmente como inorgánicos.",2
+feedback.ft_tipos_carbono.hint,es,"Cuenta solo carbonos vecinos, no hidrógenos.",1
+feedback.ft_tipos_carbono.message,es,"Clasifica el carbono por el número de carbonos a los que está unido: 1 primario, 2 secundario, 3 terciario, 4 cuaternario.",1
+lesson.l_alcanos_lineales.intro,es,"Los alcanos lineales se nombran con un prefijo que indica el número de carbonos más la terminación -ano: metano (1), etano (2), propano (3), butano (4), pentano (5), hexano (6).",1
+lesson.l_alcanos_lineales.title,es,Alcanos de cadena lineal,1
+lesson.l_carbono_enlaces.intro,es,"El carbono tiene 4 electrones de valencia, por eso forma 4 enlaces covalentes y se une consigo mismo en cadenas. Esa capacidad, la catenación, es la base de millones de compuestos orgánicos.",1
+lesson.l_carbono_enlaces.title,es,El carbono y sus enlaces,1
+lesson.l_grupos_intro.intro,es,"El grupo funcional es el átomo o conjunto de átomos que define la familia y las propiedades de un compuesto: -OH unido a un carbono saturado (alcohol), -CHO (aldehído), C=O unido a dos carbonos (cetona) y -COOH (ácido carboxílico).",2
+lesson.l_grupos_intro.title,es,Reconoce los grupos,1
+lesson.l_grupos_nitrogenados.intro,es,"El nitrógeno aparece en aminas, como la metilamina (CH₃-NH₂), y en amidas, donde el nitrógeno está unido directamente al carbono de un grupo carbonilo (C=O). Distinguirlas depende de si hay o no un carbonilo junto al nitrógeno.",2
+lesson.l_grupos_nitrogenados.title,es,Grupos con nitrógeno,1
+lesson.l_grupos_oxigenados.intro,es,"El oxígeno aparece en varias familias según su entorno: -OH unido a un carbono saturado (alcohol), C=O terminal con H (aldehído), C=O entre carbonos (cetona), C-O-C (éter) y -COOH (ácido carboxílico).",2
+lesson.l_grupos_oxigenados.title,es,Grupos con oxígeno,1
+lesson.l_numeracion.intro,es,Se elige la cadena más larga como principal y se numera desde el extremo que dé los menores localizadores a los sustituyentes. Los sustituyentes se citan en orden alfabético.,1
+lesson.l_numeracion.title,es,Numerar la cadena,1
+lesson.l_organico.intro,es,"Un compuesto orgánico contiene carbono unido principalmente a hidrógeno y a otros elementos como O, N o halógenos. En 1828 Wöhler sintetizó urea desde una sal inorgánica y rompió la idea de que lo orgánico requería 'fuerza vital'.",1
+lesson.l_organico.title,es,¿Orgánico o inorgánico?,1
+lesson.l_ramificados.intro,es,"Juntando todo: cadena principal más larga, numeración de menor localizador, sustituyentes en orden alfabético y prefijos di/tri cuando se repiten. Así se construye el nombre IUPAC completo.",1
+lesson.l_ramificados.title,es,Alcanos ramificados,1
+lesson.l_sp.intro,es,"Con un triple enlace, el carbono forma 2 híbridos sp opuestos (geometría lineal, 180°) y dos orbitales p para dos enlaces π. El etino (CH≡CH) es el ejemplo típico.",1
+lesson.l_sp.title,es,Hibridación sp,1
+lesson.l_sp2.intro,es,"Con un doble enlace, el carbono usa 3 híbridos sp² en un plano (geometría trigonal plana, 120°) y deja un orbital p para el enlace π. El eteno (CH2=CH2) es el caso de referencia.",1
+lesson.l_sp2.title,es,Hibridación sp²,1
+lesson.l_sp3.intro,es,"Cuando el carbono forma 4 enlaces simples, sus orbitales se combinan en 4 híbridos sp³ dirigidos a los vértices de un tetraedro. El metano es el ejemplo clásico: geometría tetraédrica, ángulos de 109.5°.",1
+lesson.l_sp3.title,es,Hibridación sp³,1
+lesson.l_sustituyentes.intro,es,"Un sustituyente es una cadena lateral. Se nombra cambiando -ano por -il: metil (1C), etil (2C), propil (3C), butil (4C). Se anteponen al nombre de la cadena principal.",1
+lesson.l_sustituyentes.title,es,Sustituyentes alquilo,1
+lesson.l_tipos_carbono.intro,es,"Un carbono se clasifica por cuántos otros carbonos tiene unidos: primario (1), secundario (2), terciario (3) y cuaternario (4). Esta clasificación predice reactividad y puntos de ramificación.",1
+lesson.l_tipos_carbono.title,es,Carbonos primario a cuaternario,1
+reward.chest_small.title,es,Cofre pequeño,1
+reward.streak_freeze.title,es,Congelar racha,1
+unit.alcanos_lineales.subtitle,es,La cadena base,1
+unit.alcanos_lineales.title,es,Alcanos lineales,1
+unit.alcanos_ramificados.subtitle,es,Sustituyentes y numeración,1
+unit.alcanos_ramificados.title,es,Alcanos ramificados,1
+unit.grupos_intro.subtitle,es,Reconoce grupos funcionales,1
+unit.grupos_intro.title,es,Familias químicas,1
+unit.hibridacion.subtitle,es,"sp³, sp² y sp",1
+unit.hibridacion.title,es,Hibridación del carbono,1
+unit.intro_carbono.subtitle,es,Por qué el carbono es especial,1
+unit.intro_carbono.title,es,Introducción al carbono,1
+unit.tipos_carbono.subtitle,es,Primario a cuaternario,1
+unit.tipos_carbono.title,es,Tipos de carbono,1
+world.alcanos.desc,es,Nombra alcanos lineales y ramificados,1
+world.alcanos.title,es,Nomenclatura de alcanos,1
+world.carbono.desc,es,"Enlaces, hibridación y tipos de carbono",1
+world.carbono.title,es,Química básica del carbono,1
+world.estereo.desc,es,"Quiralidad, cis/trans y proyecciones (próximamente)",1
+world.estereo.title,es,Estereoquímica,1
+world.grupos.desc,es,"Identifica alcoholes, aldehídos, cetonas y más",1
+world.grupos.title,es,Grupos funcionales y clasificación,1
+world.reacciones.desc,es,"Adición, sustitución y mecanismos (próximamente)",1
+world.reacciones.title,es,Bosque de reacciones,1

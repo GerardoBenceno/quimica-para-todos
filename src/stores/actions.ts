@@ -19,9 +19,11 @@ export function beginLesson(lessonId: string, total: number): { attemptId: strin
   const ip = s.in_progress
   if (ip && ip.lesson_id === lessonId && ip.total === total) {
     const attempt = [...s.lesson_attempts].reverse().find((a) => a.lesson_id === lessonId && !a.completed)
-    if (attempt && ip.answered < total) {
+    if (attempt) {
+      // Si ya se respondieron todos (se cerró antes de "Continuar"), startIndex = total
+      // y LessonScreen cierra la lección en lugar de repetirla desde cero.
       const correct = s.exercise_attempts.filter((e) => e.lesson_attempt_id === attempt.id && e.is_correct).length
-      return { attemptId: attempt.id, startIndex: ip.answered, correct }
+      return { attemptId: attempt.id, startIndex: Math.min(ip.answered, total), correct }
     }
   }
   let attemptId = ''

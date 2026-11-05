@@ -1,0 +1,118 @@
+<svg version='1.1' baseProfile='full'
+              xmlns='http://www.w3.org/2000/svg'
+                      xmlns:rdkit='http://www.rdkit.org/xml'
+                      xmlns:xlink='http://www.w3.org/1999/xlink'
+                  xml:space='preserve'
+width='110px' height='80px' viewBox='0 0 110 80'>
+<ellipse cx='66.5' cy='37.7' rx='4.6' ry='4.6' class='atom-1'  style='fill: var(--mol-highlight, #D5E1F1);fill-rule:evenodd;stroke:var(--mol-highlight, #D5E1F1);stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-0 atom-1 atom-0' d='M 66.5,37.7 L 78.5,12.5 L 82.2,14.6 Z' style='fill:currentColor;fill-rule:evenodd;fill-opacity:1;stroke:currentColor;stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />
+<path class='bond-1 atom-1 atom-2' d='M 66.5,37.7 L 77.6,56.9' style='fill:none;fill-rule:evenodd;stroke:currentColor;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-2 atom-1 atom-3' d='M 66.5,37.7 L 38.7,37.7' style='fill:none;fill-rule:evenodd;stroke:currentColor;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-3 atom-3 atom-4' d='M 41.1,37.7 L 29.5,17.6' style='fill:none;fill-rule:evenodd;stroke:currentColor;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-3 atom-3 atom-4' d='M 37.5,39.7 L 25.9,19.6' style='fill:none;fill-rule:evenodd;stroke:currentColor;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-4 atom-3 atom-5' d='M 38.7,37.7 L 27.6,56.8' style='fill:none;fill-rule:evenodd;stroke:currentColor;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path d='M 67.0,38.6 L 66.5,37.7 L 65.1,37.7' style='fill:none;stroke:currentColor;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />
+<path d='M 40.0,37.7 L 38.7,37.7 L 38.1,38.6' style='fill:none;stroke:currentColor;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />
+<path class='atom-2' d='M 78.6 57.8
+L 81.2 62.0
+Q 81.4 62.4, 81.9 63.1
+Q 82.3 63.9, 82.3 63.9
+L 82.3 57.8
+L 83.3 57.8
+L 83.3 65.7
+L 82.3 65.7
+L 79.5 61.1
+Q 79.2 60.6, 78.8 60.0
+Q 78.5 59.3, 78.4 59.2
+L 78.4 65.7
+L 77.4 65.7
+L 77.4 57.8
+L 78.6 57.8
+' fill='currentColor'/>
+<path class='atom-2' d='M 84.8 57.8
+L 85.9 57.8
+L 85.9 61.1
+L 89.9 61.1
+L 89.9 57.8
+L 91.0 57.8
+L 91.0 65.7
+L 89.9 65.7
+L 89.9 62.0
+L 85.9 62.0
+L 85.9 65.7
+L 84.8 65.7
+L 84.8 57.8
+' fill='currentColor'/>
+<path class='atom-2' d='M 92.5 65.4
+Q 92.7 64.9, 93.2 64.6
+Q 93.6 64.3, 94.3 64.3
+Q 95.1 64.3, 95.5 64.8
+Q 95.9 65.2, 95.9 66.0
+Q 95.9 66.7, 95.4 67.4
+Q 94.8 68.2, 93.6 69.0
+L 96.0 69.0
+L 96.0 69.6
+L 92.5 69.6
+L 92.5 69.1
+Q 93.5 68.4, 94.1 67.9
+Q 94.7 67.4, 94.9 66.9
+Q 95.2 66.5, 95.2 66.0
+Q 95.2 65.5, 95.0 65.2
+Q 94.7 64.9, 94.3 64.9
+Q 93.9 64.9, 93.6 65.1
+Q 93.3 65.3, 93.1 65.6
+L 92.5 65.4
+' fill='currentColor'/>
+<path class='atom-4' d='M 21.1 13.6
+Q 21.1 11.7, 22.1 10.7
+Q 23.0 9.6, 24.8 9.6
+Q 26.5 9.6, 27.4 10.7
+Q 28.4 11.7, 28.4 13.6
+Q 28.4 15.5, 27.4 16.6
+Q 26.5 17.7, 24.8 17.7
+Q 23.0 17.7, 22.1 16.6
+Q 21.1 15.5, 21.1 13.6
+M 24.8 16.8
+Q 26.0 16.8, 26.6 16.0
+Q 27.3 15.2, 27.3 13.6
+Q 27.3 12.1, 26.6 11.3
+Q 26.0 10.5, 24.8 10.5
+Q 23.6 10.5, 22.9 11.3
+Q 22.3 12.0, 22.3 13.6
+Q 22.3 15.2, 22.9 16.0
+Q 23.6 16.8, 24.8 16.8
+' fill='currentColor'/>
+<path class='atom-5' d='M 13.4 57.8
+L 14.4 57.8
+L 14.4 61.2
+L 18.5 61.2
+L 18.5 57.8
+L 19.5 57.8
+L 19.5 65.7
+L 18.5 65.7
+L 18.5 62.1
+L 14.4 62.1
+L 14.4 65.7
+L 13.4 65.7
+L 13.4 57.8
+' fill='currentColor'/>
+<path class='atom-5' d='M 21.1 61.7
+Q 21.1 59.9, 22.1 58.8
+Q 23.0 57.7, 24.8 57.7
+Q 26.5 57.7, 27.4 58.8
+Q 28.4 59.9, 28.4 61.7
+Q 28.4 63.7, 27.4 64.8
+Q 26.5 65.8, 24.8 65.8
+Q 23.0 65.8, 22.1 64.8
+Q 21.1 63.7, 21.1 61.7
+M 24.8 64.9
+Q 26.0 64.9, 26.6 64.1
+Q 27.3 63.3, 27.3 61.7
+Q 27.3 60.2, 26.6 59.4
+Q 26.0 58.6, 24.8 58.6
+Q 23.6 58.6, 22.9 59.4
+Q 22.3 60.2, 22.3 61.7
+Q 22.3 63.3, 22.9 64.1
+Q 23.6 64.9, 24.8 64.9
+' fill='currentColor'/>
+</svg>

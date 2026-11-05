@@ -1,0 +1,74 @@
+[
+  {
+    "id": "estereo_l_centros",
+    "unit_id": "estereo_u_estereo",
+    "title_key": "lesson.estereo_l_centros.title",
+    "order": 1,
+    "type": "standard",
+    "intro": {
+      "text_key": "lesson.estereo_l_centros.intro",
+      "image_asset_id": null,
+      "youtube_id": null
+    },
+    "xp_reward": 20,
+    "coin_reward": 5,
+    "star_count": 0,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_l_rs",
+    "unit_id": "estereo_u_estereo",
+    "title_key": "lesson.estereo_l_rs.title",
+    "order": 2,
+    "type": "standard",
+    "intro": {
+      "text_key": "lesson.estereo_l_rs.intro",
+      "image_asset_id": null,
+      "youtube_id": null
+    },
+    "xp_reward": 20,
+    "coin_reward": 5,
+    "star_count": 0,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_l_ez",
+    "unit_id": "estereo_u_estereo",
+    "title_key": "lesson.estereo_l_ez.title",
+    "order": 3,
+    "type": "standard",
+    "intro": {
+      "text_key": "lesson.estereo_l_ez.intro",
+      "image_asset_id": null,
+      "youtube_id": null
+    },
+    "xp_reward": 20,
+    "coin_reward": 5,
+    "star_count": 0,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_l_relaciones",
+    "unit_id": "estereo_u_estereo",
+    "title_key": "lesson.estereo_l_relaciones.title",
+    "order": 4,
+    "type": "standard",
+    "intro": {
+      "text_key": "lesson.estereo_l_relaciones.intro",
+      "image_asset_id": null,
+      "youtube_id": null
+    },
+    "xp_reward": 20,
+    "coin_reward": 5,
+    "star_count": 0,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  }
+]

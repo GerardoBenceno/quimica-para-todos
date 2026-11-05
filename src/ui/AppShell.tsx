@@ -5,16 +5,30 @@ import { routes } from '../app/routes'
 import { useT } from '../services/i18nHooks'
 import { useUserState } from '../stores/progressStore'
 import { useOnline, useStreak } from '../stores/selectors'
+import { usePwaStore } from '../stores/pwaStore'
 
-/** Aviso global de modo sin conexión (la app sigue con lo guardado). */
+/** Avisos globales: sin conexión (la app sigue con lo guardado) y versión nueva lista. */
 export function OfflineBanner() {
   const t = useT()
   const online = useOnline()
-  if (online) return null
+  const needRefresh = usePwaStore((s) => s.needRefresh)
+  const updateSW = usePwaStore((s) => s.updateSW)
   return (
-    <div className="offline-banner" role="status">
-      {t('offline.notice')}
-    </div>
+    <>
+      {!online && (
+        <div className="offline-banner" role="status">
+          {t('offline.notice')}
+        </div>
+      )}
+      {needRefresh && (
+        <div className="update-banner" role="status">
+          <span>{t('pwa.update_ready')}</span>
+          <button type="button" className="link" onClick={() => void updateSW?.()}>
+            {t('pwa.update_now')}
+          </button>
+        </div>
+      )}
+    </>
   )
 }
 import { BrandMark } from './BrandMark'

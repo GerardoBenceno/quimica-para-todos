@@ -104,3 +104,26 @@ Todos viven en `public/content/packs/web/` y los genera `npx tsx scripts/derive-
 | web_v3d_e_sp_geom | view_3d | e_sp_geom | ¿Qué geometría tiene un carbono sp? | `C#C` | Mismo enunciado, opciones y respuesta; agrega el visor 3D rotable. |
 | web_v3d_e_sp_enlaces | view_3d | e_sp_enlaces | Un carbono sp forma 2 enlaces sigma y 2 enlaces pi. | `C#C` | Mismo enunciado, opciones y respuesta; agrega el visor 3D rotable. |
 | web_v3d_e_sp_molecula | view_3d | e_sp_molecula | ¿Cuál molécula contiene carbonos con hibridación sp? | `C#C` | No derivado: la respuesta es la propia molécula y el visor la revelaría. |
+
+## Auditoría química automática (ronda de pulido)
+
+`python3 -I scripts/audit_chem.py` recorre cada ejercicio activo con SMILES del seed y del paquete web (47 ejercicios: 27 del seed, 4 ítems del diagnóstico y 16 derivados; 19 SMILES únicos) y escribe `reports/audit_quimica.json`. Para cada uno calcula con RDKit la fórmula, el número de carbonos, la cadena más larga, la hibridación de cada carbono y los grupos funcionales por SMARTS (alcohol, éter, aldehído, cetona, ácido carboxílico, éster, amina, amida, nitrilo, alqueno, alquino, haluros, aromático), y los compara con lo que afirma el texto: nombre correcto de alcano (reconstruye el SMILES desde el nombre y exige localizadores mínimos), fórmulas escritas, carbonos de la cadena principal, familia afirmada, tipo de carbono, hibridación, geometría y conteo sigma y pi; en el paquete web comprueba además que cada derivado conserve SMILES, nombre, explicación y opciones de su origen y que todo distractor de `choose_structure` sea un par nombre-estructura real del seed.
+
+Resultado: 242 comprobaciones, 47 coincidencias, 0 discrepancias, 0 sin referencia. Un control negativo aparte (no sobre el contenido) confirma que el auditor detecta "3-metilbutano", "3-etilbutano", una amina afirmada para la acetamida y un alcohol afirmado para una molécula con ácido. Limitaciones: solo traduce a estructura nombres de alcanos acíclicos con sustituyentes metil a butil; las familias de las explicaciones se leen por palabra; los 19 ejercicios del seed sin SMILES quedan fuera.
+
+## Textos por revisar del autor (mundo Estereoquímica)
+
+Los textos de abajo son los únicos escritos a mano del mundo `w_estereo` (paquete `plantillas/estereo/`: `unidades.csv`, `lecciones.csv` y `traducciones.csv`). El resto del contenido del mundo (ejercicios, opciones, explicaciones y sus traducciones) lo genera `scripts/gen_estereo.py`. Son definiciones generales de libro de texto, sin ejemplos ni valores inventados; conviene que el autor confirme la redacción antes de importar.
+
+| Clave | Texto |
+|---|---|
+| `unit.estereo.title` | Estereoisomería |
+| `unit.estereo.subtitle` | Estereocentros, R/S, E/Z y relaciones |
+| `lesson.estereo_l_centros.title` | Estereocentros |
+| `lesson.estereo_l_centros.intro` | Un estereocentro es un átomo, casi siempre un carbono sp³, unido a cuatro sustituyentes distintos. Si se intercambian dos de esos sustituyentes se obtiene un estereoisómero diferente. Una molécula con un solo estereocentro es quiral: no se puede superponer con su imagen especular. |
+| `lesson.estereo_l_rs.title` | Configuración R y S |
+| `lesson.estereo_l_rs.intro` | Las reglas de prioridad de Cahn, Ingold y Prelog (CIP) ordenan los cuatro sustituyentes de un estereocentro: tiene mayor prioridad el átomo de mayor número atómico unido directamente al centro y, en caso de empate, se comparan los átomos siguientes. Con el sustituyente de menor prioridad orientado hacia atrás, se recorre la secuencia de prioridades 1, 2 y 3: si gira en sentido horario la configuración es R y si gira en sentido antihorario es S. |
+| `lesson.estereo_l_ez.title` | Isomería E y Z |
+| `lesson.estereo_l_ez.intro` | El doble enlace C=C no permite la rotación libre, así que los sustituyentes quedan fijos a uno u otro lado del eje del doble enlace. En cada carbono del doble enlace se elige el sustituyente de mayor prioridad según las reglas CIP. Si los dos grupos de mayor prioridad están del mismo lado, el isómero es Z; si están en lados opuestos, es E. |
+| `lesson.estereo_l_relaciones.title` | Relaciones entre estereoisómeros |
+| `lesson.estereo_l_relaciones.intro` | Los isómeros constitucionales tienen la misma fórmula molecular pero distinta conectividad entre sus átomos. Los estereoisómeros comparten la conectividad y solo difieren en la disposición espacial. Entre ellos, los enantiómeros son imágenes especulares no superponibles, mientras que los diastereómeros son estereoisómeros que no son imágenes especulares entre sí. |

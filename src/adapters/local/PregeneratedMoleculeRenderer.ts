@@ -10,7 +10,11 @@ export class PregeneratedMoleculeRenderer implements MoleculeRenderer {
   private index: Promise<Record<string, MoleculeEntry> | null> | null = null
   private cache = new Map<string, Promise<string | null>>()
 
-  constructor(private readonly baseUrl: string) {}
+  constructor(
+    private readonly baseUrl: string,
+    /** Dibujo en tiempo de ejecución para SMILES sin SVG pregenerado (borradores del editor). */
+    private readonly runtimeSvg: ((smiles: string) => Promise<string | null>) | null = null,
+  ) {}
 
   private loadIndex() {
     if (!this.index) {
@@ -28,7 +32,7 @@ export class PregeneratedMoleculeRenderer implements MoleculeRenderer {
 
   async svg(smiles: string, variant: 'full' | 'thumb' | 'highlight'): Promise<string | null> {
     const e = await this.entry(smiles)
-    if (!e) return null
+    if (!e) return this.runtimeSvg ? this.runtimeSvg(smiles) : null
     const path = variant === 'thumb' ? e.svg_thumb : variant === 'highlight' ? e.svg_highlight : e.svg
     if (!path) return null
     let p = this.cache.get(path)

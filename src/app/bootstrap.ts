@@ -8,7 +8,8 @@ import { applyTheme, pickTheme } from '../services/theme'
 import { SafeLocalStore } from '../services/safeStorage'
 import { useContentStore } from '../stores/contentStore'
 import { useProgressStore } from '../stores/progressStore'
-import { resolveFlags } from './flags'
+import { draftRequested, resolveFlags } from './flags'
+import { enableDraftWorlds } from '../core/content/draftWorlds'
 import { registerServices } from './services'
 import { selectAds, selectAnalytics, selectAuth, selectEntitlements, selectProgress } from './adapters'
 import { selectEditor, selectMatcher, selectViewer3D } from './chemAdapters'
@@ -31,20 +32,22 @@ export async function bootstrap(): Promise<void> {
   try {
     const [featuresJson, uiJson] = await Promise.all([getJson('config/features.json'), getJson('config/ui.json')])
     const ui = uiConfigSchema.parse(uiJson)
-
+    const i18n = new LocalizationService(ui.locale)
     const contentRepo = new JsonPacksContentRepository(BASE)
-    const loaded = await contentRepo.load()
-    if (!loaded.ok) throw new Error(loaded.error.message)
-    const bundle = loaded.value
+    // Textos de UI y contenido se piden a la vez; los textos quedan listos antes para los estados.
+    const [uiStrings, loaded] = await Promise.all([getJson(ui.ui_strings), contentRepo.load()])
+    i18n.addUi(uiStrings as Record<string, string>)
+    content.setI18n(i18n)
+    document.documentElement.lang = ui.locale
 
-    const flags = resolveFlags(bundle.appConfig, featuresJson)
+    if (!loaded.ok) throw new Error(loaded.error.message)
+    const flags = resolveFlags(loaded.value.appConfig, featuresJson)
+    const draft = draftRequested(window.location.href)
+    const bundle = enableDraftWorlds(loaded.value, draft ? 'draft' : flags.mundoEstereo ? 'flag' : 'off')
     const store = new SafeLocalStore()
     const deps = { store, access: bundle.access, debug: import.meta.env.DEV }
 
-    const i18n = new LocalizationService(ui.locale)
     i18n.addContent(bundle.translations)
-    i18n.addUi((await getJson(ui.ui_strings)) as Record<string, string>)
-    document.documentElement.lang = ui.locale
 
     const [auth, progress, entitlements, ads, analytics] = await Promise.all([
       selectAuth(flags, deps),
@@ -53,6 +56,7 @@ export async function bootstrap(): Promise<void> {
       selectAds(flags),
       selectAnalytics(flags, deps),
     ])
+    const matcher = selectMatcher(BASE)
     registerServices({
       flags,
       content: contentRepo,
@@ -61,10 +65,10 @@ export async function bootstrap(): Promise<void> {
       entitlements,
       ads,
       analytics,
-      molecules: new PregeneratedMoleculeRenderer(BASE),
+      molecules: new PregeneratedMoleculeRenderer(BASE, (s) => matcher?.svg?.(s) ?? Promise.resolve(null)),
       viewer3d: selectViewer3D(flags, BASE),
       editor: selectEditor(BASE),
-      matcher: selectMatcher(BASE),
+      matcher,
     })
 
     const user = await auth.currentUser()
