@@ -34,6 +34,10 @@ Qué cambió respecto al cierre del hito 6, qué quedó pendiente y por qué. El
 
 20. **Accesibilidad fina**: las regiones `role="status"` de perfil, recompensas y repaso existen siempre (los lectores de pantalla no anuncian una región que aparece ya con texto), la plantilla de huecos usa `role="group"` en lugar de un párrafo con nombre, y el salto del diagnóstico sin ítems ocurre en un efecto, no durante el render.
 
+## Ronda 3
+
+21. **RDKit en el workflow de deploy**: `actions/setup-python` y `pip install -r requirements.txt` antes de importar las plantillas, así un paquete subido por la web con SMILES nuevos genera sus SVG y SDF en CI. Prueba de extremo a extremo `scripts/ci-import-smoke.ts` (corre en CI antes del import real): arma `plantillas/ciprueba/` con la primera lección con estructuras del seed (ids y claves con prefijo `ciprueba_`, sin química nueva), importa, comprueba SVG y SDF de cada SMILES y limpia plantilla, paquete, manifest y reporte de moléculas; después valida que el contenido quedó como antes. No se publica nada del paquete temporal.
+
 ## Para que lo corrija el autor
 
 - `seed/assets.json`: el campo `license` de los 13 assets sigue en `"propio-por-generar"`, pero el arte ya existe. No se cambió porque el seed es del autor; conviene poner la licencia real del arte. Lo mismo para `width` y `height`, que están en `null` (los originales miden 1254 × 1254 y las versiones servidas 512 × 512).
@@ -47,7 +51,6 @@ Qué cambió respecto al cierre del hito 6, qué quedó pendiente y por qué. El
 - **Teclado en el editor de estructuras.** Ketcher no permite colocar átomos sin ratón; en pantallas angostas ya se sustituye por elegir estructura, y en escritorio queda documentado como límite del editor.
 - **`srcset` solo para PNG de `assets/images/`.** Un asset con otra extensión o alojado fuera se sirve sin variante de 256 px (funciona, solo pesa más).
 - **Repaso espaciado tipo Leitner.** No se hizo: cambia la forma del documento de progreso (caja e intervalo por error) y exige migración del respaldo y tests de intervalos; no cabía completo y verificado en el presupuesto de la ronda 2.
-- **Moléculas de paquetes importados en CI.** `import-pack-csv.ts` regenera `public/mol/` solo si Python tiene RDKit; el workflow no lo instala (unos 30 MB), así que un paquete con SMILES nuevos subido por la web falla en `validate-content` con mensaje claro hasta que el autor corra `python3 scripts/gen_molecules.py` y suba `public/mol/`, o se agregue `pip install -r requirements.txt` al workflow.
 - **Fusionar los JSON de arranque y diferir zod.** Mayor ahorro restante en móvil según la medición (5 saltos de red en serie, 86 KB de zod en el bundle inicial); tocan el repositorio de contenido y el modo sin conexión, se dejan para una sesión con tiempo de verificarlos.
 - **Vibración en iOS.** Safari no expone `navigator.vibrate`; el ajuste no aparece ahí y no hay alternativa web.
 - **Etiquetas de la ruta en pantallas de 360 px.** Se acortó el texto de las lecciones bloqueadas; los títulos largos ("Carbonos primario a cuaternario") siguen partiéndose en dos líneas, lo que es aceptable pero se ve apretado junto a los cofres.

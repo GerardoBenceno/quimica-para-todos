@@ -25,8 +25,16 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: RDKit para generar las moléculas de paquetes importados
+        run: pip install -r requirements.txt
       - name: Optimizar arte (arte/originales -> assets/images)
         run: npm run art
+      - name: Prueba del importador CSV con moléculas (paquete temporal, se limpia)
+        run: npx tsx scripts/ci-import-smoke.ts
       - name: Importar plantillas CSV (plantillas/<id> -> packs/<id>)
         run: npx tsx scripts/import-pack-csv.ts
       - name: Validar contenido
