@@ -372,6 +372,11 @@
           "detalle": "('R', 'atrás', 'horario')"
         },
         {
+          "nombre": "cunas_del_dibujo_coinciden",
+          "ok": true,
+          "detalle": "{0: ('BEGINWEDGE', 1)}"
+        },
+        {
           "nombre": "distractor_incorrecto",
           "ok": true,
           "detalle": "S"
@@ -415,6 +420,11 @@
           "nombre": "rs_cunas_2d",
           "ok": true,
           "detalle": "('S', 'adelante', 'horario')"
+        },
+        {
+          "nombre": "cunas_del_dibujo_coinciden",
+          "ok": true,
+          "detalle": "{0: ('BEGINDASH', 1)}"
         },
         {
           "nombre": "distractor_incorrecto",
@@ -462,6 +472,11 @@
           "detalle": "('R', 'atrás', 'horario')"
         },
         {
+          "nombre": "cunas_del_dibujo_coinciden",
+          "ok": true,
+          "detalle": "{0: ('BEGINWEDGE', 1)}"
+        },
+        {
           "nombre": "distractor_incorrecto",
           "ok": true,
           "detalle": "S"
@@ -505,6 +520,11 @@
           "nombre": "rs_cunas_2d",
           "ok": true,
           "detalle": "('S', 'adelante', 'horario')"
+        },
+        {
+          "nombre": "cunas_del_dibujo_coinciden",
+          "ok": true,
+          "detalle": "{0: ('BEGINDASH', 1)}"
         },
         {
           "nombre": "distractor_incorrecto",
@@ -552,6 +572,11 @@
           "detalle": "('S', 'adelante', 'horario')"
         },
         {
+          "nombre": "cunas_del_dibujo_coinciden",
+          "ok": true,
+          "detalle": "{0: ('BEGINDASH', 1)}"
+        },
+        {
           "nombre": "distractor_incorrecto",
           "ok": true,
           "detalle": "R"
@@ -595,6 +620,11 @@
           "nombre": "rs_cunas_2d",
           "ok": true,
           "detalle": "('R', 'atrás', 'horario')"
+        },
+        {
+          "nombre": "cunas_del_dibujo_coinciden",
+          "ok": true,
+          "detalle": "{0: ('BEGINWEDGE', 1)}"
         },
         {
           "nombre": "distractor_incorrecto",
@@ -642,6 +672,11 @@
           "detalle": "('S', 'adelante', 'horario')"
         },
         {
+          "nombre": "cunas_del_dibujo_coinciden",
+          "ok": true,
+          "detalle": "{0: ('BEGINDASH', 1)}"
+        },
+        {
           "nombre": "distractor_incorrecto",
           "ok": true,
           "detalle": "R"
@@ -685,6 +720,11 @@
           "nombre": "rs_cunas_2d",
           "ok": true,
           "detalle": "('R', 'atrás', 'horario')"
+        },
+        {
+          "nombre": "cunas_del_dibujo_coinciden",
+          "ok": true,
+          "detalle": "{0: ('BEGINWEDGE', 1)}"
         },
         {
           "nombre": "distractor_incorrecto",
@@ -732,6 +772,11 @@
           "detalle": "('S', 'adelante', 'horario')"
         },
         {
+          "nombre": "cunas_del_dibujo_coinciden",
+          "ok": true,
+          "detalle": "{0: ('BEGINDASH', 1)}"
+        },
+        {
           "nombre": "distractor_incorrecto",
           "ok": true,
           "detalle": "R"
@@ -775,6 +820,11 @@
           "nombre": "rs_cunas_2d",
           "ok": true,
           "detalle": "('R', 'atrás', 'horario')"
+        },
+        {
+          "nombre": "cunas_del_dibujo_coinciden",
+          "ok": true,
+          "detalle": "{0: ('BEGINWEDGE', 1)}"
         },
         {
           "nombre": "distractor_incorrecto",

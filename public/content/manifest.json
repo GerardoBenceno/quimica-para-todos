@@ -28,6 +28,8 @@
       "translations_es.json"
     ],
     "estereo": [
+      "exercises.json",
+      "feedback_templates.json",
       "lessons.json",
       "translations_es.json",
       "units.json"

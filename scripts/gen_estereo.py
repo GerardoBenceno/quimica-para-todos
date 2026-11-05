@@ -385,6 +385,14 @@ class Gen:
             m2 = mol_2d_wedged(smiles)
             r2 = rs_from_2d(m2, idx, [t[0] for t in nbs[:3]]) if nbs[-1][0] is None else None
             checks.append({"nombre": "rs_cunas_2d", "ok": r2 is not None and r2[0] == label, "detalle": str(r2)})
+            # las cuñas del dibujo (PrepareMolForDrawing, como gen_molecules.py) deben ser las mismas
+            dm = Chem.Mol(m)
+            for a in dm.GetAtoms():
+                a.SetAtomMapNum(0)
+            prepared = rdMolDraw2D.PrepareMolForDrawing(dm) or dm
+            dirs_draw = {b.GetIdx(): (str(b.GetBondDir()), b.GetBeginAtomIdx()) for b in prepared.GetBonds() if b.GetBondDir() != Chem.BondDir.NONE}
+            dirs_mine = {b.GetIdx(): (str(b.GetBondDir()), b.GetBeginAtomIdx()) for b in m2.GetBonds() if b.GetBondDir() != Chem.BondDir.NONE}
+            checks.append({"nombre": "cunas_del_dibujo_coinciden", "ok": dirs_draw == dirs_mine, "detalle": str(dirs_draw)})
             other = "S" if label == "R" else "R"
             checks.append({"nombre": "distractor_incorrecto", "ok": other != label and other != lab3d, "detalle": other})
             if r2 is None:

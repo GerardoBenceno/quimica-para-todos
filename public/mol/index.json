@@ -188,5 +188,185 @@
     "svg_highlight": "mol/svg/m_e13cb409ae_hl.svg",
     "highlight_note": "2-metilpentano",
     "sdf": "mol/sdf/m_e13cb409ae.sdf"
+  },
+  "C[C@@H](O)CC": {
+    "id": "m_d8a41d27a7",
+    "formula": "C4H10O",
+    "heavy_atoms": 5,
+    "svg": "mol/svg/m_d8a41d27a7.svg",
+    "svg_thumb": "mol/svg/m_d8a41d27a7_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_d8a41d27a7.sdf"
+  },
+  "CC(C)Cl": {
+    "id": "m_2bcd195d0e",
+    "formula": "C3H7Cl",
+    "heavy_atoms": 4,
+    "svg": "mol/svg/m_2bcd195d0e.svg",
+    "svg_thumb": "mol/svg/m_2bcd195d0e_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_2bcd195d0e.sdf"
+  },
+  "C[C@H](O)C(=O)O": {
+    "id": "m_de160c4a45",
+    "formula": "C3H6O3",
+    "heavy_atoms": 6,
+    "svg": "mol/svg/m_de160c4a45.svg",
+    "svg_thumb": "mol/svg/m_de160c4a45_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_de160c4a45.sdf"
+  },
+  "C[C@@H](Br)[C@H](Br)C": {
+    "id": "m_bfc26244b2",
+    "formula": "C4H8Br2",
+    "heavy_atoms": 6,
+    "svg": "mol/svg/m_bfc26244b2.svg",
+    "svg_thumb": "mol/svg/m_bfc26244b2_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_bfc26244b2.sdf"
+  },
+  "C[C@H]1CCCC[C@H]1C": {
+    "id": "m_c85f9d77cb",
+    "formula": "C8H16",
+    "heavy_atoms": 8,
+    "svg": "mol/svg/m_c85f9d77cb.svg",
+    "svg_thumb": "mol/svg/m_c85f9d77cb_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_c85f9d77cb.sdf"
+  },
+  "C[C@@H](O)[C@H](N)C(=O)O": {
+    "id": "m_59b9acc0a5",
+    "formula": "C4H9NO3",
+    "heavy_atoms": 8,
+    "svg": "mol/svg/m_59b9acc0a5.svg",
+    "svg_thumb": "mol/svg/m_59b9acc0a5_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_59b9acc0a5.sdf"
+  },
+  "C[C@@H:1](O)CC": {
+    "id": "m_a2462b262c",
+    "formula": "C4H10O",
+    "heavy_atoms": 5,
+    "svg": "mol/svg/m_a2462b262c.svg",
+    "svg_thumb": "mol/svg/m_a2462b262c_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_a2462b262c.sdf"
+  },
+  "C[C@H:1](O)CC": {
+    "id": "m_7919347d0e",
+    "formula": "C4H10O",
+    "heavy_atoms": 5,
+    "svg": "mol/svg/m_7919347d0e.svg",
+    "svg_thumb": "mol/svg/m_7919347d0e_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_7919347d0e.sdf"
+  },
+  "C[C@@H:1](Br)CC": {
+    "id": "m_0897755ea7",
+    "formula": "C4H9Br",
+    "heavy_atoms": 5,
+    "svg": "mol/svg/m_0897755ea7.svg",
+    "svg_thumb": "mol/svg/m_0897755ea7_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_0897755ea7.sdf"
+  },
+  "C[C@H:1](Br)CC": {
+    "id": "m_70c6f62bb4",
+    "formula": "C4H9Br",
+    "heavy_atoms": 5,
+    "svg": "mol/svg/m_70c6f62bb4.svg",
+    "svg_thumb": "mol/svg/m_70c6f62bb4_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_70c6f62bb4.sdf"
+  },
+  "C[C@H:1](O)C(=O)O": {
+    "id": "m_d53e442687",
+    "formula": "C3H6O3",
+    "heavy_atoms": 6,
+    "svg": "mol/svg/m_d53e442687.svg",
+    "svg_thumb": "mol/svg/m_d53e442687_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_d53e442687.sdf"
+  },
+  "C[C@@H:1](O)C(=O)O": {
+    "id": "m_af02c4c27e",
+    "formula": "C3H6O3",
+    "heavy_atoms": 6,
+    "svg": "mol/svg/m_af02c4c27e.svg",
+    "svg_thumb": "mol/svg/m_af02c4c27e_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_af02c4c27e.sdf"
+  },
+  "C[C@H:1](N)C(=O)O": {
+    "id": "m_9bc1bd23d7",
+    "formula": "C3H7NO2",
+    "heavy_atoms": 6,
+    "svg": "mol/svg/m_9bc1bd23d7.svg",
+    "svg_thumb": "mol/svg/m_9bc1bd23d7_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_9bc1bd23d7.sdf"
+  },
+  "C[C@@H:1](N)C(=O)O": {
+    "id": "m_dfa8c12424",
+    "formula": "C3H7NO2",
+    "heavy_atoms": 6,
+    "svg": "mol/svg/m_dfa8c12424.svg",
+    "svg_thumb": "mol/svg/m_dfa8c12424_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_dfa8c12424.sdf"
+  },
+  "C[C@H:1](N)CC": {
+    "id": "m_00fa746e03",
+    "formula": "C4H11N",
+    "heavy_atoms": 5,
+    "svg": "mol/svg/m_00fa746e03.svg",
+    "svg_thumb": "mol/svg/m_00fa746e03_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_00fa746e03.sdf"
+  },
+  "C[C@@H:1](Cl)CC": {
+    "id": "m_6001accc62",
+    "formula": "C4H9Cl",
+    "heavy_atoms": 5,
+    "svg": "mol/svg/m_6001accc62.svg",
+    "svg_thumb": "mol/svg/m_6001accc62_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_6001accc62.sdf"
+  },
+  "C[CH:1](C)Cl": {
+    "id": "m_13bf766a6f",
+    "formula": "C3H7Cl",
+    "heavy_atoms": 4,
+    "svg": "mol/svg/m_13bf766a6f.svg",
+    "svg_thumb": "mol/svg/m_13bf766a6f_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_13bf766a6f.sdf"
+  },
+  "C[CH:1](C)O": {
+    "id": "m_cb52a46a92",
+    "formula": "C3H8O",
+    "heavy_atoms": 4,
+    "svg": "mol/svg/m_cb52a46a92.svg",
+    "svg_thumb": "mol/svg/m_cb52a46a92_thumb.svg",
+    "svg_highlight": null,
+    "highlight_note": null,
+    "sdf": "mol/sdf/m_cb52a46a92.sdf"
   }
 }

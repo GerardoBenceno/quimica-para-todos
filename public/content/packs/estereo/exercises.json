@@ -1,0 +1,730 @@
+[
+  {
+    "id": "estereo_e_centros_01",
+    "lesson_id": "estereo_l_centros",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_centros_01.prompt",
+    "payload": {
+      "structure_smiles": "C[C@@H](O)CC",
+      "options": [
+        {
+          "key": "ex.estereo_e_centros_01.opt.2",
+          "value": "2"
+        },
+        {
+          "key": "ex.estereo_e_centros_01.opt.1",
+          "value": "1"
+        },
+        {
+          "key": "ex.estereo_e_centros_01.opt.0",
+          "value": "0"
+        },
+        {
+          "key": "ex.estereo_e_centros_01.opt.3",
+          "value": "3"
+        }
+      ]
+    },
+    "correct": {
+      "value": "1"
+    },
+    "explanation_key": "ex.estereo_e_centros_01.explain",
+    "feedback_template_id": "estereo_ft_centros",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_centros",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@@H](O)CC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_centros_02",
+    "lesson_id": "estereo_l_centros",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_centros_02.prompt",
+    "payload": {
+      "structure_smiles": "CC(C)Cl",
+      "options": [
+        {
+          "key": "ex.estereo_e_centros_02.opt.0",
+          "value": "0"
+        },
+        {
+          "key": "ex.estereo_e_centros_02.opt.1",
+          "value": "1"
+        },
+        {
+          "key": "ex.estereo_e_centros_02.opt.3",
+          "value": "3"
+        },
+        {
+          "key": "ex.estereo_e_centros_02.opt.2",
+          "value": "2"
+        }
+      ]
+    },
+    "correct": {
+      "value": "0"
+    },
+    "explanation_key": "ex.estereo_e_centros_02.explain",
+    "feedback_template_id": "estereo_ft_centros",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_centros",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CC(C)Cl",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_centros_03",
+    "lesson_id": "estereo_l_centros",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_centros_03.prompt",
+    "payload": {
+      "structure_smiles": "C[C@H](O)C(=O)O",
+      "options": [
+        {
+          "key": "ex.estereo_e_centros_03.opt.0",
+          "value": "0"
+        },
+        {
+          "key": "ex.estereo_e_centros_03.opt.2",
+          "value": "2"
+        },
+        {
+          "key": "ex.estereo_e_centros_03.opt.3",
+          "value": "3"
+        },
+        {
+          "key": "ex.estereo_e_centros_03.opt.1",
+          "value": "1"
+        }
+      ]
+    },
+    "correct": {
+      "value": "1"
+    },
+    "explanation_key": "ex.estereo_e_centros_03.explain",
+    "feedback_template_id": "estereo_ft_centros",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_centros",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@H](O)C(=O)O",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_centros_04",
+    "lesson_id": "estereo_l_centros",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_centros_04.prompt",
+    "payload": {
+      "structure_smiles": "C[C@@H](Br)[C@H](Br)C",
+      "options": [
+        {
+          "key": "ex.estereo_e_centros_04.opt.3",
+          "value": "3"
+        },
+        {
+          "key": "ex.estereo_e_centros_04.opt.1",
+          "value": "1"
+        },
+        {
+          "key": "ex.estereo_e_centros_04.opt.0",
+          "value": "0"
+        },
+        {
+          "key": "ex.estereo_e_centros_04.opt.2",
+          "value": "2"
+        }
+      ]
+    },
+    "correct": {
+      "value": "2"
+    },
+    "explanation_key": "ex.estereo_e_centros_04.explain",
+    "feedback_template_id": "estereo_ft_centros",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_centros",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@@H](Br)[C@H](Br)C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_centros_05",
+    "lesson_id": "estereo_l_centros",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_centros_05.prompt",
+    "payload": {
+      "structure_smiles": "C[C@H]1CCCC[C@H]1C",
+      "options": [
+        {
+          "key": "ex.estereo_e_centros_05.opt.0",
+          "value": "0"
+        },
+        {
+          "key": "ex.estereo_e_centros_05.opt.3",
+          "value": "3"
+        },
+        {
+          "key": "ex.estereo_e_centros_05.opt.1",
+          "value": "1"
+        },
+        {
+          "key": "ex.estereo_e_centros_05.opt.2",
+          "value": "2"
+        }
+      ]
+    },
+    "correct": {
+      "value": "2"
+    },
+    "explanation_key": "ex.estereo_e_centros_05.explain",
+    "feedback_template_id": "estereo_ft_centros",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_centros",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@H]1CCCC[C@H]1C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_centros_06",
+    "lesson_id": "estereo_l_centros",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_centros_06.prompt",
+    "payload": {
+      "structure_smiles": "C[C@@H](O)[C@H](N)C(=O)O",
+      "options": [
+        {
+          "key": "ex.estereo_e_centros_06.opt.3",
+          "value": "3"
+        },
+        {
+          "key": "ex.estereo_e_centros_06.opt.0",
+          "value": "0"
+        },
+        {
+          "key": "ex.estereo_e_centros_06.opt.1",
+          "value": "1"
+        },
+        {
+          "key": "ex.estereo_e_centros_06.opt.2",
+          "value": "2"
+        }
+      ]
+    },
+    "correct": {
+      "value": "2"
+    },
+    "explanation_key": "ex.estereo_e_centros_06.explain",
+    "feedback_template_id": "estereo_ft_centros",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_centros",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@@H](O)[C@H](N)C(=O)O",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_rs_01",
+    "lesson_id": "estereo_l_rs",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_rs_01.prompt",
+    "payload": {
+      "structure_smiles": "C[C@@H:1](O)CC",
+      "options": [
+        {
+          "key": "ex.estereo_e_rs_01.opt.S",
+          "value": "S"
+        },
+        {
+          "key": "ex.estereo_e_rs_01.opt.R",
+          "value": "R"
+        }
+      ]
+    },
+    "correct": {
+      "value": "R"
+    },
+    "explanation_key": "ex.estereo_e_rs_01.explain",
+    "feedback_template_id": "estereo_ft_rs",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_rs",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@@H:1](O)CC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_rs_02",
+    "lesson_id": "estereo_l_rs",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_rs_02.prompt",
+    "payload": {
+      "structure_smiles": "C[C@H:1](O)CC",
+      "options": [
+        {
+          "key": "ex.estereo_e_rs_02.opt.R",
+          "value": "R"
+        },
+        {
+          "key": "ex.estereo_e_rs_02.opt.S",
+          "value": "S"
+        }
+      ]
+    },
+    "correct": {
+      "value": "S"
+    },
+    "explanation_key": "ex.estereo_e_rs_02.explain",
+    "feedback_template_id": "estereo_ft_rs",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_rs",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@H:1](O)CC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_rs_03",
+    "lesson_id": "estereo_l_rs",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_rs_03.prompt",
+    "payload": {
+      "structure_smiles": "C[C@@H:1](Br)CC",
+      "options": [
+        {
+          "key": "ex.estereo_e_rs_03.opt.S",
+          "value": "S"
+        },
+        {
+          "key": "ex.estereo_e_rs_03.opt.R",
+          "value": "R"
+        }
+      ]
+    },
+    "correct": {
+      "value": "R"
+    },
+    "explanation_key": "ex.estereo_e_rs_03.explain",
+    "feedback_template_id": "estereo_ft_rs",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_rs",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@@H:1](Br)CC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_rs_04",
+    "lesson_id": "estereo_l_rs",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_rs_04.prompt",
+    "payload": {
+      "structure_smiles": "C[C@H:1](Br)CC",
+      "options": [
+        {
+          "key": "ex.estereo_e_rs_04.opt.S",
+          "value": "S"
+        },
+        {
+          "key": "ex.estereo_e_rs_04.opt.R",
+          "value": "R"
+        }
+      ]
+    },
+    "correct": {
+      "value": "S"
+    },
+    "explanation_key": "ex.estereo_e_rs_04.explain",
+    "feedback_template_id": "estereo_ft_rs",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_rs",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@H:1](Br)CC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_rs_05",
+    "lesson_id": "estereo_l_rs",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_rs_05.prompt",
+    "payload": {
+      "structure_smiles": "C[C@H:1](O)C(=O)O",
+      "options": [
+        {
+          "key": "ex.estereo_e_rs_05.opt.R",
+          "value": "R"
+        },
+        {
+          "key": "ex.estereo_e_rs_05.opt.S",
+          "value": "S"
+        }
+      ]
+    },
+    "correct": {
+      "value": "S"
+    },
+    "explanation_key": "ex.estereo_e_rs_05.explain",
+    "feedback_template_id": "estereo_ft_rs",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_rs",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@H:1](O)C(=O)O",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_rs_06",
+    "lesson_id": "estereo_l_rs",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_rs_06.prompt",
+    "payload": {
+      "structure_smiles": "C[C@@H:1](O)C(=O)O",
+      "options": [
+        {
+          "key": "ex.estereo_e_rs_06.opt.R",
+          "value": "R"
+        },
+        {
+          "key": "ex.estereo_e_rs_06.opt.S",
+          "value": "S"
+        }
+      ]
+    },
+    "correct": {
+      "value": "R"
+    },
+    "explanation_key": "ex.estereo_e_rs_06.explain",
+    "feedback_template_id": "estereo_ft_rs",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_rs",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@@H:1](O)C(=O)O",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_rs_07",
+    "lesson_id": "estereo_l_rs",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_rs_07.prompt",
+    "payload": {
+      "structure_smiles": "C[C@H:1](N)C(=O)O",
+      "options": [
+        {
+          "key": "ex.estereo_e_rs_07.opt.S",
+          "value": "S"
+        },
+        {
+          "key": "ex.estereo_e_rs_07.opt.R",
+          "value": "R"
+        }
+      ]
+    },
+    "correct": {
+      "value": "S"
+    },
+    "explanation_key": "ex.estereo_e_rs_07.explain",
+    "feedback_template_id": "estereo_ft_rs",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_rs",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@H:1](N)C(=O)O",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_rs_08",
+    "lesson_id": "estereo_l_rs",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_rs_08.prompt",
+    "payload": {
+      "structure_smiles": "C[C@@H:1](N)C(=O)O",
+      "options": [
+        {
+          "key": "ex.estereo_e_rs_08.opt.S",
+          "value": "S"
+        },
+        {
+          "key": "ex.estereo_e_rs_08.opt.R",
+          "value": "R"
+        }
+      ]
+    },
+    "correct": {
+      "value": "R"
+    },
+    "explanation_key": "ex.estereo_e_rs_08.explain",
+    "feedback_template_id": "estereo_ft_rs",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_rs",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@@H:1](N)C(=O)O",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_rs_09",
+    "lesson_id": "estereo_l_rs",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_rs_09.prompt",
+    "payload": {
+      "structure_smiles": "C[C@H:1](N)CC",
+      "options": [
+        {
+          "key": "ex.estereo_e_rs_09.opt.R",
+          "value": "R"
+        },
+        {
+          "key": "ex.estereo_e_rs_09.opt.S",
+          "value": "S"
+        }
+      ]
+    },
+    "correct": {
+      "value": "S"
+    },
+    "explanation_key": "ex.estereo_e_rs_09.explain",
+    "feedback_template_id": "estereo_ft_rs",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_rs",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@H:1](N)CC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_rs_10",
+    "lesson_id": "estereo_l_rs",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_rs_10.prompt",
+    "payload": {
+      "structure_smiles": "C[C@@H:1](Cl)CC",
+      "options": [
+        {
+          "key": "ex.estereo_e_rs_10.opt.S",
+          "value": "S"
+        },
+        {
+          "key": "ex.estereo_e_rs_10.opt.R",
+          "value": "R"
+        }
+      ]
+    },
+    "correct": {
+      "value": "R"
+    },
+    "explanation_key": "ex.estereo_e_rs_10.explain",
+    "feedback_template_id": "estereo_ft_rs",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_rs",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@@H:1](Cl)CC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_es_centro_01",
+    "lesson_id": "estereo_l_centros",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_es_centro_01.prompt",
+    "payload": {
+      "structure_smiles": "C[C@H:1](O)CC",
+      "options": [
+        {
+          "key": "ex.estereo_e_es_centro_01.opt.si",
+          "value": "si"
+        },
+        {
+          "key": "ex.estereo_e_es_centro_01.opt.no",
+          "value": "no"
+        }
+      ]
+    },
+    "correct": {
+      "value": "si"
+    },
+    "explanation_key": "ex.estereo_e_es_centro_01.explain",
+    "feedback_template_id": "estereo_ft_centros",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_es_centro",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@H:1](O)CC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_es_centro_02",
+    "lesson_id": "estereo_l_centros",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_es_centro_02.prompt",
+    "payload": {
+      "structure_smiles": "C[CH:1](C)Cl",
+      "options": [
+        {
+          "key": "ex.estereo_e_es_centro_02.opt.si",
+          "value": "si"
+        },
+        {
+          "key": "ex.estereo_e_es_centro_02.opt.no",
+          "value": "no"
+        }
+      ]
+    },
+    "correct": {
+      "value": "no"
+    },
+    "explanation_key": "ex.estereo_e_es_centro_02.explain",
+    "feedback_template_id": "estereo_ft_centros",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_es_centro",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[CH:1](C)Cl",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_es_centro_03",
+    "lesson_id": "estereo_l_centros",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_es_centro_03.prompt",
+    "payload": {
+      "structure_smiles": "C[C@H:1](N)C(=O)O",
+      "options": [
+        {
+          "key": "ex.estereo_e_es_centro_03.opt.si",
+          "value": "si"
+        },
+        {
+          "key": "ex.estereo_e_es_centro_03.opt.no",
+          "value": "no"
+        }
+      ]
+    },
+    "correct": {
+      "value": "si"
+    },
+    "explanation_key": "ex.estereo_e_es_centro_03.explain",
+    "feedback_template_id": "estereo_ft_centros",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_es_centro",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[C@H:1](N)C(=O)O",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "estereo_e_es_centro_04",
+    "lesson_id": "estereo_l_centros",
+    "type": "multiple_choice",
+    "prompt_key": "ex.estereo_e_es_centro_04.prompt",
+    "payload": {
+      "structure_smiles": "C[CH:1](C)O",
+      "options": [
+        {
+          "key": "ex.estereo_e_es_centro_04.opt.no",
+          "value": "no"
+        },
+        {
+          "key": "ex.estereo_e_es_centro_04.opt.si",
+          "value": "si"
+        }
+      ]
+    },
+    "correct": {
+      "value": "no"
+    },
+    "explanation_key": "ex.estereo_e_es_centro_04.explain",
+    "feedback_template_id": "estereo_ft_centros",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "estereo_es_centro",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C[CH:1](C)O",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  }
+]
