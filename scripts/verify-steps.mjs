@@ -17,6 +17,13 @@ export async function welcome({ newPage, shot, URL }) {
   if (!manifest || manifest.start_url !== '/quimica-para-todos/' || manifest.scope !== '/quimica-para-todos/') {
     throw new Error(`manifest con start_url/scope incorrectos: ${JSON.stringify(manifest)}`)
   }
+  // Metadatos para compartir y 404 propia de GitHub Pages.
+  const og = await page.evaluate(() => document.querySelector('meta[property="og:image"]')?.getAttribute('content') ?? '')
+  if (!og.endsWith('/og.png')) throw new Error(`og:image inesperado: ${og}`)
+  for (const file of ['og.png', '404.html']) {
+    const st = await page.evaluate(async (u) => (await fetch(u)).status, `${URL}${file}`)
+    if (st !== 200) throw new Error(`${file}: HTTP ${st}`)
+  }
   await shot(page, '01-bienvenida')
   await ctx.close()
 }
