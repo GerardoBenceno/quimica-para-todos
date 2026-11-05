@@ -9,6 +9,7 @@ import { useT } from '../services/i18nHooks'
 import { routes } from '../app/routes'
 import { ChemText } from '../ui/ChemText'
 import { StreakDots } from '../ui/StreakDots'
+import { Carbo } from '../ui/Carbo'
 import { AdSlot } from '../ui/AdSlot'
 import { ChainLinks, MINI, PATH, VertexMark, miniX, miniY, type ChainLink, type VertexState } from '../ui/PathChain'
 import { NotFoundScreen } from './NotFoundScreen'
@@ -58,7 +59,18 @@ export function ResultScreen() {
 
   return (
     <div className="shell">
-      <div className="result-top">
+      <div className="result-top panel-warm">
+        <div className="narrow result-head">
+          <Carbo expression="happy" size={96} className="result-carbo" />
+          <div>
+            <h1 className="t-28" tabIndex={-1} ref={headRef}>
+              {t('result.title')}
+            </h1>
+            <p className="muted">
+              <ChemText text={t(lesson.title_key)} />
+            </p>
+          </div>
+        </div>
         <div className="narrow">
           <div className="chain chain-mini" style={{ height }} aria-hidden="true">
             <ChainLinks links={links} chests={[]} height={height} x={mx} y={my} />
@@ -76,12 +88,6 @@ export function ResultScreen() {
         </div>
       </div>
       <main id="main" className="narrow page result">
-        <h1 className="t-28" tabIndex={-1} ref={headRef}>
-          {t('result.title')}
-        </h1>
-        <p className="muted">
-          <ChemText text={t(lesson.title_key)} />
-        </p>
         <ul className="data-list panel">
           <li>
             <span>{t('result.correct')}</span>

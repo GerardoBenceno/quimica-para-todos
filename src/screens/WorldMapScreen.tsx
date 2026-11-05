@@ -7,7 +7,7 @@ import { nextLesson } from '../core/game/unlock'
 import { useT } from '../services/i18nHooks'
 import { routes } from '../app/routes'
 import { AppShell } from '../ui/AppShell'
-import { WorldThumb } from '../ui/WorldThumb'
+import { WorldIcon } from '../ui/WorldIcon'
 import { ProgressBar } from '../ui/ProgressBar'
 import { AdSlot } from '../ui/AdSlot'
 import { LockBadge } from '../ui/LockBadge'
@@ -43,8 +43,8 @@ export function WorldMapScreen() {
               const isCurrent = v?.status === 'in_progress' || (current && b.units.find((u) => u.id === b.lessons.find((l) => l.id === current)?.unit_id)?.world_id === w.id && v?.status !== 'completed')
               const req = w.unlock_rule?.requires_world ? b.worlds.find((x) => x.id === w.unlock_rule!.requires_world) : null
               return (
-                <li key={w.id} className={`world-row ${isCurrent ? 'current' : ''} ${open ? '' : 'closed'}`}>
-                  {v?.status === 'coming_soon' ? <span className="thumb thumb-empty" aria-hidden="true" /> : <WorldThumb worldId={w.id} label={title} />}
+                <li key={w.id} className={`world-row ${isCurrent ? 'current' : ''} ${open ? '' : 'closed'} ${v?.status === 'coming_soon' ? 'soon' : ''}`}>
+                  <WorldIcon worldId={w.id} label={title} size={64} />
                   <div className="world-text">
                     {open ? (
                       <Link className="row-link" to={routes.world(w.id)} aria-current={isCurrent ? 'true' : undefined}>

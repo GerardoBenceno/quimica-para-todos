@@ -6,6 +6,7 @@ import { useT } from '../services/i18nHooks'
 import { ChemText } from '../ui/ChemText'
 import { MoleculeView } from '../ui/MoleculeView'
 import { CheckIcon, CrossIcon } from '../ui/icons'
+import { Carbo } from '../ui/Carbo'
 import { correctAnswerText, feedbackSmiles } from './answerText'
 
 /**
@@ -48,9 +49,12 @@ export function FeedbackSheet({ exercise, verdict, onContinue, practice }: { exe
           )}
         </div>
         {!ok && template && (
-          <p className="sheet-template muted">
-            <ChemText text={t(template.message_key)} /> {t(practice ? 'feedback.still_in_review' : 'feedback.added_to_review')}
-          </p>
+          <div className="sheet-template">
+            <Carbo expression="sad" size={40} />
+            <p className="muted">
+              <ChemText text={t(template.message_key)} /> {t(practice ? 'feedback.still_in_review' : 'feedback.added_to_review')}
+            </p>
+          </div>
         )}
         <button type="button" className="btn btn-primary btn-block" onClick={onContinue}>
           {t('feedback.continue')}

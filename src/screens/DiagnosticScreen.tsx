@@ -12,6 +12,7 @@ import { useT } from '../services/i18nHooks'
 import { trackEvent } from '../app/analyticsEvents'
 import { routes } from '../app/routes'
 import { ChemText } from '../ui/ChemText'
+import { Carbo } from '../ui/Carbo'
 import { topicTitleKey } from './topics'
 
 /** Diagnóstico saltable, resultado amable y directo a la primera lección. */
@@ -55,6 +56,7 @@ export function DiagnosticScreen() {
     const levelText = i18n?.has(levelKey) ? t(levelKey) : outcome.level_label
     return (
       <main id="main" className="narrow page diag-result">
+        <Carbo expression="think" size={72} />
         <p className="muted">{t('diagnostic.result_kicker')}</p>
         <h1 className="t-28">{t('diagnostic.start_point', { world: world ? t(world.title_key) : '' })}</h1>
         <ul className="data-list panel">
@@ -104,7 +106,10 @@ export function DiagnosticScreen() {
       onClose={skip}
       footer={
         <div className="diag-footer">
-          <p className="muted t-14">{t('diagnostic.only_start')}</p>
+          <div className="diag-note">
+            <Carbo expression="think" size={40} />
+            <p className="muted t-14">{t('diagnostic.only_start')}</p>
+          </div>
           <button type="button" className="link" onClick={skip}>
             {t('diagnostic.skip')}
           </button>

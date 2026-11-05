@@ -11,6 +11,7 @@ import { AppShell } from '../ui/AppShell'
 import { ProgressBar } from '../ui/ProgressBar'
 import { ChemText } from '../ui/ChemText'
 import { BackIcon, ChestIcon } from '../ui/icons'
+import { WorldIcon } from '../ui/WorldIcon'
 import { ChainLinks, PATH, VertexMark, vertexX, vertexY, type ChainLink, type VertexState } from '../ui/PathChain'
 import { NotFoundScreen } from './NotFoundScreen'
 
@@ -61,16 +62,17 @@ export function WorldPathScreen() {
 
   return (
     <AppShell hideHeaderOnNarrow>
-      <div className="path-header">
+      <div className="path-header band">
         <div className="narrow">
           <div className="path-head-row">
             <Link className="icon-btn" to={routes.worlds()} aria-label={t('path.back_to_map')}>
               <BackIcon />
             </Link>
-            <div>
+            <div className="path-head-text">
               <h1 className="t-28">{title}</h1>
-              <p className="muted">{t('path.completed_count', { n: wv.completed, m: wv.total })}</p>
+              <p>{t('path.completed_count', { n: wv.completed, m: wv.total })}</p>
             </div>
+            <WorldIcon worldId={worldId} label={title} size={72} className="path-head-icon" />
           </div>
           <ProgressBar value={wv.progress} label={t('map.progress_label', { world: title })} />
         </div>

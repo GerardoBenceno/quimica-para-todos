@@ -12,6 +12,7 @@ import { MoleculeView } from '../ui/MoleculeView'
 import { AssetImage } from '../ui/AssetImage'
 import { ProgressBar } from '../ui/ProgressBar'
 import { CrossIcon } from '../ui/icons'
+import { Carbo } from '../ui/Carbo'
 import { FeedbackSheet } from './FeedbackSheet'
 import { exerciseTypeDef } from './registry'
 import { promptSmiles } from './answerText'
@@ -154,9 +155,12 @@ export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onR
         {canHint && (
           <div className="hint">
             {hint ? (
-              <p className="hint-text" role="status">
-                <ChemText text={t(template!.hint_key!)} />
-              </p>
+              <div className="hint-text" role="status">
+                <Carbo expression="think" size={40} />
+                <p>
+                  <ChemText text={t(template!.hint_key!)} />
+                </p>
+              </div>
             ) : (
               <button type="button" className="link" onClick={useHint} disabled={!affordable}>
                 {g.hintCost > 0 ? t('exercise.hint_cost', { n: g.hintCost }) : t('exercise.hint')}

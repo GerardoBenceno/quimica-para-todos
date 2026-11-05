@@ -59,7 +59,7 @@ export function PracticeScreen() {
         )}
         {queue.length === 0 ? (
           <div className="empty">
-            <Carbo expression="happy" />
+            <Carbo expression="idle" size={96} />
             <p className="t-body">{t('practice.empty')}</p>
             <Link className="link" to={routes.worlds()}>
               {t('practice.go_learn')}

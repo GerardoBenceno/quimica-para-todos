@@ -43,8 +43,8 @@ export function LessonIntro({ lessonId, headingLevel, onStart }: { lessonId: str
         </p>
       )}
       {(image || sample) && (
-        <figure className="figure figure-intro">
-          {image ? <AssetImage assetId={image} className="figure-img" /> : <MoleculeView smiles={sample!} label={t('figure.example_structure')} />}
+        <figure className={`figure figure-intro ${image ? 'figure-plain' : ''}`}>
+          {image ? <AssetImage assetId={image} className="figure-img" size={240} /> : <MoleculeView smiles={sample!} label={t('figure.example_structure')} />}
         </figure>
       )}
       <div className="intro-actions">
