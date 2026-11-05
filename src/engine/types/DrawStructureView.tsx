@@ -1,10 +1,10 @@
 import { useEffect, useState, type ComponentType } from 'react'
-import { servicesOrNull } from '../app/services'
-import type { StructureEditorProps } from '../ports'
-import type { Exercise } from '../models'
-import type { Answer, Verdict } from '../core/game/validate'
-import { useT } from '../services/i18nHooks'
-import type { ExerciseViewProps } from './types'
+import { servicesOrNull } from '../../app/services'
+import type { StructureEditorProps } from '../../ports'
+import type { Exercise } from '../../models'
+import type { Answer, Verdict } from '../../core/game/validate'
+import { useT } from '../../services/i18nHooks'
+import type { ExerciseViewProps, ExerciseTypeRegistrations } from '../typeDefs'
 
 /** Dibuja la molécula del nombre IUPAC en el editor 2D (cargado al primer uso). */
 export function DrawStructureView({ onAnswer, checked }: ExerciseViewProps) {
@@ -54,3 +54,5 @@ export async function checkDrawStructure(ex: Exercise, answer: Answer): Promise<
     return 'invalid'
   }
 }
+
+export const exerciseTypes: ExerciseTypeRegistrations = { draw_structure: { View: DrawStructureView, check: checkDrawStructure } }

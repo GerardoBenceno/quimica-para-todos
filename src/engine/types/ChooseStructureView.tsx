@@ -1,9 +1,9 @@
 import { useMemo, useRef, type KeyboardEvent } from 'react'
-import { presentationOrder, LETTERS } from '../core/game/shuffle'
-import { useT } from '../services/i18nHooks'
-import { MoleculeView } from '../ui/MoleculeView'
-import { CheckIcon, CrossIcon } from '../ui/icons'
-import type { ExerciseViewProps } from './types'
+import { presentationOrder, LETTERS } from '../../core/game/shuffle'
+import { useT } from '../../services/i18nHooks'
+import { MoleculeView } from '../../ui/MoleculeView'
+import { CheckIcon, CrossIcon } from '../../ui/icons'
+import type { ExerciseViewProps, ExerciseTypeRegistrations } from '../typeDefs'
 
 /** Variante para pantallas angostas: se muestra el nombre y se elige la estructura. */
 export function ChooseStructureView({ exercise, attemptId, answer, onAnswer, checked, promptId }: ExerciseViewProps) {
@@ -56,3 +56,5 @@ export function ChooseStructureView({ exercise, attemptId, answer, onAnswer, che
     </div>
   )
 }
+
+export const exerciseTypes: ExerciseTypeRegistrations = { choose_structure: { View: ChooseStructureView } }

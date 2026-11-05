@@ -5,7 +5,7 @@ Conflictos del seed, discrepancias de fórmula, moléculas sin 3D y ejercicios d
 ## Estado
 
 - Errores químicos conocidos en ítems activos: **ninguno** detectado por la revisión automática (fórmulas, nombres contra estructura) ni por la lectura de los 58 enunciados (50 ejercicios y 8 ítems de diagnóstico).
-- La parte química **no se marca como aprobada** desde aquí: queda pendiente de la revisión del autor sobre las observaciones de la sección "Observaciones de redacción" y sobre la lista de ejercicios derivados (hito 4).
+- La parte química **no se marca como aprobada** desde aquí: queda pendiente de la revisión del autor sobre las observaciones de redacción y sobre los 16 ejercicios derivados del paquete web (10 de dibujo o elección de estructura y 6 con visor 3D), listados al final.
 
 ## Fórmulas moleculares (hito 2)
 

@@ -1,35 +1,16 @@
 import type { ExerciseType } from '../models'
-import type { ExerciseTypeDef } from './types'
-import { OptionsView } from './OptionsView'
-import { FillBlanksView } from './FillBlanksView'
-import { ChatCompleteView } from './ChatCompleteView'
-import { DrawStructureView, checkDrawStructure } from './DrawStructureView'
-import { ChooseStructureView } from './ChooseStructureView'
-import { View3DExercise } from './View3DExercise'
+import type { ExerciseTypeDef, ExerciseTypeRegistrations } from './typeDefs'
 
 /**
- * Registro tipo -> componente. Agregar un tipo de ejercicio = escribir su
- * vista y registrarla aquí (más su esquema de payload en core/schemas.ts).
+ * Registro tipo -> componente, armado con los archivos de src/engine/types/.
+ * Cada archivo exporta `exerciseTypes` con sus registros. Agregar un tipo de
+ * ejercicio = crear su archivo ahí y agregar el nombre a core/exerciseTypes.ts.
  */
-const registry: Partial<Record<ExerciseType, ExerciseTypeDef>> = {
-  multiple_choice: { View: OptionsView },
-  true_false: { View: OptionsView },
-  identify_group: { View: OptionsView },
-  diagnostic: { View: OptionsView },
-  fill_blanks: { View: FillBlanksView },
-  chat_complete: { View: ChatCompleteView, ownsFigure: false },
-  draw_structure: { View: DrawStructureView, check: checkDrawStructure },
-  choose_structure: { View: ChooseStructureView },
-  view_3d: { View: View3DExercise, ownsFigure: true },
-}
+const modules = import.meta.glob<{ exerciseTypes?: ExerciseTypeRegistrations }>('./types/*.tsx', { eager: true })
 
-export function registerExerciseType(type: ExerciseType, def: ExerciseTypeDef) {
-  registry[type] = def
-}
+const registry: ExerciseTypeRegistrations = {}
+for (const m of Object.values(modules)) Object.assign(registry, m.exerciseTypes ?? {})
 
 export function exerciseTypeDef(type: ExerciseType): ExerciseTypeDef | null {
   return registry[type] ?? null
 }
-
-/** Tipos cuyo enunciado se muestra dentro de la vista (no como título). */
-export const PROMPT_IN_VIEW = new Set<ExerciseType>(['chat_complete'])

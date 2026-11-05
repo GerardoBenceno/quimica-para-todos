@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { useContentStore } from '../stores/contentStore'
 import { useProgressStore } from '../stores/progressStore'
+import { BrandMark } from './BrandMark'
 
 /**
  * Estados de carga y error del arranque. Antes de que cargue la i18n no hay
@@ -25,7 +26,11 @@ export function AppGate({ children, onRetry }: { children: ReactNode; onRetry():
     )
   }
   if (status !== 'ready' || !progress) {
-    return <main className="state" aria-busy="true" aria-live="polite" />
+    return (
+      <main className="state state-loading" aria-busy="true" aria-live="polite">
+        <BrandMark size={48} />
+      </main>
+    )
   }
   return <>{children}</>
 }

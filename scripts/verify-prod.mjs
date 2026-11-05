@@ -36,6 +36,15 @@ async function newPage(viewport) {
   const ctx = await browser.newContext(viewport ? { viewport } : { ...devices['Pixel 5'] })
   const page = await ctx.newPage()
   openPages.push(page)
+  ctx.on('page', (pg) => {
+    if (!openPages.includes(pg)) {
+      openPages.push(pg)
+      pg.on('pageerror', (e) => problems.push(`pageerror: ${e.message}`))
+      pg.on('response', (r) => {
+        if (r.status() >= 400) problems.push(`HTTP ${r.status()} ${r.url()}`)
+      })
+    }
+  })
   page.on('response', (r) => {
     if (r.status() >= 400) problems.push(`HTTP ${r.status()} ${r.url()}`)
   })

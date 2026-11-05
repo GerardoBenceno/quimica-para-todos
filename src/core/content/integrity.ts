@@ -1,4 +1,5 @@
 import type { Exercise } from '../../models'
+import { answerShape } from '../exerciseTypes'
 import type { ContentBundle } from './bundle'
 
 export interface Issue {
@@ -6,15 +7,6 @@ export interface Issue {
   message: string
 }
 
-/** Tipos cuya respuesta es elegir un value entre payload.options. */
-export const OPTION_TYPES = new Set([
-  'multiple_choice',
-  'true_false',
-  'identify_group',
-  'chat_complete',
-  'diagnostic',
-  'choose_structure',
-])
 
 /** Todas las claves i18n que referencia un ejercicio. */
 export function exerciseKeys(ex: Exercise): string[] {
@@ -112,21 +104,22 @@ export function checkIntegrity(
       if (ref && !exercises.has(ref)) e(`${where} ${ex.id}: referencia a ejercicio "${ref}" que no existe`)
     }
     const effectiveType = ex.type === 'view_3d' ? ex.payload.base_type : ex.type
-    if (effectiveType && OPTION_TYPES.has(effectiveType)) {
+    const shape = effectiveType ? answerShape(effectiveType) : null
+    if (shape === 'options') {
       const values = (ex.payload.options ?? []).map((o) => o.value)
       if (values.length < 2) e(`${where} ${ex.id}: necesita al menos 2 opciones`)
       if (new Set(values).size !== values.length) e(`${where} ${ex.id}: opciones con value repetido`)
       if (!values.includes(ex.correct.value ?? '')) {
         e(`${where} ${ex.id}: la respuesta correcta "${ex.correct.value}" no está en sus opciones`)
       }
-    } else if (effectiveType === 'fill_blanks') {
+    } else if (shape === 'blanks') {
       const bank = new Set((ex.payload.bank ?? []).map((o) => o.value))
       for (const b of ex.payload.blanks ?? []) {
         if (!(b in ex.correct)) e(`${where} ${ex.id}: el hueco "${b}" no tiene respuesta correcta`)
         else if (!bank.has(ex.correct[b])) e(`${where} ${ex.id}: la respuesta "${ex.correct[b]}" del hueco ${b} no está en el banco`)
         if (!ex.payload.template?.includes(`{${b}}`)) e(`${where} ${ex.id}: la plantilla no contiene {${b}}`)
       }
-    } else if (effectiveType === 'draw_structure') {
+    } else if (shape === 'structure') {
       if (!ex.correct.smiles) e(`${where} ${ex.id}: draw_structure necesita correct.smiles`)
       if (!ex.payload.name_key) e(`${where} ${ex.id}: draw_structure necesita payload.name_key`)
     }

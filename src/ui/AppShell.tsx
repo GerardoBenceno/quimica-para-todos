@@ -5,6 +5,18 @@ import { routes } from '../app/routes'
 import { useT } from '../services/i18nHooks'
 import { useUserState } from '../stores/progressStore'
 import { useOnline, useStreak } from '../stores/selectors'
+
+/** Aviso global de modo sin conexión (la app sigue con lo guardado). */
+export function OfflineBanner() {
+  const t = useT()
+  const online = useOnline()
+  if (online) return null
+  return (
+    <div className="offline-banner" role="status">
+      {t('offline.notice')}
+    </div>
+  )
+}
 import { BrandMark } from './BrandMark'
 import { StreakDots } from './StreakDots'
 import { CoinIcon, LearnIcon, ProfileIcon, ReviewIcon, RewardsIcon } from './icons'
@@ -42,17 +54,11 @@ export function StatsBar() {
 /** Marco de las pantallas principales: encabezado, navegación y barra inferior en celular. */
 export function AppShell({ children, hideHeaderOnNarrow = false }: { children: ReactNode; hideHeaderOnNarrow?: boolean }) {
   const t = useT()
-  const online = useOnline()
   return (
     <div className="shell with-tabbar">
       <a className="skip-link" href="#main">
         {t('app.skip_to_content')}
       </a>
-      {!online && (
-        <div className="offline-banner" role="status">
-          {t('offline.notice')}
-        </div>
-      )}
       <header className={`app-header ${hideHeaderOnNarrow ? 'hide-narrow' : ''}`}>
         <div className="container app-header-inner">
           <Link to={routes.worlds()} className="brand">

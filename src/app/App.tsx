@@ -11,6 +11,7 @@ import { ProfileScreen } from '../screens/ProfileScreen'
 import { QuestsScreen } from '../screens/QuestsScreen'
 import { useProgressStore } from '../stores/progressStore'
 import { routes } from './routes'
+import { OfflineBanner } from '../ui/AppShell'
 
 /** Primera sesión: bienvenida, diagnóstico, primera lección y después el mapa. */
 function Home() {
@@ -47,6 +48,7 @@ export function AppRoutes() {
 export function App() {
   return (
     <HashRouter>
+      <OfflineBanner />
       <AppRoutes />
     </HashRouter>
   )

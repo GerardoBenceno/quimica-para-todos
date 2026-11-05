@@ -1,8 +1,8 @@
 import { Fragment, useMemo } from 'react'
-import { presentationOrder } from '../core/game/shuffle'
-import { useT } from '../services/i18nHooks'
-import { ChemText } from '../ui/ChemText'
-import type { ExerciseViewProps } from './types'
+import { presentationOrder } from '../../core/game/shuffle'
+import { useT } from '../../services/i18nHooks'
+import { ChemText } from '../../ui/ChemText'
+import type { ExerciseViewProps, ExerciseTypeRegistrations } from '../typeDefs'
 
 /**
  * Plantilla con huecos {b1}, {b2}. Tocar una pieza del banco llena el primer
@@ -70,3 +70,5 @@ export function FillBlanksView({ exercise, attemptId, answer, onAnswer, checked,
     </div>
   )
 }
+
+export const exerciseTypes: ExerciseTypeRegistrations = { fill_blanks: { View: FillBlanksView } }

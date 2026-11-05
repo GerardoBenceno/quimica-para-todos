@@ -2,6 +2,8 @@
 // modelo de la guía técnica, sección G. Los campos extra de los tipos web
 // (draw_structure, choose_structure, view_3d) viven solo en el payload.
 
+import type { ExerciseTypeName } from '../core/exerciseTypes'
+
 export type Id = string
 
 export type WorldStatus = 'unlocked' | 'locked' | 'coming_soon'
@@ -11,17 +13,8 @@ export type ScopeType = 'world' | 'unit' | 'lesson'
 export type RewardType = 'xp' | 'coins' | 'chest' | 'streak_freeze' | 'cosmetic'
 export type AssetKind = 'image' | 'sprite' | 'structure' | 'video' | 'icon' | 'lottie'
 
-/** Tipos de ejercicio del seed más los tipos web. */
-export type ExerciseType =
-  | 'multiple_choice'
-  | 'true_false'
-  | 'identify_group'
-  | 'fill_blanks'
-  | 'chat_complete'
-  | 'diagnostic'
-  | 'draw_structure'
-  | 'choose_structure'
-  | 'view_3d'
+/** Tipos de ejercicio del seed más los tipos web (catálogo en core/exerciseTypes.ts). */
+export type ExerciseType = ExerciseTypeName
 
 export interface UnlockRule {
   requires_world?: Id

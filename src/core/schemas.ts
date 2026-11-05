@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import { EXERCISE_TYPE_NAMES } from './exerciseTypes'
 
 // Esquemas zod de cada archivo de un paquete de contenido. Un paquete mal
 // formado falla al cargar con un mensaje que nombra el archivo y la ruta.
@@ -61,17 +62,7 @@ export const lessonSchema = z.object({
   is_active: z.boolean(),
 })
 
-export const exerciseTypeSchema = z.enum([
-  'multiple_choice',
-  'true_false',
-  'identify_group',
-  'fill_blanks',
-  'chat_complete',
-  'diagnostic',
-  'draw_structure',
-  'choose_structure',
-  'view_3d',
-])
+export const exerciseTypeSchema = z.enum(EXERCISE_TYPE_NAMES)
 
 const optionSchema = z.object({ key: z.string(), value: z.string(), smiles: z.string().optional() })
 

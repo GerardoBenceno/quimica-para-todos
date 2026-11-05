@@ -1,9 +1,9 @@
-import { useBundle } from '../stores/contentStore'
-import { useT } from '../services/i18nHooks'
-import { Carbo } from '../ui/Carbo'
-import { ChemText } from '../ui/ChemText'
+import { useBundle } from '../../stores/contentStore'
+import { useT } from '../../services/i18nHooks'
+import { Carbo } from '../../ui/Carbo'
+import { ChemText } from '../../ui/ChemText'
 import { OptionsView } from './OptionsView'
-import type { ExerciseViewProps } from './types'
+import type { ExerciseViewProps, ExerciseTypeRegistrations } from '../typeDefs'
 
 /** Mensaje del personaje que el usuario completa eligiendo una opción. */
 export function ChatCompleteView(props: ExerciseViewProps) {
@@ -26,3 +26,5 @@ export function ChatCompleteView(props: ExerciseViewProps) {
     </div>
   )
 }
+
+export const exerciseTypes: ExerciseTypeRegistrations = { chat_complete: { View: ChatCompleteView, promptInView: true } }

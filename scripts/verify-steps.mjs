@@ -233,3 +233,102 @@ export async function view3d({ newPage, shot, URL }) {
   await shot(page, 'v3d-02-retro')
   await ctx.close()
 }
+
+export async function offline({ newPage, shot, URL, BASE }) {
+  const { ctx, page } = await newPage()
+  await page.goto(URL)
+  await expectVisible(page, 'Aprende química orgánica jugando')
+  const sw = await page.evaluate(async () => {
+    const reg = await navigator.serviceWorker.ready
+    return { scope: reg.scope, active: !!reg.active }
+  })
+  if (!sw.active || !sw.scope.endsWith(BASE)) throw new Error(`service worker con scope inesperado: ${JSON.stringify(sw)}`)
+  // Esperar a que termine el precache (el SW queda activo cuando lo instaló todo).
+  await page.waitForFunction(async () => {
+    const keys = await caches.keys()
+    for (const k of keys) if (k.includes('precache') && (await (await caches.open(k)).keys()).length > 50) return true
+    return false
+  }, null, { timeout: 30000 })
+  // Instalabilidad según Chrome (equivale a la pestaña Manifest de DevTools).
+  const cdp = await ctx.newCDPSession(page)
+  const inst = await cdp.send('Page.getInstallabilityErrors')
+  if (inst.installabilityErrors.length) throw new Error(`no instalable: ${JSON.stringify(inst.installabilityErrors)}`)
+  const man = await cdp.send('Page.getAppManifest')
+  if (man.errors?.length) throw new Error(`errores del manifest: ${JSON.stringify(man.errors)}`)
+  await ctx.setOffline(true)
+  // Reapertura sin conexión en una pestaña nueva.
+  const p2 = await ctx.newPage()
+  await p2.goto(URL)
+  await expectVisible(p2, 'Aprende química orgánica jugando')
+  await expectVisible(p2, 'Sin conexión')
+  await firstSession(p2, URL)
+  await shot(p2, 'offline-01-mapa')
+  await p2.getByRole('link', { name: 'Química básica del carbono' }).first().click()
+  await expectVisible(p2, 'lecciones completadas')
+  await ctx.close()
+}
+
+/** axe-core (WCAG 2.1 A/AA) en cada pantalla principal; falla con violaciones serias o críticas. */
+export async function a11y({ newPage, URL }) {
+  const { createRequire } = await import('node:module')
+  const axePath = createRequire(import.meta.url).resolve('axe-core/axe.min.js')
+  const run = async (page, where) => {
+    await page.addScriptTag({ path: axePath })
+    const r = await page.evaluate(async () => {
+      // eslint-disable-next-line no-undef
+      const res = await axe.run(document, { runOnly: ['wcag2a', 'wcag2aa', 'wcag21aa'] })
+      return res.violations.map((v) => ({ id: v.id, impact: v.impact, n: v.nodes.length, target: v.nodes[0]?.target?.join(' ') }))
+    })
+    const small = await page.evaluate(() => {
+      const out = []
+      for (const el of document.querySelectorAll('a, button, [role="radio"], input, label.radio-row')) {
+        if (el.closest('p') && el.tagName === 'A') continue // enlaces dentro de un párrafo: exentos
+        if (el.tagName === 'INPUT' && el.closest('label')) continue // cuenta la fila de la etiqueta
+        if (el.closest('.ketcher-host')) continue
+        // Enlaces de fila: su ::after hace clicable la fila completa.
+        const r = (el.classList.contains('row-link') ? el.closest('li') : el).getBoundingClientRect()
+        const st = getComputedStyle(el)
+        if (r.width === 0 || r.height === 0 || st.visibility === 'hidden') continue
+        if (el.classList.contains('skip-link') && r.top < 0) continue
+        if (r.width < 43.5 || r.height < 43.5) out.push(`${el.tagName.toLowerCase()}.${el.className} "${(el.textContent || el.getAttribute('aria-label') || '').trim().slice(0, 30)}" ${Math.round(r.width)}x${Math.round(r.height)}`)
+      }
+      return out
+    })
+    if (small.length) throw new Error(`${where}: objetivos táctiles menores de 44 px: ${small.join('; ')}`)
+    const bad = r.filter((v) => v.impact === 'serious' || v.impact === 'critical')
+    if (bad.length) throw new Error(`${where}: ${JSON.stringify(bad)}`)
+    return r
+  }
+  for (const viewport of [null, { width: 1280, height: 860 }]) {
+    const { ctx, page } = await newPage(viewport)
+    await page.goto(URL)
+    await expectVisible(page, 'Aprende química orgánica jugando')
+    await run(page, 'bienvenida')
+    await page.getByRole('button', { name: 'Empezar' }).click()
+    await page.getByText('Pregunta 1 de 8').waitFor()
+    await run(page, 'diagnóstico')
+    await page.getByRole('button', { name: 'No sé, empezar desde el principio' }).click()
+    await page.getByRole('button', { name: 'Empezar lección' }).waitFor()
+    await run(page, 'intro de lección')
+    await page.getByRole('button', { name: 'Empezar lección' }).click()
+    await answerVisible(page)
+    await run(page, 'ejercicio')
+    await page.getByRole('button', { name: 'Comprobar' }).click()
+    await page.getByRole('button', { name: 'Continuar', exact: true }).waitFor()
+    await run(page, 'retroalimentación')
+    await page.getByRole('button', { name: 'Continuar', exact: true }).click()
+    await playLesson(page)
+    await run(page, 'resultado')
+    await page.getByRole('button', { name: 'Ver el mapa de mundos' }).click()
+    await expectVisible(page, 'Tu ruta')
+    await page.waitForTimeout(300)
+    await run(page, 'mapa')
+    for (const [hash, text] of [['#/mundo/w_carbono', 'lecciones completadas'], ['#/perfil', 'Experiencia total'], ['#/recompensas', 'Tienda'], ['#/repasar', 'Empezar repaso']]) {
+      await page.goto(`${URL}${hash}`)
+      await expectVisible(page, text)
+      await page.waitForTimeout(300)
+      await run(page, hash)
+    }
+    await ctx.close()
+  }
+}

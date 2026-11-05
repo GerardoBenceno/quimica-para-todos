@@ -1,10 +1,10 @@
 import { useMemo, useRef, type KeyboardEvent } from 'react'
-import { presentationOrder, LETTERS } from '../core/game/shuffle'
-import { answerType } from '../core/game/validate'
-import { useT } from '../services/i18nHooks'
-import { ChemText } from '../ui/ChemText'
-import { CheckIcon, CrossIcon } from '../ui/icons'
-import type { ExerciseViewProps } from './types'
+import { presentationOrder, LETTERS } from '../../core/game/shuffle'
+import { answerType } from '../../core/game/validate'
+import { useT } from '../../services/i18nHooks'
+import { ChemText } from '../../ui/ChemText'
+import { CheckIcon, CrossIcon } from '../../ui/icons'
+import type { ExerciseViewProps, ExerciseTypeRegistrations } from '../typeDefs'
 
 /**
  * Opciones como filas a), b), c), d) con role="radio". El orden se baraja por
@@ -69,4 +69,11 @@ export function OptionsView({ exercise, attemptId, answer, onAnswer, checked, pr
       })}
     </div>
   )
+}
+
+export const exerciseTypes: ExerciseTypeRegistrations = {
+  multiple_choice: { View: OptionsView },
+  true_false: { View: OptionsView },
+  identify_group: { View: OptionsView },
+  diagnostic: { View: OptionsView },
 }

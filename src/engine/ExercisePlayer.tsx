@@ -13,7 +13,7 @@ import { AssetImage } from '../ui/AssetImage'
 import { ProgressBar } from '../ui/ProgressBar'
 import { CrossIcon } from '../ui/icons'
 import { FeedbackSheet } from './FeedbackSheet'
-import { PROMPT_IN_VIEW, exerciseTypeDef } from './registry'
+import { exerciseTypeDef } from './registry'
 import { promptSmiles } from './answerText'
 
 export type PlayerMode = 'lesson' | 'practice' | 'diagnostic'
@@ -67,7 +67,7 @@ export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onR
   const template = b.feedbackTemplates.find((f) => f.id === ex.feedback_template_id && f.is_active)
   const smiles = promptSmiles(ex)
   const assetId = ex.payload.structure_asset_id ?? ex.structure_asset_id
-  const promptInView = PROMPT_IN_VIEW.has(ex.type)
+  const promptInView = !!def?.promptInView
   const progress = (index + (checked ? 1 : 0)) / exercises.length
 
   const check = async () => {

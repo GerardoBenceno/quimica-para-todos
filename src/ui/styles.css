@@ -189,6 +189,7 @@ sup {
   cursor: not-allowed;
 }
 .icon-btn {
+  flex: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -356,7 +357,9 @@ sup {
 .top-nav-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   min-height: 44px;
+  min-width: 44px;
   color: var(--color-text-secondary);
   text-decoration: none;
   border-bottom: 2px solid transparent;
@@ -1339,4 +1342,7 @@ a.vertex:hover {
   min-width: 48px;
   padding: 0 12px;
   font-family: 'Noto Sans Math', var(--font-sans);
+}
+.state-loading {
+  align-items: center;
 }

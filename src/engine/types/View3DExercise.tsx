@@ -1,11 +1,11 @@
 import { useEffect, useState, type ComponentType } from 'react'
-import { servicesOrNull } from '../app/services'
-import type { MoleculeViewer3DProps } from '../ports'
-import { useT } from '../services/i18nHooks'
-import { answerType } from '../core/game/validate'
+import { servicesOrNull } from '../../app/services'
+import type { MoleculeViewer3DProps } from '../../ports'
+import { useT } from '../../services/i18nHooks'
+import { answerType } from '../../core/game/validate'
 import { OptionsView } from './OptionsView'
 import { FillBlanksView } from './FillBlanksView'
-import type { ExerciseViewProps } from './types'
+import type { ExerciseViewProps, ExerciseTypeRegistrations } from '../typeDefs'
 
 /**
  * view_3d: no crea preguntas. Muestra el visor 3D rotable en lugar de la
@@ -35,3 +35,5 @@ export function View3DExercise(props: ExerciseViewProps) {
     </>
   )
 }
+
+export const exerciseTypes: ExerciseTypeRegistrations = { view_3d: { View: View3DExercise, ownsFigure: true } }

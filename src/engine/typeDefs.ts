@@ -1,5 +1,5 @@
 import type { ComponentType } from 'react'
-import type { Exercise } from '../models'
+import type { Exercise, ExerciseType } from '../models'
 import type { Answer, Verdict } from '../core/game/validate'
 
 export interface ExerciseViewProps {
@@ -20,4 +20,9 @@ export interface ExerciseTypeDef {
   check?(exercise: Exercise, answer: Answer): Promise<Verdict>
   /** La vista ya muestra la figura (no la agrega el reproductor). */
   ownsFigure?: boolean
+  /** El enunciado se muestra dentro de la vista (no como título). */
+  promptInView?: boolean
 }
+
+/** Lo que exporta cada archivo de src/engine/types/ como `exerciseTypes`. */
+export type ExerciseTypeRegistrations = Partial<Record<ExerciseType, ExerciseTypeDef>>

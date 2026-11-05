@@ -1,4 +1,5 @@
 import type { Exercise } from '../../models'
+import { answerShape } from '../exerciseTypes'
 
 export type Answer = Record<string, string>
 export type Verdict = 'correct' | 'incorrect' | 'invalid'
@@ -11,9 +12,9 @@ export function answerType(ex: Exercise): string {
 /** ¿Hay respuesta suficiente para habilitar Comprobar? */
 export function hasAnswer(ex: Exercise, answer: Answer | null): boolean {
   if (!answer) return false
-  const t = answerType(ex)
-  if (t === 'fill_blanks') return (ex.payload.blanks ?? []).every((b) => !!answer[b])
-  if (t === 'draw_structure') return !!answer.smiles
+  const shape = answerShape(answerType(ex))
+  if (shape === 'blanks') return (ex.payload.blanks ?? []).every((b) => !!answer[b])
+  if (shape === 'structure') return !!answer.smiles
   return !!answer.value
 }
 
