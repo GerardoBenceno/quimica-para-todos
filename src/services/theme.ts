@@ -20,6 +20,8 @@ const FALLBACKS: Record<string, string[]> = {
   sheet_shadow: ['line', 'locked'],
   card: ['surface'],
   surface_warm: ['surface'],
+  // Papel para ilustraciones con tinta fija (PNG): blanco también en el tema oscuro.
+  illustration_bg: ['surface'],
   progress_track: ['line', 'locked'],
   block_strong: ['primary_selected_bg'],
   block_bright: ['primary_selected_bg'],

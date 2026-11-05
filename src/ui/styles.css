@@ -766,6 +766,7 @@ sup {
 }
 .figure-plain {
   border: 0;
+  background: var(--color-illustration-bg);
 }
 .intro-actions {
   display: flex;

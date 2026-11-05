@@ -20,7 +20,6 @@ export function AboutScreen() {
   const worlds = b.worlds.filter((w) => w.is_active && w.status !== 'coming_soon')
   const soon = b.worlds.filter((w) => w.is_active && w.status === 'coming_soon')
   const lessons = b.lessons.filter((l) => l.is_active)
-  const exercises = b.exercises.filter((e) => e.is_active && e.lesson_id && lessons.some((l) => l.id === e.lesson_id))
   const items = b.diagnosticItems.filter((i) => i.is_active)
 
   const body = (
@@ -36,7 +35,7 @@ export function AboutScreen() {
         <h2 id="about-content" className="t-18">
           {t('about.content_title')}
         </h2>
-        <p>{t('about.content', { worlds: worlds.length, lessons: lessons.length, exercises: exercises.length, items: items.length, soon: soon.length })}</p>
+        <p>{t('about.content', { worlds: worlds.length, lessons: lessons.length, items: items.length, soon: soon.length })}</p>
         <p className="muted">{t('about.content_note')}</p>
       </section>
 

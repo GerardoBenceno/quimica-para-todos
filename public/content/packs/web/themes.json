@@ -35,7 +35,8 @@
       "block_bright": "#8FC9FF",
       "block_mid": "#A2D2FF",
       "block_soft": "#BDE0FE",
-      "block_pale": "#D1E8FC"
+      "block_pale": "#D1E8FC",
+      "illustration_bg": "#FFFFFF"
     },
     "typography": {
       "font_family": "IBM Plex Sans Variable",
@@ -104,7 +105,8 @@
       "block_bright": "#1F4766",
       "block_mid": "#244763",
       "block_soft": "#203E58",
-      "block_pale": "#1C3045"
+      "block_pale": "#1C3045",
+      "illustration_bg": "#FFFFFF"
     },
     "typography": {
       "font_family": "IBM Plex Sans Variable",
