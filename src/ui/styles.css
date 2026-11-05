@@ -374,6 +374,44 @@ sup {
   white-space: pre-wrap;
   font-size: var(--fs-13);
   color: var(--color-text-secondary);
+  margin: 8px 0 0;
+}
+.state-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px;
+  width: 100%;
+}
+.state-panel p {
+  margin: 0;
+}
+.tech-detail {
+  width: 100%;
+  font-size: var(--fs-14);
+  color: var(--color-text-secondary);
+}
+.tech-detail summary {
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.brand-loading {
+  font-size: var(--fs-22);
+}
+.viewer3d-canvas.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px dashed var(--color-line);
+}
+.editor-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
 }
 
 .offline-banner {

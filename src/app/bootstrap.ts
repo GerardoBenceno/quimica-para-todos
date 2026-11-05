@@ -31,6 +31,10 @@ export async function bootstrap(): Promise<void> {
   try {
     const [featuresJson, uiJson] = await Promise.all([getJson('config/features.json'), getJson('config/ui.json')])
     const ui = uiConfigSchema.parse(uiJson)
+    const i18n = new LocalizationService(ui.locale)
+    i18n.addUi((await getJson(ui.ui_strings)) as Record<string, string>)
+    content.setI18n(i18n)
+    document.documentElement.lang = ui.locale
 
     const contentRepo = new JsonPacksContentRepository(BASE)
     const loaded = await contentRepo.load()
@@ -41,10 +45,7 @@ export async function bootstrap(): Promise<void> {
     const store = new SafeLocalStore()
     const deps = { store, access: bundle.access, debug: import.meta.env.DEV }
 
-    const i18n = new LocalizationService(ui.locale)
     i18n.addContent(bundle.translations)
-    i18n.addUi((await getJson(ui.ui_strings)) as Record<string, string>)
-    document.documentElement.lang = ui.locale
 
     const [auth, progress, entitlements, ads, analytics] = await Promise.all([
       selectAuth(flags, deps),

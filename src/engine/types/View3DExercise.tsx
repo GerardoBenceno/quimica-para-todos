@@ -30,7 +30,7 @@ export function View3DExercise(props: ExerciseViewProps) {
   const Base = answerType(props.exercise) === 'fill_blanks' ? FillBlanksView : OptionsView
   return (
     <>
-      <figure className="figure figure-3d">{Viewer ? <Viewer smiles={smiles} ariaLabel={t('viewer3d.label')} /> : <div className="viewer3d-canvas loading" aria-busy="true" />}</figure>
+      <figure className="figure figure-3d">{Viewer ? <Viewer smiles={smiles} ariaLabel={t('viewer3d.label')} /> : <div className="viewer3d-canvas loading muted t-14" aria-busy="true">{t('viewer3d.loading')}</div>}</figure>
       <Base {...props} />
     </>
   )

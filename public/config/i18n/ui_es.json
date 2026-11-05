@@ -4,9 +4,9 @@
   "welcome.lead": "Ejercicios de menos de un minuto, con las estructuras dibujadas como en un libro de texto.",
   "welcome.start": "Empezar",
   "welcome.no_signup": "Sin registro. Tu avance se guarda en este dispositivo.",
-  "error.content_title": "No se pudo cargar el contenido",
-  "error.retry": "Reintentar",
-  "error.not_found": "No encontramos esta página.",
+  "error.content_title": "No pudimos cargar el contenido",
+  "error.retry": "Volver a intentar",
+  "error.not_found": "Esta página no existe",
   "error.go_home": "Ir al inicio",
   "offline.notice": "Sin conexión. Puedes seguir con lo que ya está guardado en este dispositivo.",
   "access.premium": "Requiere plan",
@@ -156,7 +156,7 @@
   "profile.reset_confirm": "¿Borrar todo tu avance en este dispositivo? No se puede deshacer.",
   "profile.reset_yes": "Sí, borrar",
   "profile.reset_no": "Cancelar",
-  "profile.reset_done": "Progreso reiniciado.",
+  "profile.reset_done": "Listo. Tu avance en este dispositivo se borró y empiezas de cero.",
   "draw.loading": "Cargando el editor de estructuras…",
   "draw.editor_failed": "No se pudo cargar el editor de estructuras. Revisa tu conexión y vuelve a intentarlo.",
   "draw.editor_label": "Editor de estructuras",
@@ -166,5 +166,10 @@
   "viewer3d.help": "Arrastra para girar o usa los botones.",
   "viewer3d.rotate_left": "Girar a la izquierda",
   "viewer3d.rotate_right": "Girar a la derecha",
-  "viewer3d.missing": "No hay modelo 3D para esta molécula."
+  "viewer3d.missing": "No hay modelo 3D para esta molécula.",
+  "error.content_lead": "Puede ser un problema de conexión o un archivo de contenido dañado. Vuelve a intentarlo; si sigue fallando, avisa a quien mantiene la app.",
+  "error.technical_detail": "Detalle técnico",
+  "error.not_found_lead": "Quizá el enlace cambió o la lección ya no está disponible. Puedes volver al inicio o al mapa de mundos.",
+  "error.go_map": "Ver el mapa de mundos",
+  "viewer3d.loading": "Cargando el modelo 3D…"
 }

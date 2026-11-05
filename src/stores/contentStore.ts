@@ -21,6 +21,8 @@ interface ContentState {
   theme: Theme | null
   setReady(p: { bundle: ContentBundle; i18n: LocalizationService; assets: AssetService; ui: UiConfig; theme: Theme | null }): void
   setError(message: string): void
+  /** Los textos de UI se cargan antes que el contenido para que carga y error tengan texto. */
+  setI18n(i18n: LocalizationService): void
   setTheme(theme: Theme): void
 }
 
@@ -34,6 +36,7 @@ export const useContentStore = create<ContentState>((set) => ({
   theme: null,
   setReady: (p) => set({ status: 'ready', error: null, ...p }),
   setError: (message) => set({ status: 'error', error: message }),
+  setI18n: (i18n) => set({ i18n }),
   setTheme: (theme) => set({ theme }),
 }))
 
