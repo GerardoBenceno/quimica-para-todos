@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { servicesOrNull } from '../app/services'
-import { KEY_EDITOR_DRAFT } from '../core/storageKeys'
+import { KEY_EDITOR_DRAFT, KEY_EDITOR_DRAFTS } from '../core/storageKeys'
 import { buildExercise, draftToCsv, slugify, validateDraft, type Draft } from '../core/content/exerciseCsv'
 import { useBundle, useContentStore } from '../stores/contentStore'
 import { SafeLocalStore } from '../services/safeStorage'
@@ -22,6 +22,23 @@ const loadDraft = (): Draft => {
 }
 
 type Preview = 'question' | 'correct' | 'incorrect'
+
+const loadDrafts = (): Draft[] => {
+  try {
+    const raw = store.get(KEY_EDITOR_DRAFTS)
+    const list = raw ? (JSON.parse(raw) as Draft[]) : []
+    return Array.isArray(list) ? list.map((d) => ({ ...EMPTY, ...d })) : []
+  } catch {
+    return []
+  }
+}
+const saveDrafts = (list: Draft[]) => {
+  try {
+    store.set(KEY_EDITOR_DRAFTS, JSON.stringify(list))
+  } catch {
+    /* sin guardado */
+  }
+}
 
 /** Fórmula y estructura de un SMILES calculadas en vivo con RDKit.js. */
 function useSmilesCheck(smiles: string) {
@@ -63,6 +80,7 @@ export function EditorScreen() {
   const [frame, setFrame] = useState<'phone' | 'desktop'>('phone')
   const [preview, setPreview] = useState<Preview>('question')
   const [touched, setTouched] = useState(false)
+  const [drafts, setDrafts] = useState<Draft[]>(loadDrafts)
   const smilesState = useSmilesCheck(draft.smiles)
   const lessons = useMemo(() => b.lessons.filter((l) => l.is_active), [b])
 
@@ -107,8 +125,24 @@ export function EditorScreen() {
   const previewKey = `${JSON.stringify(built.exercise)}|${preview}`
   const canDownload = Object.keys(errors).length === 0 && !smilesError
 
+  const current = (): Draft => ({ ...draft, slug: draft.slug || slugify(draft.prompt) })
+  const saveCurrent = () => {
+    const d = current()
+    const list = [...drafts.filter((x) => !(x.pack === d.pack && x.slug === d.slug)), d]
+    setDrafts(list)
+    saveDrafts(list)
+  }
+  const removeDraft = (d: Draft) => {
+    const list = drafts.filter((x) => !(x.pack === d.pack && x.slug === d.slug))
+    setDrafts(list)
+    saveDrafts(list)
+  }
+
   const download = () => {
-    const files = draftToCsv([{ ...draft, slug: draft.slug || slugify(draft.prompt) }], i18n?.locale ?? 'es')
+    // Todos los borradores guardados del mismo paquete más el actual (sin repetir).
+    const d = current()
+    const all = [...drafts.filter((x) => x.pack === d.pack && !(x.slug === d.slug)), d]
+    const files = draftToCsv(all, i18n?.locale ?? 'es')
     for (const [name, text] of [['ejercicios.csv', files.ejercicios], ['traducciones.csv', files.traducciones], ['retroalimentacion.csv', files.retroalimentacion]] as const) {
       const url = URL.createObjectURL(new Blob([text], { type: 'text/csv;charset=utf-8' }))
       const a = document.createElement('a')
@@ -226,6 +260,43 @@ export function EditorScreen() {
         </button>
       </div>
       <p className="muted t-14">{t('editor.download_help', { pack: draft.pack })}</p>
+      <section className="section" aria-labelledby="ed-drafts">
+        <h2 id="ed-drafts" className="t-18">
+          {t('editor.drafts')}
+        </h2>
+        <p className="muted t-14">{t('editor.drafts_help')}</p>
+        <button type="button" className="btn btn-secondary" disabled={!canDownload} onClick={saveCurrent}>
+          {t('editor.save_draft')}
+        </button>
+        {drafts.length > 0 && (
+          <ul className="data-list panel">
+            {drafts.map((d) => (
+              <li key={`${d.pack}_${d.slug}`}>
+                <span>
+                  <strong>{`${d.pack}_e_${d.slug}`}</strong>
+                  <br />
+                  <span className="t-14">{d.prompt.slice(0, 60)}</span>
+                </span>
+                <span className="confirm-actions">
+                  <button
+                    type="button"
+                    className="link"
+                    onClick={() => {
+                      setDraft(d)
+                      setTouched(false)
+                    }}
+                  >
+                    {t('editor.load_draft')}
+                  </button>
+                  <button type="button" className="link" onClick={() => removeDraft(d)}>
+                    {t('editor.delete_draft')}
+                  </button>
+                </span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
     </form>
   )
 

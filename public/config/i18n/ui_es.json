@@ -293,5 +293,10 @@
   "editor.err_options_repeated": "Hay opciones repetidas.",
   "editor.err_correct": "Marca cuál opción es la correcta.",
   "editor.err_explanation": "Escribe la explicación.",
-  "editor.err_smiles": "RDKit.js no pudo leer este SMILES: revisa paréntesis, valencias y mayúsculas."
+  "editor.err_smiles": "RDKit.js no pudo leer este SMILES: revisa paréntesis, valencias y mayúsculas.",
+  "editor.drafts": "Borradores guardados",
+  "editor.drafts_help": "Guarda varios ejercicios del mismo paquete y descárgalos juntos en un solo CSV. Se guardan en este navegador.",
+  "editor.save_draft": "Guardar como borrador",
+  "editor.load_draft": "Cargar",
+  "editor.delete_draft": "Borrar"
 }

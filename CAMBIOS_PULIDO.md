@@ -52,7 +52,7 @@ Qué cambió respecto al cierre del hito 6, qué quedó pendiente y por qué. El
 
 27. **Editor del autor `#/editor`** (ruta oculta): formulario (paquete, nombre corto, lección, tipo opción múltiple o verdadero/falso, pregunta, opciones A a D con la correcta marcada, explicación, pista, SMILES opcional validado en vivo con RDKit.js con fórmula y estructura) con errores junto a cada campo; vista previa con el reproductor y la hoja de retroalimentación reales que se actualiza con cada tecla, con selector Celular (marco de 390 px) o Computadora y estados Pregunta, Respuesta correcta y Respuesta incorrecta; en pantallas angostas, pestañas Editar y Vista previa. Descarga `ejercicios.csv`, `traducciones.csv` y `retroalimentacion.csv` en el formato del importador (`src/core/content/exerciseCsv.ts`), con test que importa lo generado sin errores (`scripts/editor-csv.test.ts`). El borrador se guarda en el navegador con try/catch. Para la vista previa, el renderizador de moléculas cae a RDKit.js en tiempo de ejecución cuando el SMILES no tiene SVG pregenerado (método `svg` del puerto `StructureMatcher`), y el reproductor acepta un estado inicial de vista previa. Receta en el README. Corregido de paso el cálculo de fórmula con RDKit.js (en MinimalLib 2026.09 `add_hs` modifica en el lugar), que dejaba la vista de revisión en "calculando…".
 
-Pendiente del editor: lista de borradores guardados (hoy se guarda uno solo) y edición de varios ejercicios por descarga.
+Lista de borradores guardados en el navegador (guardar, cargar, borrar) y descarga conjunta de todos los del mismo paquete en un solo CSV.
 
 ## Para que lo corrija el autor
 

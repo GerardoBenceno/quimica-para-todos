@@ -4,3 +4,4 @@ export const KEY_USER_ID = `${STORAGE_PREFIX}:anon_user_id`
 export const keyUserState = (userId: string) => `${STORAGE_PREFIX}:state:${userId}`
 export const KEY_PREFS = `${STORAGE_PREFIX}:prefs`
 export const KEY_EDITOR_DRAFT = `${STORAGE_PREFIX}:editor_draft`
+export const KEY_EDITOR_DRAFTS = `${STORAGE_PREFIX}:editor_drafts`
