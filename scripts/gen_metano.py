@@ -23,6 +23,8 @@ OUT = ROOT / "arte" / "originales" / "asset_metano_tetraedrico.png"
 SIZE = 512
 INK = (0x1E / 255, 0x1E / 255, 0x1E / 255)
 SEED = 0x5EED
+# Semiángulo entre la cuña y la línea discontinua (convención gráfica).
+SPLAY_DEG = 27
 # Fuente para "C", "H" y el rótulo del ángulo (incluye el signo de grado).
 FONT = Path("/usr/share/fonts/opentype/inter/Inter-Medium.otf")
 
@@ -38,25 +40,29 @@ def conformer_3d() -> tuple[Chem.Mol, np.ndarray]:
 
 
 def oriented_2d(xyz: np.ndarray) -> tuple[np.ndarray, int, int]:
-    """Rota el tetraedro para que H1 y H2 queden en el plano del papel (z = 0)
-    y devuelve la proyección, el índice del H al frente y el del H atrás."""
+    """Convención de libro: los dos H del plano del papel se proyectan tal cual
+    (su ángulo H-C-H de 109.5° queda real sobre el papel) y los otros dos, que
+    en una proyección exacta caerían en el mismo punto, se dibujan juntos del
+    otro lado, separados de forma simétrica respecto a la bisectriz, uno con
+    cuña (frente) y otro con línea discontinua (atrás). Devuelve la proyección,
+    el índice del H del frente y el del H de atrás."""
     h = [1, 2, 3, 4]
-    # Base ortonormal: e1 bisectriz de H1 y H2 (apunta abajo), e2 en el plano H1-C-H2.
+    # Base ortonormal: e1 bisectriz de H1 y H2, e2 en el plano H1-C-H2, e3 normal al papel.
     u1, u2 = xyz[h[0]] / np.linalg.norm(xyz[h[0]]), xyz[h[1]] / np.linalg.norm(xyz[h[1]])
     e1 = (u1 + u2) / np.linalg.norm(u1 + u2)
     e2 = (u1 - u2) / np.linalg.norm(u1 - u2)
     e3 = np.cross(e1, e2)
-    rot = np.vstack([e2, -e1, e3])  # x = e2 (horizontal), y = -e1 (bisectriz hacia arriba), z = e3
+    rot = np.vstack([e2, -e1, e3])  # x horizontal, y = -bisectriz (H1 y H2 abajo), z hacia el lector
     p = xyz @ rot.T
-    # Giro de 50° alrededor del eje vertical: si H3 y H4 fueran simétricos
-    # respecto al plano del papel se proyectarían en el mismo punto. Así el H
-    # del frente y el de atrás quedan separados, como en el dibujo de libro.
-    th = np.radians(50)
-    tilt = np.array([[np.cos(th), 0, np.sin(th)], [0, 1, 0], [-np.sin(th), 0, np.cos(th)]])
-    p = p @ tilt.T
     front = max(h[2:], key=lambda i: p[i][2])
     back = min(h[2:], key=lambda i: p[i][2])
-    # Los dos H del plano quedan abajo, abiertos; los otros dos arriba, uno al frente y uno atrás.
+    # Cuña y línea discontinua: a ±SPLAY de la bisectriz (hacia arriba), algo
+    # más cortas para sugerir profundidad. Es convención gráfica, no proyección.
+    bond = float(np.linalg.norm(xyz[h[0]]))
+    length = 0.88 * bond
+    delta = np.radians(SPLAY_DEG)
+    p[front, :2] = (length * np.sin(delta), length * np.cos(delta))
+    p[back, :2] = (-length * np.sin(delta), length * np.cos(delta))
     return p[:, :2], front, back
 
 
