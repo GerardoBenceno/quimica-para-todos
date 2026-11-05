@@ -242,5 +242,6 @@
   "pwa.install_lead": "Queda en tu pantalla de inicio y abre a pantalla completa, también sin conexión.",
   "pwa.install": "Instalar en este dispositivo",
   "pwa.installed": "La app ya está instalada en este dispositivo.",
-  "draw.editor_offline": "El editor de estructuras necesita descargarse una vez con conexión. Conéctate y vuelve a abrir este ejercicio; mientras tanto puedes seguir con los demás."
+  "draw.editor_offline": "El editor de estructuras necesita descargarse una vez con conexión. Conéctate y vuelve a abrir este ejercicio; mientras tanto puedes seguir con los demás.",
+  "path.side_label": "Lección en curso"
 }

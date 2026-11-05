@@ -859,6 +859,42 @@ sup {
   padding-top: 8px;
   padding-bottom: 32px;
 }
+.path-col {
+  width: 100%;
+}
+/* Escritorio: la ruta y la lección en curso lado a lado; en móvil solo la ruta. */
+.path-side {
+  display: none;
+}
+@media (min-width: 960px) {
+  .path-main {
+    max-width: 1160px;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+  }
+  .path-col {
+    flex: 0 0 440px;
+  }
+  .path-side {
+    display: block;
+    flex: 1 1 0;
+    min-width: 0;
+    position: sticky;
+    top: 24px;
+    padding: 24px 28px;
+  }
+  .path-side .t-36 {
+    font-size: var(--fs-28);
+  }
+  .path-header .narrow {
+    max-width: 1160px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
 .chain {
   position: relative;
   width: 100%;
