@@ -61,3 +61,11 @@ Registro de los supuestos tomados durante la construcción, en el orden en que a
 9. **Lugar de los derivados.** Los draw_structure se agregan a la lección de su ejercicio de origen (después de los del seed), no a lecciones nuevas, para no cambiar el número de lecciones de los mundos ni inventar títulos. l_numeracion pasa de 4 a 6 ejercicios y l_ramificados de 3 a 6.
 10. **Acceso para pruebas.** El wrapper deja la instancia de Ketcher en `window.ketcher` (Ketcher lo hace en otras versiones) para que la verificación de extremo a extremo pueda dibujar con `setMolecule`.
 11. **Una pantalla por lección.** La ruta `/leccion/:id` monta `LessonScreen` con `key` igual al id, para que pasar de una lección a otra sin salir de la ruta no arrastre la sesión anterior (error encontrado en la verificación del hito 4).
+
+## Hito 5: view_3d con 3Dmol.js
+
+1. **Visor.** 3Dmol.js 2.5.5 cargado con `import()` dinámico al primer view_3d (chunk `assets/3dmol-*`, 574 kB). Como pesa menos de 2 MiB, sí entra al precache: así el ejercicio 3D funciona sin conexión. Los SDF pregenerados también están en el precache.
+2. **Estilo 3D.** Barras y esferas pequeñas; los colores salen de las variables del tema en tiempo de ejecución (`--color-mol-ink` para C, `--color-control-border` para H, `--color-primary` para cualquier otro elemento; fondo `--color-surface`). No se usa la paleta CPK, por coherencia con las figuras 2D.
+3. **Accesibilidad.** El lienzo tiene `role="img"` con etiqueta y se acompaña de dos botones de 48 px para girar 30° a cada lado, para quien no puede arrastrar.
+4. **Selección de ejercicios.** Los 6 view_3d derivan de ejercicios de hibridación del seed con estructura; se excluyen los 3 que preguntan cuál molécula es (ver REPORTE_QUIMICA.md). view_3d sustituye a su ejercicio de origen solo si el flag `molecules3d` está encendido y hay adaptador; si no, la lección muestra el ejercicio del seed.
+5. **Flag.** `selectViewer3D` devuelve `null` con `molecules3d: false`; con el flag apagado la lección vuelve sola a los ejercicios del seed.

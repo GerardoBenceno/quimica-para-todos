@@ -31,7 +31,7 @@ function brandHtml(): Plugin {
 }
 
 // Motores pesados: fuera del precache, en caché de tiempo de ejecución.
-const ENGINE_GLOBS = ['**/assets/ketcher-*', '**/assets/indigoWorker-*', '**/assets/supabase-*.js', '**/assets/Provider*.js', '**/*.wasm', '**/vendor/**', '**/assets/ketcher-*.js', '**/assets/ketcher-*.css', '**/assets/engine-*.js', '**/assets/3dmol-*.js', '**/assets/rdkit-*.js', '**/assets/indigo-*.js']
+const ENGINE_GLOBS = ['**/assets/ketcher-*', '**/assets/indigoWorker-*', '**/assets/supabase-*.js', '**/assets/Provider*.js', '**/*.wasm', '**/vendor/**', '**/assets/ketcher-*.js', '**/assets/ketcher-*.css', '**/assets/engine-*.js', '**/assets/rdkit-*.js', '**/assets/indigo-*.js']
 
 export default defineConfig({
   base,
@@ -44,7 +44,9 @@ export default defineConfig({
         chunkFileNames: (chunk) =>
           chunk.moduleIds.some((id) => /node_modules[\\/](ketcher-|indigo-)|adapters[\\/]ketcher/.test(id))
             ? 'assets/ketcher-[hash].js'
-            : 'assets/[name]-[hash].js',
+            : chunk.moduleIds.some((id) => /node_modules[\\/]3dmol/.test(id))
+              ? 'assets/3dmol-[hash].js'
+              : 'assets/[name]-[hash].js',
         assetFileNames: (asset) =>
           (asset.names ?? []).some((n) => /ketcher|indigo/i.test(n)) ? 'assets/ketcher-[hash][extname]' : 'assets/[name]-[hash][extname]',
       },

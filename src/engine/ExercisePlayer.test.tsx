@@ -102,3 +102,32 @@ describe('tipos web', () => {
     expect(onRecord.mock.calls[0][2]).toMatch(/correct|incorrect/)
   })
 })
+
+describe('view_3d', () => {
+  it('muestra el visor registrado y responde como su ejercicio de origen', async () => {
+    const { bundle: bb } = setupApp({
+      viewer3d: {
+        id: 'falso',
+        isAvailable: async () => true,
+        load: async () =>
+          function FakeViewer({ ariaLabel }: { ariaLabel: string }) {
+            return <div role="img" aria-label={ariaLabel} />
+          },
+      },
+    })
+    const e = bb.exercises.find((x) => x.type === 'view_3d')!
+    const src = bb.exercises.find((x) => x.id === e.payload.source_exercise_id)!
+    const onRecord = vi.fn()
+    render(
+      <Router>
+        <ExercisePlayer exercises={[e]} attemptId="a" mode="lesson" onRecord={onRecord} onFinish={vi.fn()} onClose={vi.fn()} />
+      </Router>,
+    )
+    expect(await screen.findByRole('img', { name: 'Modelo 3D de la molécula' })).toBeInTheDocument()
+    expect(screen.getAllByRole('radio')).toHaveLength(src.payload.options!.length)
+    const label = i18n.t(src.payload.options!.find((o) => o.value === src.correct.value)!.key)
+    await userEvent.click(screen.getAllByRole('radio').find((r) => r.textContent?.includes(label))!)
+    await userEvent.click(screen.getByRole('button', { name: 'Comprobar' }))
+    expect(onRecord.mock.calls[0][2]).toBe('correct')
+  })
+})

@@ -214,3 +214,22 @@ export async function draw({ newPage, shot, URL }) {
   await noHorizontalScroll(m.page, '360 resultado')
   await m.ctx.close()
 }
+
+export async function view3d({ newPage, shot, URL }) {
+  const { ctx, page } = await newPage()
+  await firstSession(page, URL)
+  await completeLessons(page, ['l_carbono_enlaces', 'l_organico'])
+  await page.goto(`${URL}#/leccion/l_sp3`)
+  await page.getByRole('button', { name: 'Empezar lección' }).click()
+  await page.locator('.viewer3d-canvas canvas').first().waitFor({ timeout: 30000 })
+  await page.getByRole('button', { name: 'Girar a la derecha' }).click()
+  await page.waitForTimeout(500)
+  const size = await page.locator('.viewer3d-canvas canvas').first().boundingBox()
+  if (!size || size.width < 100 || size.height < 100) throw new Error('lienzo 3D vacío')
+  await shot(page, 'v3d-01-visor')
+  await answerVisible(page)
+  await page.getByRole('button', { name: 'Comprobar' }).click()
+  await page.getByRole('button', { name: 'Continuar', exact: true }).waitFor()
+  await shot(page, 'v3d-02-retro')
+  await ctx.close()
+}

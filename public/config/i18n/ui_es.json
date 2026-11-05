@@ -161,5 +161,10 @@
   "draw.editor_failed": "No se pudo cargar el editor de estructuras. Revisa tu conexión y vuelve a intentarlo.",
   "draw.editor_label": "Editor de estructuras",
   "draw.help": "Dibuja la cadena con la herramienta de enlace sencillo; los hidrógenos no hacen falta.",
-  "choose.option_label": "Estructura {l}"
+  "choose.option_label": "Estructura {l}",
+  "viewer3d.label": "Modelo 3D de la molécula",
+  "viewer3d.help": "Arrastra para girar o usa los botones.",
+  "viewer3d.rotate_left": "Girar a la izquierda",
+  "viewer3d.rotate_right": "Girar a la derecha",
+  "viewer3d.missing": "No hay modelo 3D para esta molécula."
 }

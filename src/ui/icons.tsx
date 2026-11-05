@@ -53,3 +53,9 @@ export const ProfileIcon = ({ size = 24, className }: P) => (
   </svg>
 )
 export const RewardsIcon = ({ size = 24, className }: P) => <ChestIcon size={size} className={className} />
+export const RotateIcon = ({ size = 22, className, flip }: P & { flip?: boolean }) => (
+  <svg className={className} width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" style={flip ? { transform: 'scaleX(-1)' } : undefined}>
+    <path d="M5 12 a7 7 0 1 0 2.2 -5.1" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <polyline points="5,4 5,8.5 9.5,8.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)

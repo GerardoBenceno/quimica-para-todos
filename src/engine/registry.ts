@@ -5,6 +5,7 @@ import { FillBlanksView } from './FillBlanksView'
 import { ChatCompleteView } from './ChatCompleteView'
 import { DrawStructureView, checkDrawStructure } from './DrawStructureView'
 import { ChooseStructureView } from './ChooseStructureView'
+import { View3DExercise } from './View3DExercise'
 
 /**
  * Registro tipo -> componente. Agregar un tipo de ejercicio = escribir su
@@ -19,6 +20,7 @@ const registry: Partial<Record<ExerciseType, ExerciseTypeDef>> = {
   chat_complete: { View: ChatCompleteView, ownsFigure: false },
   draw_structure: { View: DrawStructureView, check: checkDrawStructure },
   choose_structure: { View: ChooseStructureView },
+  view_3d: { View: View3DExercise, ownsFigure: true },
 }
 
 export function registerExerciseType(type: ExerciseType, def: ExerciseTypeDef) {
