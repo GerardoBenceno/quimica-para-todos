@@ -32,7 +32,7 @@ export function DrawStructureView({ onAnswer, checked }: ExerciseViewProps) {
     }
   }, [])
 
-  if (failed) return <p role="alert">{t('draw.editor_failed')}</p>
+  if (failed) return <p role="alert" className="inline-note">{t(typeof navigator !== 'undefined' && !navigator.onLine ? 'draw.editor_offline' : 'draw.editor_failed')}</p>
   if (!Editor) return <div className="editor-loading" aria-busy="true">{t('draw.loading')}</div>
   return (
     <div className={`draw ${checked ? 'draw-checked' : ''}`}>

@@ -6,6 +6,7 @@ import { useBundle, useContentStore } from '../stores/contentStore'
 import { useProgressStore, useUserState } from '../stores/progressStore'
 import { useProgressView, useStreak } from '../stores/selectors'
 import { canVibrate, usePrefsStore } from '../stores/prefsStore'
+import { promptInstall, usePwaStore } from '../stores/pwaStore'
 import { backupFileName, makeBackup, readBackup, type BackupError } from '../core/game/backup'
 import { applyTheme } from '../services/theme'
 import { useT } from '../services/i18nHooks'
@@ -32,6 +33,8 @@ export function ProfileScreen() {
   const [pendingImport, setPendingImport] = useState<string | null>(null)
   const [message, setMessage] = useState<{ text: string; error?: boolean } | null>(null)
   const fileInput = useRef<HTMLInputElement>(null)
+  const installEvent = usePwaStore((x) => x.install)
+  const installed = usePwaStore((x) => x.installed)
 
   const worldsDone = Object.values(view.worlds).filter((w) => w.status === 'completed').length
   const solved = new Set(s.exercise_attempts.filter((a) => a.is_correct).map((a) => a.exercise_id)).size
@@ -134,6 +137,22 @@ export function ProfileScreen() {
               <span id="vibration">{t('profile.vibration')}</span>
             </label>
             <p className="muted t-14">{t('profile.vibration_help')}</p>
+          </section>
+        )}
+
+        {(installEvent || installed) && (
+          <section className="section" aria-labelledby="install">
+            <h3 id="install" className="t-18">
+              {t('pwa.install_title')}
+            </h3>
+            <p className="muted t-14">{t('pwa.install_lead')}</p>
+            {installed ? (
+              <p role="status">{t('pwa.installed')}</p>
+            ) : (
+              <button type="button" className="btn btn-secondary" onClick={() => void promptInstall()}>
+                {t('pwa.install')}
+              </button>
+            )}
           </section>
         )}
 

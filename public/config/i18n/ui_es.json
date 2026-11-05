@@ -8,7 +8,7 @@
   "error.retry": "Volver a intentar",
   "error.not_found": "Esta página no existe",
   "error.go_home": "Ir al inicio",
-  "offline.notice": "Sin conexión. Puedes seguir con lo que ya está guardado en este dispositivo.",
+  "offline.notice": "Sin conexión. Puedes seguir con las lecciones ya guardadas en este dispositivo; el editor de estructuras necesita haberse abierto antes con internet.",
   "access.premium": "Requiere plan",
   "nav.main": "Principal",
   "nav.learn": "Aprender",
@@ -235,5 +235,12 @@
   "review.source": "Derivado de {id}",
   "review.template": "Plantilla",
   "review.bank": "Banco",
-  "review.target": "Estructura esperada"
+  "review.target": "Estructura esperada",
+  "pwa.update_ready": "Hay una versión nueva de la app lista.",
+  "pwa.update_now": "Actualizar ahora",
+  "pwa.install_title": "Instalar como app",
+  "pwa.install_lead": "Queda en tu pantalla de inicio y abre a pantalla completa, también sin conexión.",
+  "pwa.install": "Instalar en este dispositivo",
+  "pwa.installed": "La app ya está instalada en este dispositivo.",
+  "draw.editor_offline": "El editor de estructuras necesita descargarse una vez con conexión. Conéctate y vuelve a abrir este ejercicio; mientras tanto puedes seguir con los demás."
 }

@@ -26,6 +26,8 @@ Qué cambió respecto al cierre del hito 6, qué quedó pendiente y por qué. El
 
 16. **Auditoría química automática** (`scripts/audit_chem.py`, `reports/audit_quimica.json`): 47 ejercicios con SMILES, 242 comprobaciones, 0 discrepancias. Resumen y limitaciones en `REPORTE_QUIMICA.md`.
 
+17. **PWA**: aviso discreto cuando el service worker instaló una versión nueva (no recarga sola a mitad de un ejercicio; botón "Actualizar ahora"), sección "Instalar como app" en Ajustes cuando el navegador expone `beforeinstallprompt` (Chromium) y mensajes claros sin conexión: el aviso global explica que el editor de estructuras necesita haberse abierto antes con internet, y el editor lo repite si falla su descarga sin conexión.
+
 ## Para que lo corrija el autor
 
 - `seed/assets.json`: el campo `license` de los 13 assets sigue en `"propio-por-generar"`, pero el arte ya existe. No se cambió porque el seed es del autor; conviene poner la licencia real del arte. Lo mismo para `width` y `height`, que están en `null` (los originales miden 1254 × 1254 y las versiones servidas 512 × 512).

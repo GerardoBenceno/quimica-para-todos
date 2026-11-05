@@ -414,6 +414,17 @@ sup {
   color: var(--color-text-secondary);
 }
 
+.update-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 16px;
+  background: var(--color-primary-selected-bg);
+  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-line);
+  font-size: var(--fs-14);
+  padding: 4px 16px;
+}
 .offline-banner {
   background: var(--color-accent-bg);
   color: var(--color-text-primary);
