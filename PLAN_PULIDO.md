@@ -37,3 +37,17 @@ Lista priorizada de lo que hoy delata que la app es un prototipo, escrita despu�
 11. **Rendimiento en celular.** CSS del shell en línea en `index.html` (sin petición bloqueante) y pantallas cargadas con `React.lazy` para que la bienvenida no descargue el resto.
 12. **Errores de flujo y textos.** Etiquetas de la ruta en móvil, textos de interfaz más claros, y lo que aparezca al recorrer el flujo después de los cambios.
 13. **Documentación.** Receta del arte en el README, decisiones nuevas en `DECISIONES.md`, `CAMBIOS_PULIDO.md` con lo hecho y lo pendiente.
+
+## Ronda 2
+
+Presupuesto: de las 06:30 a las 07:45 UTC del 5 de noviembre de 2026 (75 minutos de trabajo útil), con tres auditorías de solo lectura corriendo en paralelo (química con RDKit, revisión de código y casos borde, rendimiento y accesibilidad medidos). Orden por valor para estudiantes y para el autor, acotado a lo que cabe completo y verificado en ese tiempo:
+
+1. **Metano tetraédrico con convención de libro** (corrección pedida por el autor): hecho primero.
+2. **Vista de revisión `#/revision`** (ruta oculta, sin enlace en la navegación). Es lo de mayor valor para el autor con el tiempo disponible: ver cada ejercicio de cada paquete con enunciado, opciones, respuesta marcada, explicación, mensaje de retroalimentación, estructura dibujada, fórmula calculada con RDKit.js y filtros por mundo, lección y tipo, más una hoja de estilos de impresión. Sin ella la revisión química exige leer JSON.
+3. **Auditoría química automática** (agente): `scripts/audit_chem.py` y `reports/audit_quimica.json`; las discrepancias se integran en `REPORTE_QUIMICA.md`.
+4. **PWA**: aviso discreto de versión nueva, botón de instalar donde el navegador lo permita y mensaje claro cuando falta un motor sin conexión.
+5. **Escritorio a 1280 px**: ruta del mundo y panel de progreso lado a lado sin tocar el diseño móvil.
+6. **Hallazgos de las auditorías** de código, rendimiento y accesibilidad: se corrigen los confirmados que quepan en el tiempo; el resto queda listado en `CAMBIOS_PULIDO.md`.
+7. **Casos borde con tests** según lo que confirmen las auditorías.
+
+Fuera de esta ronda por tiempo, en orden de valor para una siguiente sesión: importador desde hoja de cálculo con exportación inversa y test de ida y vuelta (es la pieza más grande: plantillas por entidad, conversión, moléculas, validación con errores por fila y columna, paso en el workflow); repaso espaciado tipo Leitner (cambia la forma del documento de progreso y necesita migración del respaldo); tema oscuro pantalla por pantalla con el arte (se revisó en la ronda 1 con capturas; queda la pasada fina).
