@@ -122,6 +122,11 @@ export async function game({ newPage, shot, URL }) {
   // Segunda lección: habilita el primer cofre.
   await page.getByRole('button', { name: /Empezar lección|Continuar lección/ }).click()
   await playLesson(page)
+  // Repetir lección: intento nuevo desde el primer ejercicio, sin cerrar la lección.
+  await page.getByRole('button', { name: 'Repetir lección' }).click()
+  await page.getByText(/^Pregunta 1 de \d+$/).waitFor({ timeout: 10000 })
+  await shot(page, 'juego-00-repetir')
+  await playLesson(page)
   await page.getByRole('button', { name: 'Volver a la ruta' }).click()
   await expectVisible(page, '2 de 6 lecciones completadas')
   await shot(page, 'juego-01-ruta-cofre')

@@ -13,11 +13,17 @@ import { useProgressStore } from './progressStore'
 
 const store = () => useProgressStore.getState()
 
-/** Empieza o reanuda una lección. Devuelve el intento y desde qué ejercicio seguir. */
-export function beginLesson(lessonId: string, total: number): { attemptId: string; startIndex: number; correct: number } {
+/**
+ * Empieza o reanuda una lección. Devuelve el intento y desde qué ejercicio seguir.
+ * Con `restart` ("Repetir lección") nunca reanuda: abre un intento nuevo desde el
+ * primer ejercicio (id nuevo, así las opciones se barajan de nuevo), aunque quede
+ * un intento de esa lección con todos los ejercicios respondidos, que sin
+ * `restart` se cerraría y llevaría al resultado en lugar de reiniciarse.
+ */
+export function beginLesson(lessonId: string, total: number, opts: { restart?: boolean } = {}): { attemptId: string; startIndex: number; correct: number } {
   const s = store().state!
   const ip = s.in_progress
-  if (ip && ip.lesson_id === lessonId && ip.total === total) {
+  if (!opts.restart && ip && ip.lesson_id === lessonId && ip.total === total) {
     const attempt = [...s.lesson_attempts].reverse().find((a) => a.lesson_id === lessonId && !a.completed)
     if (attempt) {
       // Si ya se respondieron todos (se cerró antes de "Continuar"), startIndex = total

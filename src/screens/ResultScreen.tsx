@@ -143,6 +143,10 @@ export function ResultScreen() {
               </button>
             </>
           )}
+          {/* Intento nuevo de la misma lección; la recompensa de la primera vez no se repite. */}
+          <button type="button" className="btn btn-secondary btn-block" onClick={() => navigate(routes.lesson(lesson.id), { replace: true, state: { autostart: true, restart: true } })}>
+            {t('result.repeat')}
+          </button>
         </div>
       </main>
     </div>

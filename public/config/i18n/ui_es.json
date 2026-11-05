@@ -111,6 +111,7 @@
   "result.continue_next_world": "Seguir con la siguiente lección",
   "result.back_to_path": "Volver a la ruta",
   "result.see_map": "Ver el mapa de mundos",
+  "result.repeat": "Repetir lección",
   "practice.title": "Repasar errores",
   "practice.lead": "Tienes {n} ejercicio para repasar. Empezamos por los que más has fallado.|Tienes {n} ejercicios para repasar. Empezamos por los que más has fallado.",
   "practice.failed_times": "{n} vez|{n} veces",
