@@ -1,7 +1,11 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useBundle } from "../stores/contentStore";
 import { useUserState } from "../stores/progressStore";
-import { useCompleted, useProgressView } from "../stores/selectors";
+import {
+  useCompleted,
+  useProgressView,
+  useStartHere,
+} from "../stores/selectors";
 import { lessonsOfWorld } from "../core/game/structure";
 import { chestNodes } from "../core/game/rewards";
 import { openChest } from "../stores/actions";
@@ -37,6 +41,7 @@ export function WorldPathScreen() {
   const view = useProgressView();
   const completed = useCompleted();
   const navigate = useNavigate();
+  const startHere = useStartHere();
   const world = b.worlds.find((w) => w.id === worldId && w.is_active);
   const wv = view.worlds[worldId];
   if (!world || !wv) return <NotFoundScreen />;
@@ -137,6 +142,11 @@ export function WorldPathScreen() {
                         ? t("path.status_opens_after", { n: i })
                         : t("map.locked");
                 const name = t(l.title_key);
+                const isStart = l.id === startHere;
+                const vertexLabel = t(
+                  isStart ? "path.vertex_label_start" : "path.vertex_label",
+                  { n: i + 1, name, status },
+                );
                 const style = {
                   left: vertexX(i) - PATH.r,
                   top: vertexY(i) - PATH.r,
@@ -152,11 +162,7 @@ export function WorldPathScreen() {
                         className={`vertex ${st}`}
                         style={style}
                         role="img"
-                        aria-label={t("path.vertex_label", {
-                          n: i + 1,
-                          name,
-                          status,
-                        })}
+                        aria-label={vertexLabel}
                       >
                         <VertexMark state={st} n={i + 1} />
                       </span>
@@ -165,11 +171,7 @@ export function WorldPathScreen() {
                         className={`vertex ${st}`}
                         style={style}
                         to={routes.lesson(l.id)}
-                        aria-label={t("path.vertex_label", {
-                          n: i + 1,
-                          name,
-                          status,
-                        })}
+                        aria-label={vertexLabel}
                         aria-current={i === currentIndex ? "step" : undefined}
                       >
                         <VertexMark state={st} n={i + 1} />
@@ -185,6 +187,20 @@ export function WorldPathScreen() {
                       </span>
                       <span className="vertex-status">{status}</span>
                     </div>
+                    {isStart && (
+                      // Banderín fijo sobre el vértice (sin animación); el
+                      // lector de pantalla lo oye en la etiqueta del vértice.
+                      <span
+                        className="tag path-start-tag"
+                        style={{
+                          left: vertexX(i),
+                          top: vertexY(i) - PATH.r - 12,
+                        }}
+                        aria-hidden="true"
+                      >
+                        {t("start_here.label")}
+                      </span>
+                    )}
                   </li>
                 );
               })}
@@ -245,6 +261,7 @@ export function WorldPathScreen() {
                 })
               }
               hidePathLink
+              startHere={lessons[currentIndex].id === startHere}
             />
           </aside>
         )}

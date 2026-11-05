@@ -368,6 +368,16 @@ export async function a11y({ newPage, URL }) {
     await run(page, 'diagnóstico')
     await page.getByRole('button', { name: 'No sé, empezar desde el principio' }).click()
     await page.getByRole('button', { name: 'Empezar lección' }).waitFor()
+    // Sin ninguna lección empezada: etiqueta fija "Empieza aquí" en el mapa y en la ruta.
+    for (const hash of ['#/aprender', '#/mundo/w_carbono']) {
+      await page.goto(`${URL}${hash}`)
+      await expectVisible(page, 'Empieza aquí')
+      await page.waitForTimeout(300)
+      await noHorizontalScroll(page, `${hash} con Empieza aquí`)
+      await run(page, `${hash} con Empieza aquí`)
+    }
+    await page.goto(`${URL}#/leccion/l_carbono_enlaces`)
+    await page.getByRole('button', { name: 'Empezar lección' }).waitFor()
     await run(page, 'intro de lección')
     await page.getByRole('button', { name: 'Empezar lección' }).click()
     await answerVisible(page)
@@ -381,6 +391,7 @@ export async function a11y({ newPage, URL }) {
     await page.getByRole('button', { name: 'Ver el mapa de mundos' }).click()
     await expectVisible(page, 'Tu ruta')
     await page.waitForTimeout(300)
+    if ((await page.getByText('Empieza aquí').count()) > 0) throw new Error('mapa: "Empieza aquí" sigue visible tras empezar una lección')
     await run(page, 'mapa')
     for (const [hash, text] of [['#/mundo/w_carbono', 'lecciones completadas'], ['#/perfil', 'Experiencia total'], ['#/recompensas', 'Tienda'], ['#/repasar', 'Empezar repaso'], ['#/acerca', 'Hecho con'], ['#/no-existe', 'Esta página no existe'], ['#/revision', 'Revisión del curso'], ['#/editor', 'Editor de ejercicios']]) {
       await page.goto(`${URL}${hash}`)
