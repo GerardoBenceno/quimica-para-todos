@@ -19,6 +19,13 @@ const FALLBACKS: Record<string, string[]> = {
   focus: ['primary'],
   sheet_shadow: ['line', 'locked'],
   card: ['surface'],
+  surface_warm: ['surface'],
+  progress_track: ['line', 'locked'],
+  block_strong: ['primary_selected_bg'],
+  block_bright: ['primary_selected_bg'],
+  block_mid: ['primary_selected_bg'],
+  block_soft: ['primary_selected_bg'],
+  block_pale: ['primary_selected_bg'],
 }
 
 export function resolveColor(theme: Theme, role: string, depth = 0): string | undefined {

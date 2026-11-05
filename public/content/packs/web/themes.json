@@ -7,11 +7,11 @@
     "colors": {
       "primary": "#1D4F91",
       "primary_hover": "#163B6C",
-      "primary_selected_bg": "#E8EFF8",
-      "primary_halo": "#C9D6E8",
+      "primary_selected_bg": "#C1E4F3",
+      "primary_halo": "#C1E4F3",
       "on_primary": "#FFFFFF",
       "surface": "#FFFFFF",
-      "background": "#F4F6F8",
+      "background": "#E3F1FB",
       "card": "#FFFFFF",
       "accent": "#E2A100",
       "accent_text": "#8A5B00",
@@ -22,20 +22,45 @@
       "error_bg": "#FBECEA",
       "text_primary": "#1E1E1E",
       "text_secondary": "#545B66",
-      "locked": "#808995",
-      "line": "#DCE1E7",
-      "control_border": "#808995",
+      "locked": "#5A6473",
+      "line": "#CFDDE8",
+      "control_border": "#5A6473",
       "mol_ink": "#1E1E1E",
-      "mol_highlight": "#D5E1F1",
+      "mol_highlight": "#C1E4F3",
       "focus": "#1D4F91",
-      "sheet_shadow": "#1E1E1E"
+      "sheet_shadow": "#1E1E1E",
+      "surface_warm": "#FFF9E6",
+      "progress_track": "#A8D0EF",
+      "block_strong": "#99C3E4",
+      "block_bright": "#8FC9FF",
+      "block_mid": "#A2D2FF",
+      "block_soft": "#BDE0FE",
+      "block_pale": "#D1E8FC"
     },
     "typography": {
       "font_family": "IBM Plex Sans Variable",
-      "fallback": ["Noto Sans Math", "system-ui", "sans-serif"],
+      "fallback": [
+        "Noto Sans Math",
+        "system-ui",
+        "sans-serif"
+      ],
       "scale": 1.0,
-      "sizes": [12, 13, 14, 15, 16, 18, 22, 28, 36],
-      "weights": [400, 500, 600],
+      "sizes": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        22,
+        28,
+        36
+      ],
+      "weights": [
+        400,
+        500,
+        600
+      ],
       "body_size": 18,
       "body_line_height": 1.6,
       "measure_ch": 62
@@ -66,20 +91,45 @@
       "error_bg": "#3B1F1C",
       "text_primary": "#E6E9EE",
       "text_secondary": "#A8B0BB",
-      "locked": "#7D8897",
+      "locked": "#93A0AE",
       "line": "#2C3440",
-      "control_border": "#7D8897",
+      "control_border": "#93A0AE",
       "mol_ink": "#E6E9EE",
       "mol_highlight": "#2F4A70",
       "focus": "#8AB4F0",
-      "sheet_shadow": "#000000"
+      "sheet_shadow": "#000000",
+      "surface_warm": "#2A2618",
+      "progress_track": "#2A4668",
+      "block_strong": "#24445F",
+      "block_bright": "#1F4766",
+      "block_mid": "#244763",
+      "block_soft": "#203E58",
+      "block_pale": "#1C3045"
     },
     "typography": {
       "font_family": "IBM Plex Sans Variable",
-      "fallback": ["Noto Sans Math", "system-ui", "sans-serif"],
+      "fallback": [
+        "Noto Sans Math",
+        "system-ui",
+        "sans-serif"
+      ],
       "scale": 1.0,
-      "sizes": [12, 13, 14, 15, 16, 18, 22, 28, 36],
-      "weights": [400, 500, 600],
+      "sizes": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        22,
+        28,
+        36
+      ],
+      "weights": [
+        400,
+        500,
+        600
+      ],
       "body_size": 18,
       "body_line_height": 1.6,
       "measure_ch": 62

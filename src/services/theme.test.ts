@@ -16,7 +16,9 @@ describe('tema', () => {
   it('expone colores y tipografía como variables CSS', () => {
     const v = themeVariables(theme('web_theme_claro_prusia'))
     expect(v['--color-primary']).toBe('#1D4F91')
-    expect(v['--mol-highlight']).toBe('#D5E1F1')
+    expect(v['--mol-highlight']).toBe('#C1E4F3')
+    expect(v['--color-background']).toBe('#E3F1FB')
+    expect(v['--color-surface-warm']).toBe('#FFF9E6')
     expect(v['--fs-22']).toBe('22px')
     expect(v['--font-sans']).toContain('IBM Plex Sans Variable')
   })
@@ -43,6 +45,19 @@ describe('tema', () => {
     ['mol_ink', 'surface'],
     ['mol_ink', 'mol_highlight'],
     ['text_secondary', 'line'],
+    // Paleta del autor: sobre los pasteles fuertes solo va tinta (text_primary).
+    ['text_primary', 'surface_warm'],
+    ['text_primary', 'progress_track'],
+    ['text_primary', 'block_strong'],
+    ['text_primary', 'block_bright'],
+    ['text_primary', 'block_mid'],
+    ['text_primary', 'block_soft'],
+    ['text_primary', 'block_pale'],
+    ['text_secondary', 'surface_warm'],
+    ['primary', 'surface_warm'],
+    ['accent_text', 'surface_warm'],
+    ['success', 'surface_warm'],
+    ['error', 'surface_warm'],
   ]
   const UI_PAIRS: [string, string][] = [
     ['control_border', 'surface'],
@@ -50,6 +65,21 @@ describe('tema', () => {
     ['focus', 'surface'],
     ['success', 'surface'],
     ['error', 'surface'],
+    // Bordes de controles y foco sobre fondos pastel: al menos 3:1.
+    ['control_border', 'background'],
+    ['control_border', 'primary_selected_bg'],
+    ['control_border', 'surface_warm'],
+    ['control_border', 'progress_track'],
+    ['control_border', 'block_strong'],
+    ['control_border', 'block_bright'],
+    ['control_border', 'block_mid'],
+    ['control_border', 'block_soft'],
+    ['control_border', 'block_pale'],
+    ['primary', 'progress_track'],
+    ['focus', 'surface_warm'],
+    ['focus', 'block_pale'],
+    ['focus', 'block_soft'],
+    ['focus', 'primary_selected_bg'],
   ]
   for (const id of ['web_theme_claro_prusia', 'web_theme_oscuro_prusia']) {
     it(`${id} cumple contraste AA en cada par`, () => {

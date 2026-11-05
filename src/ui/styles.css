@@ -231,7 +231,7 @@ sup {
 /* --- Barra de progreso ------------------------------------------------ */
 .progress {
   height: 6px;
-  background: var(--color-line);
+  background: var(--color-progress-track);
   border-radius: 3px;
   overflow: hidden;
 }
