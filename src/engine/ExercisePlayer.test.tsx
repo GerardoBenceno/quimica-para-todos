@@ -39,6 +39,20 @@ describe('ExercisePlayer renderiza cada tipo del seed', () => {
     },
   )
 
+  it('atajos: 1 a 4 eligen la opción visible y Enter comprueba y continúa', async () => {
+    const onRecord = vi.fn()
+    const e = renderPlayer('multiple_choice', onRecord)
+    const radios = screen.getAllByRole('radio')
+    const correctLabel = i18n.t(e.payload.options!.find((o) => o.value === e.correct.value)!.key)
+    const idx = radios.findIndex((r) => r.textContent?.includes(correctLabel))
+    await userEvent.keyboard(String(idx + 1))
+    expect(radios[idx]).toHaveAttribute('aria-checked', 'true')
+    await userEvent.keyboard('{Enter}')
+    expect(onRecord).toHaveBeenCalledWith(e, { value: e.correct.value }, 'correct', expect.any(Number))
+    const next = await screen.findByRole('button', { name: 'Continuar' })
+    expect(next).toBeInTheDocument()
+  })
+
   it('las letras a) b) c) d) se asignan después de barajar', () => {
     renderPlayer('multiple_choice')
     const letters = screen.getAllByRole('radio').map((r) => within(r).getByText(/^[a-d]\)$/).textContent)

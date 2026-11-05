@@ -171,5 +171,6 @@
   "error.technical_detail": "Detalle técnico",
   "error.not_found_lead": "Quizá el enlace cambió o la lección ya no está disponible. Puedes volver al inicio o al mapa de mundos.",
   "error.go_map": "Ver el mapa de mundos",
-  "viewer3d.loading": "Cargando el modelo 3D…"
+  "viewer3d.loading": "Cargando el modelo 3D…",
+  "exercise.keyboard_hint": "Teclado: 1 a {n} eligen una opción, Enter comprueba y continúa."
 }

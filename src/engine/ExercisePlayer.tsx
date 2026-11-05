@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import type { Exercise } from '../models'
-import { hasAnswer, validateAnswer, type Answer, type Verdict } from '../core/game/validate'
+import { answerType, hasAnswer, validateAnswer, type Answer, type Verdict } from '../core/game/validate'
+import { answerShape } from '../core/exerciseTypes'
+import { presentationOrder } from '../core/game/shuffle'
 import { spendCoins } from '../core/game/rewards'
 import { useBundle } from '../stores/contentStore'
 import { useProgressStore, useUserState } from '../stores/progressStore'
@@ -113,6 +115,46 @@ export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onR
   const canHint = mode !== 'diagnostic' && !!template?.hint_key && !checked
   const affordable = state.user.coins >= g.hintCost
 
+  // Atajos de teclado: 1 a 9 eligen la opción visible (en su orden barajado),
+  // Enter comprueba y, ya comprobado, continúa. No interfieren con campos de
+  // texto, con el editor de estructuras ni con botones que ya responden a Enter.
+  const optionsType = answerType(ex)
+  const keyOptions = answerShape(optionsType) === 'options' ? presentationOrder(optionsType, ex.payload.options ?? [], attemptId, ex.id) : null
+  const checkRef = useRef(check)
+  checkRef.current = check
+  const nextRef = useRef(next)
+  nextRef.current = next
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey) return
+      const el = e.target as HTMLElement | null
+      if (el && (el.closest('input, textarea, select, [contenteditable="true"], .ketcher-host') || el.isContentEditable)) return
+      if (e.key === 'Enter') {
+        // Un botón enfocado que no sea una opción conserva su Enter nativo.
+        if (el && el.closest('button, a') && !el.closest('[role="radio"]')) return
+        if (checked) {
+          if (mode === 'diagnostic') return
+          e.preventDefault()
+          nextRef.current()
+        } else if (hasAnswer(ex, answer) && !busy) {
+          e.preventDefault()
+          void checkRef.current()
+        }
+        return
+      }
+      if (keyOptions && !checked && /^[1-9]$/.test(e.key)) {
+        const o = keyOptions[Number(e.key) - 1]
+        if (!o) return
+        e.preventDefault()
+        changeAnswer({ value: o.value })
+        const radios = document.querySelectorAll<HTMLElement>('[role="radio"]')
+        radios[Number(e.key) - 1]?.focus()
+      }
+    }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  })
+
   return (
     <div className="player">
       <div className="player-top">
@@ -171,6 +213,7 @@ export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onR
         )}
 
         {footer}
+        {keyOptions && !checked && <p className="muted t-13 kbd-hint">{t('exercise.keyboard_hint', { n: keyOptions.length })}</p>}
       </main>
 
       {!checked && (

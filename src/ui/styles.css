@@ -1205,6 +1205,17 @@ a.vertex:hover {
   margin: 8px 0 0;
 }
 
+/* Aviso de atajos: solo donde hay teclado físico probable. */
+.kbd-hint {
+  display: none;
+  margin: 0;
+}
+@media (hover: hover) and (pointer: fine) {
+  .kbd-hint {
+    display: block;
+  }
+}
+
 /* --- Hoja de retroalimentación ---------------------------------------- */
 .sheet {
   position: sticky;
