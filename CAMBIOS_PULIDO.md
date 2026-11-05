@@ -40,6 +40,8 @@ Qué cambió respecto al cierre del hito 6, qué quedó pendiente y por qué. El
 
 22. **Interruptor del mundo de Estereoquímica**: flag `mundoEstereo` en `public/config/features.json` (apagado por defecto), `?borrador=1` en la URL para verlo en esta carga, y transformación del bundle al arrancar (`src/core/content/draftWorlds.ts`) que convierte un mundo "Próximamente" con lecciones en un mundo bloqueado tras el anterior (flag) o abierto (borrador), sin tocar el seed. Tests. Receta de una línea en el README.
 
+23. **Mundo de Estereoquímica, paquete `estereo`** (detrás del flag): plantillas CSV en `plantillas/estereo/` con una unidad y cuatro lecciones en orden pedagógico (estereocentros, R y S, E y Z, relaciones entre estereoisómeros), convertidas con el importador a `public/content/packs/estereo/`. Las introducciones son el único texto escrito a mano y están listadas en `REPORTE_QUIMICA.md` ("Textos por revisar del autor"). Los ejercicios los genera y verifica `scripts/gen_estereo.py` con RDKit (ver puntos siguientes).
+
 ## Para que lo corrija el autor
 
 - `seed/assets.json`: el campo `license` de los 13 assets sigue en `"propio-por-generar"`, pero el arte ya existe. No se cambió porque el seed es del autor; conviene poner la licencia real del arte. Lo mismo para `width` y `height`, que están en `null` (los originales miden 1254 × 1254 y las versiones servidas 512 × 512).

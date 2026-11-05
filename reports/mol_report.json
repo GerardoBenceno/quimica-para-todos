@@ -120,6 +120,27 @@
       "ok": true
     },
     {
+      "smiles": "CCC(C)C",
+      "rdkit": "C5H12",
+      "expected": "C5H12",
+      "source": "web_draw_e_2metilbutano (enunciado: 2-metilbutano)",
+      "ok": true
+    },
+    {
+      "smiles": "CCC(C)C",
+      "rdkit": "C5H12",
+      "expected": "C5H12",
+      "source": "web_choose_e_2metilbutano (respuesta: 2-metilbutano)",
+      "ok": true
+    },
+    {
+      "smiles": "CCC(C)C",
+      "rdkit": "C5H12",
+      "expected": "C5H12",
+      "source": "web_choose_e_2metilbutano (enunciado: 2-metilbutano)",
+      "ok": true
+    },
+    {
       "smiles": "CC(C)C(C)C",
       "rdkit": "C6H14",
       "expected": "C6H14",
@@ -134,10 +155,52 @@
       "ok": true
     },
     {
+      "smiles": "CC(C)C(C)C",
+      "rdkit": "C6H14",
+      "expected": "C6H14",
+      "source": "web_draw_e_23dimetilbutano (enunciado: 2,3-dimetilbutano)",
+      "ok": true
+    },
+    {
+      "smiles": "CC(C)C(C)C",
+      "rdkit": "C6H14",
+      "expected": "C6H14",
+      "source": "web_choose_e_23dimetilbutano (respuesta: 2,3-dimetilbutano)",
+      "ok": true
+    },
+    {
+      "smiles": "CC(C)C(C)C",
+      "rdkit": "C6H14",
+      "expected": "C6H14",
+      "source": "web_choose_e_23dimetilbutano (enunciado: 2,3-dimetilbutano)",
+      "ok": true
+    },
+    {
       "smiles": "CC(C)C(CC)CCC",
       "rdkit": "C9H20",
       "expected": "C9H20",
       "source": "e_complete_etilmetilhexano (respuesta: 3-etil-2-metilhexano)",
+      "ok": true
+    },
+    {
+      "smiles": "CC(C)C(CC)CCC",
+      "rdkit": "C9H20",
+      "expected": "C9H20",
+      "source": "web_draw_e_complete_etilmetilhexano (enunciado: 3-etil-2-metilhexano)",
+      "ok": true
+    },
+    {
+      "smiles": "CC(C)C(CC)CCC",
+      "rdkit": "C9H20",
+      "expected": "C9H20",
+      "source": "web_choose_e_complete_etilmetilhexano (respuesta: 3-etil-2-metilhexano)",
+      "ok": true
+    },
+    {
+      "smiles": "CC(C)C(CC)CCC",
+      "rdkit": "C9H20",
+      "expected": "C9H20",
+      "source": "web_choose_e_complete_etilmetilhexano (enunciado: 3-etil-2-metilhexano)",
       "ok": true
     },
     {
@@ -148,10 +211,52 @@
       "ok": true
     },
     {
+      "smiles": "CCC(C)(C)C",
+      "rdkit": "C6H14",
+      "expected": "C6H14",
+      "source": "web_draw_e_22dimetilbutano (enunciado: 2,2-dimetilbutano)",
+      "ok": true
+    },
+    {
+      "smiles": "CCC(C)(C)C",
+      "rdkit": "C6H14",
+      "expected": "C6H14",
+      "source": "web_choose_e_22dimetilbutano (respuesta: 2,2-dimetilbutano)",
+      "ok": true
+    },
+    {
+      "smiles": "CCC(C)(C)C",
+      "rdkit": "C6H14",
+      "expected": "C6H14",
+      "source": "web_choose_e_22dimetilbutano (enunciado: 2,2-dimetilbutano)",
+      "ok": true
+    },
+    {
       "smiles": "CCCC(C)C",
       "rdkit": "C6H14",
       "expected": "C6H14",
       "source": "e_2metilpentano (respuesta: 2-metilpentano)",
+      "ok": true
+    },
+    {
+      "smiles": "CCCC(C)C",
+      "rdkit": "C6H14",
+      "expected": "C6H14",
+      "source": "web_draw_e_2metilpentano (enunciado: 2-metilpentano)",
+      "ok": true
+    },
+    {
+      "smiles": "CCCC(C)C",
+      "rdkit": "C6H14",
+      "expected": "C6H14",
+      "source": "web_choose_e_2metilpentano (respuesta: 2-metilpentano)",
+      "ok": true
+    },
+    {
+      "smiles": "CCCC(C)C",
+      "rdkit": "C6H14",
+      "expected": "C6H14",
+      "source": "web_choose_e_2metilpentano (enunciado: 2-metilpentano)",
       "ok": true
     }
   ],

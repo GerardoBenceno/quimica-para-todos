@@ -1,7 +1,8 @@
 {
   "packs": [
     "base",
-    "web"
+    "web",
+    "estereo"
   ],
   "files": {
     "base": [
@@ -25,6 +26,11 @@
       "exercises.json",
       "themes.json",
       "translations_es.json"
+    ],
+    "estereo": [
+      "lessons.json",
+      "translations_es.json",
+      "units.json"
     ]
   }
 }
