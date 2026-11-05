@@ -56,6 +56,7 @@ export async function bootstrap(): Promise<void> {
       selectAds(flags),
       selectAnalytics(flags, deps),
     ])
+    const matcher = selectMatcher(BASE)
     registerServices({
       flags,
       content: contentRepo,
@@ -64,10 +65,10 @@ export async function bootstrap(): Promise<void> {
       entitlements,
       ads,
       analytics,
-      molecules: new PregeneratedMoleculeRenderer(BASE),
+      molecules: new PregeneratedMoleculeRenderer(BASE, (s) => matcher?.svg?.(s) ?? Promise.resolve(null)),
       viewer3d: selectViewer3D(flags, BASE),
       editor: selectEditor(BASE),
-      matcher: selectMatcher(BASE),
+      matcher,
     })
 
     const user = await auth.currentUser()

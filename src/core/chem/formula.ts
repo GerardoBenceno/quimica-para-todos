@@ -2,7 +2,7 @@ import type { RDKitLike, RDMolLike } from './canonical'
 
 /** Subconjunto adicional de MinimalLib para la fórmula: hidrógenos explícitos y molblock. */
 export interface RDMolWithHs extends RDMolLike {
-  add_hs?(): RDMolWithHs
+  add_hs?(): unknown
   get_molblock?(): string
 }
 
@@ -33,18 +33,16 @@ export function hillFormula(counts: Record<string, number>): string {
 /** Fórmula molecular de un SMILES con RDKit.js, o null si no se puede leer. */
 export function molecularFormula(rd: RDKitLike, smiles: string): string | null {
   let m: RDMolWithHs | null = null
-  let withHs: RDMolWithHs | null = null
   try {
     m = rd.get_mol(smiles) as RDMolWithHs | null
     if (!m || !m.is_valid() || !m.add_hs || !m.get_molblock) return null
-    withHs = m.add_hs()
-    const block = withHs.get_molblock?.() ?? ''
-    const counts = countElements(block)
+    // En MinimalLib 2026.09 add_hs() devuelve el molblock con hidrógenos como texto.
+    const added = m.add_hs()
+    const counts = countElements(typeof added === 'string' ? added : m.get_molblock())
     return Object.keys(counts).length ? hillFormula(counts) : null
   } catch {
     return null
   } finally {
-    withHs?.delete()
     m?.delete()
   }
 }

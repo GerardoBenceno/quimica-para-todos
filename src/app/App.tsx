@@ -49,6 +49,7 @@ const QuestsScreen = lazy(() =>
   import("../screens/QuestsScreen").then((m) => ({ default: m.QuestsScreen })),
 );
 const ReviewScreen = lazy(() => import('../screens/ReviewScreen').then((m) => ({ default: m.ReviewScreen })))
+const EditorScreen = lazy(() => import('../screens/EditorScreen').then((m) => ({ default: m.EditorScreen })))
 const AboutScreen = lazy(() =>
   import("../screens/AboutScreen").then((m) => ({ default: m.AboutScreen })),
 );
@@ -89,6 +90,7 @@ export function AppRoutes() {
         <Route path="/recompensas" element={<QuestsScreen />} />
         <Route path="/acerca" element={<AboutScreen />} />
         <Route path="/revision" element={<ReviewScreen />} />
+        <Route path="/editor" element={<EditorScreen />} />
         <Route path="*" element={<NotFoundScreen />} />
       </Routes>
     </Suspense>

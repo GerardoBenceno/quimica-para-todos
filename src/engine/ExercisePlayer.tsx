@@ -33,6 +33,8 @@ export interface ExercisePlayerProps {
   onClose(): void
   /** Texto del encabezado del diagnóstico (con enlace para saltar). */
   footer?: React.ReactNode
+  /** Vista previa del editor: respuesta inicial y si ya está comprobada. */
+  preview?: { answer: Answer | null; checked: boolean }
 }
 
 /**
@@ -40,7 +42,7 @@ export interface ExercisePlayerProps {
  * deshabilitado hasta que haya respuesta. En lección y práctica muestra la
  * hoja de retroalimentación; en el diagnóstico avanza sin revelar.
  */
-export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onRecord, onFinish, onClose, footer }: ExercisePlayerProps) {
+export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onRecord, onFinish, onClose, footer, preview }: ExercisePlayerProps) {
   const t = useT()
   const b = useBundle()
   const g = useGameValues()
@@ -48,8 +50,10 @@ export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onR
   const update = useProgressStore((s) => s.update)
 
   const [index, setIndex] = useState(Math.min(startIndex, Math.max(0, exercises.length - 1)))
-  const [answer, setAnswer] = useState<Answer | null>(null)
-  const [verdict, setVerdict] = useState<Verdict | null>(null)
+  const first = exercises[Math.min(startIndex, Math.max(0, exercises.length - 1))]
+  const [answer, setAnswer] = useState<Answer | null>(preview?.answer ?? null)
+  const [verdict, setVerdict] = useState<Verdict | null>(preview?.checked && preview.answer && first ? validateAnswer(first, preview.answer) : null)
+  const mounted = useRef(false)
   const [busy, setBusy] = useState(false)
   const [hint, setHint] = useState(false)
   const started = useRef(performance.now())
@@ -58,10 +62,14 @@ export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onR
   const ex = exercises[index]
   useEffect(() => {
     started.current = performance.now()
-    setAnswer(null)
-    setVerdict(null)
-    setHint(false)
-    promptRef.current?.focus()
+    if (mounted.current) {
+      setAnswer(null)
+      setVerdict(null)
+      setHint(false)
+    }
+    mounted.current = true
+    if (!preview) promptRef.current?.focus()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index])
 
   if (!ex) return null

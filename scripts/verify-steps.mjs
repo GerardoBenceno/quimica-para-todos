@@ -382,7 +382,7 @@ export async function a11y({ newPage, URL }) {
     await expectVisible(page, 'Tu ruta')
     await page.waitForTimeout(300)
     await run(page, 'mapa')
-    for (const [hash, text] of [['#/mundo/w_carbono', 'lecciones completadas'], ['#/perfil', 'Experiencia total'], ['#/recompensas', 'Tienda'], ['#/repasar', 'Empezar repaso'], ['#/acerca', 'Hecho con'], ['#/no-existe', 'Esta página no existe'], ['#/revision', 'Revisión del curso']]) {
+    for (const [hash, text] of [['#/mundo/w_carbono', 'lecciones completadas'], ['#/perfil', 'Experiencia total'], ['#/recompensas', 'Tienda'], ['#/repasar', 'Empezar repaso'], ['#/acerca', 'Hecho con'], ['#/no-existe', 'Esta página no existe'], ['#/revision', 'Revisión del curso'], ['#/editor', 'Editor de ejercicios']]) {
       await page.goto(`${URL}${hash}`)
       await expectVisible(page, text)
       await page.waitForTimeout(300)
