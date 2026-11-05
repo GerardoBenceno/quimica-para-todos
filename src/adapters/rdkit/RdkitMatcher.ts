@@ -1,5 +1,6 @@
 import type { StructureMatcher } from '../../ports'
 import { compareStructures, type RDKitLike } from '../../core/chem/canonical'
+import { molecularFormula } from '../../core/chem/formula'
 
 declare global {
   interface Window {
@@ -49,5 +50,10 @@ export class RdkitMatcher implements StructureMatcher {
   async compare(drawn: string, target: string) {
     const rd = await this.load()
     return compareStructures(rd, drawn, target)
+  }
+
+  async formula(smiles: string) {
+    const rd = await this.load()
+    return molecularFormula(rd, smiles)
   }
 }

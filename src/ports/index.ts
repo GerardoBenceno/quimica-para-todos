@@ -91,4 +91,6 @@ export interface MoleculeViewer3D {
 /** Verificador químico de draw_structure (RDKit.js en el navegador). */
 export interface StructureMatcher {
   compare(drawn: string, target: string): Promise<'match' | 'mismatch' | 'invalid'>
+  /** Fórmula molecular (orden de Hill) de un SMILES, para la vista de revisión. */
+  formula?(smiles: string): Promise<string | null>
 }

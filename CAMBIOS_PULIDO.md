@@ -17,6 +17,11 @@ Qué cambió respecto al cierre del hito 6, qué quedó pendiente y por qué. El
 11. **Textos de interfaz** más claros en reinicio, error y página inexistente, y estado de lecciones bloqueadas más corto en la ruta ("Se abre tras la lección n").
 12. **Verificación.** `npm run verify` revisa además `og:image`, `og.png`, `404.html`, Acerca de y la página inexistente (axe y objetivos táctiles). Recorrido completo repetido a 393 px y 1280 px en ambos temas sin errores de consola ni desplazamiento horizontal.
 
+## Ronda 2
+
+13. **Metano tetraédrico corregido** a la convención de libro (ver arriba, punto 2).
+14. **Vista de revisión `#/revision`** (ruta oculta, sin enlace): cada ejercicio de cada paquete y del diagnóstico con enunciado, opciones con la correcta marcada, plantilla y banco, respuesta, explicación, mensaje y pista de retroalimentación, SMILES, estructura dibujada, fórmula molecular calculada con RDKit.js (orden de Hill, nuevo método `formula` del puerto `StructureMatcher`) y avisos de integridad; filtros por mundo, lección, tipo y paquete; botón de imprimir con hoja de estilos de impresión sin navegación. Incluida en la verificación de accesibilidad.
+
 ## Para que lo corrija el autor
 
 - `seed/assets.json`: el campo `license` de los 13 assets sigue en `"propio-por-generar"`, pero el arte ya existe. No se cambió porque el seed es del autor; conviene poner la licencia real del arte. Lo mismo para `width` y `height`, que están en `null` (los originales miden 1254 × 1254 y las versiones servidas 512 × 512).
