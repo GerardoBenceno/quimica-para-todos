@@ -1,0 +1,7 @@
+id,world_id,title_key,subtitle_key,order,unlock_rule,content_version,is_active
+u_intro_carbono,w_carbono,unit.intro_carbono.title,unit.intro_carbono.subtitle,1,,1,true
+u_hibridacion,w_carbono,unit.hibridacion.title,unit.hibridacion.subtitle,2,"{""requires_unit"":""u_intro_carbono"",""min_progress"":1}",1,true
+u_tipos_carbono,w_carbono,unit.tipos_carbono.title,unit.tipos_carbono.subtitle,3,"{""requires_unit"":""u_hibridacion"",""min_progress"":1}",1,true
+u_grupos_intro,w_grupos,unit.grupos_intro.title,unit.grupos_intro.subtitle,1,,1,true
+u_alcanos_lineales,w_nomenclatura_alcanos,unit.alcanos_lineales.title,unit.alcanos_lineales.subtitle,1,,1,true
+u_alcanos_ramificados,w_nomenclatura_alcanos,unit.alcanos_ramificados.title,unit.alcanos_ramificados.subtitle,2,"{""requires_unit"":""u_alcanos_lineales"",""min_progress"":1}",1,true

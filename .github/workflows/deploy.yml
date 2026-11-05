@@ -27,6 +27,8 @@ jobs:
       - run: npm ci
       - name: Optimizar arte (arte/originales -> assets/images)
         run: npm run art
+      - name: Importar plantillas CSV (plantillas/<id> -> packs/<id>)
+        run: npx tsx scripts/import-pack-csv.ts
       - name: Validar contenido
         run: npm run validate
       - name: Tests

@@ -1,0 +1,14 @@
+id,unit_id,title_key,order,type,intro,xp_reward,coin_reward,star_count,unlock_rule,content_version,is_active
+l_carbono_enlaces,u_intro_carbono,lesson.l_carbono_enlaces.title,1,standard,"{""text_key"":""lesson.l_carbono_enlaces.intro"",""image_asset_id"":null,""youtube_id"":null}",20,5,0,,1,true
+l_organico,u_intro_carbono,lesson.l_organico.title,2,standard,"{""text_key"":""lesson.l_organico.intro"",""image_asset_id"":null,""youtube_id"":null}",20,5,0,,1,true
+l_sp3,u_hibridacion,lesson.l_sp3.title,1,standard,"{""text_key"":""lesson.l_sp3.intro"",""image_asset_id"":""asset_metano_tetraedrico"",""youtube_id"":null}",20,5,0,,1,true
+l_sp2,u_hibridacion,lesson.l_sp2.title,2,standard,"{""text_key"":""lesson.l_sp2.intro"",""image_asset_id"":null,""youtube_id"":null}",20,5,0,,1,true
+l_sp,u_hibridacion,lesson.l_sp.title,3,standard,"{""text_key"":""lesson.l_sp.intro"",""image_asset_id"":null,""youtube_id"":null}",20,5,0,,1,true
+l_tipos_carbono,u_tipos_carbono,lesson.l_tipos_carbono.title,1,standard,"{""text_key"":""lesson.l_tipos_carbono.intro"",""image_asset_id"":null,""youtube_id"":null}",20,5,0,,1,true
+l_grupos_intro,u_grupos_intro,lesson.l_grupos_intro.title,1,standard,"{""text_key"":""lesson.l_grupos_intro.intro"",""image_asset_id"":null,""youtube_id"":null}",20,5,0,,1,true
+l_grupos_oxigenados,u_grupos_intro,lesson.l_grupos_oxigenados.title,2,standard,"{""text_key"":""lesson.l_grupos_oxigenados.intro"",""image_asset_id"":null,""youtube_id"":null}",20,5,0,,1,true
+l_grupos_nitrogenados,u_grupos_intro,lesson.l_grupos_nitrogenados.title,3,standard,"{""text_key"":""lesson.l_grupos_nitrogenados.intro"",""image_asset_id"":null,""youtube_id"":null}",20,5,0,,1,true
+l_alcanos_lineales,u_alcanos_lineales,lesson.l_alcanos_lineales.title,1,standard,"{""text_key"":""lesson.l_alcanos_lineales.intro"",""image_asset_id"":null,""youtube_id"":null}",20,5,0,,1,true
+l_sustituyentes,u_alcanos_ramificados,lesson.l_sustituyentes.title,1,standard,"{""text_key"":""lesson.l_sustituyentes.intro"",""image_asset_id"":null,""youtube_id"":null}",20,5,0,,1,true
+l_numeracion,u_alcanos_ramificados,lesson.l_numeracion.title,2,standard,"{""text_key"":""lesson.l_numeracion.intro"",""image_asset_id"":null,""youtube_id"":null}",20,5,0,,1,true
+l_ramificados,u_alcanos_ramificados,lesson.l_ramificados.title,3,standard,"{""text_key"":""lesson.l_ramificados.intro"",""image_asset_id"":null,""youtube_id"":null}",20,5,0,,1,true

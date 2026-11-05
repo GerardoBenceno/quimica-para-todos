@@ -117,7 +117,7 @@ SMARTS = {
     "aldehido": "[CX3H1](=O)[#6,#1]",
     "cetona": "[#6][CX3](=O)[#6]",
     "alcohol": "[CX4][OX2H]",
-    "eter": "[#6][OX2H0][#6]",
+    "eter": "[#6;!$(C=O)][OX2H0][#6;!$(C=O)]",
     "amina": "[NX3;H2,H1,H0;!$(NC=O);!$(N=*);!$(N#*)][#6]",
     "nitrilo": "[CX2]#[NX1]",
     "alqueno": "[CX3]=[CX3]",

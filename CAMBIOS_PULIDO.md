@@ -22,6 +22,10 @@ Qué cambió respecto al cierre del hito 6, qué quedó pendiente y por qué. El
 13. **Metano tetraédrico corregido** a la convención de libro (ver arriba, punto 2).
 14. **Vista de revisión `#/revision`** (ruta oculta, sin enlace): cada ejercicio de cada paquete y del diagnóstico con enunciado, opciones con la correcta marcada, plantilla y banco, respuesta, explicación, mensaje y pista de retroalimentación, SMILES, estructura dibujada, fórmula molecular calculada con RDKit.js (orden de Hill, nuevo método `formula` del puerto `StructureMatcher`) y avisos de integridad; filtros por mundo, lección, tipo y paquete; botón de imprimir con hoja de estilos de impresión sin navegación. Incluida en la verificación de accesibilidad.
 
+15. **Importador desde hoja de cálculo.** `scripts/pack-csv.ts` (exportar e importar), `scripts/export-pack-csv.ts`, `scripts/import-pack-csv.ts`, plantilla de ejemplo en `plantillas/ejemplo/` exportada del seed (solo filas del seed, sin química nueva), paso en el workflow y receta en el README. Test de ida y vuelta: exportar el seed y reimportarlo da un paquete idéntico; test de errores por archivo, fila y columna.
+
+16. **Auditoría química automática** (`scripts/audit_chem.py`, `reports/audit_quimica.json`): 47 ejercicios con SMILES, 242 comprobaciones, 0 discrepancias. Resumen y limitaciones en `REPORTE_QUIMICA.md`.
+
 ## Para que lo corrija el autor
 
 - `seed/assets.json`: el campo `license` de los 13 assets sigue en `"propio-por-generar"`, pero el arte ya existe. No se cambió porque el seed es del autor; conviene poner la licencia real del arte. Lo mismo para `width` y `height`, que están en `null` (los originales miden 1254 × 1254 y las versiones servidas 512 × 512).

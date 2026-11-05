@@ -1,0 +1,21 @@
+{
+  "max_score": 92,
+  "thresholds": [
+    {
+      "max_ratio": 0.4,
+      "label": "Principiante",
+      "recommended_world": "w_carbono"
+    },
+    {
+      "max_ratio": 0.75,
+      "label": "Intermedio",
+      "recommended_world": "w_carbono"
+    },
+    {
+      "max_ratio": 1,
+      "label": "Avanzado",
+      "recommended_world": "w_carbono"
+    }
+  ],
+  "note": "recommended_world se acota al primer mundo desbloqueado en el MVP"
+}
