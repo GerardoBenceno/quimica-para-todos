@@ -1364,6 +1364,30 @@ a.vertex:hover {
   margin: 0;
   width: 100%;
 }
+.status-error {
+  border-color: var(--color-error);
+  background: var(--color-error-bg);
+}
+.settings-title {
+  margin-top: 16px;
+}
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+}
+.version-line {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.about-section p {
+  margin: 0;
+}
+.about-section p + p {
+  margin-top: 8px;
+}
 .reward-list {
   list-style: none;
   margin: 0;

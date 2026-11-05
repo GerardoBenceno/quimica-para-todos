@@ -5,6 +5,8 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 import { APP_DISPLAY_NAME, APP_SHORT_NAME } from './src/app/brand.ts'
 
+const pkg = JSON.parse(readFileSync('package.json', 'utf8')) as { version: string }
+
 // Ruta base de producción en GitHub Pages: /<nombre-del-repo>/.
 const REPO_NAME = 'quimica-para-todos'
 const base = process.env.VITE_BASE ?? `/${REPO_NAME}/`
@@ -56,6 +58,7 @@ export default defineConfig({
   define: {
     // Ketcher y sus dependencias esperan "global" de Node.
     global: 'globalThis',
+    __APP_VERSION__: JSON.stringify(pkg.version),
   },
   plugins: [
     react(),

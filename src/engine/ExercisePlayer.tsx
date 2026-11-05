@@ -15,6 +15,7 @@ import { AssetImage } from '../ui/AssetImage'
 import { ProgressBar } from '../ui/ProgressBar'
 import { CrossIcon } from '../ui/icons'
 import { Carbo } from '../ui/Carbo'
+import { vibrateFor } from '../stores/prefsStore'
 import { FeedbackSheet } from './FeedbackSheet'
 import { exerciseTypeDef } from './registry'
 import { promptSmiles } from './answerText'
@@ -79,7 +80,10 @@ export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onR
     try {
       const v = def?.check ? await def.check(ex, answer) : validateAnswer(ex, answer)
       const timeMs = performance.now() - started.current
-      if (v !== 'invalid') onRecord(ex, answer, v, timeMs)
+      if (v !== 'invalid') {
+        onRecord(ex, answer, v, timeMs)
+        if (mode !== 'diagnostic') vibrateFor(v)
+      }
       if (mode === 'diagnostic' && v !== 'invalid') next()
       else setVerdict(v)
     } finally {

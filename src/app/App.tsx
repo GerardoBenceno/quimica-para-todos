@@ -9,6 +9,7 @@ import { NotFoundScreen } from '../screens/NotFoundScreen'
 import { PracticeScreen } from '../screens/PracticeScreen'
 import { ProfileScreen } from '../screens/ProfileScreen'
 import { QuestsScreen } from '../screens/QuestsScreen'
+import { AboutScreen } from '../screens/AboutScreen'
 import { useProgressStore } from '../stores/progressStore'
 import { routes } from './routes'
 import { OfflineBanner } from '../ui/AppShell'
@@ -40,6 +41,7 @@ export function AppRoutes() {
       <Route path="/repasar" element={<PracticeScreen />} />
       <Route path="/perfil" element={<ProfileScreen />} />
       <Route path="/recompensas" element={<QuestsScreen />} />
+      <Route path="/acerca" element={<AboutScreen />} />
       <Route path="*" element={<NotFoundScreen />} />
     </Routes>
   )

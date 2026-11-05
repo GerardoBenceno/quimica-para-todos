@@ -3,3 +3,5 @@
 export const APP_DISPLAY_NAME = 'Química para Todos'
 export const APP_SHORT_NAME = 'Química'
 export const APP_SLUG = 'quimica_app'
+/** Repositorio público del proyecto (código fuente y forma de contacto técnica). */
+export const APP_REPO_URL = 'https://github.com/GerardoBenceno/quimica-para-todos'

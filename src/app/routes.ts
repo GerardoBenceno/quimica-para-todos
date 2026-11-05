@@ -10,4 +10,5 @@ export const routes = {
   practice: () => '/repasar',
   profile: () => '/perfil',
   quests: () => '/recompensas',
+  about: () => '/acerca',
 }

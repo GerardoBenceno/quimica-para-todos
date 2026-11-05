@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { APP_DISPLAY_NAME } from '../app/brand'
 import { useT } from '../services/i18nHooks'
 import { useProgressStore } from '../stores/progressStore'
@@ -32,6 +32,9 @@ export function WelcomeScreen() {
               {t('welcome.start')}
             </button>
             <p className="t-14 muted">{t('welcome.no_signup')}</p>
+            <Link className="link t-15" to={routes.about()}>
+              {t('welcome.about')}
+            </Link>
           </div>
           <div className="welcome-art illus-block" aria-hidden="true">
             <Carbo expression="idle" size={200} />
