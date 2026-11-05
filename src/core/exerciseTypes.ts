@@ -13,6 +13,7 @@ export const EXERCISE_TYPES = {
   chat_complete: 'options',
   diagnostic: 'options',
   choose_structure: 'options',
+  compare_structures: 'options',
   fill_blanks: 'blanks',
   draw_structure: 'structure',
   view_3d: 'delegate',

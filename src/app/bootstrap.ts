@@ -8,7 +8,8 @@ import { applyTheme, pickTheme } from '../services/theme'
 import { SafeLocalStore } from '../services/safeStorage'
 import { useContentStore } from '../stores/contentStore'
 import { useProgressStore } from '../stores/progressStore'
-import { resolveFlags } from './flags'
+import { draftRequested, resolveFlags } from './flags'
+import { enableDraftWorlds } from '../core/content/draftWorlds'
 import { registerServices } from './services'
 import { selectAds, selectAnalytics, selectAuth, selectEntitlements, selectProgress } from './adapters'
 import { selectEditor, selectMatcher, selectViewer3D } from './chemAdapters'
@@ -40,9 +41,9 @@ export async function bootstrap(): Promise<void> {
     document.documentElement.lang = ui.locale
 
     if (!loaded.ok) throw new Error(loaded.error.message)
-    const bundle = loaded.value
-
-    const flags = resolveFlags(bundle.appConfig, featuresJson)
+    const flags = resolveFlags(loaded.value.appConfig, featuresJson)
+    const draft = draftRequested(window.location.href)
+    const bundle = enableDraftWorlds(loaded.value, draft ? 'draft' : flags.mundoEstereo ? 'flag' : 'off')
     const store = new SafeLocalStore()
     const deps = { store, access: bundle.access, debug: import.meta.env.DEV }
 

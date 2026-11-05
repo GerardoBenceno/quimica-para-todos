@@ -1,0 +1,2 @@
+id,world_id,title_key,subtitle_key,order,unlock_rule,content_version,is_active
+estereo_u_estereo,w_estereo,unit.estereo.title,unit.estereo.subtitle,1,,1,true

@@ -1,0 +1,11 @@
+key,locale,value,content_version
+lesson.estereo_l_centros.intro,es,"Un estereocentro es un átomo, casi siempre un carbono sp³, unido a cuatro sustituyentes distintos. Si se intercambian dos de esos sustituyentes se obtiene un estereoisómero diferente. Una molécula con un solo estereocentro es quiral: no se puede superponer con su imagen especular.",1
+lesson.estereo_l_centros.title,es,Estereocentros,1
+lesson.estereo_l_ez.intro,es,"El doble enlace C=C no permite la rotación libre, así que los sustituyentes quedan fijos a uno u otro lado del plano del enlace. En cada carbono del doble enlace se elige el sustituyente de mayor prioridad según las reglas CIP. Si los dos grupos de mayor prioridad están del mismo lado, el isómero es Z; si están en lados opuestos, es E.",1
+lesson.estereo_l_ez.title,es,Isomería E y Z,1
+lesson.estereo_l_relaciones.intro,es,"Los isómeros constitucionales tienen la misma fórmula molecular pero distinta conectividad entre sus átomos. Los estereoisómeros comparten la conectividad y solo difieren en la disposición espacial. Entre ellos, los enantiómeros son imágenes especulares no superponibles, mientras que los diastereómeros son estereoisómeros que no son imágenes especulares entre sí.",1
+lesson.estereo_l_relaciones.title,es,Relaciones entre estereoisómeros,1
+lesson.estereo_l_rs.intro,es,"Las reglas de prioridad de Cahn, Ingold y Prelog (CIP) ordenan los cuatro sustituyentes de un estereocentro: tiene mayor prioridad el átomo de mayor número atómico unido directamente al centro y, en caso de empate, se comparan los átomos siguientes. Con el sustituyente de menor prioridad orientado hacia atrás, se recorre la secuencia de prioridades 1, 2 y 3: si gira en sentido horario la configuración es R y si gira en sentido antihorario es S.",1
+lesson.estereo_l_rs.title,es,Configuración R y S,1
+unit.estereo.subtitle,es,"Estereocentros, R/S, E/Z y relaciones",1
+unit.estereo.title,es,Estereoisomería,1

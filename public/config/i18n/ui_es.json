@@ -243,5 +243,11 @@
   "pwa.install": "Instalar en este dispositivo",
   "pwa.installed": "La app ya está instalada en este dispositivo.",
   "draw.editor_offline": "El editor de estructuras necesita descargarse una vez con conexión. Conéctate y vuelve a abrir este ejercicio; mientras tanto puedes seguir con los demás.",
-  "path.side_label": "Lección en curso"
+  "path.side_label": "Lección en curso",
+  "compare.a": "Estructura A",
+  "compare.b": "Estructura B",
+  "figure.structure_a": "Estructura A del ejercicio",
+  "figure.structure_b": "Estructura B del ejercicio",
+  "figure.highlighted_atom": "Estructura con un átomo resaltado",
+  "figure.highlighted_bond": "Estructura con un enlace resaltado"
 }

@@ -10,6 +10,8 @@ export type FeatureFlags = {
   molecules3d: boolean
   aiFeedback: boolean
   social: boolean
+  /** Mundo de estereoquímica jugable (también con ?borrador=1 en la URL). */
+  mundoEstereo: boolean
 }
 
 export const ALL_OFF: FeatureFlags = {
@@ -21,6 +23,7 @@ export const ALL_OFF: FeatureFlags = {
   molecules3d: false,
   aiFeedback: false,
   social: false,
+  mundoEstereo: false,
 }
 
 /** Nombres del seed (app_config features.flags) -> nombres de features.json. */
@@ -46,5 +49,17 @@ export function resolveFlags(appConfig: AppConfig[], featuresJson: unknown): Fea
   }
   const parsed = featuresSchema.partial().safeParse(featuresJson)
   if (parsed.success) Object.assign(flags, parsed.data)
+  if (flags.mundoEstereo === undefined) flags.mundoEstereo = false
   return flags
+}
+
+/** ?borrador=1 (antes o después del hash) enciende los mundos en borrador solo en esta carga. */
+export function draftRequested(href: string): boolean {
+  try {
+    const u = new URL(href)
+    const hashQuery = u.hash.includes('?') ? u.hash.slice(u.hash.indexOf('?') + 1) : ''
+    return u.searchParams.get('borrador') === '1' || new URLSearchParams(hashQuery).get('borrador') === '1'
+  } catch {
+    return false
+  }
 }

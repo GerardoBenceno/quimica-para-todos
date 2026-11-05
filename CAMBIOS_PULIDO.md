@@ -38,6 +38,8 @@ Qué cambió respecto al cierre del hito 6, qué quedó pendiente y por qué. El
 
 21. **RDKit en el workflow de deploy**: `actions/setup-python` y `pip install -r requirements.txt` antes de importar las plantillas, así un paquete subido por la web con SMILES nuevos genera sus SVG y SDF en CI. Prueba de extremo a extremo `scripts/ci-import-smoke.ts` (corre en CI antes del import real): arma `plantillas/ciprueba/` con la primera lección con estructuras del seed (ids y claves con prefijo `ciprueba_`, sin química nueva), importa, comprueba SVG y SDF de cada SMILES y limpia plantilla, paquete, manifest y reporte de moléculas; después valida que el contenido quedó como antes. No se publica nada del paquete temporal.
 
+22. **Interruptor del mundo de Estereoquímica**: flag `mundoEstereo` en `public/config/features.json` (apagado por defecto), `?borrador=1` en la URL para verlo en esta carga, y transformación del bundle al arrancar (`src/core/content/draftWorlds.ts`) que convierte un mundo "Próximamente" con lecciones en un mundo bloqueado tras el anterior (flag) o abierto (borrador), sin tocar el seed. Tests. Receta de una línea en el README.
+
 ## Para que lo corrija el autor
 
 - `seed/assets.json`: el campo `license` de los 13 assets sigue en `"propio-por-generar"`, pero el arte ya existe. No se cambió porque el seed es del autor; conviene poner la licencia real del arte. Lo mismo para `width` y `height`, que están en `null` (los originales miden 1254 × 1254 y las versiones servidas 512 × 512).

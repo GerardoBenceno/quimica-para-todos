@@ -1731,3 +1731,23 @@ a.vertex:hover {
     display: none;
   }
 }
+
+/* --- Comparar estructuras --------------------------------------------- */
+.compare-figures {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.compare-figure {
+  margin: 0;
+  min-height: 140px;
+}
+.compare-figure figcaption {
+  margin-top: 8px;
+  font-weight: 600;
+}
+@media (max-width: 599px) {
+  .compare-figures {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

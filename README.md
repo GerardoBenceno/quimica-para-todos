@@ -116,6 +116,8 @@ Cada receta toca como máximo dos archivos de código; casi todas, ninguno.
 
 **Agregar o redibujar estructuras.** Edita el SMILES en `seed/` (o en el paquete que lo define), corre `npm run sync:base` si cambió el seed, luego `python3 scripts/gen_molecules.py` (procesa todos los paquetes del manifest) y `npx tsx scripts/derive-web-pack.ts` si cambió un par nombre-estructura. `npm run validate` falla si un SMILES usado no tiene entrada en `public/mol/index.json`. Sin código.
 
+**Encender el mundo de Estereoquímica.** Desde la web de GitHub edita `public/config/features.json` y pon `"mundoEstereo": true` (una línea); al publicar, el mundo deja de decir "Próximamente" y se desbloquea al completar el mundo anterior. Sin encenderlo, se puede probar en el navegador agregando `?borrador=1` a la dirección (por ejemplo `.../quimica-para-todos/?borrador=1`), y sus ejercicios aparecen siempre en `#/revision`.
+
 **Encender una función futura.** Pon su flag en `true` en `public/config/features.json` e implementa su adaptador en el stub correspondiente (`src/adapters/supabase/index.ts` o `src/adapters/future/`). Un archivo. Variables de Supabase: copia `.env.example` a `.env`.
 
 **Cambiar de editor de moléculas.** Escribe un adaptador que implemente `StructureEditor` (en `src/adapters/<editor>/`) y devuélvelo en `selectEditor` de `src/app/chemAdapters.ts`. Dos archivos. Si el nuevo editor es usable a 360 px, `src/engine/drawPolicy.ts` decide si se dibuja en pantallas angostas.
