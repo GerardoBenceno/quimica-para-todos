@@ -1,0 +1,2438 @@
+[
+  {
+    "key": "asset.asset_carbo_happy.alt",
+    "locale": "es",
+    "value": "Mascota Carbo feliz",
+    "content_version": 1
+  },
+  {
+    "key": "asset.asset_carbo_idle.alt",
+    "locale": "es",
+    "value": "Mascota Carbo en reposo",
+    "content_version": 1
+  },
+  {
+    "key": "asset.asset_carbo_sad.alt",
+    "locale": "es",
+    "value": "Mascota Carbo triste",
+    "content_version": 1
+  },
+  {
+    "key": "asset.asset_carbo_think.alt",
+    "locale": "es",
+    "value": "Mascota Carbo pensando",
+    "content_version": 1
+  },
+  {
+    "key": "asset.asset_icon_alcanos.alt",
+    "locale": "es",
+    "value": "Ícono del mundo nomenclatura",
+    "content_version": 1
+  },
+  {
+    "key": "asset.asset_icon_carbono.alt",
+    "locale": "es",
+    "value": "Ícono del mundo carbono",
+    "content_version": 1
+  },
+  {
+    "key": "asset.asset_icon_chest.alt",
+    "locale": "es",
+    "value": "Ícono de cofre",
+    "content_version": 1
+  },
+  {
+    "key": "asset.asset_icon_coin.alt",
+    "locale": "es",
+    "value": "Ícono de moneda",
+    "content_version": 1
+  },
+  {
+    "key": "asset.asset_icon_estereo.alt",
+    "locale": "es",
+    "value": "Ícono estereoquímica",
+    "content_version": 1
+  },
+  {
+    "key": "asset.asset_icon_freeze.alt",
+    "locale": "es",
+    "value": "Ícono de congelar racha",
+    "content_version": 1
+  },
+  {
+    "key": "asset.asset_icon_grupos.alt",
+    "locale": "es",
+    "value": "Ícono del mundo grupos funcionales",
+    "content_version": 1
+  },
+  {
+    "key": "asset.asset_icon_reacciones.alt",
+    "locale": "es",
+    "value": "Ícono reacciones",
+    "content_version": 1
+  },
+  {
+    "key": "asset.asset_metano_tetraedrico.alt",
+    "locale": "es",
+    "value": "Metano tetraédrico",
+    "content_version": 1
+  },
+  {
+    "key": "character.carbo.name",
+    "locale": "es",
+    "value": "Carbo",
+    "content_version": 1
+  },
+  {
+    "key": "currency.coin.name",
+    "locale": "es",
+    "value": "Monedas",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_01.opt.1",
+    "locale": "es",
+    "value": "1",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_01.opt.2",
+    "locale": "es",
+    "value": "2",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_01.opt.3",
+    "locale": "es",
+    "value": "3",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_01.opt.4",
+    "locale": "es",
+    "value": "4",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_01.prompt",
+    "locale": "es",
+    "value": "¿Cuántos enlaces covalentes forma el carbono?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_02.opt.angular",
+    "locale": "es",
+    "value": "Angular",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_02.opt.lineal",
+    "locale": "es",
+    "value": "Lineal",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_02.opt.tetraedrica",
+    "locale": "es",
+    "value": "Tetraédrica",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_02.opt.trigonal_plana",
+    "locale": "es",
+    "value": "Trigonal plana",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_02.prompt",
+    "locale": "es",
+    "value": "¿Qué geometría tiene un carbono sp³?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_03.opt.cuaternario",
+    "locale": "es",
+    "value": "Cuaternario",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_03.opt.primario",
+    "locale": "es",
+    "value": "Primario",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_03.opt.secundario",
+    "locale": "es",
+    "value": "Secundario",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_03.opt.terciario",
+    "locale": "es",
+    "value": "Terciario",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_03.prompt",
+    "locale": "es",
+    "value": "Un carbono unido a 3 carbonos es:",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_04.opt.acido",
+    "locale": "es",
+    "value": "Ácidos",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_04.opt.alcohol",
+    "locale": "es",
+    "value": "Alcoholes",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_04.opt.aldehido",
+    "locale": "es",
+    "value": "Aldehídos",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_04.opt.eter",
+    "locale": "es",
+    "value": "Éteres",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_04.prompt",
+    "locale": "es",
+    "value": "El grupo -OH unido a un carbono saturado corresponde a:",
+    "content_version": 2
+  },
+  {
+    "key": "ex.diag_05.opt.acido",
+    "locale": "es",
+    "value": "Ácidos carboxílicos",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_05.opt.alcohol",
+    "locale": "es",
+    "value": "Alcoholes",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_05.opt.cetona",
+    "locale": "es",
+    "value": "Cetonas",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_05.opt.ester",
+    "locale": "es",
+    "value": "Ésteres",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_05.prompt",
+    "locale": "es",
+    "value": "El grupo -COOH corresponde a:",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_06.opt.alcohol",
+    "locale": "es",
+    "value": "Alcohol",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_06.opt.aldehido",
+    "locale": "es",
+    "value": "Aldehído",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_06.opt.cetona",
+    "locale": "es",
+    "value": "Cetona",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_06.opt.eter",
+    "locale": "es",
+    "value": "Éter",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_06.prompt",
+    "locale": "es",
+    "value": "¿Qué grupo funcional es?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_07.opt.etano",
+    "locale": "es",
+    "value": "Etano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_07.opt.metano",
+    "locale": "es",
+    "value": "Metano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_07.opt.metanol",
+    "locale": "es",
+    "value": "Metanol",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_07.opt.propano",
+    "locale": "es",
+    "value": "Propano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_07.prompt",
+    "locale": "es",
+    "value": "¿Cómo se llama el alcano CH₄?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_08.opt.23dimetilbutano",
+    "locale": "es",
+    "value": "2,3-dimetilbutano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_08.opt.2metilpentano",
+    "locale": "es",
+    "value": "2-metilpentano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_08.opt.3etilbutano",
+    "locale": "es",
+    "value": "3-etilbutano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_08.opt.hexano",
+    "locale": "es",
+    "value": "Hexano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.diag_08.prompt",
+    "locale": "es",
+    "value": "¿Cuál es el nombre IUPAC de esta estructura?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_22dimetilbutano.explain",
+    "locale": "es",
+    "value": "Cadena de 4 carbonos con dos metilos en el mismo carbono 2: 2,2-dimetilbutano.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_22dimetilbutano.opt.22dimetilbutano",
+    "locale": "es",
+    "value": "2,2-dimetilbutano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_22dimetilbutano.opt.23dimetilbutano",
+    "locale": "es",
+    "value": "2,3-dimetilbutano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_22dimetilbutano.opt.2metilpentano",
+    "locale": "es",
+    "value": "2-metilpentano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_22dimetilbutano.opt.hexano",
+    "locale": "es",
+    "value": "Hexano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_22dimetilbutano.prompt",
+    "locale": "es",
+    "value": "¿Cuál es el nombre IUPAC de esta estructura?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_23dimetilbutano.explain",
+    "locale": "es",
+    "value": "Cadena principal de 4 carbonos con metilos en C2 y C3: 2,3-dimetilbutano. '3-etilbutano' no es válido porque la cadena más larga sería mayor.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_23dimetilbutano.opt.22dimetilbutano",
+    "locale": "es",
+    "value": "2,2-dimetilbutano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_23dimetilbutano.opt.23dimetilbutano",
+    "locale": "es",
+    "value": "2,3-dimetilbutano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_23dimetilbutano.opt.2metilpentano",
+    "locale": "es",
+    "value": "2-metilpentano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_23dimetilbutano.opt.3etilbutano",
+    "locale": "es",
+    "value": "3-etilbutano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_23dimetilbutano.prompt",
+    "locale": "es",
+    "value": "¿Cuál es el nombre IUPAC de esta estructura?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_2metilbutano.explain",
+    "locale": "es",
+    "value": "Cadena de 4 carbonos (butano) con un metil en el carbono 2: 2-metilbutano. Numerando para el menor localizador no es 3-metilbutano.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_2metilbutano.opt.2metilbutano",
+    "locale": "es",
+    "value": "2-metilbutano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_2metilbutano.opt.2metilpropano",
+    "locale": "es",
+    "value": "2-metilpropano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_2metilbutano.opt.3metilbutano",
+    "locale": "es",
+    "value": "3-metilbutano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_2metilbutano.opt.pentano",
+    "locale": "es",
+    "value": "Pentano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_2metilbutano.prompt",
+    "locale": "es",
+    "value": "¿Cuál es el nombre IUPAC de esta estructura?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_2metilpentano.explain",
+    "locale": "es",
+    "value": "Cadena principal de 5 carbonos (pentano) con un metil en C2: 2-metilpentano.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_2metilpentano.opt.2metilbutano",
+    "locale": "es",
+    "value": "2-metilbutano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_2metilpentano.opt.2metilpentano",
+    "locale": "es",
+    "value": "2-metilpentano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_2metilpentano.opt.3metilpentano",
+    "locale": "es",
+    "value": "3-metilpentano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_2metilpentano.opt.hexano",
+    "locale": "es",
+    "value": "Hexano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_2metilpentano.prompt",
+    "locale": "es",
+    "value": "¿Cuál es el nombre IUPAC de esta estructura?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_amida_def.explain",
+    "locale": "es",
+    "value": "El enlace C(=O)-N es la firma de una amida.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_amida_def.opt.false",
+    "locale": "es",
+    "value": "Falso",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_amida_def.opt.true",
+    "locale": "es",
+    "value": "Verdadero",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_amida_def.prompt",
+    "locale": "es",
+    "value": "Una amida contiene un grupo carbonilo unido directamente a un nitrógeno.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_butano.explain",
+    "locale": "es",
+    "value": "4 carbonos lineales: butano.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_butano.opt.butano",
+    "locale": "es",
+    "value": "Butano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_butano.opt.hexano",
+    "locale": "es",
+    "value": "Hexano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_butano.opt.pentano",
+    "locale": "es",
+    "value": "Pentano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_butano.opt.propano",
+    "locale": "es",
+    "value": "Propano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_butano.prompt",
+    "locale": "es",
+    "value": "¿Cómo se llama CH₃-CH₂-CH₂-CH₃?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_carbono_enlaces.explain",
+    "locale": "es",
+    "value": "El carbono tiene 4 electrones de valencia y completa el octeto formando 4 enlaces covalentes.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_carbono_enlaces.opt.1",
+    "locale": "es",
+    "value": "1",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_carbono_enlaces.opt.2",
+    "locale": "es",
+    "value": "2",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_carbono_enlaces.opt.3",
+    "locale": "es",
+    "value": "3",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_carbono_enlaces.opt.4",
+    "locale": "es",
+    "value": "4",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_carbono_enlaces.prompt",
+    "locale": "es",
+    "value": "¿Cuántos enlaces covalentes forma normalmente el carbono?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_carbono_valencia.explain",
+    "locale": "es",
+    "value": "El carbono está en el grupo 14: tiene 4 electrones de valencia.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_carbono_valencia.opt.2",
+    "locale": "es",
+    "value": "2",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_carbono_valencia.opt.4",
+    "locale": "es",
+    "value": "4",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_carbono_valencia.opt.6",
+    "locale": "es",
+    "value": "6",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_carbono_valencia.opt.8",
+    "locale": "es",
+    "value": "8",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_carbono_valencia.prompt",
+    "locale": "es",
+    "value": "¿Cuántos electrones de valencia tiene el carbono?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_catenacion.explain",
+    "locale": "es",
+    "value": "La catenación del carbono explica la enorme variedad de compuestos orgánicos.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_catenacion.opt.false",
+    "locale": "es",
+    "value": "Falso",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_catenacion.opt.true",
+    "locale": "es",
+    "value": "Verdadero",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_catenacion.prompt",
+    "locale": "es",
+    "value": "El carbono puede unirse consigo mismo formando cadenas largas (catenación).",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_cetona_def.explain",
+    "locale": "es",
+    "value": "Si el C=O está entre dos carbonos es cetona; si está al final con un H, es aldehído.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_cetona_def.opt.false",
+    "locale": "es",
+    "value": "Falso",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_cetona_def.opt.true",
+    "locale": "es",
+    "value": "Verdadero",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_cetona_def.prompt",
+    "locale": "es",
+    "value": "Una cetona tiene el grupo carbonilo (C=O) ubicado entre dos carbonos.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_complete_etilmetilhexano.bank.butil",
+    "locale": "es",
+    "value": "butil",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_complete_etilmetilhexano.bank.etil",
+    "locale": "es",
+    "value": "etil",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_complete_etilmetilhexano.bank.metil",
+    "locale": "es",
+    "value": "metil",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_complete_etilmetilhexano.bank.propil",
+    "locale": "es",
+    "value": "propil",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_complete_etilmetilhexano.explain",
+    "locale": "es",
+    "value": "Cadena principal de 6 carbonos (hexano), metil en C2 y etil en C3. En el nombre el etil va antes (alfabético): 3-etil-2-metilhexano.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_complete_etilmetilhexano.prompt",
+    "locale": "es",
+    "value": "Completa el nombre IUPAC de la estructura mostrada:",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_cual_organico.explain",
+    "locale": "es",
+    "value": "El metano es un hidrocarburo: carbono e hidrógeno. El CO₂ se trata tradicionalmente como inorgánico.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_cual_organico.opt.agua",
+    "locale": "es",
+    "value": "Agua (H₂O)",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_cual_organico.opt.co2",
+    "locale": "es",
+    "value": "Dióxido de carbono (CO₂)",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_cual_organico.opt.metano",
+    "locale": "es",
+    "value": "Metano (CH₄)",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_cual_organico.opt.nacl",
+    "locale": "es",
+    "value": "Cloruro de sodio (NaCl)",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_cual_organico.prompt",
+    "locale": "es",
+    "value": "¿Cuál de estos compuestos es orgánico?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_define_organico.explain",
+    "locale": "es",
+    "value": "La química orgánica es la química de los compuestos del carbono.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_define_organico.opt.carbono",
+    "locale": "es",
+    "value": "Carbono",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_define_organico.opt.hidrogeno",
+    "locale": "es",
+    "value": "Hidrógeno",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_define_organico.opt.nitrogeno",
+    "locale": "es",
+    "value": "Nitrógeno",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_define_organico.opt.oxigeno",
+    "locale": "es",
+    "value": "Oxígeno",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_define_organico.prompt",
+    "locale": "es",
+    "value": "¿Qué elemento debe estar presente para clasificar un compuesto como orgánico?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_enlace_ionico.explain",
+    "locale": "es",
+    "value": "El carbono comparte electrones: forma enlaces covalentes, no iónicos.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_enlace_ionico.opt.false",
+    "locale": "es",
+    "value": "Falso",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_enlace_ionico.opt.true",
+    "locale": "es",
+    "value": "Verdadero",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_enlace_ionico.prompt",
+    "locale": "es",
+    "value": "El carbono forma principalmente enlaces iónicos al unir átomos.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_grupo_cooh.explain",
+    "locale": "es",
+    "value": "-COOH (carboxilo) define un ácido carboxílico.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_grupo_cooh.opt.acido",
+    "locale": "es",
+    "value": "Ácidos carboxílicos",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_grupo_cooh.opt.alcohol",
+    "locale": "es",
+    "value": "Alcoholes",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_grupo_cooh.opt.aldehido",
+    "locale": "es",
+    "value": "Aldehídos",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_grupo_cooh.opt.ester",
+    "locale": "es",
+    "value": "Ésteres",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_grupo_cooh.prompt",
+    "locale": "es",
+    "value": "El grupo -COOH corresponde a:",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_grupo_nh2.explain",
+    "locale": "es",
+    "value": "Un -NH₂ unido a un grupo alquilo es una amina primaria. Si el nitrógeno estuviera unido al carbono de un C=O, sería una amida.",
+    "content_version": 2
+  },
+  {
+    "key": "ex.e_grupo_nh2.opt.alcohol",
+    "locale": "es",
+    "value": "Alcoholes",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_grupo_nh2.opt.amida",
+    "locale": "es",
+    "value": "Amidas",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_grupo_nh2.opt.amina",
+    "locale": "es",
+    "value": "Aminas",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_grupo_nh2.opt.nitrilo",
+    "locale": "es",
+    "value": "Nitrilos",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_grupo_nh2.prompt",
+    "locale": "es",
+    "value": "El grupo -NH₂ unido a un grupo alquilo corresponde a:",
+    "content_version": 2
+  },
+  {
+    "key": "ex.e_grupo_oh.explain",
+    "locale": "es",
+    "value": "Un -OH unido a un carbono saturado, es decir, con solo enlaces sencillos, define un alcohol. En el -COOH el OH está unido a un carbonilo y forma parte de un ácido carboxílico.",
+    "content_version": 2
+  },
+  {
+    "key": "ex.e_grupo_oh.opt.acido",
+    "locale": "es",
+    "value": "Ácidos carboxílicos",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_grupo_oh.opt.alcohol",
+    "locale": "es",
+    "value": "Alcoholes",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_grupo_oh.opt.aldehido",
+    "locale": "es",
+    "value": "Aldehídos",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_grupo_oh.opt.cetona",
+    "locale": "es",
+    "value": "Cetonas",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_grupo_oh.prompt",
+    "locale": "es",
+    "value": "El grupo -OH unido a un carbono saturado corresponde a la familia de los:",
+    "content_version": 2
+  },
+  {
+    "key": "ex.e_hexano_n.explain",
+    "locale": "es",
+    "value": "Hexa = 6: el hexano tiene 6 carbonos.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_hexano_n.opt.5",
+    "locale": "es",
+    "value": "5",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_hexano_n.opt.6",
+    "locale": "es",
+    "value": "6",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_hexano_n.opt.7",
+    "locale": "es",
+    "value": "7",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_hexano_n.opt.8",
+    "locale": "es",
+    "value": "8",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_hexano_n.prompt",
+    "locale": "es",
+    "value": "El hexano tiene ¿cuántos carbonos?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_acetaldehido.explain",
+    "locale": "es",
+    "value": "CC=O es acetaldehído: carbonilo terminal con H, un aldehído.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_acetaldehido.opt.acido",
+    "locale": "es",
+    "value": "Ácido carboxílico",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_acetaldehido.opt.alcohol",
+    "locale": "es",
+    "value": "Alcohol",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_acetaldehido.opt.aldehido",
+    "locale": "es",
+    "value": "Aldehído",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_acetaldehido.opt.cetona",
+    "locale": "es",
+    "value": "Cetona",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_acetaldehido.prompt",
+    "locale": "es",
+    "value": "¿Qué grupo funcional es?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_acetico.explain",
+    "locale": "es",
+    "value": "CC(=O)O es ácido acético: grupo -COOH.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_acetico.opt.acido",
+    "locale": "es",
+    "value": "Ácido carboxílico",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_acetico.opt.alcohol",
+    "locale": "es",
+    "value": "Alcohol",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_acetico.opt.cetona",
+    "locale": "es",
+    "value": "Cetona",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_acetico.opt.ester",
+    "locale": "es",
+    "value": "Éster",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_acetico.prompt",
+    "locale": "es",
+    "value": "¿A qué familia pertenece esta estructura?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_acetona.explain",
+    "locale": "es",
+    "value": "CC(=O)C es acetona: carbonilo entre dos carbonos, una cetona.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_acetona.opt.alcohol",
+    "locale": "es",
+    "value": "Alcohol",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_acetona.opt.aldehido",
+    "locale": "es",
+    "value": "Aldehído",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_acetona.opt.cetona",
+    "locale": "es",
+    "value": "Cetona",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_acetona.opt.eter",
+    "locale": "es",
+    "value": "Éter",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_acetona.prompt",
+    "locale": "es",
+    "value": "¿Qué grupo funcional es?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_amida.explain",
+    "locale": "es",
+    "value": "CC(=O)N es acetamida: carbonilo unido a nitrógeno, una amida.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_amida.opt.acido",
+    "locale": "es",
+    "value": "Ácido carboxílico",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_amida.opt.amida",
+    "locale": "es",
+    "value": "Amida",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_amida.opt.amina",
+    "locale": "es",
+    "value": "Amina",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_amida.opt.cetona",
+    "locale": "es",
+    "value": "Cetona",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_amida.prompt",
+    "locale": "es",
+    "value": "¿Qué grupo funcional es?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_amina.explain",
+    "locale": "es",
+    "value": "CN es metilamina: grupo -NH2 unido a carbono, una amina.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_amina.opt.alcohol",
+    "locale": "es",
+    "value": "Alcohol",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_amina.opt.amida",
+    "locale": "es",
+    "value": "Amida",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_amina.opt.amina",
+    "locale": "es",
+    "value": "Amina",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_amina.opt.eter",
+    "locale": "es",
+    "value": "Éter",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_amina.prompt",
+    "locale": "es",
+    "value": "¿Qué grupo funcional es?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_etanol.explain",
+    "locale": "es",
+    "value": "CCO es etanol: tiene -OH, es un alcohol.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_etanol.opt.acido",
+    "locale": "es",
+    "value": "Ácido carboxílico",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_etanol.opt.alcohol",
+    "locale": "es",
+    "value": "Alcohol",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_etanol.opt.aldehido",
+    "locale": "es",
+    "value": "Aldehído",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_etanol.opt.eter",
+    "locale": "es",
+    "value": "Éter",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_etanol.prompt",
+    "locale": "es",
+    "value": "¿A qué familia pertenece esta estructura?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_eter.explain",
+    "locale": "es",
+    "value": "COC es dimetil éter: oxígeno entre dos carbonos (C-O-C), un éter.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_eter.opt.alcohol",
+    "locale": "es",
+    "value": "Alcohol",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_eter.opt.cetona",
+    "locale": "es",
+    "value": "Cetona",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_eter.opt.ester",
+    "locale": "es",
+    "value": "Éster",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_eter.opt.eter",
+    "locale": "es",
+    "value": "Éter",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_id_eter.prompt",
+    "locale": "es",
+    "value": "¿Qué grupo funcional es?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_metano.explain",
+    "locale": "es",
+    "value": "1 carbono: metano.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_metano.opt.butano",
+    "locale": "es",
+    "value": "Butano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_metano.opt.etano",
+    "locale": "es",
+    "value": "Etano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_metano.opt.metano",
+    "locale": "es",
+    "value": "Metano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_metano.opt.propano",
+    "locale": "es",
+    "value": "Propano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_metano.prompt",
+    "locale": "es",
+    "value": "¿Cómo se llama el alcano de un solo carbono (CH₄)?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_num_alfabetico.explain",
+    "locale": "es",
+    "value": "Los sustituyentes se nombran en orden alfabético (etil antes que metil).",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_num_alfabetico.opt.alfabetico",
+    "locale": "es",
+    "value": "Alfabético",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_num_alfabetico.opt.aparicion",
+    "locale": "es",
+    "value": "Según aparecen en la cadena",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_num_alfabetico.opt.inverso",
+    "locale": "es",
+    "value": "Inverso al alfabeto",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_num_alfabetico.opt.tamano",
+    "locale": "es",
+    "value": "De mayor a menor tamaño",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_num_alfabetico.prompt",
+    "locale": "es",
+    "value": "Cuando hay varios sustituyentes distintos, se citan en el nombre en orden:",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_num_menor.explain",
+    "locale": "es",
+    "value": "Se elige la numeración que minimiza los localizadores.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_num_menor.opt.false",
+    "locale": "es",
+    "value": "Falso",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_num_menor.opt.true",
+    "locale": "es",
+    "value": "Verdadero",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_num_menor.prompt",
+    "locale": "es",
+    "value": "La cadena principal se numera desde el extremo que da los menores localizadores a los sustituyentes.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_propano.explain",
+    "locale": "es",
+    "value": "3 carbonos en cadena: propano.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_propano.opt.butano",
+    "locale": "es",
+    "value": "Butano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_propano.opt.etano",
+    "locale": "es",
+    "value": "Etano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_propano.opt.pentano",
+    "locale": "es",
+    "value": "Pentano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_propano.opt.propano",
+    "locale": "es",
+    "value": "Propano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_propano.prompt",
+    "locale": "es",
+    "value": "¿Cómo se llama el alcano CH₃-CH₂-CH₃?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_angulo.explain",
+    "locale": "es",
+    "value": "La geometría trigonal plana corresponde a 120°.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_angulo.opt.109",
+    "locale": "es",
+    "value": "109.5°",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_angulo.opt.120",
+    "locale": "es",
+    "value": "120°",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_angulo.opt.180",
+    "locale": "es",
+    "value": "180°",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_angulo.opt.90",
+    "locale": "es",
+    "value": "90°",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_angulo.prompt",
+    "locale": "es",
+    "value": "¿Cuál es el ángulo de enlace aproximado en un carbono sp²?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_enlaces.explain",
+    "locale": "es",
+    "value": "Tres sigma con los híbridos sp² y un pi con el orbital p restante (el doble enlace).",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_enlaces.opt.false",
+    "locale": "es",
+    "value": "Falso",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_enlaces.opt.true",
+    "locale": "es",
+    "value": "Verdadero",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_enlaces.prompt",
+    "locale": "es",
+    "value": "Un carbono sp² forma 3 enlaces sigma y 1 enlace pi.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_geom.explain",
+    "locale": "es",
+    "value": "Tres híbridos sp² en un plano: geometría trigonal plana.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_geom.opt.lineal",
+    "locale": "es",
+    "value": "Lineal",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_geom.opt.piramidal",
+    "locale": "es",
+    "value": "Piramidal",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_geom.opt.tetraedrica",
+    "locale": "es",
+    "value": "Tetraédrica",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_geom.opt.trigonal_plana",
+    "locale": "es",
+    "value": "Trigonal plana",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_geom.prompt",
+    "locale": "es",
+    "value": "¿Qué geometría tiene un carbono sp²?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_molecula.explain",
+    "locale": "es",
+    "value": "El doble enlace del eteno implica carbonos sp².",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_molecula.opt.etano",
+    "locale": "es",
+    "value": "Etano (CH₃-CH₃)",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_molecula.opt.eteno",
+    "locale": "es",
+    "value": "Eteno (CH₂=CH₂)",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_molecula.opt.etino",
+    "locale": "es",
+    "value": "Etino (CH≡CH)",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_molecula.opt.metano",
+    "locale": "es",
+    "value": "Metano (CH₄)",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp2_molecula.prompt",
+    "locale": "es",
+    "value": "¿Cuál molécula contiene carbonos con hibridación sp²?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_angulo.explain",
+    "locale": "es",
+    "value": "La geometría tetraédrica corresponde a ángulos de 109.5°.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_angulo.opt.109",
+    "locale": "es",
+    "value": "109.5°",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_angulo.opt.120",
+    "locale": "es",
+    "value": "120°",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_angulo.opt.180",
+    "locale": "es",
+    "value": "180°",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_angulo.opt.90",
+    "locale": "es",
+    "value": "90°",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_angulo.prompt",
+    "locale": "es",
+    "value": "¿Cuál es el ángulo de enlace aproximado en un carbono sp³?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_geom.explain",
+    "locale": "es",
+    "value": "Cuatro híbridos sp³ apuntan a los vértices de un tetraedro.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_geom.opt.angular",
+    "locale": "es",
+    "value": "Angular",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_geom.opt.lineal",
+    "locale": "es",
+    "value": "Lineal",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_geom.opt.tetraedrica",
+    "locale": "es",
+    "value": "Tetraédrica",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_geom.opt.trigonal_plana",
+    "locale": "es",
+    "value": "Trigonal plana",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_geom.prompt",
+    "locale": "es",
+    "value": "¿Qué geometría tiene un carbono con hibridación sp³?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_molecula.explain",
+    "locale": "es",
+    "value": "El metano solo tiene enlaces simples: carbono sp³. Eteno es sp² y etino es sp.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_molecula.opt.benceno",
+    "locale": "es",
+    "value": "Benceno",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_molecula.opt.eteno",
+    "locale": "es",
+    "value": "Eteno (CH₂=CH₂)",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_molecula.opt.etino",
+    "locale": "es",
+    "value": "Etino (CH≡CH)",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_molecula.opt.metano",
+    "locale": "es",
+    "value": "Metano (CH₄)",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_molecula.prompt",
+    "locale": "es",
+    "value": "¿Cuál molécula tiene todos sus carbonos con hibridación sp³?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_sigma.explain",
+    "locale": "es",
+    "value": "Los 4 híbridos sp³ forman 4 sigma; no hay orbital p libre para pi.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_sigma.opt.false",
+    "locale": "es",
+    "value": "Falso",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_sigma.opt.true",
+    "locale": "es",
+    "value": "Verdadero",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp3_sigma.prompt",
+    "locale": "es",
+    "value": "Un carbono sp³ forma 4 enlaces sigma y ningún enlace pi.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_angulo.explain",
+    "locale": "es",
+    "value": "La geometría lineal corresponde a 180°.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_angulo.opt.109",
+    "locale": "es",
+    "value": "109.5°",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_angulo.opt.120",
+    "locale": "es",
+    "value": "120°",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_angulo.opt.180",
+    "locale": "es",
+    "value": "180°",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_angulo.opt.90",
+    "locale": "es",
+    "value": "90°",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_angulo.prompt",
+    "locale": "es",
+    "value": "¿Cuál es el ángulo de enlace en un carbono sp?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_enlaces.explain",
+    "locale": "es",
+    "value": "Dos sigma con los híbridos sp y dos pi con los dos orbitales p (el triple enlace).",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_enlaces.opt.false",
+    "locale": "es",
+    "value": "Falso",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_enlaces.opt.true",
+    "locale": "es",
+    "value": "Verdadero",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_enlaces.prompt",
+    "locale": "es",
+    "value": "Un carbono sp forma 2 enlaces sigma y 2 enlaces pi.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_geom.explain",
+    "locale": "es",
+    "value": "Dos híbridos sp opuestos: geometría lineal.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_geom.opt.angular",
+    "locale": "es",
+    "value": "Angular",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_geom.opt.lineal",
+    "locale": "es",
+    "value": "Lineal",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_geom.opt.tetraedrica",
+    "locale": "es",
+    "value": "Tetraédrica",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_geom.opt.trigonal_plana",
+    "locale": "es",
+    "value": "Trigonal plana",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_geom.prompt",
+    "locale": "es",
+    "value": "¿Qué geometría tiene un carbono sp?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_molecula.explain",
+    "locale": "es",
+    "value": "El triple enlace del etino implica carbonos sp.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_molecula.opt.etano",
+    "locale": "es",
+    "value": "Etano (CH₃-CH₃)",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_molecula.opt.eteno",
+    "locale": "es",
+    "value": "Eteno (CH₂=CH₂)",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_molecula.opt.etino",
+    "locale": "es",
+    "value": "Etino (CH≡CH)",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_molecula.opt.propano",
+    "locale": "es",
+    "value": "Propano",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sp_molecula.prompt",
+    "locale": "es",
+    "value": "¿Cuál molécula contiene carbonos con hibridación sp?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_etil.explain",
+    "locale": "es",
+    "value": "-CH2CH3 (2 carbonos) como sustituyente es etil.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_etil.opt.butil",
+    "locale": "es",
+    "value": "Butil",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_etil.opt.etil",
+    "locale": "es",
+    "value": "Etil",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_etil.opt.metil",
+    "locale": "es",
+    "value": "Metil",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_etil.opt.propil",
+    "locale": "es",
+    "value": "Propil",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_etil.prompt",
+    "locale": "es",
+    "value": "El sustituyente -CH₂CH₃ se llama:",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_metil.explain",
+    "locale": "es",
+    "value": "-CH3 como cadena lateral es metil.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_metil.opt.butil",
+    "locale": "es",
+    "value": "Butil",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_metil.opt.etil",
+    "locale": "es",
+    "value": "Etil",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_metil.opt.metil",
+    "locale": "es",
+    "value": "Metil",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_metil.opt.propil",
+    "locale": "es",
+    "value": "Propil",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_metil.prompt",
+    "locale": "es",
+    "value": "El sustituyente -CH₃ se llama:",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_propil.explain",
+    "locale": "es",
+    "value": "Prop = 3: el propil tiene 3 carbonos.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_propil.opt.false",
+    "locale": "es",
+    "value": "Falso",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_propil.opt.true",
+    "locale": "es",
+    "value": "Verdadero",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_propil.prompt",
+    "locale": "es",
+    "value": "Un grupo propil tiene 3 carbonos.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_terminacion.explain",
+    "locale": "es",
+    "value": "Alcano -> sustituyente: -ano cambia a -il (metano -> metil).",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_terminacion.opt.eno",
+    "locale": "es",
+    "value": "-eno",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_terminacion.opt.il",
+    "locale": "es",
+    "value": "-il",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_terminacion.opt.ol",
+    "locale": "es",
+    "value": "-ol",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_terminacion.opt.ona",
+    "locale": "es",
+    "value": "-ona",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_sust_terminacion.prompt",
+    "locale": "es",
+    "value": "Para nombrar un sustituyente alquilo se cambia la terminación -ano por:",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_cuaternario.explain",
+    "locale": "es",
+    "value": "El carbono central está unido a 4 carbonos: es cuaternario.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_cuaternario.opt.cuaternario",
+    "locale": "es",
+    "value": "Cuaternario",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_cuaternario.opt.primario",
+    "locale": "es",
+    "value": "Primario",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_cuaternario.opt.secundario",
+    "locale": "es",
+    "value": "Secundario",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_cuaternario.opt.terciario",
+    "locale": "es",
+    "value": "Terciario",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_cuaternario.prompt",
+    "locale": "es",
+    "value": "En el 2,2-dimetilpropano (neopentano), ¿cómo es el carbono central?",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_primario.explain",
+    "locale": "es",
+    "value": "Primario = unido a 1 carbono. Los carbonos de los extremos suelen serlo.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_primario.opt.cuaternario",
+    "locale": "es",
+    "value": "Cuaternario",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_primario.opt.primario",
+    "locale": "es",
+    "value": "Primario",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_primario.opt.secundario",
+    "locale": "es",
+    "value": "Secundario",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_primario.opt.terciario",
+    "locale": "es",
+    "value": "Terciario",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_primario.prompt",
+    "locale": "es",
+    "value": "Un carbono unido a un solo carbono se clasifica como:",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_secundario.explain",
+    "locale": "es",
+    "value": "Secundario = unido a 2 carbonos.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_secundario.opt.false",
+    "locale": "es",
+    "value": "Falso",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_secundario.opt.true",
+    "locale": "es",
+    "value": "Verdadero",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_secundario.prompt",
+    "locale": "es",
+    "value": "Un carbono secundario está unido a 2 carbonos.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_terciario.explain",
+    "locale": "es",
+    "value": "Terciario = unido a 3 carbonos.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_terciario.opt.cuaternario",
+    "locale": "es",
+    "value": "Cuaternario",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_terciario.opt.primario",
+    "locale": "es",
+    "value": "Primario",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_terciario.opt.secundario",
+    "locale": "es",
+    "value": "Secundario",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_terciario.opt.terciario",
+    "locale": "es",
+    "value": "Terciario",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_tipo_terciario.prompt",
+    "locale": "es",
+    "value": "Un carbono unido directamente a otros 3 carbonos se clasifica como:",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_wohler.explain",
+    "locale": "es",
+    "value": "La síntesis de Wöhler refutó el vitalismo: lo orgánico no necesitaba 'fuerza vital'.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_wohler.opt.atomica",
+    "locale": "es",
+    "value": "atómica.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_wohler.opt.celular",
+    "locale": "es",
+    "value": "celular.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_wohler.opt.vitalista",
+    "locale": "es",
+    "value": "vitalista.",
+    "content_version": 1
+  },
+  {
+    "key": "ex.e_wohler.prompt",
+    "locale": "es",
+    "value": "Dato curioso: en 1828 Wöhler obtuvo urea a partir de una sal inorgánica. Esto refutó la teoría...",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.ft_carbono_enlaces.hint",
+    "locale": "es",
+    "value": "Cuenta los electrones del grupo 14.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.ft_carbono_enlaces.message",
+    "locale": "es",
+    "value": "El carbono tiene 4 electrones de valencia, por eso forma 4 enlaces covalentes.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.ft_grupos_funcionales.hint",
+    "locale": "es",
+    "value": "Fíjate en dónde está el oxígeno y si hay un hidrógeno en el carbonilo.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.ft_grupos_funcionales.message",
+    "locale": "es",
+    "value": "Revisa el grupo: -OH sobre un carbono saturado es alcohol; -CHO es aldehído; C=O entre dos carbonos es cetona; -COOH es ácido carboxílico.",
+    "content_version": 2
+  },
+  {
+    "key": "feedback.ft_grupos_nitrogenados.hint",
+    "locale": "es",
+    "value": "¿Hay un carbonilo junto al nitrógeno?",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.ft_grupos_nitrogenados.message",
+    "locale": "es",
+    "value": "-NH₂ unido a un grupo alquilo es amina; si el nitrógeno está unido al carbono de un C=O, es amida.",
+    "content_version": 2
+  },
+  {
+    "key": "feedback.ft_grupos_oxigenados.hint",
+    "locale": "es",
+    "value": "¿Hay un C=O? Si lo hay, fíjate si está al final de la cadena o entre dos carbonos. Si no lo hay, revisa si el oxígeno une dos carbonos.",
+    "content_version": 2
+  },
+  {
+    "key": "feedback.ft_grupos_oxigenados.message",
+    "locale": "es",
+    "value": "C=O terminal con H es aldehído; C=O entre carbonos es cetona; C-O-C es éter; -COOH es ácido.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.ft_hibridacion_general.hint",
+    "locale": "es",
+    "value": "Cada enlace pi viene de un doble o triple enlace.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.ft_hibridacion_general.message",
+    "locale": "es",
+    "value": "sp³ = 4 sigma; sp² = 3 sigma + 1 pi; sp = 2 sigma + 2 pi.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.ft_hibridacion_geom.hint",
+    "locale": "es",
+    "value": "Cuenta los enlaces simples, dobles o triples del carbono.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.ft_hibridacion_geom.message",
+    "locale": "es",
+    "value": "Relaciona hibridación y geometría: sp³ tetraédrica (109.5°), sp² trigonal plana (120°), sp lineal (180°).",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.ft_nomenclatura_lineales.hint",
+    "locale": "es",
+    "value": "El número de carbonos da el prefijo.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.ft_nomenclatura_lineales.message",
+    "locale": "es",
+    "value": "Cuenta los carbonos de la cadena y usa el prefijo: met, et, prop, but, pent, hex + -ano.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.ft_nomenclatura_numeracion.hint",
+    "locale": "es",
+    "value": "Prueba numerar desde ambos extremos y compara.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.ft_nomenclatura_numeracion.message",
+    "locale": "es",
+    "value": "Elige la cadena más larga y numera desde el extremo que da los menores localizadores.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.ft_nomenclatura_sustituyentes.hint",
+    "locale": "es",
+    "value": "Compara el número de carbonos de la cadena lateral.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.ft_nomenclatura_sustituyentes.message",
+    "locale": "es",
+    "value": "Los sustituyentes cambian -ano por -il: metil, etil, propil, butil. En el nombre van en orden alfabético.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.ft_organico.hint",
+    "locale": "es",
+    "value": "El carbono es necesario, pero no basta. Recuerda que el CO₂ se considera inorgánico.",
+    "content_version": 2
+  },
+  {
+    "key": "feedback.ft_organico.message",
+    "locale": "es",
+    "value": "Los compuestos orgánicos contienen carbono, casi siempre unido a hidrógeno. Algunos compuestos del carbono, como el CO₂, se clasifican tradicionalmente como inorgánicos.",
+    "content_version": 2
+  },
+  {
+    "key": "feedback.ft_tipos_carbono.hint",
+    "locale": "es",
+    "value": "Cuenta solo carbonos vecinos, no hidrógenos.",
+    "content_version": 1
+  },
+  {
+    "key": "feedback.ft_tipos_carbono.message",
+    "locale": "es",
+    "value": "Clasifica el carbono por el número de carbonos a los que está unido: 1 primario, 2 secundario, 3 terciario, 4 cuaternario.",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_alcanos_lineales.intro",
+    "locale": "es",
+    "value": "Los alcanos lineales se nombran con un prefijo que indica el número de carbonos más la terminación -ano: metano (1), etano (2), propano (3), butano (4), pentano (5), hexano (6).",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_alcanos_lineales.title",
+    "locale": "es",
+    "value": "Alcanos de cadena lineal",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_carbono_enlaces.intro",
+    "locale": "es",
+    "value": "El carbono tiene 4 electrones de valencia, por eso forma 4 enlaces covalentes y se une consigo mismo en cadenas. Esa capacidad, la catenación, es la base de millones de compuestos orgánicos.",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_carbono_enlaces.title",
+    "locale": "es",
+    "value": "El carbono y sus enlaces",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_grupos_intro.intro",
+    "locale": "es",
+    "value": "El grupo funcional es el átomo o conjunto de átomos que define la familia y las propiedades de un compuesto: -OH unido a un carbono saturado (alcohol), -CHO (aldehído), C=O unido a dos carbonos (cetona) y -COOH (ácido carboxílico).",
+    "content_version": 2
+  },
+  {
+    "key": "lesson.l_grupos_intro.title",
+    "locale": "es",
+    "value": "Reconoce los grupos",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_grupos_nitrogenados.intro",
+    "locale": "es",
+    "value": "El nitrógeno aparece en aminas, como la metilamina (CH₃-NH₂), y en amidas, donde el nitrógeno está unido directamente al carbono de un grupo carbonilo (C=O). Distinguirlas depende de si hay o no un carbonilo junto al nitrógeno.",
+    "content_version": 2
+  },
+  {
+    "key": "lesson.l_grupos_nitrogenados.title",
+    "locale": "es",
+    "value": "Grupos con nitrógeno",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_grupos_oxigenados.intro",
+    "locale": "es",
+    "value": "El oxígeno aparece en varias familias según su entorno: -OH unido a un carbono saturado (alcohol), C=O terminal con H (aldehído), C=O entre carbonos (cetona), C-O-C (éter) y -COOH (ácido carboxílico).",
+    "content_version": 2
+  },
+  {
+    "key": "lesson.l_grupos_oxigenados.title",
+    "locale": "es",
+    "value": "Grupos con oxígeno",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_numeracion.intro",
+    "locale": "es",
+    "value": "Se elige la cadena más larga como principal y se numera desde el extremo que dé los menores localizadores a los sustituyentes. Los sustituyentes se citan en orden alfabético.",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_numeracion.title",
+    "locale": "es",
+    "value": "Numerar la cadena",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_organico.intro",
+    "locale": "es",
+    "value": "Un compuesto orgánico contiene carbono unido principalmente a hidrógeno y a otros elementos como O, N o halógenos. En 1828 Wöhler sintetizó urea desde una sal inorgánica y rompió la idea de que lo orgánico requería 'fuerza vital'.",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_organico.title",
+    "locale": "es",
+    "value": "¿Orgánico o inorgánico?",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_ramificados.intro",
+    "locale": "es",
+    "value": "Juntando todo: cadena principal más larga, numeración de menor localizador, sustituyentes en orden alfabético y prefijos di/tri cuando se repiten. Así se construye el nombre IUPAC completo.",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_ramificados.title",
+    "locale": "es",
+    "value": "Alcanos ramificados",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_sp.intro",
+    "locale": "es",
+    "value": "Con un triple enlace, el carbono forma 2 híbridos sp opuestos (geometría lineal, 180°) y dos orbitales p para dos enlaces π. El etino (CH≡CH) es el ejemplo típico.",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_sp.title",
+    "locale": "es",
+    "value": "Hibridación sp",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_sp2.intro",
+    "locale": "es",
+    "value": "Con un doble enlace, el carbono usa 3 híbridos sp² en un plano (geometría trigonal plana, 120°) y deja un orbital p para el enlace π. El eteno (CH2=CH2) es el caso de referencia.",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_sp2.title",
+    "locale": "es",
+    "value": "Hibridación sp²",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_sp3.intro",
+    "locale": "es",
+    "value": "Cuando el carbono forma 4 enlaces simples, sus orbitales se combinan en 4 híbridos sp³ dirigidos a los vértices de un tetraedro. El metano es el ejemplo clásico: geometría tetraédrica, ángulos de 109.5°.",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_sp3.title",
+    "locale": "es",
+    "value": "Hibridación sp³",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_sustituyentes.intro",
+    "locale": "es",
+    "value": "Un sustituyente es una cadena lateral. Se nombra cambiando -ano por -il: metil (1C), etil (2C), propil (3C), butil (4C). Se anteponen al nombre de la cadena principal.",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_sustituyentes.title",
+    "locale": "es",
+    "value": "Sustituyentes alquilo",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_tipos_carbono.intro",
+    "locale": "es",
+    "value": "Un carbono se clasifica por cuántos otros carbonos tiene unidos: primario (1), secundario (2), terciario (3) y cuaternario (4). Esta clasificación predice reactividad y puntos de ramificación.",
+    "content_version": 1
+  },
+  {
+    "key": "lesson.l_tipos_carbono.title",
+    "locale": "es",
+    "value": "Carbonos primario a cuaternario",
+    "content_version": 1
+  },
+  {
+    "key": "reward.chest_small.title",
+    "locale": "es",
+    "value": "Cofre pequeño",
+    "content_version": 1
+  },
+  {
+    "key": "reward.streak_freeze.title",
+    "locale": "es",
+    "value": "Congelar racha",
+    "content_version": 1
+  },
+  {
+    "key": "unit.alcanos_lineales.subtitle",
+    "locale": "es",
+    "value": "La cadena base",
+    "content_version": 1
+  },
+  {
+    "key": "unit.alcanos_lineales.title",
+    "locale": "es",
+    "value": "Alcanos lineales",
+    "content_version": 1
+  },
+  {
+    "key": "unit.alcanos_ramificados.subtitle",
+    "locale": "es",
+    "value": "Sustituyentes y numeración",
+    "content_version": 1
+  },
+  {
+    "key": "unit.alcanos_ramificados.title",
+    "locale": "es",
+    "value": "Alcanos ramificados",
+    "content_version": 1
+  },
+  {
+    "key": "unit.grupos_intro.subtitle",
+    "locale": "es",
+    "value": "Reconoce grupos funcionales",
+    "content_version": 1
+  },
+  {
+    "key": "unit.grupos_intro.title",
+    "locale": "es",
+    "value": "Familias químicas",
+    "content_version": 1
+  },
+  {
+    "key": "unit.hibridacion.subtitle",
+    "locale": "es",
+    "value": "sp³, sp² y sp",
+    "content_version": 1
+  },
+  {
+    "key": "unit.hibridacion.title",
+    "locale": "es",
+    "value": "Hibridación del carbono",
+    "content_version": 1
+  },
+  {
+    "key": "unit.intro_carbono.subtitle",
+    "locale": "es",
+    "value": "Por qué el carbono es especial",
+    "content_version": 1
+  },
+  {
+    "key": "unit.intro_carbono.title",
+    "locale": "es",
+    "value": "Introducción al carbono",
+    "content_version": 1
+  },
+  {
+    "key": "unit.tipos_carbono.subtitle",
+    "locale": "es",
+    "value": "Primario a cuaternario",
+    "content_version": 1
+  },
+  {
+    "key": "unit.tipos_carbono.title",
+    "locale": "es",
+    "value": "Tipos de carbono",
+    "content_version": 1
+  },
+  {
+    "key": "world.alcanos.desc",
+    "locale": "es",
+    "value": "Nombra alcanos lineales y ramificados",
+    "content_version": 1
+  },
+  {
+    "key": "world.alcanos.title",
+    "locale": "es",
+    "value": "Nomenclatura de alcanos",
+    "content_version": 1
+  },
+  {
+    "key": "world.carbono.desc",
+    "locale": "es",
+    "value": "Enlaces, hibridación y tipos de carbono",
+    "content_version": 1
+  },
+  {
+    "key": "world.carbono.title",
+    "locale": "es",
+    "value": "Química básica del carbono",
+    "content_version": 1
+  },
+  {
+    "key": "world.estereo.desc",
+    "locale": "es",
+    "value": "Quiralidad, cis/trans y proyecciones (próximamente)",
+    "content_version": 1
+  },
+  {
+    "key": "world.estereo.title",
+    "locale": "es",
+    "value": "Estereoquímica",
+    "content_version": 1
+  },
+  {
+    "key": "world.grupos.desc",
+    "locale": "es",
+    "value": "Identifica alcoholes, aldehídos, cetonas y más",
+    "content_version": 1
+  },
+  {
+    "key": "world.grupos.title",
+    "locale": "es",
+    "value": "Grupos funcionales y clasificación",
+    "content_version": 1
+  },
+  {
+    "key": "world.reacciones.desc",
+    "locale": "es",
+    "value": "Adición, sustitución y mecanismos (próximamente)",
+    "content_version": 1
+  },
+  {
+    "key": "world.reacciones.title",
+    "locale": "es",
+    "value": "Bosque de reacciones",
+    "content_version": 1
+  }
+]

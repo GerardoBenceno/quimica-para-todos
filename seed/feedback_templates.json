@@ -1,0 +1,112 @@
+[
+  {
+    "id": "ft_carbono_enlaces",
+    "key": "feedback.carbono_enlaces.generic",
+    "topic": "carbono_enlaces",
+    "message_key": "feedback.ft_carbono_enlaces.message",
+    "hint_key": "feedback.ft_carbono_enlaces.hint",
+    "severity": "correction",
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "ft_organico",
+    "key": "feedback.compuesto_organico.generic",
+    "topic": "compuesto_organico",
+    "message_key": "feedback.ft_organico.message",
+    "hint_key": "feedback.ft_organico.hint",
+    "severity": "correction",
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "ft_hibridacion_geom",
+    "key": "feedback.hibridacion_geometria.generic",
+    "topic": "hibridacion_geometria",
+    "message_key": "feedback.ft_hibridacion_geom.message",
+    "hint_key": "feedback.ft_hibridacion_geom.hint",
+    "severity": "correction",
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "ft_hibridacion_general",
+    "key": "feedback.hibridacion_general.generic",
+    "topic": "hibridacion_general",
+    "message_key": "feedback.ft_hibridacion_general.message",
+    "hint_key": "feedback.ft_hibridacion_general.hint",
+    "severity": "correction",
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "ft_tipos_carbono",
+    "key": "feedback.tipos_carbono.generic",
+    "topic": "tipos_carbono",
+    "message_key": "feedback.ft_tipos_carbono.message",
+    "hint_key": "feedback.ft_tipos_carbono.hint",
+    "severity": "correction",
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "ft_grupos_funcionales",
+    "key": "feedback.grupos_funcionales.generic",
+    "topic": "grupos_funcionales",
+    "message_key": "feedback.ft_grupos_funcionales.message",
+    "hint_key": "feedback.ft_grupos_funcionales.hint",
+    "severity": "correction",
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "ft_grupos_oxigenados",
+    "key": "feedback.grupos_oxigenados.generic",
+    "topic": "grupos_oxigenados",
+    "message_key": "feedback.ft_grupos_oxigenados.message",
+    "hint_key": "feedback.ft_grupos_oxigenados.hint",
+    "severity": "correction",
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "ft_grupos_nitrogenados",
+    "key": "feedback.grupos_nitrogenados.generic",
+    "topic": "grupos_nitrogenados",
+    "message_key": "feedback.ft_grupos_nitrogenados.message",
+    "hint_key": "feedback.ft_grupos_nitrogenados.hint",
+    "severity": "correction",
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "ft_nomenclatura_lineales",
+    "key": "feedback.nomenclatura_alcanos_lineales.generic",
+    "topic": "nomenclatura_alcanos_lineales",
+    "message_key": "feedback.ft_nomenclatura_lineales.message",
+    "hint_key": "feedback.ft_nomenclatura_lineales.hint",
+    "severity": "correction",
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "ft_nomenclatura_sustituyentes",
+    "key": "feedback.nomenclatura_sustituyentes.generic",
+    "topic": "nomenclatura_sustituyentes",
+    "message_key": "feedback.ft_nomenclatura_sustituyentes.message",
+    "hint_key": "feedback.ft_nomenclatura_sustituyentes.hint",
+    "severity": "correction",
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "ft_nomenclatura_numeracion",
+    "key": "feedback.nomenclatura_numeracion.generic",
+    "topic": "nomenclatura_numeracion",
+    "message_key": "feedback.ft_nomenclatura_numeracion.message",
+    "hint_key": "feedback.ft_nomenclatura_numeracion.hint",
+    "severity": "correction",
+    "content_version": 1,
+    "is_active": true
+  }
+]

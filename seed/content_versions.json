@@ -1,0 +1,18 @@
+[
+  {
+    "id": "cvs_1",
+    "version": 1,
+    "channel": "stable",
+    "notes": "Seed inicial MVP: 3 mundos, 13 lecciones",
+    "min_app_version": "0.1.0",
+    "created_at": "2026-06-25T00:00:00Z"
+  },
+  {
+    "id": "cvs_2",
+    "version": 2,
+    "channel": "stable",
+    "notes": "Correcciones de precisión en textos de grupos funcionales y de compuestos orgánicos (ver CAMBIOS_SEED.md)",
+    "min_app_version": "0.1.0",
+    "created_at": "2026-11-04T00:00:00Z"
+  }
+]

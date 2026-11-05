@@ -1,0 +1,236 @@
+[
+  {
+    "id": "l_carbono_enlaces",
+    "unit_id": "u_intro_carbono",
+    "title_key": "lesson.l_carbono_enlaces.title",
+    "order": 1,
+    "type": "standard",
+    "intro": {
+      "text_key": "lesson.l_carbono_enlaces.intro",
+      "image_asset_id": null,
+      "youtube_id": null
+    },
+    "xp_reward": 20,
+    "coin_reward": 5,
+    "star_count": 0,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "l_organico",
+    "unit_id": "u_intro_carbono",
+    "title_key": "lesson.l_organico.title",
+    "order": 2,
+    "type": "standard",
+    "intro": {
+      "text_key": "lesson.l_organico.intro",
+      "image_asset_id": null,
+      "youtube_id": null
+    },
+    "xp_reward": 20,
+    "coin_reward": 5,
+    "star_count": 0,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "l_sp3",
+    "unit_id": "u_hibridacion",
+    "title_key": "lesson.l_sp3.title",
+    "order": 1,
+    "type": "standard",
+    "intro": {
+      "text_key": "lesson.l_sp3.intro",
+      "image_asset_id": "asset_metano_tetraedrico",
+      "youtube_id": null
+    },
+    "xp_reward": 20,
+    "coin_reward": 5,
+    "star_count": 0,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "l_sp2",
+    "unit_id": "u_hibridacion",
+    "title_key": "lesson.l_sp2.title",
+    "order": 2,
+    "type": "standard",
+    "intro": {
+      "text_key": "lesson.l_sp2.intro",
+      "image_asset_id": null,
+      "youtube_id": null
+    },
+    "xp_reward": 20,
+    "coin_reward": 5,
+    "star_count": 0,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "l_sp",
+    "unit_id": "u_hibridacion",
+    "title_key": "lesson.l_sp.title",
+    "order": 3,
+    "type": "standard",
+    "intro": {
+      "text_key": "lesson.l_sp.intro",
+      "image_asset_id": null,
+      "youtube_id": null
+    },
+    "xp_reward": 20,
+    "coin_reward": 5,
+    "star_count": 0,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "l_tipos_carbono",
+    "unit_id": "u_tipos_carbono",
+    "title_key": "lesson.l_tipos_carbono.title",
+    "order": 1,
+    "type": "standard",
+    "intro": {
+      "text_key": "lesson.l_tipos_carbono.intro",
+      "image_asset_id": null,
+      "youtube_id": null
+    },
+    "xp_reward": 20,
+    "coin_reward": 5,
+    "star_count": 0,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "l_grupos_intro",
+    "unit_id": "u_grupos_intro",
+    "title_key": "lesson.l_grupos_intro.title",
+    "order": 1,
+    "type": "standard",
+    "intro": {
+      "text_key": "lesson.l_grupos_intro.intro",
+      "image_asset_id": null,
+      "youtube_id": null
+    },
+    "xp_reward": 20,
+    "coin_reward": 5,
+    "star_count": 0,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "l_grupos_oxigenados",
+    "unit_id": "u_grupos_intro",
+    "title_key": "lesson.l_grupos_oxigenados.title",
+    "order": 2,
+    "type": "standard",
+    "intro": {
+      "text_key": "lesson.l_grupos_oxigenados.intro",
+      "image_asset_id": null,
+      "youtube_id": null
+    },
+    "xp_reward": 20,
+    "coin_reward": 5,
+    "star_count": 0,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "l_grupos_nitrogenados",
+    "unit_id": "u_grupos_intro",
+    "title_key": "lesson.l_grupos_nitrogenados.title",
+    "order": 3,
+    "type": "standard",
+    "intro": {
+      "text_key": "lesson.l_grupos_nitrogenados.intro",
+      "image_asset_id": null,
+      "youtube_id": null
+    },
+    "xp_reward": 20,
+    "coin_reward": 5,
+    "star_count": 0,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "l_alcanos_lineales",
+    "unit_id": "u_alcanos_lineales",
+    "title_key": "lesson.l_alcanos_lineales.title",
+    "order": 1,
+    "type": "standard",
+    "intro": {
+      "text_key": "lesson.l_alcanos_lineales.intro",
+      "image_asset_id": null,
+      "youtube_id": null
+    },
+    "xp_reward": 20,
+    "coin_reward": 5,
+    "star_count": 0,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "l_sustituyentes",
+    "unit_id": "u_alcanos_ramificados",
+    "title_key": "lesson.l_sustituyentes.title",
+    "order": 1,
+    "type": "standard",
+    "intro": {
+      "text_key": "lesson.l_sustituyentes.intro",
+      "image_asset_id": null,
+      "youtube_id": null
+    },
+    "xp_reward": 20,
+    "coin_reward": 5,
+    "star_count": 0,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "l_numeracion",
+    "unit_id": "u_alcanos_ramificados",
+    "title_key": "lesson.l_numeracion.title",
+    "order": 2,
+    "type": "standard",
+    "intro": {
+      "text_key": "lesson.l_numeracion.intro",
+      "image_asset_id": null,
+      "youtube_id": null
+    },
+    "xp_reward": 20,
+    "coin_reward": 5,
+    "star_count": 0,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "l_ramificados",
+    "unit_id": "u_alcanos_ramificados",
+    "title_key": "lesson.l_ramificados.title",
+    "order": 3,
+    "type": "standard",
+    "intro": {
+      "text_key": "lesson.l_ramificados.intro",
+      "image_asset_id": null,
+      "youtube_id": null
+    },
+    "xp_reward": 20,
+    "coin_reward": 5,
+    "star_count": 0,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  }
+]

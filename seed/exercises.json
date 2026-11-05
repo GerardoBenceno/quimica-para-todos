@@ -1,0 +1,2003 @@
+[
+  {
+    "id": "e_carbono_enlaces",
+    "lesson_id": "l_carbono_enlaces",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_carbono_enlaces.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_carbono_enlaces.opt.4",
+          "value": "4"
+        },
+        {
+          "key": "ex.e_carbono_enlaces.opt.3",
+          "value": "3"
+        },
+        {
+          "key": "ex.e_carbono_enlaces.opt.2",
+          "value": "2"
+        },
+        {
+          "key": "ex.e_carbono_enlaces.opt.1",
+          "value": "1"
+        }
+      ]
+    },
+    "correct": {
+      "value": "4"
+    },
+    "explanation_key": "ex.e_carbono_enlaces.explain",
+    "feedback_template_id": "ft_carbono_enlaces",
+    "difficulty": 1,
+    "xp": 10,
+    "coins": 1,
+    "topic": "carbono_enlaces",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_carbono_valencia",
+    "lesson_id": "l_carbono_enlaces",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_carbono_valencia.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_carbono_valencia.opt.4",
+          "value": "4"
+        },
+        {
+          "key": "ex.e_carbono_valencia.opt.6",
+          "value": "6"
+        },
+        {
+          "key": "ex.e_carbono_valencia.opt.2",
+          "value": "2"
+        },
+        {
+          "key": "ex.e_carbono_valencia.opt.8",
+          "value": "8"
+        }
+      ]
+    },
+    "correct": {
+      "value": "4"
+    },
+    "explanation_key": "ex.e_carbono_valencia.explain",
+    "feedback_template_id": "ft_carbono_enlaces",
+    "difficulty": 1,
+    "xp": 10,
+    "coins": 1,
+    "topic": "carbono_enlaces",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_catenacion",
+    "lesson_id": "l_carbono_enlaces",
+    "type": "true_false",
+    "prompt_key": "ex.e_catenacion.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_catenacion.opt.true",
+          "value": "true"
+        },
+        {
+          "key": "ex.e_catenacion.opt.false",
+          "value": "false"
+        }
+      ]
+    },
+    "correct": {
+      "value": "true"
+    },
+    "explanation_key": "ex.e_catenacion.explain",
+    "feedback_template_id": "ft_carbono_enlaces",
+    "difficulty": 1,
+    "xp": 8,
+    "coins": 1,
+    "topic": "carbono_enlaces",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_enlace_ionico",
+    "lesson_id": "l_carbono_enlaces",
+    "type": "true_false",
+    "prompt_key": "ex.e_enlace_ionico.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_enlace_ionico.opt.true",
+          "value": "true"
+        },
+        {
+          "key": "ex.e_enlace_ionico.opt.false",
+          "value": "false"
+        }
+      ]
+    },
+    "correct": {
+      "value": "false"
+    },
+    "explanation_key": "ex.e_enlace_ionico.explain",
+    "feedback_template_id": "ft_carbono_enlaces",
+    "difficulty": 2,
+    "xp": 8,
+    "coins": 1,
+    "topic": "carbono_enlaces",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_define_organico",
+    "lesson_id": "l_organico",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_define_organico.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_define_organico.opt.carbono",
+          "value": "carbono"
+        },
+        {
+          "key": "ex.e_define_organico.opt.oxigeno",
+          "value": "oxigeno"
+        },
+        {
+          "key": "ex.e_define_organico.opt.nitrogeno",
+          "value": "nitrogeno"
+        },
+        {
+          "key": "ex.e_define_organico.opt.hidrogeno",
+          "value": "hidrogeno"
+        }
+      ]
+    },
+    "correct": {
+      "value": "carbono"
+    },
+    "explanation_key": "ex.e_define_organico.explain",
+    "feedback_template_id": "ft_organico",
+    "difficulty": 1,
+    "xp": 10,
+    "coins": 1,
+    "topic": "compuesto_organico",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_cual_organico",
+    "lesson_id": "l_organico",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_cual_organico.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_cual_organico.opt.metano",
+          "value": "metano"
+        },
+        {
+          "key": "ex.e_cual_organico.opt.nacl",
+          "value": "nacl"
+        },
+        {
+          "key": "ex.e_cual_organico.opt.agua",
+          "value": "agua"
+        },
+        {
+          "key": "ex.e_cual_organico.opt.co2",
+          "value": "co2"
+        }
+      ]
+    },
+    "correct": {
+      "value": "metano"
+    },
+    "explanation_key": "ex.e_cual_organico.explain",
+    "feedback_template_id": "ft_organico",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "compuesto_organico",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_wohler",
+    "lesson_id": "l_organico",
+    "type": "chat_complete",
+    "prompt_key": "ex.e_wohler.prompt",
+    "payload": {
+      "character_id": "char_carbo",
+      "options": [
+        {
+          "key": "ex.e_wohler.opt.vitalista",
+          "value": "vitalista"
+        },
+        {
+          "key": "ex.e_wohler.opt.atomica",
+          "value": "atomica"
+        },
+        {
+          "key": "ex.e_wohler.opt.celular",
+          "value": "celular"
+        }
+      ]
+    },
+    "correct": {
+      "value": "vitalista"
+    },
+    "explanation_key": "ex.e_wohler.explain",
+    "feedback_template_id": "ft_organico",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "compuesto_organico",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_sp3_geom",
+    "lesson_id": "l_sp3",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_sp3_geom.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sp3_geom.opt.tetraedrica",
+          "value": "tetraedrica"
+        },
+        {
+          "key": "ex.e_sp3_geom.opt.trigonal_plana",
+          "value": "trigonal_plana"
+        },
+        {
+          "key": "ex.e_sp3_geom.opt.lineal",
+          "value": "lineal"
+        },
+        {
+          "key": "ex.e_sp3_geom.opt.angular",
+          "value": "angular"
+        }
+      ]
+    },
+    "correct": {
+      "value": "tetraedrica"
+    },
+    "explanation_key": "ex.e_sp3_geom.explain",
+    "feedback_template_id": "ft_hibridacion_geom",
+    "difficulty": 1,
+    "xp": 10,
+    "coins": 1,
+    "topic": "hibridacion_sp3",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_sp3_angulo",
+    "lesson_id": "l_sp3",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_sp3_angulo.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sp3_angulo.opt.109",
+          "value": "109"
+        },
+        {
+          "key": "ex.e_sp3_angulo.opt.120",
+          "value": "120"
+        },
+        {
+          "key": "ex.e_sp3_angulo.opt.180",
+          "value": "180"
+        },
+        {
+          "key": "ex.e_sp3_angulo.opt.90",
+          "value": "90"
+        }
+      ]
+    },
+    "correct": {
+      "value": "109"
+    },
+    "explanation_key": "ex.e_sp3_angulo.explain",
+    "feedback_template_id": "ft_hibridacion_geom",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "hibridacion_sp3",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_sp3_sigma",
+    "lesson_id": "l_sp3",
+    "type": "true_false",
+    "prompt_key": "ex.e_sp3_sigma.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sp3_sigma.opt.true",
+          "value": "true"
+        },
+        {
+          "key": "ex.e_sp3_sigma.opt.false",
+          "value": "false"
+        }
+      ]
+    },
+    "correct": {
+      "value": "true"
+    },
+    "explanation_key": "ex.e_sp3_sigma.explain",
+    "feedback_template_id": "ft_hibridacion_general",
+    "difficulty": 2,
+    "xp": 8,
+    "coins": 1,
+    "topic": "hibridacion_sp3",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_sp3_molecula",
+    "lesson_id": "l_sp3",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_sp3_molecula.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sp3_molecula.opt.metano",
+          "value": "metano"
+        },
+        {
+          "key": "ex.e_sp3_molecula.opt.eteno",
+          "value": "eteno"
+        },
+        {
+          "key": "ex.e_sp3_molecula.opt.etino",
+          "value": "etino"
+        },
+        {
+          "key": "ex.e_sp3_molecula.opt.benceno",
+          "value": "benceno"
+        }
+      ]
+    },
+    "correct": {
+      "value": "metano"
+    },
+    "explanation_key": "ex.e_sp3_molecula.explain",
+    "feedback_template_id": "ft_hibridacion_general",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "hibridacion_sp3",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_sp2_geom",
+    "lesson_id": "l_sp2",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_sp2_geom.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sp2_geom.opt.trigonal_plana",
+          "value": "trigonal_plana"
+        },
+        {
+          "key": "ex.e_sp2_geom.opt.tetraedrica",
+          "value": "tetraedrica"
+        },
+        {
+          "key": "ex.e_sp2_geom.opt.lineal",
+          "value": "lineal"
+        },
+        {
+          "key": "ex.e_sp2_geom.opt.piramidal",
+          "value": "piramidal"
+        }
+      ]
+    },
+    "correct": {
+      "value": "trigonal_plana"
+    },
+    "explanation_key": "ex.e_sp2_geom.explain",
+    "feedback_template_id": "ft_hibridacion_geom",
+    "difficulty": 1,
+    "xp": 10,
+    "coins": 1,
+    "topic": "hibridacion_sp2",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C=C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_sp2_angulo",
+    "lesson_id": "l_sp2",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_sp2_angulo.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sp2_angulo.opt.120",
+          "value": "120"
+        },
+        {
+          "key": "ex.e_sp2_angulo.opt.109",
+          "value": "109"
+        },
+        {
+          "key": "ex.e_sp2_angulo.opt.180",
+          "value": "180"
+        },
+        {
+          "key": "ex.e_sp2_angulo.opt.90",
+          "value": "90"
+        }
+      ]
+    },
+    "correct": {
+      "value": "120"
+    },
+    "explanation_key": "ex.e_sp2_angulo.explain",
+    "feedback_template_id": "ft_hibridacion_geom",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "hibridacion_sp2",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_sp2_enlaces",
+    "lesson_id": "l_sp2",
+    "type": "true_false",
+    "prompt_key": "ex.e_sp2_enlaces.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sp2_enlaces.opt.true",
+          "value": "true"
+        },
+        {
+          "key": "ex.e_sp2_enlaces.opt.false",
+          "value": "false"
+        }
+      ]
+    },
+    "correct": {
+      "value": "true"
+    },
+    "explanation_key": "ex.e_sp2_enlaces.explain",
+    "feedback_template_id": "ft_hibridacion_general",
+    "difficulty": 2,
+    "xp": 8,
+    "coins": 1,
+    "topic": "hibridacion_sp2",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C=C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_sp2_molecula",
+    "lesson_id": "l_sp2",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_sp2_molecula.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sp2_molecula.opt.eteno",
+          "value": "eteno"
+        },
+        {
+          "key": "ex.e_sp2_molecula.opt.etano",
+          "value": "etano"
+        },
+        {
+          "key": "ex.e_sp2_molecula.opt.etino",
+          "value": "etino"
+        },
+        {
+          "key": "ex.e_sp2_molecula.opt.metano",
+          "value": "metano"
+        }
+      ]
+    },
+    "correct": {
+      "value": "eteno"
+    },
+    "explanation_key": "ex.e_sp2_molecula.explain",
+    "feedback_template_id": "ft_hibridacion_general",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "hibridacion_sp2",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C=C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_sp_geom",
+    "lesson_id": "l_sp",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_sp_geom.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sp_geom.opt.lineal",
+          "value": "lineal"
+        },
+        {
+          "key": "ex.e_sp_geom.opt.trigonal_plana",
+          "value": "trigonal_plana"
+        },
+        {
+          "key": "ex.e_sp_geom.opt.tetraedrica",
+          "value": "tetraedrica"
+        },
+        {
+          "key": "ex.e_sp_geom.opt.angular",
+          "value": "angular"
+        }
+      ]
+    },
+    "correct": {
+      "value": "lineal"
+    },
+    "explanation_key": "ex.e_sp_geom.explain",
+    "feedback_template_id": "ft_hibridacion_geom",
+    "difficulty": 1,
+    "xp": 10,
+    "coins": 1,
+    "topic": "hibridacion_sp",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C#C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_sp_angulo",
+    "lesson_id": "l_sp",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_sp_angulo.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sp_angulo.opt.180",
+          "value": "180"
+        },
+        {
+          "key": "ex.e_sp_angulo.opt.120",
+          "value": "120"
+        },
+        {
+          "key": "ex.e_sp_angulo.opt.109",
+          "value": "109"
+        },
+        {
+          "key": "ex.e_sp_angulo.opt.90",
+          "value": "90"
+        }
+      ]
+    },
+    "correct": {
+      "value": "180"
+    },
+    "explanation_key": "ex.e_sp_angulo.explain",
+    "feedback_template_id": "ft_hibridacion_geom",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "hibridacion_sp",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_sp_enlaces",
+    "lesson_id": "l_sp",
+    "type": "true_false",
+    "prompt_key": "ex.e_sp_enlaces.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sp_enlaces.opt.true",
+          "value": "true"
+        },
+        {
+          "key": "ex.e_sp_enlaces.opt.false",
+          "value": "false"
+        }
+      ]
+    },
+    "correct": {
+      "value": "true"
+    },
+    "explanation_key": "ex.e_sp_enlaces.explain",
+    "feedback_template_id": "ft_hibridacion_general",
+    "difficulty": 3,
+    "xp": 8,
+    "coins": 1,
+    "topic": "hibridacion_sp",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C#C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_sp_molecula",
+    "lesson_id": "l_sp",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_sp_molecula.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sp_molecula.opt.etino",
+          "value": "etino"
+        },
+        {
+          "key": "ex.e_sp_molecula.opt.eteno",
+          "value": "eteno"
+        },
+        {
+          "key": "ex.e_sp_molecula.opt.etano",
+          "value": "etano"
+        },
+        {
+          "key": "ex.e_sp_molecula.opt.propano",
+          "value": "propano"
+        }
+      ]
+    },
+    "correct": {
+      "value": "etino"
+    },
+    "explanation_key": "ex.e_sp_molecula.explain",
+    "feedback_template_id": "ft_hibridacion_general",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "hibridacion_sp",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C#C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_tipo_terciario",
+    "lesson_id": "l_tipos_carbono",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_tipo_terciario.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_tipo_terciario.opt.terciario",
+          "value": "terciario"
+        },
+        {
+          "key": "ex.e_tipo_terciario.opt.primario",
+          "value": "primario"
+        },
+        {
+          "key": "ex.e_tipo_terciario.opt.secundario",
+          "value": "secundario"
+        },
+        {
+          "key": "ex.e_tipo_terciario.opt.cuaternario",
+          "value": "cuaternario"
+        }
+      ]
+    },
+    "correct": {
+      "value": "terciario"
+    },
+    "explanation_key": "ex.e_tipo_terciario.explain",
+    "feedback_template_id": "ft_tipos_carbono",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "tipos_carbono",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_tipo_primario",
+    "lesson_id": "l_tipos_carbono",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_tipo_primario.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_tipo_primario.opt.primario",
+          "value": "primario"
+        },
+        {
+          "key": "ex.e_tipo_primario.opt.secundario",
+          "value": "secundario"
+        },
+        {
+          "key": "ex.e_tipo_primario.opt.terciario",
+          "value": "terciario"
+        },
+        {
+          "key": "ex.e_tipo_primario.opt.cuaternario",
+          "value": "cuaternario"
+        }
+      ]
+    },
+    "correct": {
+      "value": "primario"
+    },
+    "explanation_key": "ex.e_tipo_primario.explain",
+    "feedback_template_id": "ft_tipos_carbono",
+    "difficulty": 1,
+    "xp": 10,
+    "coins": 1,
+    "topic": "tipos_carbono",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_tipo_secundario",
+    "lesson_id": "l_tipos_carbono",
+    "type": "true_false",
+    "prompt_key": "ex.e_tipo_secundario.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_tipo_secundario.opt.true",
+          "value": "true"
+        },
+        {
+          "key": "ex.e_tipo_secundario.opt.false",
+          "value": "false"
+        }
+      ]
+    },
+    "correct": {
+      "value": "true"
+    },
+    "explanation_key": "ex.e_tipo_secundario.explain",
+    "feedback_template_id": "ft_tipos_carbono",
+    "difficulty": 1,
+    "xp": 8,
+    "coins": 1,
+    "topic": "tipos_carbono",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_tipo_cuaternario",
+    "lesson_id": "l_tipos_carbono",
+    "type": "identify_group",
+    "prompt_key": "ex.e_tipo_cuaternario.prompt",
+    "payload": {
+      "structure_smiles": "CC(C)(C)C",
+      "structure_asset_id": null,
+      "options": [
+        {
+          "key": "ex.e_tipo_cuaternario.opt.cuaternario",
+          "value": "cuaternario"
+        },
+        {
+          "key": "ex.e_tipo_cuaternario.opt.terciario",
+          "value": "terciario"
+        },
+        {
+          "key": "ex.e_tipo_cuaternario.opt.secundario",
+          "value": "secundario"
+        },
+        {
+          "key": "ex.e_tipo_cuaternario.opt.primario",
+          "value": "primario"
+        }
+      ]
+    },
+    "correct": {
+      "value": "cuaternario"
+    },
+    "explanation_key": "ex.e_tipo_cuaternario.explain",
+    "feedback_template_id": "ft_tipos_carbono",
+    "difficulty": 3,
+    "xp": 12,
+    "coins": 1,
+    "topic": "tipos_carbono",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CC(C)(C)C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_grupo_oh",
+    "lesson_id": "l_grupos_intro",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_grupo_oh.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_grupo_oh.opt.alcohol",
+          "value": "alcohol"
+        },
+        {
+          "key": "ex.e_grupo_oh.opt.aldehido",
+          "value": "aldehido"
+        },
+        {
+          "key": "ex.e_grupo_oh.opt.cetona",
+          "value": "cetona"
+        },
+        {
+          "key": "ex.e_grupo_oh.opt.acido",
+          "value": "acido"
+        }
+      ]
+    },
+    "correct": {
+      "value": "alcohol"
+    },
+    "explanation_key": "ex.e_grupo_oh.explain",
+    "feedback_template_id": "ft_grupos_funcionales",
+    "difficulty": 1,
+    "xp": 10,
+    "coins": 1,
+    "topic": "grupos_funcionales",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_grupo_cooh",
+    "lesson_id": "l_grupos_intro",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_grupo_cooh.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_grupo_cooh.opt.acido",
+          "value": "acido"
+        },
+        {
+          "key": "ex.e_grupo_cooh.opt.alcohol",
+          "value": "alcohol"
+        },
+        {
+          "key": "ex.e_grupo_cooh.opt.ester",
+          "value": "ester"
+        },
+        {
+          "key": "ex.e_grupo_cooh.opt.aldehido",
+          "value": "aldehido"
+        }
+      ]
+    },
+    "correct": {
+      "value": "acido"
+    },
+    "explanation_key": "ex.e_grupo_cooh.explain",
+    "feedback_template_id": "ft_grupos_funcionales",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "grupos_funcionales",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_id_etanol",
+    "lesson_id": "l_grupos_intro",
+    "type": "identify_group",
+    "prompt_key": "ex.e_id_etanol.prompt",
+    "payload": {
+      "structure_smiles": "CCO",
+      "structure_asset_id": null,
+      "options": [
+        {
+          "key": "ex.e_id_etanol.opt.alcohol",
+          "value": "alcohol"
+        },
+        {
+          "key": "ex.e_id_etanol.opt.eter",
+          "value": "eter"
+        },
+        {
+          "key": "ex.e_id_etanol.opt.aldehido",
+          "value": "aldehido"
+        },
+        {
+          "key": "ex.e_id_etanol.opt.acido",
+          "value": "acido"
+        }
+      ]
+    },
+    "correct": {
+      "value": "alcohol"
+    },
+    "explanation_key": "ex.e_id_etanol.explain",
+    "feedback_template_id": "ft_grupos_funcionales",
+    "difficulty": 2,
+    "xp": 12,
+    "coins": 1,
+    "topic": "grupos_funcionales",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CCO",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_id_acetico",
+    "lesson_id": "l_grupos_intro",
+    "type": "identify_group",
+    "prompt_key": "ex.e_id_acetico.prompt",
+    "payload": {
+      "structure_smiles": "CC(=O)O",
+      "structure_asset_id": null,
+      "options": [
+        {
+          "key": "ex.e_id_acetico.opt.acido",
+          "value": "acido"
+        },
+        {
+          "key": "ex.e_id_acetico.opt.ester",
+          "value": "ester"
+        },
+        {
+          "key": "ex.e_id_acetico.opt.cetona",
+          "value": "cetona"
+        },
+        {
+          "key": "ex.e_id_acetico.opt.alcohol",
+          "value": "alcohol"
+        }
+      ]
+    },
+    "correct": {
+      "value": "acido"
+    },
+    "explanation_key": "ex.e_id_acetico.explain",
+    "feedback_template_id": "ft_grupos_funcionales",
+    "difficulty": 2,
+    "xp": 12,
+    "coins": 1,
+    "topic": "grupos_funcionales",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CC(=O)O",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_id_acetaldehido",
+    "lesson_id": "l_grupos_oxigenados",
+    "type": "identify_group",
+    "prompt_key": "ex.e_id_acetaldehido.prompt",
+    "payload": {
+      "structure_smiles": "CC=O",
+      "structure_asset_id": null,
+      "options": [
+        {
+          "key": "ex.e_id_acetaldehido.opt.aldehido",
+          "value": "aldehido"
+        },
+        {
+          "key": "ex.e_id_acetaldehido.opt.cetona",
+          "value": "cetona"
+        },
+        {
+          "key": "ex.e_id_acetaldehido.opt.alcohol",
+          "value": "alcohol"
+        },
+        {
+          "key": "ex.e_id_acetaldehido.opt.acido",
+          "value": "acido"
+        }
+      ]
+    },
+    "correct": {
+      "value": "aldehido"
+    },
+    "explanation_key": "ex.e_id_acetaldehido.explain",
+    "feedback_template_id": "ft_grupos_oxigenados",
+    "difficulty": 2,
+    "xp": 12,
+    "coins": 1,
+    "topic": "grupos_oxigenados",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CC=O",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_id_acetona",
+    "lesson_id": "l_grupos_oxigenados",
+    "type": "identify_group",
+    "prompt_key": "ex.e_id_acetona.prompt",
+    "payload": {
+      "structure_smiles": "CC(=O)C",
+      "structure_asset_id": null,
+      "options": [
+        {
+          "key": "ex.e_id_acetona.opt.cetona",
+          "value": "cetona"
+        },
+        {
+          "key": "ex.e_id_acetona.opt.aldehido",
+          "value": "aldehido"
+        },
+        {
+          "key": "ex.e_id_acetona.opt.eter",
+          "value": "eter"
+        },
+        {
+          "key": "ex.e_id_acetona.opt.alcohol",
+          "value": "alcohol"
+        }
+      ]
+    },
+    "correct": {
+      "value": "cetona"
+    },
+    "explanation_key": "ex.e_id_acetona.explain",
+    "feedback_template_id": "ft_grupos_oxigenados",
+    "difficulty": 2,
+    "xp": 12,
+    "coins": 1,
+    "topic": "grupos_oxigenados",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CC(=O)C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_id_eter",
+    "lesson_id": "l_grupos_oxigenados",
+    "type": "identify_group",
+    "prompt_key": "ex.e_id_eter.prompt",
+    "payload": {
+      "structure_smiles": "COC",
+      "structure_asset_id": null,
+      "options": [
+        {
+          "key": "ex.e_id_eter.opt.eter",
+          "value": "eter"
+        },
+        {
+          "key": "ex.e_id_eter.opt.alcohol",
+          "value": "alcohol"
+        },
+        {
+          "key": "ex.e_id_eter.opt.cetona",
+          "value": "cetona"
+        },
+        {
+          "key": "ex.e_id_eter.opt.ester",
+          "value": "ester"
+        }
+      ]
+    },
+    "correct": {
+      "value": "eter"
+    },
+    "explanation_key": "ex.e_id_eter.explain",
+    "feedback_template_id": "ft_grupos_oxigenados",
+    "difficulty": 3,
+    "xp": 12,
+    "coins": 1,
+    "topic": "grupos_oxigenados",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "COC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_cetona_def",
+    "lesson_id": "l_grupos_oxigenados",
+    "type": "true_false",
+    "prompt_key": "ex.e_cetona_def.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_cetona_def.opt.true",
+          "value": "true"
+        },
+        {
+          "key": "ex.e_cetona_def.opt.false",
+          "value": "false"
+        }
+      ]
+    },
+    "correct": {
+      "value": "true"
+    },
+    "explanation_key": "ex.e_cetona_def.explain",
+    "feedback_template_id": "ft_grupos_oxigenados",
+    "difficulty": 2,
+    "xp": 8,
+    "coins": 1,
+    "topic": "grupos_oxigenados",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_id_amina",
+    "lesson_id": "l_grupos_nitrogenados",
+    "type": "identify_group",
+    "prompt_key": "ex.e_id_amina.prompt",
+    "payload": {
+      "structure_smiles": "CN",
+      "structure_asset_id": null,
+      "options": [
+        {
+          "key": "ex.e_id_amina.opt.amina",
+          "value": "amina"
+        },
+        {
+          "key": "ex.e_id_amina.opt.amida",
+          "value": "amida"
+        },
+        {
+          "key": "ex.e_id_amina.opt.alcohol",
+          "value": "alcohol"
+        },
+        {
+          "key": "ex.e_id_amina.opt.eter",
+          "value": "eter"
+        }
+      ]
+    },
+    "correct": {
+      "value": "amina"
+    },
+    "explanation_key": "ex.e_id_amina.explain",
+    "feedback_template_id": "ft_grupos_nitrogenados",
+    "difficulty": 2,
+    "xp": 12,
+    "coins": 1,
+    "topic": "grupos_nitrogenados",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CN",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_id_amida",
+    "lesson_id": "l_grupos_nitrogenados",
+    "type": "identify_group",
+    "prompt_key": "ex.e_id_amida.prompt",
+    "payload": {
+      "structure_smiles": "CC(=O)N",
+      "structure_asset_id": null,
+      "options": [
+        {
+          "key": "ex.e_id_amida.opt.amida",
+          "value": "amida"
+        },
+        {
+          "key": "ex.e_id_amida.opt.amina",
+          "value": "amina"
+        },
+        {
+          "key": "ex.e_id_amida.opt.acido",
+          "value": "acido"
+        },
+        {
+          "key": "ex.e_id_amida.opt.cetona",
+          "value": "cetona"
+        }
+      ]
+    },
+    "correct": {
+      "value": "amida"
+    },
+    "explanation_key": "ex.e_id_amida.explain",
+    "feedback_template_id": "ft_grupos_nitrogenados",
+    "difficulty": 3,
+    "xp": 12,
+    "coins": 1,
+    "topic": "grupos_nitrogenados",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CC(=O)N",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_grupo_nh2",
+    "lesson_id": "l_grupos_nitrogenados",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_grupo_nh2.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_grupo_nh2.opt.amina",
+          "value": "amina"
+        },
+        {
+          "key": "ex.e_grupo_nh2.opt.amida",
+          "value": "amida"
+        },
+        {
+          "key": "ex.e_grupo_nh2.opt.nitrilo",
+          "value": "nitrilo"
+        },
+        {
+          "key": "ex.e_grupo_nh2.opt.alcohol",
+          "value": "alcohol"
+        }
+      ]
+    },
+    "correct": {
+      "value": "amina"
+    },
+    "explanation_key": "ex.e_grupo_nh2.explain",
+    "feedback_template_id": "ft_grupos_nitrogenados",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "grupos_nitrogenados",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_amida_def",
+    "lesson_id": "l_grupos_nitrogenados",
+    "type": "true_false",
+    "prompt_key": "ex.e_amida_def.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_amida_def.opt.true",
+          "value": "true"
+        },
+        {
+          "key": "ex.e_amida_def.opt.false",
+          "value": "false"
+        }
+      ]
+    },
+    "correct": {
+      "value": "true"
+    },
+    "explanation_key": "ex.e_amida_def.explain",
+    "feedback_template_id": "ft_grupos_nitrogenados",
+    "difficulty": 2,
+    "xp": 8,
+    "coins": 1,
+    "topic": "grupos_nitrogenados",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_metano",
+    "lesson_id": "l_alcanos_lineales",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_metano.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_metano.opt.metano",
+          "value": "metano"
+        },
+        {
+          "key": "ex.e_metano.opt.etano",
+          "value": "etano"
+        },
+        {
+          "key": "ex.e_metano.opt.propano",
+          "value": "propano"
+        },
+        {
+          "key": "ex.e_metano.opt.butano",
+          "value": "butano"
+        }
+      ]
+    },
+    "correct": {
+      "value": "metano"
+    },
+    "explanation_key": "ex.e_metano.explain",
+    "feedback_template_id": "ft_nomenclatura_lineales",
+    "difficulty": 1,
+    "xp": 10,
+    "coins": 1,
+    "topic": "nomenclatura_alcanos_lineales",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_propano",
+    "lesson_id": "l_alcanos_lineales",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_propano.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_propano.opt.propano",
+          "value": "propano"
+        },
+        {
+          "key": "ex.e_propano.opt.etano",
+          "value": "etano"
+        },
+        {
+          "key": "ex.e_propano.opt.butano",
+          "value": "butano"
+        },
+        {
+          "key": "ex.e_propano.opt.pentano",
+          "value": "pentano"
+        }
+      ]
+    },
+    "correct": {
+      "value": "propano"
+    },
+    "explanation_key": "ex.e_propano.explain",
+    "feedback_template_id": "ft_nomenclatura_lineales",
+    "difficulty": 1,
+    "xp": 10,
+    "coins": 1,
+    "topic": "nomenclatura_alcanos_lineales",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CCC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_butano",
+    "lesson_id": "l_alcanos_lineales",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_butano.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_butano.opt.butano",
+          "value": "butano"
+        },
+        {
+          "key": "ex.e_butano.opt.propano",
+          "value": "propano"
+        },
+        {
+          "key": "ex.e_butano.opt.pentano",
+          "value": "pentano"
+        },
+        {
+          "key": "ex.e_butano.opt.hexano",
+          "value": "hexano"
+        }
+      ]
+    },
+    "correct": {
+      "value": "butano"
+    },
+    "explanation_key": "ex.e_butano.explain",
+    "feedback_template_id": "ft_nomenclatura_lineales",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "nomenclatura_alcanos_lineales",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CCCC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_hexano_n",
+    "lesson_id": "l_alcanos_lineales",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_hexano_n.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_hexano_n.opt.6",
+          "value": "6"
+        },
+        {
+          "key": "ex.e_hexano_n.opt.5",
+          "value": "5"
+        },
+        {
+          "key": "ex.e_hexano_n.opt.7",
+          "value": "7"
+        },
+        {
+          "key": "ex.e_hexano_n.opt.8",
+          "value": "8"
+        }
+      ]
+    },
+    "correct": {
+      "value": "6"
+    },
+    "explanation_key": "ex.e_hexano_n.explain",
+    "feedback_template_id": "ft_nomenclatura_lineales",
+    "difficulty": 1,
+    "xp": 10,
+    "coins": 1,
+    "topic": "nomenclatura_alcanos_lineales",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CCCCCC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_sust_metil",
+    "lesson_id": "l_sustituyentes",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_sust_metil.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sust_metil.opt.metil",
+          "value": "metil"
+        },
+        {
+          "key": "ex.e_sust_metil.opt.etil",
+          "value": "etil"
+        },
+        {
+          "key": "ex.e_sust_metil.opt.propil",
+          "value": "propil"
+        },
+        {
+          "key": "ex.e_sust_metil.opt.butil",
+          "value": "butil"
+        }
+      ]
+    },
+    "correct": {
+      "value": "metil"
+    },
+    "explanation_key": "ex.e_sust_metil.explain",
+    "feedback_template_id": "ft_nomenclatura_sustituyentes",
+    "difficulty": 1,
+    "xp": 10,
+    "coins": 1,
+    "topic": "nomenclatura_sustituyentes",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_sust_etil",
+    "lesson_id": "l_sustituyentes",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_sust_etil.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sust_etil.opt.etil",
+          "value": "etil"
+        },
+        {
+          "key": "ex.e_sust_etil.opt.metil",
+          "value": "metil"
+        },
+        {
+          "key": "ex.e_sust_etil.opt.propil",
+          "value": "propil"
+        },
+        {
+          "key": "ex.e_sust_etil.opt.butil",
+          "value": "butil"
+        }
+      ]
+    },
+    "correct": {
+      "value": "etil"
+    },
+    "explanation_key": "ex.e_sust_etil.explain",
+    "feedback_template_id": "ft_nomenclatura_sustituyentes",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "nomenclatura_sustituyentes",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_sust_propil",
+    "lesson_id": "l_sustituyentes",
+    "type": "true_false",
+    "prompt_key": "ex.e_sust_propil.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sust_propil.opt.true",
+          "value": "true"
+        },
+        {
+          "key": "ex.e_sust_propil.opt.false",
+          "value": "false"
+        }
+      ]
+    },
+    "correct": {
+      "value": "true"
+    },
+    "explanation_key": "ex.e_sust_propil.explain",
+    "feedback_template_id": "ft_nomenclatura_sustituyentes",
+    "difficulty": 1,
+    "xp": 8,
+    "coins": 1,
+    "topic": "nomenclatura_sustituyentes",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_sust_terminacion",
+    "lesson_id": "l_sustituyentes",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_sust_terminacion.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_sust_terminacion.opt.il",
+          "value": "il"
+        },
+        {
+          "key": "ex.e_sust_terminacion.opt.eno",
+          "value": "eno"
+        },
+        {
+          "key": "ex.e_sust_terminacion.opt.ona",
+          "value": "ona"
+        },
+        {
+          "key": "ex.e_sust_terminacion.opt.ol",
+          "value": "ol"
+        }
+      ]
+    },
+    "correct": {
+      "value": "il"
+    },
+    "explanation_key": "ex.e_sust_terminacion.explain",
+    "feedback_template_id": "ft_nomenclatura_sustituyentes",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "nomenclatura_sustituyentes",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_num_menor",
+    "lesson_id": "l_numeracion",
+    "type": "true_false",
+    "prompt_key": "ex.e_num_menor.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_num_menor.opt.true",
+          "value": "true"
+        },
+        {
+          "key": "ex.e_num_menor.opt.false",
+          "value": "false"
+        }
+      ]
+    },
+    "correct": {
+      "value": "true"
+    },
+    "explanation_key": "ex.e_num_menor.explain",
+    "feedback_template_id": "ft_nomenclatura_numeracion",
+    "difficulty": 2,
+    "xp": 8,
+    "coins": 1,
+    "topic": "nomenclatura_numeracion",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_num_alfabetico",
+    "lesson_id": "l_numeracion",
+    "type": "multiple_choice",
+    "prompt_key": "ex.e_num_alfabetico.prompt",
+    "payload": {
+      "options": [
+        {
+          "key": "ex.e_num_alfabetico.opt.alfabetico",
+          "value": "alfabetico"
+        },
+        {
+          "key": "ex.e_num_alfabetico.opt.tamano",
+          "value": "tamano"
+        },
+        {
+          "key": "ex.e_num_alfabetico.opt.aparicion",
+          "value": "aparicion"
+        },
+        {
+          "key": "ex.e_num_alfabetico.opt.inverso",
+          "value": "inverso"
+        }
+      ]
+    },
+    "correct": {
+      "value": "alfabetico"
+    },
+    "explanation_key": "ex.e_num_alfabetico.explain",
+    "feedback_template_id": "ft_nomenclatura_numeracion",
+    "difficulty": 2,
+    "xp": 10,
+    "coins": 1,
+    "topic": "nomenclatura_numeracion",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": null,
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_2metilbutano",
+    "lesson_id": "l_numeracion",
+    "type": "identify_group",
+    "prompt_key": "ex.e_2metilbutano.prompt",
+    "payload": {
+      "structure_smiles": "CCC(C)C",
+      "structure_asset_id": null,
+      "options": [
+        {
+          "key": "ex.e_2metilbutano.opt.2metilbutano",
+          "value": "2metilbutano"
+        },
+        {
+          "key": "ex.e_2metilbutano.opt.3metilbutano",
+          "value": "3metilbutano"
+        },
+        {
+          "key": "ex.e_2metilbutano.opt.2metilpropano",
+          "value": "2metilpropano"
+        },
+        {
+          "key": "ex.e_2metilbutano.opt.pentano",
+          "value": "pentano"
+        }
+      ]
+    },
+    "correct": {
+      "value": "2metilbutano"
+    },
+    "explanation_key": "ex.e_2metilbutano.explain",
+    "feedback_template_id": "ft_nomenclatura_numeracion",
+    "difficulty": 3,
+    "xp": 12,
+    "coins": 1,
+    "topic": "nomenclatura_numeracion",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CCC(C)C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_23dimetilbutano",
+    "lesson_id": "l_numeracion",
+    "type": "identify_group",
+    "prompt_key": "ex.e_23dimetilbutano.prompt",
+    "payload": {
+      "structure_smiles": "CC(C)C(C)C",
+      "structure_asset_id": null,
+      "options": [
+        {
+          "key": "ex.e_23dimetilbutano.opt.23dimetilbutano",
+          "value": "23dimetilbutano"
+        },
+        {
+          "key": "ex.e_23dimetilbutano.opt.2metilpentano",
+          "value": "2metilpentano"
+        },
+        {
+          "key": "ex.e_23dimetilbutano.opt.3etilbutano",
+          "value": "3etilbutano"
+        },
+        {
+          "key": "ex.e_23dimetilbutano.opt.22dimetilbutano",
+          "value": "22dimetilbutano"
+        }
+      ]
+    },
+    "correct": {
+      "value": "23dimetilbutano"
+    },
+    "explanation_key": "ex.e_23dimetilbutano.explain",
+    "feedback_template_id": "ft_nomenclatura_numeracion",
+    "difficulty": 3,
+    "xp": 12,
+    "coins": 1,
+    "topic": "nomenclatura_numeracion",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CC(C)C(C)C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_complete_etilmetilhexano",
+    "lesson_id": "l_ramificados",
+    "type": "fill_blanks",
+    "prompt_key": "ex.e_complete_etilmetilhexano.prompt",
+    "payload": {
+      "template": "3-{b1}-2-{b2}hexano",
+      "blanks": [
+        "b1",
+        "b2"
+      ],
+      "bank": [
+        {
+          "key": "ex.e_complete_etilmetilhexano.bank.metil",
+          "value": "metil"
+        },
+        {
+          "key": "ex.e_complete_etilmetilhexano.bank.etil",
+          "value": "etil"
+        },
+        {
+          "key": "ex.e_complete_etilmetilhexano.bank.propil",
+          "value": "propil"
+        },
+        {
+          "key": "ex.e_complete_etilmetilhexano.bank.butil",
+          "value": "butil"
+        }
+      ],
+      "structure_smiles": "CC(C)C(CC)CCC"
+    },
+    "correct": {
+      "b1": "etil",
+      "b2": "metil"
+    },
+    "explanation_key": "ex.e_complete_etilmetilhexano.explain",
+    "feedback_template_id": "ft_nomenclatura_sustituyentes",
+    "difficulty": 4,
+    "xp": 15,
+    "coins": 2,
+    "topic": "nomenclatura_alcanos_ramificados",
+    "prerequisites": [
+      "nomenclatura_sustituyentes",
+      "nomenclatura_numeracion"
+    ],
+    "structure_asset_id": null,
+    "smiles": "CC(C)C(CC)CCC",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_22dimetilbutano",
+    "lesson_id": "l_ramificados",
+    "type": "identify_group",
+    "prompt_key": "ex.e_22dimetilbutano.prompt",
+    "payload": {
+      "structure_smiles": "CCC(C)(C)C",
+      "structure_asset_id": null,
+      "options": [
+        {
+          "key": "ex.e_22dimetilbutano.opt.22dimetilbutano",
+          "value": "22dimetilbutano"
+        },
+        {
+          "key": "ex.e_22dimetilbutano.opt.23dimetilbutano",
+          "value": "23dimetilbutano"
+        },
+        {
+          "key": "ex.e_22dimetilbutano.opt.2metilpentano",
+          "value": "2metilpentano"
+        },
+        {
+          "key": "ex.e_22dimetilbutano.opt.hexano",
+          "value": "hexano"
+        }
+      ]
+    },
+    "correct": {
+      "value": "22dimetilbutano"
+    },
+    "explanation_key": "ex.e_22dimetilbutano.explain",
+    "feedback_template_id": "ft_nomenclatura_numeracion",
+    "difficulty": 4,
+    "xp": 12,
+    "coins": 1,
+    "topic": "nomenclatura_alcanos_ramificados",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CCC(C)(C)C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "e_2metilpentano",
+    "lesson_id": "l_ramificados",
+    "type": "identify_group",
+    "prompt_key": "ex.e_2metilpentano.prompt",
+    "payload": {
+      "structure_smiles": "CCCC(C)C",
+      "structure_asset_id": null,
+      "options": [
+        {
+          "key": "ex.e_2metilpentano.opt.2metilpentano",
+          "value": "2metilpentano"
+        },
+        {
+          "key": "ex.e_2metilpentano.opt.3metilpentano",
+          "value": "3metilpentano"
+        },
+        {
+          "key": "ex.e_2metilpentano.opt.2metilbutano",
+          "value": "2metilbutano"
+        },
+        {
+          "key": "ex.e_2metilpentano.opt.hexano",
+          "value": "hexano"
+        }
+      ]
+    },
+    "correct": {
+      "value": "2metilpentano"
+    },
+    "explanation_key": "ex.e_2metilpentano.explain",
+    "feedback_template_id": "ft_nomenclatura_numeracion",
+    "difficulty": 4,
+    "xp": 12,
+    "coins": 1,
+    "topic": "nomenclatura_alcanos_ramificados",
+    "prerequisites": [],
+    "structure_asset_id": null,
+    "smiles": "CCCC(C)C",
+    "is_diagnostic": false,
+    "content_version": 1,
+    "is_active": true
+  }
+]

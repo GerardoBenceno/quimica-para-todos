@@ -1,0 +1,71 @@
+[
+  {
+    "id": "u_intro_carbono",
+    "world_id": "w_carbono",
+    "title_key": "unit.intro_carbono.title",
+    "subtitle_key": "unit.intro_carbono.subtitle",
+    "order": 1,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "u_hibridacion",
+    "world_id": "w_carbono",
+    "title_key": "unit.hibridacion.title",
+    "subtitle_key": "unit.hibridacion.subtitle",
+    "order": 2,
+    "unlock_rule": {
+      "requires_unit": "u_intro_carbono",
+      "min_progress": 1.0
+    },
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "u_tipos_carbono",
+    "world_id": "w_carbono",
+    "title_key": "unit.tipos_carbono.title",
+    "subtitle_key": "unit.tipos_carbono.subtitle",
+    "order": 3,
+    "unlock_rule": {
+      "requires_unit": "u_hibridacion",
+      "min_progress": 1.0
+    },
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "u_grupos_intro",
+    "world_id": "w_grupos",
+    "title_key": "unit.grupos_intro.title",
+    "subtitle_key": "unit.grupos_intro.subtitle",
+    "order": 1,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "u_alcanos_lineales",
+    "world_id": "w_nomenclatura_alcanos",
+    "title_key": "unit.alcanos_lineales.title",
+    "subtitle_key": "unit.alcanos_lineales.subtitle",
+    "order": 1,
+    "unlock_rule": null,
+    "content_version": 1,
+    "is_active": true
+  },
+  {
+    "id": "u_alcanos_ramificados",
+    "world_id": "w_nomenclatura_alcanos",
+    "title_key": "unit.alcanos_ramificados.title",
+    "subtitle_key": "unit.alcanos_ramificados.subtitle",
+    "order": 2,
+    "unlock_rule": {
+      "requires_unit": "u_alcanos_lineales",
+      "min_progress": 1.0
+    },
+    "content_version": 1,
+    "is_active": true
+  }
+]

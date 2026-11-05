@@ -1,0 +1,16 @@
+[
+  {
+    "id": "char_carbo",
+    "name_key": "character.carbo.name",
+    "role": "mascot",
+    "sprite_asset_id": "asset_carbo_idle",
+    "expressions": {
+      "idle": "asset_carbo_idle",
+      "happy": "asset_carbo_happy",
+      "think": "asset_carbo_think",
+      "sad": "asset_carbo_sad"
+    },
+    "content_version": 1,
+    "is_active": true
+  }
+]
