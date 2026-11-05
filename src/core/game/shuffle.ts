@@ -25,7 +25,7 @@ export function shuffle<T>(items: readonly T[], rand: () => number): T[] {
 }
 
 /** Tipos cuyas opciones (o banco) se barajan al iniciar cada intento. */
-export const SHUFFLED_TYPES = new Set(['multiple_choice', 'identify_group', 'chat_complete', 'diagnostic', 'fill_blanks', 'choose_structure'])
+export const SHUFFLED_TYPES = new Set(['multiple_choice', 'identify_group', 'chat_complete', 'diagnostic', 'fill_blanks', 'choose_structure', 'compare_structures'])
 
 /**
  * Orden de presentación de un ejercicio dentro de un intento. La semilla es

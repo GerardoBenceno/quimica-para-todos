@@ -20,11 +20,12 @@ const world = (id: string, order = 1) => ({
 describe('carga y unión de paquetes', () => {
   it('parsea los paquetes reales y une en el orden del manifest', () => {
     const raw = loadRawPacks()
-    expect(raw.map((p) => p.id)).toEqual(['base', 'web'])
+    expect(raw.map((p) => p.id).slice(0, 2)).toEqual(['base', 'web'])
     const b = loadBundleFromDisk()
     expect(b.worlds).toHaveLength(5)
-    expect(b.units).toHaveLength(6)
-    expect(b.lessons).toHaveLength(13)
+    // Conteos del seed (paquete base); otros paquetes agregan los suyos.
+    expect(b.units.filter((u) => b.origin[u.id] === 'base')).toHaveLength(6)
+    expect(b.lessons.filter((l) => b.origin[l.id] === 'base')).toHaveLength(13)
     expect(b.exercises.filter((e) => b.origin[e.id] === 'base')).toHaveLength(50)
     expect(b.diagnosticItems).toHaveLength(8)
     // El tema del seed sigue existiendo y llega primero; los web van después.
