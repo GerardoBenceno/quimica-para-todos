@@ -71,6 +71,15 @@ Textos nuevos en `public/config/i18n/ui_es.json`: `start_here.label`, `path.vert
 34. **Acerca de sin datos pendientes a la vista.** `about.author`, `about.contact` y `about.license` quedan vacíos por decisión del autor; la sección "Autor" solo aparece cuando alguna tiene texto, y entonces muestra solo esas líneas. Receta en el README.
 35. **Conteo de Acerca de.** Contaba las lecciones de todos los paquetes, incluidas las 4 de Estereoquímica con el mundo todavía en preparación ("3 mundos abiertos con 17 lecciones"); ahora cuenta solo las de los mundos abiertos (13 sin el flag, 17 con `?borrador=1`). La frase de mundos en preparación pasó a `about.content_soon` con singular y plural ("Otro mundo está en preparación." con uno solo). Test de pantalla.
 
+## Ronda 7: ajustes antes de la primera ronda con estudiantes
+
+36. **Hoja de error sin repetir la explicación** (`src/engine/FeedbackSheet.tsx`). Regla nueva: si el ejercicio tiene explicación, al fallar se muestra solo la explicación y debajo la nota de la lista de repaso; el mensaje de `feedback_template` aparece únicamente cuando el ejercicio no tiene explicación. La nota de repaso sale siempre al fallar, haya o no plantilla. Sustituye la comparación de textos del punto 28: `nearlySameText` (Jaccard de 0.8) no detectaba el par de `l_carbono_enlaces`, con 0.56 ("…y completa el octeto formando 4 enlaces covalentes" frente a "…por eso forma 4 enlaces covalentes"), y se retiró con su test. Tests nuevos de la hoja con ese par y con un ejercicio sin explicación.
+37. **Puntos por pregunta en el diagnóstico.** Junto a "Pregunta n de 8" se lee "Vale n puntos" (o "Vale 1 punto"), tomado del `weight` de cada ítem (10, 10, 10, 12, 12, 12, 12 y 14). En el resultado, bajo "Puntaje", la línea "8 preguntas, 92 puntos en total", calculada de los ítems activos. El cálculo del nivel y la escala de `diagnostic.scoring` no cambian. El reproductor acepta una nota opcional junto al contador (`counterNote`), que hoy solo usa el diagnóstico. Test con pesos alterados (1 y 7) que comprueba que lo mostrado sale del `weight`; `verify` revisa "Vale 10 puntos" y "8 preguntas, 92 puntos en total".
+38. **"Empieza aquí" una sola vez en el mapa**: queda en la fila del mundo y deja de aparecer en el panel de la lección (en celular se veía junto al botón de empezar; se quitó en todos los anchos). La ruta del mundo no cambia. El test cuenta una etiqueta y `verify` falla si el mapa muestra más de una.
+39. **Acerca de**: se retiró `about.mascot` de `ui_es.json` y su párrafo en `AboutScreen`, sin sustituirlo.
+
+Textos nuevos en `public/config/i18n/ui_es.json`: `diagnostic.item_points` y `diagnostic.total_points`; retirado `about.mascot`. Ningún archivo de `seed/` ni de `public/content/packs/` ni texto químico cambió.
+
 ## Para que lo corrija el autor
 
 - `seed/assets.json`: el campo `license` de los 13 assets sigue en `"propio-por-generar"`, pero el arte ya existe. No se cambió porque el seed es del autor; conviene poner la licencia real del arte. Lo mismo para `width` y `height`, que están en `null` (los originales miden 1254 × 1254 y las versiones servidas 512 × 512).
