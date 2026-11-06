@@ -57,7 +57,6 @@ export function AboutScreen() {
           {t('about.engines_title')}
         </h2>
         <p>{t('about.engines')}</p>
-        <p>{t('about.mascot')}</p>
       </section>
 
       {authorLines.length > 0 && (
