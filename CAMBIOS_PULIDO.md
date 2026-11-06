@@ -65,15 +65,21 @@ Lista de borradores guardados en el navegador (guardar, cargar, borrar) y descar
 
 Textos nuevos en `public/config/i18n/ui_es.json`: `start_here.label`, `path.vertex_label_start`, `result.repeat`, `profile.sound`, `profile.sound_help`; `about.version` cambió a `Versión {date} · {commit}`. Ningún archivo de `seed/` ni de `packs/base` ni texto químico cambió.
 
+## Ronda 6: logo oficial y Acerca de
+
+33. **Logo oficial.** Dos originales del autor en `arte/`: `logo.png` (logo completo con el nombre, 1254 × 1254, fondo transparente) y `logo-simbolo.png` (solo el matraz dentro de la Q, recortado del mismo logo como su componente conectado, sin redibujar). `scripts/gen-brand.ts` (sharp, ya era dependencia) genera desde ellos el logo de la bienvenida y de Acerca de, el símbolo del encabezado a 64 y 128 px, los íconos de la PWA (192 y 512 transparentes, maskable con el símbolo al 60 % sobre el fondo del tema), el ícono de iOS de 180 px y el favicon de 48 px, todos con paleta de 256 colores y de 150 KB o menos. Corre con `npm run art`, antes de dev, build y test y en CI, con un hash en `public/brand/.sources.json` para no regenerar. Se retiró `public/icons/icon.svg` (la cadena en zigzag); `BrandMark` muestra el símbolo y el nuevo `BrandLogo` el logo completo con el nombre como texto alternativo. La página 404 y `public/og.png` usan el símbolo.
+34. **Acerca de sin datos pendientes a la vista.** `about.author`, `about.contact` y `about.license` quedan vacíos por decisión del autor; la sección "Autor" solo aparece cuando alguna tiene texto, y entonces muestra solo esas líneas. Receta en el README.
+35. **Conteo de Acerca de.** Contaba las lecciones de todos los paquetes, incluidas las 4 de Estereoquímica con el mundo todavía en preparación ("3 mundos abiertos con 17 lecciones"); ahora cuenta solo las de los mundos abiertos (13 sin el flag, 17 con `?borrador=1`). La frase de mundos en preparación pasó a `about.content_soon` con singular y plural ("Otro mundo está en preparación." con uno solo). Test de pantalla.
+
 ## Para que lo corrija el autor
 
 - `seed/assets.json`: el campo `license` de los 13 assets sigue en `"propio-por-generar"`, pero el arte ya existe. No se cambió porque el seed es del autor; conviene poner la licencia real del arte. Lo mismo para `width` y `height`, que están en `null` (los originales miden 1254 × 1254 y las versiones servidas 512 × 512).
-- `public/config/i18n/ui_es.json`: `about.author`, `about.contact` y `about.license` están como `[completar]`.
+- `public/config/i18n/ui_es.json`: `about.author`, `about.contact` y `about.license` están vacíos y la sección "Autor" no se muestra; se llenan cuando el autor decida publicarlos.
 - `REPORTE_QUIMICA.md` conserva las observaciones de redacción del seed; ninguna se tocó.
 
 ## Qué quedó pendiente y por qué
 
-- **Logo oficial.** No hay `logo.png` entre los originales, así que la marca, los íconos de la PWA, el favicon y la imagen para compartir usan la cadena en zigzag. La receta para cambiarlos está en el README ("Cambiar el logo, los íconos de la PWA y la imagen para compartir").
+- **Logo oficial.** Integrado en la ronda 6.
 - **Rendimiento móvil.** Lighthouse móvil dio 90 antes de precargar la imagen de la bienvenida; la mayor oportunidad restante es fusionar en el build los 22 JSON de configuración y contenido en un solo archivo (5 saltos de red en serie en el arranque) y diferir zod (86 KB) fuera del bundle inicial. Ambas tocan el repositorio de contenido y se dejan para una sesión con tiempo de verificar el modo sin conexión.
 - **Teclado en el editor de estructuras.** Ketcher no permite colocar átomos sin ratón; en pantallas angostas ya se sustituye por elegir estructura, y en escritorio queda documentado como límite del editor.
 - **`srcset` solo para PNG de `assets/images/`.** Un asset con otra extensión o alojado fuera se sirve sin variante de 256 px (funciona, solo pesa más).

@@ -109,7 +109,7 @@ function notFoundHtml(): Plugin {
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex" />
 <title>${esc(uiStrings['error.not_found'])} · ${esc(APP_DISPLAY_NAME)}</title>
-<link rel="icon" href="${base}icons/icon.svg" type="image/svg+xml" />
+<link rel="icon" href="${base}icons/favicon-48.png" type="image/png" sizes="48x48" />
 <style>
 body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:${colors.background};color:${colors.text_primary};font-family:'IBM Plex Sans',system-ui,sans-serif;padding:16px;box-sizing:border-box}
 main{background:${colors.surface};border-radius:8px;padding:32px 24px;max-width:520px;width:100%}
@@ -122,7 +122,7 @@ a.btn:focus-visible{outline:3px solid ${colors.focus};outline-offset:2px}
 </head>
 <body>
 <main>
-<div class="brand"><svg width="32" height="24" viewBox="0 0 32 24" aria-hidden="true"><polyline points="3,18 11,8 19,18 27,8" fill="none" stroke="${colors.text_primary}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="27" cy="8" r="3.4" fill="${colors.primary}"/></svg>${esc(APP_DISPLAY_NAME)}</div>
+<div class="brand"><img src="${base}brand/logo-mark-64.png" srcset="${base}brand/logo-mark-128.png 2x" width="25" height="32" alt="" style="object-fit:contain" />${esc(APP_DISPLAY_NAME)}</div>
 <h1>${esc(uiStrings['error.not_found'])}</h1>
 <p>${esc(uiStrings['error.not_found_lead'])}</p>
 <a class="btn" href="${base}">${esc(uiStrings['error.go_home'])}</a>
@@ -176,7 +176,7 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       injectRegister: null,
-      includeAssets: ['icons/icon.svg'],
+      includeAssets: ['icons/favicon-48.png', 'icons/apple-touch-icon.png'],
       manifest: {
         id: base,
         name: APP_DISPLAY_NAME,

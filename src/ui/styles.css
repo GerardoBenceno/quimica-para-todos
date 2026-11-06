@@ -351,11 +351,14 @@ sup {
 .brand:hover {
   color: var(--color-text-primary);
 }
-.brand-mark polyline {
-  stroke: var(--color-text-primary);
+.brand-mark,
+.brand-logo {
+  display: block;
+  object-fit: contain;
+  flex: none;
 }
-.brand-mark circle {
-  fill: var(--color-primary);
+.brand-logo {
+  max-width: 100%;
 }
 
 /* --- Estados de carga y error ----------------------------------------- */

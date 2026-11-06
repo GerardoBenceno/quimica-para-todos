@@ -74,6 +74,28 @@ describe('Acerca de', () => {
     )
     expect(screen.getByText(/^Versión \d{4}-\d{2}-\d{2} · ([0-9a-f]{7}|local)$/)).toBeInTheDocument()
   })
+
+  it('muestra el logo completo y oculta la sección Autor mientras sus líneas estén vacías', () => {
+    setupApp()
+    render(
+      <Router>
+        <AboutScreen />
+      </Router>,
+    )
+    expect(screen.getByRole('img', { name: 'Química para Todos' })).toHaveAttribute('src', expect.stringContaining('brand/logo-300.png'))
+    expect(screen.queryByRole('heading', { name: 'Autor' })).not.toBeInTheDocument()
+    expect(screen.queryByText(/\[completar\]/)).not.toBeInTheDocument()
+  })
+
+  it('cuenta solo las lecciones de los mundos abiertos, sin las de un mundo en preparación', () => {
+    setupApp()
+    render(
+      <Router>
+        <AboutScreen />
+      </Router>,
+    )
+    expect(screen.getByText(/^3 mundos abiertos con 13 lecciones/)).toBeInTheDocument()
+  })
 })
 
 describe('espacios para el futuro', () => {

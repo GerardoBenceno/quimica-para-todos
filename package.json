@@ -12,10 +12,10 @@
     "typecheck": "tsc -b",
     "validate": "tsx scripts/validate-content.ts",
     "sync:base": "tsx scripts/sync-base.ts",
-    "art": "tsx scripts/optimize-art.ts",
-    "predev": "tsx scripts/optimize-art.ts && tsx scripts/sync-base.ts && tsx scripts/copy-vendor.ts",
-    "prebuild": "tsx scripts/optimize-art.ts && tsx scripts/sync-base.ts && tsx scripts/copy-vendor.ts",
-    "pretest": "tsx scripts/optimize-art.ts && tsx scripts/sync-base.ts && tsx scripts/copy-vendor.ts",
+    "art": "tsx scripts/optimize-art.ts && tsx scripts/gen-brand.ts",
+    "predev": "tsx scripts/optimize-art.ts && tsx scripts/gen-brand.ts && tsx scripts/sync-base.ts && tsx scripts/copy-vendor.ts",
+    "prebuild": "tsx scripts/optimize-art.ts && tsx scripts/gen-brand.ts && tsx scripts/sync-base.ts && tsx scripts/copy-vendor.ts",
+    "pretest": "tsx scripts/optimize-art.ts && tsx scripts/gen-brand.ts && tsx scripts/sync-base.ts && tsx scripts/copy-vendor.ts",
     "verify": "node scripts/verify-prod.mjs"
   },
   "dependencies": {
