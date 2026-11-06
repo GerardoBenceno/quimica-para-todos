@@ -27,6 +27,7 @@ export function WorldMapScreen() {
     (ipStatus && ipStatus !== 'locked' ? s.in_progress!.lesson_id : null) ??
     (s.user.recommended_world_id ? nextLesson(b, view, s.user.recommended_world_id) : null) ??
     nextLesson(b, view)
+  // "Empieza aquí" va solo en la fila del mundo; el panel de la lección no lo repite.
   const startHere = useStartHere()
   const startWorld = startHere ? worldOfLesson(b, startHere)?.id : null
   const pending = Object.values(s.mistakes).filter((m) => !m.resolved).length
@@ -94,7 +95,7 @@ export function WorldMapScreen() {
         </section>
         <div className="home-current">
           {current ? (
-            <LessonIntro lessonId={current} headingLevel={1} startHere={current === startHere} onStart={() => navigate(routes.lesson(current), { state: { autostart: true } })} />
+            <LessonIntro lessonId={current} headingLevel={1} onStart={() => navigate(routes.lesson(current), { state: { autostart: true } })} />
           ) : (
             <h1 className="t-28">{t('map.all_done')}</h1>
           )}

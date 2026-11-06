@@ -7,12 +7,14 @@ import { ChemText } from '../ui/ChemText'
 import { MoleculeView } from '../ui/MoleculeView'
 import { CheckIcon, CrossIcon } from '../ui/icons'
 import { Carbo } from '../ui/Carbo'
-import { correctAnswerText, feedbackSmiles, nearlySameText } from './answerText'
+import { correctAnswerText, feedbackSmiles } from './answerText'
 
 /**
- * Hoja inferior con veredicto, respuesta correcta, explicación del seed, la
- * estructura con lo relevante resaltado y el mensaje de feedback_template.
- * No bloquea el avance.
+ * Hoja inferior con veredicto, respuesta correcta, explicación del seed y la
+ * estructura con lo relevante resaltado. Al fallar, el mensaje de
+ * feedback_template solo aparece si el ejercicio no tiene explicación (casi
+ * siempre repite la explicación con otras palabras); debajo va siempre la nota
+ * de la lista de repaso. No bloquea el avance.
  */
 export function FeedbackSheet({ exercise, verdict, onContinue, practice }: { exercise: Exercise; verdict: Verdict; onContinue(): void; practice?: boolean }) {
   const t = useT()
@@ -24,9 +26,8 @@ export function FeedbackSheet({ exercise, verdict, onContinue, practice }: { exe
   const smiles = feedbackSmiles(exercise)
   const answer = correctAnswerText(exercise, t)
   const explanation = exercise.explanation_key ? t(exercise.explanation_key) : ''
-  // Si el mensaje de la plantilla dice prácticamente lo mismo que la explicación, no se repite.
-  const templateMessage = template ? t(template.message_key) : ''
-  const showTemplate = !!templateMessage && !(explanation && nearlySameText(templateMessage, explanation))
+  // La explicación manda; el mensaje de la plantilla solo la sustituye cuando no hay explicación.
+  const templateMessage = !explanation && template ? t(template.message_key) : ''
 
   return (
     <section className={`sheet ${ok ? 'sheet-ok' : 'sheet-bad'}`} aria-labelledby="sheet-title">
@@ -52,11 +53,11 @@ export function FeedbackSheet({ exercise, verdict, onContinue, practice }: { exe
             </p>
           )}
         </div>
-        {!ok && template && (
+        {!ok && (
           <div className="sheet-template">
             <Carbo expression="sad" size={40} />
             <p className="muted">
-              {showTemplate && (
+              {templateMessage && (
                 <>
                   <ChemText text={templateMessage} />{' '}
                 </>

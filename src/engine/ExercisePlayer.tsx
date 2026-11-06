@@ -36,6 +36,8 @@ export interface ExercisePlayerProps {
   footer?: React.ReactNode
   /** Vista previa del editor: respuesta inicial y si ya está comprobada. */
   preview?: { answer: Answer | null; checked: boolean }
+  /** Texto junto a "Pregunta n de m" (en el diagnóstico, cuánto vale el ítem). */
+  counterNote?: (ex: Exercise) => string | null
 }
 
 /**
@@ -43,7 +45,7 @@ export interface ExercisePlayerProps {
  * deshabilitado hasta que haya respuesta. En lección y práctica muestra la
  * hoja de retroalimentación; en el diagnóstico avanza sin revelar.
  */
-export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onRecord, onFinish, onClose, footer, preview }: ExercisePlayerProps) {
+export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onRecord, onFinish, onClose, footer, preview, counterNote }: ExercisePlayerProps) {
   const t = useT()
   const b = useBundle()
   const g = useGameValues()
@@ -188,7 +190,10 @@ export function ExercisePlayer({ exercises, attemptId, startIndex = 0, mode, onR
       </div>
 
       <main id="main" className="narrow player-main">
-        <p className="muted t-15">{t('exercise.counter', { n: index + 1, m: exercises.length })}</p>
+        <p className="muted t-15">
+          {t('exercise.counter', { n: index + 1, m: exercises.length })}
+          {counterNote?.(ex) && <span className="counter-note"> · {counterNote(ex)}</span>}
+        </p>
         <h1 className="t-22 prompt" id={promptInView ? undefined : promptId} tabIndex={-1} ref={promptRef}>
           {promptInView ? t('exercise.chat_title') : <ChemText text={t(ex.prompt_key)} />}
         </h1>
