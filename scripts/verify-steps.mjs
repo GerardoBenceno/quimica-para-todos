@@ -384,6 +384,10 @@ export async function a11y({ newPage, URL }) {
       await page.goto(`${URL}${hash}`)
       await expectVisible(page, 'Empieza aquí')
       await page.waitForTimeout(300)
+      if (hash === '#/aprender') {
+        const n = await page.getByText('Empieza aquí').count()
+        if (n !== 1) throw new Error(`mapa: "Empieza aquí" aparece ${n} veces (debe ser solo en la fila del mundo)`)
+      }
       await noHorizontalScroll(page, `${hash} con Empieza aquí`)
       await run(page, `${hash} con Empieza aquí`)
     }

@@ -32,15 +32,16 @@ describe('"Empieza aquí" en el mapa y en la ruta', () => {
     ['con diagnóstico', withDiagnostic],
     ['sin diagnóstico', skippedDiagnostic],
   ] as const) {
-    it(`${label}: aparece en el mapa de mundos sobre la primera lección`, () => {
+    it(`${label}: aparece una sola vez en el mapa, en la fila del mundo`, () => {
       setupApp()
       prepare()
       renderAt('/aprender')
+      // Una sola vez: en la fila del mundo, no en el panel de la lección.
       const tags = screen.getAllByText('Empieza aquí')
-      // Fila del mundo y panel de la lección.
-      expect(tags).toHaveLength(2)
+      expect(tags).toHaveLength(1)
+      expect(tags[0].closest('li')).toHaveTextContent('Química básica del carbono')
       const intro = screen.getByRole('region', { name: 'El carbono y sus enlaces' })
-      expect(within(intro).getByText('Empieza aquí')).toBeInTheDocument()
+      expect(within(intro).queryByText('Empieza aquí')).toBeNull()
     })
 
     it(`${label}: aparece en la ruta del mundo y desaparece al empezar la lección`, () => {
