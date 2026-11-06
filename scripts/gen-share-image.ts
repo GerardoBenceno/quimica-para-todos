@@ -1,5 +1,6 @@
 // Genera public/og.png (1200 × 630), la imagen que ven las redes y los chats
-// al compartir el enlace. Toma la marca de src/app/brand.ts, los textos de
+// al compartir el enlace. Toma el nombre de src/app/brand.ts, el símbolo del
+// logo de public/brand/ (lo genera scripts/gen-brand.ts), los textos de
 // public/config/i18n/ui_es.json, los colores del tema de ui.json y a Carbo en
 // reposo desde assets/images/. Se versiona: solo hay que correrlo cuando
 // cambie la marca, el texto de bienvenida, la paleta o el arte de Carbo.
@@ -41,7 +42,7 @@ p{margin:0;font-size:27px;line-height:1.4;color:${c.text_secondary}}
 .art{width:380px;height:380px;background:${c.block_soft};border-radius:16px;display:flex;align-items:center;justify-content:center}
 .art img{width:300px;height:300px}
 </style></head><body>
-<div class="text"><div class="brand"><svg width="44" height="33" viewBox="0 0 32 24"><polyline points="3,18 11,8 19,18 27,8" fill="none" stroke="${c.text_primary}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="27" cy="8" r="3.4" fill="${c.primary}"/></svg>${APP_DISPLAY_NAME}</div>
+<div class="text"><div class="brand"><img src="${dataUri('public/brand/logo-mark-128.png', 'image/png')}" height="56" alt="">${APP_DISPLAY_NAME}</div>
 <h1>${strings['app.tagline']}</h1><p>${strings['welcome.lead']} ${strings['welcome.no_signup'].split('.')[0]}.</p></div>
 ${art ? `<div class="art"><img src="${dataUri(art, 'image/png')}" alt=""></div>` : ''}
 </body></html>`
