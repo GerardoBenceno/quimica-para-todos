@@ -122,6 +122,11 @@ export async function game({ newPage, shot, URL }) {
   // Segunda lección: habilita el primer cofre.
   await page.getByRole('button', { name: /Empezar lección|Continuar lección/ }).click()
   await playLesson(page)
+  // Repetir lección: intento nuevo desde el primer ejercicio, sin cerrar la lección.
+  await page.getByRole('button', { name: 'Repetir lección' }).click()
+  await page.getByText(/^Pregunta 1 de \d+$/).waitFor({ timeout: 10000 })
+  await shot(page, 'juego-00-repetir')
+  await playLesson(page)
   await page.getByRole('button', { name: 'Volver a la ruta' }).click()
   await expectVisible(page, '2 de 6 lecciones completadas')
   await shot(page, 'juego-01-ruta-cofre')
@@ -133,6 +138,10 @@ export async function game({ newPage, shot, URL }) {
   await page.getByRole('link', { name: 'Perfil' }).first().click()
   await expectVisible(page, 'Experiencia total')
   await noHorizontalScroll(page, 'perfil')
+  // Sonido al responder: apagado por defecto; encendido, el repaso siguiente lo toca.
+  const sound = page.getByRole('checkbox', { name: 'Sonido al responder' })
+  if (await sound.isChecked()) throw new Error('perfil: el sonido debería estar apagado por defecto')
+  await sound.check()
   await shot(page, 'juego-03-perfil')
   await page.getByRole('link', { name: 'Repasar' }).first().click()
   await page.getByRole('button', { name: 'Empezar repaso' }).waitFor()
@@ -368,6 +377,16 @@ export async function a11y({ newPage, URL }) {
     await run(page, 'diagnóstico')
     await page.getByRole('button', { name: 'No sé, empezar desde el principio' }).click()
     await page.getByRole('button', { name: 'Empezar lección' }).waitFor()
+    // Sin ninguna lección empezada: etiqueta fija "Empieza aquí" en el mapa y en la ruta.
+    for (const hash of ['#/aprender', '#/mundo/w_carbono']) {
+      await page.goto(`${URL}${hash}`)
+      await expectVisible(page, 'Empieza aquí')
+      await page.waitForTimeout(300)
+      await noHorizontalScroll(page, `${hash} con Empieza aquí`)
+      await run(page, `${hash} con Empieza aquí`)
+    }
+    await page.goto(`${URL}#/leccion/l_carbono_enlaces`)
+    await page.getByRole('button', { name: 'Empezar lección' }).waitFor()
     await run(page, 'intro de lección')
     await page.getByRole('button', { name: 'Empezar lección' }).click()
     await answerVisible(page)
@@ -381,11 +400,17 @@ export async function a11y({ newPage, URL }) {
     await page.getByRole('button', { name: 'Ver el mapa de mundos' }).click()
     await expectVisible(page, 'Tu ruta')
     await page.waitForTimeout(300)
+    if ((await page.getByText('Empieza aquí').count()) > 0) throw new Error('mapa: "Empieza aquí" sigue visible tras empezar una lección')
     await run(page, 'mapa')
     for (const [hash, text] of [['#/mundo/w_carbono', 'lecciones completadas'], ['#/perfil', 'Experiencia total'], ['#/recompensas', 'Tienda'], ['#/repasar', 'Empezar repaso'], ['#/acerca', 'Hecho con'], ['#/no-existe', 'Esta página no existe'], ['#/revision', 'Revisión del curso'], ['#/editor', 'Editor de ejercicios']]) {
       await page.goto(`${URL}${hash}`)
       await expectVisible(page, text)
       await page.waitForTimeout(300)
+      if (hash === '#/acerca') {
+        // Versión inyectada en el build: fecha y commit corto.
+        const version = (await page.locator('.version-line').innerText()).trim()
+        if (!/^Versión \d{4}-\d{2}-\d{2} · ([0-9a-f]{7}|local)$/.test(version)) throw new Error(`versión inesperada en Acerca de: ${version}`)
+      }
       await run(page, hash)
     }
     await ctx.close()

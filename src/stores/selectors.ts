@@ -5,6 +5,7 @@ import { gameValues } from '../core/game/config'
 import { computeProgress } from '../core/game/unlock'
 import { completedLessons } from '../core/game/session'
 import { displayedStreak } from '../core/game/streak'
+import { startHereLesson } from '../core/game/startHere'
 
 export function useGameValues() {
   const b = useBundle()
@@ -22,6 +23,14 @@ export function useProgressView() {
   const completed = useCompleted()
   const inProgress = s.in_progress?.lesson_id ?? null
   return useMemo(() => computeProgress(b, completed, inProgress), [b, completed, inProgress])
+}
+
+/** Lección con la etiqueta "Empieza aquí" (null en cuanto se empieza cualquier lección). */
+export function useStartHere(): string | null {
+  const b = useBundle()
+  const s = useUserState()
+  const view = useProgressView()
+  return useMemo(() => startHereLesson(b, s, view), [b, s, view])
 }
 
 export function useStreak() {

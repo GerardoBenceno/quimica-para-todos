@@ -1,11 +1,23 @@
 /// <reference types="vitest/config" />
 import { readFileSync } from 'node:fs'
+import { execSync } from 'node:child_process'
 import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 import { APP_DISPLAY_NAME, APP_REPO_URL, APP_SHORT_NAME } from './src/app/brand.ts'
 
-const pkg = JSON.parse(readFileSync('package.json', 'utf8')) as { version: string }
+// Versión visible en Acerca de: fecha del build y commit corto, para anotar qué
+// versión se probó en cada ronda. La fecha va en la hora del centro de México
+// (la del autor); en CI corre en UTC y un build nocturno marcaría el día siguiente.
+const BUILD_DATE = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Mexico_City', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date())
+const BUILD_COMMIT = (() => {
+  try {
+    return execSync('git rev-parse --short=7 HEAD', { stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim()
+  } catch {
+    // Sin git (por ejemplo, un zip del repositorio): el SHA de Actions si existe.
+    return process.env.GITHUB_SHA?.slice(0, 7) ?? 'local'
+  }
+})()
 
 // Ruta base de producción en GitHub Pages: /<nombre-del-repo>/.
 const REPO_NAME = 'quimica-para-todos'
@@ -153,7 +165,8 @@ export default defineConfig({
   define: {
     // Ketcher y sus dependencias esperan "global" de Node.
     global: 'globalThis',
-    __APP_VERSION__: JSON.stringify(pkg.version),
+    __BUILD_DATE__: JSON.stringify(BUILD_DATE),
+    __BUILD_COMMIT__: JSON.stringify(BUILD_COMMIT),
   },
   plugins: [
     react(),

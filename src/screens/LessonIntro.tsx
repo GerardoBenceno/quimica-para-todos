@@ -17,7 +17,20 @@ import { feedbackSmiles } from '../engine/answerText'
 /** Átomos explícitos de un SMILES (aproximado); una figura de un solo átomo no ilustra nada. */
 const atomCount = (smiles: string) => (smiles.match(/Cl|Br|[BCNOPSFI]|\[[^\]]+\]|[bcnops]/g) ?? []).length
 
-export function LessonIntro({ lessonId, headingLevel, onStart, hidePathLink = false }: { lessonId: string; headingLevel: 1 | 2; onStart(): void; hidePathLink?: boolean }) {
+export function LessonIntro({
+  lessonId,
+  headingLevel,
+  onStart,
+  hidePathLink = false,
+  startHere = false,
+}: {
+  lessonId: string
+  headingLevel: 1 | 2
+  onStart(): void
+  hidePathLink?: boolean
+  /** Etiqueta fija "Empieza aquí" (sin animación) mientras no hay lecciones empezadas. */
+  startHere?: boolean
+}) {
   const t = useT()
   const b = useBundle()
   const s = useUserState()
@@ -34,6 +47,7 @@ export function LessonIntro({ lessonId, headingLevel, onStart, hidePathLink = fa
   return (
     <section className="lesson-intro" aria-labelledby={`intro-${lessonId}`}>
       <p className="muted t-15">{t('lesson.context', { world: t(world.title_key), n, m: lessons.length })}</p>
+      {startHere && <p className="tag start-tag">{t('start_here.label')}</p>}
       <H className="t-36" id={`intro-${lessonId}`}>
         <ChemText text={t(lesson.title_key)} />
       </H>

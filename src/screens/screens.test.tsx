@@ -1,9 +1,11 @@
 import { describe, expect, it } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import { setupApp, Router } from '../test/helpers'
 import { useProgressStore } from '../stores/progressStore'
+import { usePrefsStore } from '../stores/prefsStore'
 import { ProfileScreen } from './ProfileScreen'
 import { PracticeScreen } from './PracticeScreen'
+import { AboutScreen } from './AboutScreen'
 import { AdSlot } from '../ui/AdSlot'
 import { LockBadge } from '../ui/LockBadge'
 
@@ -18,6 +20,28 @@ describe('pantallas de gamificación', () => {
     expect(screen.getByText('Experiencia total')).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Reiniciar mi progreso' })).toBeInTheDocument()
     expect(screen.queryByText('Guardar mi progreso en la nube')).toBeNull()
+  })
+
+  it('el perfil tiene el interruptor "Sonido al responder", apagado por defecto', () => {
+    setupApp()
+    usePrefsStore.getState().set({ sound: false })
+    const w = window as unknown as { AudioContext?: unknown }
+    w.AudioContext = class {}
+    try {
+      render(
+        <Router>
+          <ProfileScreen />
+        </Router>,
+      )
+      const toggle = screen.getByRole('checkbox', { name: 'Sonido al responder' })
+      expect(toggle).not.toBeChecked()
+      fireEvent.click(toggle)
+      expect(toggle).toBeChecked()
+      expect(usePrefsStore.getState().prefs.sound).toBe(true)
+    } finally {
+      delete w.AudioContext
+      usePrefsStore.getState().set({ sound: false })
+    }
   })
 
   it('la práctica prioriza los errores de mayor count', () => {
@@ -37,6 +61,18 @@ describe('pantallas de gamificación', () => {
     )
     const counts = screen.getAllByText(/veces|vez/).map((x) => x.textContent)
     expect(counts).toEqual(['3 veces', '1 vez'])
+  })
+})
+
+describe('Acerca de', () => {
+  it('muestra la versión con la fecha del build y el commit corto', () => {
+    setupApp()
+    render(
+      <Router>
+        <AboutScreen />
+      </Router>,
+    )
+    expect(screen.getByText(/^Versión \d{4}-\d{2}-\d{2} · ([0-9a-f]{7}|local)$/)).toBeInTheDocument()
   })
 })
 

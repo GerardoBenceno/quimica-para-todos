@@ -4,14 +4,15 @@ import { SafeLocalStore } from '../services/safeStorage'
 
 /**
  * Preferencias del dispositivo (no viajan con el progreso ni con el respaldo):
- * hoy solo la vibración al responder. Se guardan en localStorage con respaldo
- * en memoria.
+ * vibración y sonido al responder, ambos apagados por defecto. Se guardan en
+ * localStorage con respaldo en memoria.
  */
 export interface DevicePrefs {
   vibration: boolean
+  sound: boolean
 }
 
-const DEFAULTS: DevicePrefs = { vibration: false }
+const DEFAULTS: DevicePrefs = { vibration: false, sound: false }
 const store = new SafeLocalStore()
 
 function load(): DevicePrefs {

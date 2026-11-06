@@ -68,7 +68,7 @@ export function AboutScreen() {
         <a className="link" href={APP_REPO_URL} target="_blank" rel="noopener noreferrer">
           {t('about.source')}
         </a>
-        <span className="muted t-14 version-line">{t('about.version', { version: __APP_VERSION__ })}</span>
+        <span className="muted t-14 version-line">{t('about.version', { date: __BUILD_DATE__, commit: __BUILD_COMMIT__ })}</span>
       </div>
       {welcomed ? (
         <button type="button" className="link" onClick={() => navigate(-1)}>

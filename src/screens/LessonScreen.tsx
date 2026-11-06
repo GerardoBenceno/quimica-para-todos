@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { servicesOrNull } from '../app/services'
 import type { Exercise } from '../models'
@@ -25,8 +25,13 @@ export function LessonScreen() {
   const narrow = useNarrow()
   const navigate = useNavigate()
   const location = useLocation()
-  const autostart = (location.state as { autostart?: boolean } | null)?.autostart === true
+  const navState = location.state as { autostart?: boolean; restart?: boolean } | null
+  const autostart = navState?.autostart === true
+  // "Repetir lección" desde el resultado: intento nuevo desde el primer ejercicio.
+  const restart = navState?.restart === true
   const [session, setSession] = useState<{ attemptId: string; startIndex: number; exercises: Exercise[] } | null>(null)
+  // Un solo arranque automático por montaje (StrictMode repite los efectos en desarrollo).
+  const autoStarted = useRef(false)
 
   const lesson = b.lessons.find((l) => l.id === lessonId && l.is_active)
   const world = lesson ? worldOfLesson(b, lesson.id) : null
@@ -47,8 +52,11 @@ export function LessonScreen() {
   const status0 = lesson ? view.lessons[lesson.id]?.status : undefined
   // Desde el mapa o la ruta, "Empezar lección" entra directo a los ejercicios.
   useEffect(() => {
-    if (autostart && lesson && !session && status0 && status0 !== 'locked') {
-      setSession({ ...beginLesson(lesson.id, plan.length), exercises: plan })
+    if (autostart && lesson && !session && !autoStarted.current && status0 && status0 !== 'locked') {
+      autoStarted.current = true
+      setSession({ ...beginLesson(lesson.id, plan.length, { restart }), exercises: plan })
+      // El reinicio se consume una vez: recargar a la mitad reanuda este intento en lugar de abrir otro.
+      if (restart) navigate(location.pathname, { replace: true, state: { autostart: true } })
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [autostart, lesson?.id])

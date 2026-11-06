@@ -126,6 +126,6 @@ Cada receta toca como máximo dos archivos de código; casi todas, ninguno.
 
 ## Calidad verificada
 
-- 81 tests (paquetes, unión e ids duplicados, validación por tipo, draw_structure con RDKit.js real, desbloqueos, diagnóstico, barajado, atajos de teclado, respaldo del progreso, racha, cofres, selección de adaptadores, AdSlot, LockBadge, contraste AA de ambos temas con la paleta del autor, render del reproductor con cada tipo).
+- 116 tests (paquetes, unión e ids duplicados, validación por tipo, draw_structure con RDKit.js real, desbloqueos, diagnóstico, barajado, atajos de teclado, respaldo del progreso, racha, cofres, selección de adaptadores, AdSlot, LockBadge, contraste AA de ambos temas con la paleta del autor, render del reproductor con cada tipo, "Empieza aquí" con y sin diagnóstico, repetir lección, preferencia de sonido y versión del build).
 - `npm run verify` en `vite preview` bajo `/quimica-para-todos/`: flujo completo en celular y escritorio, gamificación, dibujo con Ketcher y calificación con RDKit.js, sustitución por choose_structure a 360 px, visor 3D, reapertura y primera sesión sin conexión, instalabilidad según Chrome, metadatos para compartir y 404 propia, y axe-core en 14 pantallas (incluye Acerca de y la página inexistente).
 - Lighthouse 12.8.2 en la bienvenida: rendimiento 93 en móvil y 100 en escritorio; accesibilidad 100; buenas prácticas 100. (La categoría PWA ya no existe en Lighthouse; la instalabilidad se revisa con `Page.getInstallabilityErrors`.)
