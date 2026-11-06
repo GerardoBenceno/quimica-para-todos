@@ -23,6 +23,9 @@ export function DiagnosticScreen() {
   const view = useProgressView()
   const navigate = useNavigate()
   const items = useMemo(() => b.diagnosticItems.filter((i) => i.is_active), [b])
+  // Puntos de cada pregunta y total, leídos del weight de los ítems activos.
+  const weightOf = useMemo(() => new Map(items.map((i) => [i.id, i.weight])), [items])
+  const totalPoints = useMemo(() => items.reduce((sum, i) => sum + i.weight, 0), [items])
   const attemptId = useMemo(() => uuid(), [])
   const answers = useRef<Record<string, Answer>>({})
   const [outcome, setOutcome] = useState<DiagnosticOutcome | null>(null)
@@ -71,7 +74,10 @@ export function DiagnosticScreen() {
             <strong>{levelText}</strong>
           </li>
           <li>
-            <span>{t('diagnostic.score')}</span>
+            <span className="score-label">
+              {t('diagnostic.score')}
+              <span className="muted t-14">{t('diagnostic.total_points', { n: items.length, max: totalPoints })}</span>
+            </span>
             <strong className="num">{t('diagnostic.score_value', { score: outcome.score, max: outcome.max })}</strong>
           </li>
         </ul>
@@ -107,6 +113,10 @@ export function DiagnosticScreen() {
       }}
       onFinish={finish}
       onClose={skip}
+      counterNote={(ex) => {
+        const w = weightOf.get(ex.id)
+        return w === undefined ? null : t('diagnostic.item_points', { n: w })
+      }}
       footer={
         <div className="diag-footer">
           <div className="diag-note">

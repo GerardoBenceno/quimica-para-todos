@@ -71,11 +71,13 @@ export async function flow({ newPage, shot, URL }) {
     // Diagnóstico completo.
     for (let k = 0; k < 8; k++) {
       await page.getByText(`Pregunta ${k + 1} de 8`).waitFor()
+      if (k === 0) await expectVisible(page, 'Vale 10 puntos')
       await page.getByRole('radio').nth(k % 2).click()
       if (k === 0) await shot(page, `${label}-02-diagnostico`)
       await page.getByRole('button', { name: 'Siguiente' }).click()
     }
     await expectVisible(page, 'Tu punto de partida')
+    await expectVisible(page, '8 preguntas, 92 puntos en total')
     await shot(page, `${label}-03-diagnostico-resultado`)
     await page.getByRole('button', { name: 'Empezar mi primera lección' }).click()
     await page.getByRole('button', { name: 'Empezar lección' }).click()
