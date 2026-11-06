@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from 'vitest'
 import { render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { ExercisePlayer } from './ExercisePlayer'
-import { nearlySameText } from './answerText'
+import { FeedbackSheet } from './FeedbackSheet'
 import { setupApp, Router } from '../test/helpers'
 import type { Exercise, ExerciseType } from '../models'
 import { highlightKind } from '../ui/MoleculeView'
@@ -188,11 +188,30 @@ describe('compare_structures', () => {
   })
 })
 
-describe('retroalimentación sin repetir la explicación', () => {
-  it('detecta textos prácticamente iguales', () => {
-    expect(nearlySameText('El carbono forma 4 enlaces.', 'el carbono forma 4 enlaces')).toBe(true)
-    expect(nearlySameText('El carbono forma 4 enlaces covalentes.', 'El carbono forma 4 enlaces covalentes, por eso es tetravalente.')).toBe(true)
-    expect(nearlySameText('Revisa las prioridades CIP.', 'El carbono tiene 4 electrones de valencia.')).toBe(false)
-    expect(nearlySameText('', 'algo')).toBe(false)
+describe('retroalimentación al fallar sin repetir la explicación', () => {
+  const carbono = bundle.exercises.find((e) => e.id === 'e_carbono_enlaces')!
+  const explanation = 'El carbono tiene 4 electrones de valencia y completa el octeto formando 4 enlaces covalentes.'
+  const template = 'El carbono tiene 4 electrones de valencia, por eso forma 4 enlaces covalentes.'
+  const sheet = (e: Exercise, practice = false) =>
+    render(
+      <Router>
+        <FeedbackSheet exercise={e} verdict="incorrect" onContinue={vi.fn()} practice={practice} />
+      </Router>,
+    )
+
+  it('con explicación muestra solo la explicación y la nota de repaso (par de l_carbono_enlaces)', () => {
+    // El par que repetía la hoja: la regla anterior (Jaccard 0.8) no lo detectaba.
+    expect(i18n.t(carbono.explanation_key!)).toBe(explanation)
+    expect(i18n.t(bundle.feedbackTemplates.find((f) => f.id === carbono.feedback_template_id)!.message_key)).toBe(template)
+    sheet(carbono)
+    expect(screen.getByText(explanation)).toBeInTheDocument()
+    expect(screen.queryByText(template, { exact: false })).toBeNull()
+    expect(screen.getByText('Este ejercicio pasó a tu lista para repasar.')).toBeInTheDocument()
+  })
+
+  it('sin explicación muestra el mensaje de la plantilla seguido de la nota', () => {
+    sheet({ ...carbono, id: 'ex_sin_explicacion', explanation_key: null }, true)
+    expect(screen.queryByText(explanation)).toBeNull()
+    expect(screen.getByText(`${template} Sigue en tu lista para repasar.`)).toBeInTheDocument()
   })
 })
